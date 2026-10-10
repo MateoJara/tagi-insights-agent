@@ -3,11 +3,13 @@
 Run with: python -m src.metrics
 """
 
+import argparse
 import json
+from pathlib import Path
 
 import pandas as pd
 
-from src.load_data import load_google_reviews, load_survey_responses
+from src.load_data import SAMPLE_DIR, load_google_reviews, load_survey_responses
 
 ASPECT_COLUMNS = ("rating_food", "rating_service", "rating_ambience", "rating_value")
 SATISFIED_MIN_RATING = 4
@@ -58,6 +60,7 @@ def survey_summary(survey, months=RECENT_MONTHS):
     changes = aspect_change(survey, months)
     return {
         "n_responses": len(survey),
+        "recent_n": int(recent_mask(survey["submitted_at"], months).sum()),
         "first_date": survey["submitted_at"].min().date(),
         "last_date": survey["submitted_at"].max().date(),
         "mean_overall": _mean(survey["rating_overall"]),
@@ -81,6 +84,8 @@ def review_summary(reviews, months=RECENT_MONTHS):
     last_reply = reviews["owner_reply_date"].max()
     return {
         "n_reviews": len(reviews),
+        "first_date": reviews["review_date"].min().date(),
+        "last_date": reviews["review_date"].max().date(),
         "mean_rating": _mean(reviews["rating"]),
         "distribution": {int(stars): int(n) for stars, n in rating_distribution(reviews).items()},
         "satisfied_share": satisfied_share(reviews["rating"]),
@@ -94,13 +99,37 @@ def review_summary(reviews, months=RECENT_MONTHS):
     }
 
 
-if __name__ == "__main__":
-    survey, survey_report = load_survey_responses()
-    reviews, reviews_report = load_google_reviews()
-    output = {
-        "survey_cleaning": vars(survey_report),
-        "survey": survey_summary(survey),
-        "reviews_cleaning": vars(reviews_report),
-        "reviews": review_summary(reviews),
+def build_metrics(survey_path, reviews_path, months=RECENT_MONTHS):
+    """Load both tables and return every figure the report needs as plain data."""
+    survey, survey_report = load_survey_responses(survey_path)
+    reviews, reviews_report = load_google_reviews(reviews_path)
+    monthly = monthly_means(survey)
+    responses_per_month = survey["submitted_at"].dt.to_period("M").value_counts().sort_index()
+    return {
+        "survey_cleaning": {**vars(survey_report), "rows_kept": survey_report.rows_kept},
+        "survey": survey_summary(survey, months),
+        "survey_responses_per_month": {str(m): int(n) for m, n in responses_per_month.items()},
+        "survey_monthly_means": {str(m): row.to_dict() for m, row in monthly.iterrows()},
+        "survey_aspect_change": aspect_change(survey, months).to_dict(orient="index"),
+        "reviews_cleaning": {**vars(reviews_report), "rows_kept": reviews_report.rows_kept},
+        "reviews": review_summary(reviews, months),
     }
-    print(json.dumps(output, indent=2, default=str))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Compute the report metrics as JSON.")
+    parser.add_argument("--survey", default=SAMPLE_DIR / "survey_responses.csv")
+    parser.add_argument("--reviews", default=SAMPLE_DIR / "google_reviews.csv")
+    parser.add_argument("--output", help="write the JSON to this file instead of printing it")
+    args = parser.parse_args(argv)
+
+    text = json.dumps(build_metrics(args.survey, args.reviews), indent=2, default=str)
+    if args.output:
+        Path(args.output).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.output).write_text(text + "\n", encoding="utf-8")
+    else:
+        print(text)
+
+
+if __name__ == "__main__":
+    main()

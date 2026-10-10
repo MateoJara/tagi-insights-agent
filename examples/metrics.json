@@ -1,0 +1,129 @@
+{
+  "survey_cleaning": {
+    "rows_read": 300,
+    "duplicates_removed": 6,
+    "invalid_ratings": 0,
+    "texts_cleaned": 32,
+    "rows_kept": 294
+  },
+  "survey": {
+    "n_responses": 294,
+    "recent_n": 145,
+    "first_date": "2026-04-02",
+    "last_date": "2026-09-30",
+    "mean_overall": 3.8850174216027873,
+    "mean_by_aspect": {
+      "rating_food": 4.181184668989547,
+      "rating_service": 3.3285714285714287,
+      "rating_ambience": 3.923344947735192,
+      "rating_value": 4.230769230769231
+    },
+    "satisfied_share": 0.710801393728223,
+    "nps": -3.819444444444442,
+    "recent_months": 3,
+    "biggest_drop_aspect": "rating_service",
+    "biggest_drop_change": -1.4619113220062245
+  },
+  "survey_responses_per_month": {
+    "2026-04": 46,
+    "2026-05": 45,
+    "2026-06": 59,
+    "2026-07": 47,
+    "2026-08": 63,
+    "2026-09": 34
+  },
+  "survey_monthly_means": {
+    "2026-04": {
+      "rating_overall": 3.9782608695652173,
+      "rating_food": 4.1521739130434785,
+      "rating_service": 3.9523809523809526,
+      "rating_ambience": 3.911111111111111,
+      "rating_value": 4.282608695652174
+    },
+    "2026-05": {
+      "rating_overall": 4.095238095238095,
+      "rating_food": 4.25,
+      "rating_service": 4.159090909090909,
+      "rating_ambience": 4.044444444444444,
+      "rating_value": 4.295454545454546
+    },
+    "2026-06": {
+      "rating_overall": 4.120689655172414,
+      "rating_food": 4.228070175438597,
+      "rating_service": 4.055555555555555,
+      "rating_ambience": 4.016949152542373,
+      "rating_value": 4.232142857142857
+    },
+    "2026-07": {
+      "rating_overall": 3.5555555555555554,
+      "rating_food": 3.9565217391304346,
+      "rating_service": 2.5106382978723403,
+      "rating_ambience": 3.8636363636363638,
+      "rating_value": 4.170212765957447
+    },
+    "2026-08": {
+      "rating_overall": 3.8253968253968256,
+      "rating_food": 4.229508196721311,
+      "rating_service": 2.7288135593220337,
+      "rating_ambience": 3.8852459016393444,
+      "rating_value": 4.258064516129032
+    },
+    "2026-09": {
+      "rating_overall": 3.6363636363636362,
+      "rating_food": 4.2727272727272725,
+      "rating_service": 2.5,
+      "rating_ambience": 3.757575757575758,
+      "rating_value": 4.096774193548387
+    }
+  },
+  "survey_aspect_change": {
+    "rating_service": {
+      "previous": 4.0647482014388485,
+      "recent": 2.602836879432624,
+      "change": -1.4619113220062245
+    },
+    "rating_ambience": {
+      "previous": 3.9932432432432434,
+      "recent": 3.8489208633093526,
+      "change": -0.14432237993389085
+    },
+    "rating_value": {
+      "previous": 4.2620689655172415,
+      "recent": 4.198581560283688,
+      "change": -0.06348740523355367
+    },
+    "rating_food": {
+      "previous": 4.205479452054795,
+      "recent": 4.156028368794326,
+      "change": -0.0494510832604691
+    }
+  },
+  "reviews_cleaning": {
+    "rows_read": 200,
+    "duplicates_removed": 0,
+    "invalid_ratings": 0,
+    "texts_cleaned": 19,
+    "rows_kept": 200
+  },
+  "reviews": {
+    "n_reviews": 200,
+    "first_date": "2024-10-01",
+    "last_date": "2026-09-18",
+    "mean_rating": 4.23,
+    "distribution": {
+      "5": 106,
+      "4": 53,
+      "3": 27,
+      "2": 9,
+      "1": 5
+    },
+    "satisfied_share": 0.795,
+    "text_share": 0.4,
+    "recent_months": 3,
+    "recent_n": 29,
+    "recent_mean_rating": 3.5517241379310347,
+    "reply_rate": 0.335,
+    "recent_reply_rate": 0.0,
+    "last_owner_reply": "2026-06-21"
+  }
+}

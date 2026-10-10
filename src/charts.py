@@ -3,6 +3,7 @@
 Run with: python -m src.charts
 """
 
+import argparse
 from pathlib import Path
 
 import matplotlib
@@ -10,7 +11,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from src.load_data import load_google_reviews, load_survey_responses
+from src.load_data import SAMPLE_DIR, load_google_reviews, load_survey_responses
 from src.metrics import ASPECT_COLUMNS, RECENT_MONTHS, aspect_change, monthly_means, rating_distribution
 
 OUTPUT_DIR = Path(__file__).resolve().parent.parent / "examples" / "charts"
@@ -163,8 +164,18 @@ def write_charts(survey, reviews, output_dir=OUTPUT_DIR):
     ]
 
 
-if __name__ == "__main__":
-    survey, _ = load_survey_responses()
-    reviews, _ = load_google_reviews()
-    for chart_path in write_charts(survey, reviews):
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Write the report charts as PNG files.")
+    parser.add_argument("--survey", default=SAMPLE_DIR / "survey_responses.csv")
+    parser.add_argument("--reviews", default=SAMPLE_DIR / "google_reviews.csv")
+    parser.add_argument("--output-dir", default=OUTPUT_DIR)
+    args = parser.parse_args(argv)
+
+    survey, _ = load_survey_responses(args.survey)
+    reviews, _ = load_google_reviews(args.reviews)
+    for chart_path in write_charts(survey, reviews, args.output_dir):
         print(chart_path)
+
+
+if __name__ == "__main__":
+    main()

@@ -1,5 +1,7 @@
 """Tests for the report metrics."""
 
+import json
+
 import pandas as pd
 import pytest
 
@@ -60,9 +62,21 @@ def test_finds_planted_service_decline(survey):
     assert changes.drop(index="rating_service")["change"].abs().max() < 0.3
 
 
+def test_main_writes_json_for_given_files(tmp_path):
+    survey_path, reviews_path = gen.write_sample_data(tmp_path / "data", seed=7)
+    output = tmp_path / "out" / "metrics.json"
+    metrics.main(["--survey", str(survey_path), "--reviews", str(reviews_path), "--output", str(output)])
+    data = json.loads(output.read_text(encoding="utf-8"))
+    assert data["survey"]["n_responses"] == data["survey_cleaning"]["rows_kept"]
+    assert sum(data["survey_responses_per_month"].values()) == data["survey"]["n_responses"]
+    assert set(data["survey_aspect_change"]) == set(metrics.ASPECT_COLUMNS)
+    assert data["reviews"]["n_reviews"] == gen.N_GOOGLE_REVIEWS
+
+
 def test_finds_owner_stopped_replying(reviews):
     summary = metrics.review_summary(reviews)
     assert summary["recent_reply_rate"] < 0.1 < summary["reply_rate"]
     assert summary["recent_mean_rating"] < summary["mean_rating"] - 0.5
     assert summary["n_reviews"] == gen.N_GOOGLE_REVIEWS
+    assert gen.REVIEWS_START.date() <= summary["first_date"] < summary["last_date"] <= gen.END.date()
     assert sum(summary["distribution"].values()) == gen.N_GOOGLE_REVIEWS
