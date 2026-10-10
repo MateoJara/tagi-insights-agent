@@ -31,8 +31,14 @@ dan rutas, usa el dataset sintético: omite `--survey` y `--reviews` en los coma
    es algo concreto que el dueño puede atender ("tiempo de espera"), no una
    categoría amplia ("servicio"). Junta en un mismo tema las distintas formas de
    decir lo mismo, y usa el mismo tema para el elogio y la queja de una misma cosa
-   (el tipo los distingue). Lo normal son entre 8 y 20 temas, sin contar
-   `sin detalle`. Es una guía: no fusiones cosas distintas solo para no pasarte.
+   (el tipo los distingue).
+
+   **Máximo 20 temas**, sin contar `sin detalle`. Lo normal son entre 8 y 20. Si
+   te pasas, junta primero los temas con menos menciones que el dueño atendería
+   de la misma manera (por ejemplo, calor y mesas muy juntas en "comodidad del
+   local"; sugerencias sueltas de carta en "opciones en la carta"), y deja en la
+   descripción qué incluye. No juntes los temas con más menciones ni los detalles
+   pequeños. Cuenta los temas antes de escribir el archivo.
 
 4. **Busca los detalles pequeños**: algo que le cuesta poco al negocio y que el
    cliente nota. Puede ser un elogio (algo que conviene mantener) o una queja por
@@ -93,7 +99,8 @@ dan rutas, usa el dataset sintético: omite `--survey` y `--reviews` en los coma
 
 Un resumen corto para quien te llamó:
 
-- Los temas que definiste, con la descripción de cada uno.
+- Los temas que definiste, con la descripción de cada uno, y cuáles juntaste para
+  no pasar de 20.
 - Las tres quejas y los tres elogios más frecuentes, con las cifras de
   `comment_metrics.json`.
 - Los detalles pequeños que encontraste.

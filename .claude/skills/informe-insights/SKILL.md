@@ -63,9 +63,18 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 
    Ábrelo y revisa que se vea bien y que no haya errores.
 
-8. **Revisar.** Recorre el informe y los textos del tablero cifra por cifra y
-   compáralos con `metrics.json` y `comment_metrics.json`. Las citas de clientes se
-   copian tal cual, con sus errores. Corrige cualquier diferencia antes de entregar.
+8. **Pasar por el revisor.** Lanza el subagente `revisor` con las rutas de los CSV,
+   el informe, `insights.json` y la carpeta de comentarios. Recalcula cada cifra
+   por su cuenta y comprueba cada cita.
+
+   - Si devuelve `CON ERRORES`: corrige lo que señala y vuelve a lanzarlo. Si un
+     error es en realidad una diferencia de definición y no del documento, corrige
+     la definición donde esté escrita, no el veredicto.
+   - No se entrega nada hasta que devuelva `APROBADO`.
+   - Lee también sus observaciones: no bloquean, pero suelen señalar frases que
+     comparan cifras de periodos distintos.
+
+   Tú no reemplazas al revisor: quien redactó un documento no ve sus propios errores.
 
 ## Reglas
 
@@ -76,6 +85,9 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 - Junto a cada cifra importante, cuántas respuestas o reseñas hay detrás. Como hay
   preguntas sin responder, la base de cada cifra es menor que el total: tómala de
   `answered`, `previous_n` y `recent_n` en `metrics.json`, no del número de filas.
+- Al comparar un antes con un ahora, las dos cifras salen de periodos que no se
+  solapan: `previous_*` y `recent_*`. El total o histórico incluye lo reciente y
+  no sirve como "antes".
 - Lo marcado como [Criterio] en el archivo del sector se presenta como sugerencia.
   Lo marcado como [Evidencia] se cita como referencia de otros mercados, nunca como
   promesa de resultado.

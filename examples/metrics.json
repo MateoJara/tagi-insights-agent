@@ -138,8 +138,11 @@
     "recent_months": 3,
     "recent_n": 26,
     "recent_mean_rating": 3.3076923076923075,
+    "previous_n": 174,
+    "previous_mean_rating": 4.275862068965517,
     "reply_rate": 0.27,
     "recent_reply_rate": 0.07692307692307693,
+    "previous_reply_rate": 0.2988505747126437,
     "last_owner_reply": "2026-08-28"
   }
 }

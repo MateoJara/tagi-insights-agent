@@ -5,8 +5,8 @@
   "recent_months": 3,
   "topics": [
     {
-      "topic": "tamaño de porciones",
-      "description": "Cantidad de comida servida en el plato",
+      "topic": "tamaño de las porciones",
+      "description": "Porciones abundantes que llenan o platos que sirven menos",
       "small_detail": false,
       "n": 49,
       "previous_n": 28,
@@ -35,8 +35,8 @@
       }
     },
     {
-      "topic": "precio y valor",
-      "description": "Precios justos y relacion calidad-precio",
+      "topic": "precio",
+      "description": "Precios justos y buena relación calidad-precio o alzas de precio",
       "small_detail": false,
       "n": 45,
       "previous_n": 30,
@@ -66,7 +66,7 @@
     },
     {
       "topic": "tiempo de espera",
-      "description": "Demoras o rapidez para atender y entregar el pedido",
+      "description": "Demoras o rapidez para ser atendido y recibir el pedido",
       "small_detail": false,
       "n": 43,
       "previous_n": 18,
@@ -95,58 +95,8 @@
       }
     },
     {
-      "topic": "ambiente y decoración",
-      "description": "Decoración y sensación del local (acogedor tranquilo para conversar)",
-      "small_detail": false,
-      "n": 38,
-      "previous_n": 27,
-      "recent_n": 11,
-      "kinds": {
-        "praise": {
-          "n": 38,
-          "previous_n": 27,
-          "recent_n": 11,
-          "quotes": [
-            "Primera vez que vengo y me gustó mucho la decoración. Recomendado",
-            "El sitio es limpio y bonito!!",
-            "Como siempre, me gustó mucho la decoración"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "sabor de la comida",
-      "description": "Sabor sazon y punto de cocción de los platos",
-      "small_detail": false,
-      "n": 34,
-      "previous_n": 26,
-      "recent_n": 8,
-      "kinds": {
-        "praise": {
-          "n": 28,
-          "previous_n": 20,
-          "recent_n": 8,
-          "quotes": [
-            "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-            "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
-            "Como siempre, todo muy rico"
-          ]
-        },
-        "complaint": {
-          "n": 6,
-          "previous_n": 6,
-          "recent_n": 0,
-          "quotes": [
-            "La verdad la carne estaba dura",
-            "Antes era mejor, ahora a la comida le faltaba sabor",
-            "Esta vez el arroz estaba simple"
-          ]
-        }
-      }
-    },
-    {
       "topic": "trato del personal",
-      "description": "Amabilidad o mala actitud de quienes atienden",
+      "description": "Amabilidad o mala actitud de meseros y personal al atender",
       "small_detail": false,
       "n": 30,
       "previous_n": 18,
@@ -175,6 +125,36 @@
       }
     },
     {
+      "topic": "sabor de la comida",
+      "description": "Sabor y sazón de los platos",
+      "small_detail": false,
+      "n": 28,
+      "previous_n": 21,
+      "recent_n": 7,
+      "kinds": {
+        "praise": {
+          "n": 23,
+          "previous_n": 16,
+          "recent_n": 7,
+          "quotes": [
+            "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
+            "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
+            "Como siempre, todo muy rico"
+          ]
+        },
+        "complaint": {
+          "n": 5,
+          "previous_n": 5,
+          "recent_n": 0,
+          "quotes": [
+            "Antes era mejor, ahora a la comida le faltaba sabor",
+            "Esta vez el arroz estaba simple",
+            "El pedido llegó rapidísimo, pero el arroz estaba simple. Recomendado"
+          ]
+        }
+      }
+    },
+    {
       "topic": "sin detalle",
       "description": "Comentario sin información concreta",
       "small_detail": false,
@@ -198,7 +178,7 @@
     },
     {
       "topic": "galleta con el café",
-      "description": "Galleta de cortesía que acompaña el café o tinto",
+      "description": "Galleta de cortesía que acompaña el café o el tinto",
       "small_detail": true,
       "n": 19,
       "previous_n": 11,
@@ -217,8 +197,48 @@
       }
     },
     {
+      "topic": "ambiente del lugar",
+      "description": "Ambiente acogedor y tranquilo para almorzar y conversar",
+      "small_detail": false,
+      "n": 17,
+      "previous_n": 14,
+      "recent_n": 3,
+      "kinds": {
+        "praise": {
+          "n": 17,
+          "previous_n": 14,
+          "recent_n": 3,
+          "quotes": [
+            "La verdad buen ambiente para conversar",
+            "Como siempre, es un lugar tranquilo para almorzar, además uno queda lleno con el almuerzo. Recomendado",
+            "Vengo seguido y buen ambiente para conversar!!"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "decoración",
+      "description": "Decoración del local",
+      "small_detail": false,
+      "n": 11,
+      "previous_n": 6,
+      "recent_n": 5,
+      "kinds": {
+        "praise": {
+          "n": 11,
+          "previous_n": 6,
+          "recent_n": 5,
+          "quotes": [
+            "Primera vez que vengo y me gustó mucho la decoración. Recomendado",
+            "Como siempre, me gustó mucho la decoración",
+            "La verdad me gustó mucho la decoración. Recomendado"
+          ]
+        }
+      }
+    },
+    {
       "topic": "limpieza",
-      "description": "Aseo del local y los baños",
+      "description": "Limpieza del salón y de los baños",
       "small_detail": false,
       "n": 11,
       "previous_n": 8,
@@ -246,7 +266,7 @@
     },
     {
       "topic": "ruido y música",
-      "description": "Volumen de la música y del ruido en el local",
+      "description": "Volumen de la música y nivel de ruido en el salón",
       "small_detail": false,
       "n": 11,
       "previous_n": 5,
@@ -276,7 +296,7 @@
     },
     {
       "topic": "menú con código QR",
-      "description": "Pedido de tener el menú en un código QR",
+      "description": "Menú consultable con un código QR",
       "small_detail": false,
       "n": 10,
       "previous_n": 2,
@@ -295,8 +315,8 @@
       }
     },
     {
-      "topic": "personal en hora del almuerzo",
-      "description": "Pedido de más personal en la hora pico del almuerzo",
+      "topic": "personal en el almuerzo",
+      "description": "Más personal a la hora del almuerzo",
       "small_detail": false,
       "n": 8,
       "previous_n": 3,
@@ -315,37 +335,8 @@
       }
     },
     {
-      "topic": "espacio y comodidad",
-      "description": "Distribución de mesas y temperatura del local",
-      "small_detail": false,
-      "n": 7,
-      "previous_n": 5,
-      "recent_n": 2,
-      "kinds": {
-        "complaint": {
-          "n": 4,
-          "previous_n": 3,
-          "recent_n": 1,
-          "quotes": [
-            "Hacía mucho calor adentro",
-            "Esta vez hacia mucho calor adentro",
-            "Las mesas estan muy juntas"
-          ]
-        },
-        "suggestion": {
-          "n": 3,
-          "previous_n": 2,
-          "recent_n": 1,
-          "quotes": [
-            "Una idea: podrían poner más mesas afuera",
-            "Podrían poner más mesas afuera. gracias"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "abrir los domingos",
-      "description": "Pedido de abrir también los domingos",
+      "topic": "horario de domingos",
+      "description": "Abrir los domingos",
       "small_detail": false,
       "n": 6,
       "previous_n": 5,
@@ -365,7 +356,7 @@
     },
     {
       "topic": "menú infantil",
-      "description": "Pedido de un menú para niños",
+      "description": "Menú pensado para niños",
       "small_detail": false,
       "n": 6,
       "previous_n": 4,
@@ -384,8 +375,36 @@
       }
     },
     {
-      "topic": "errores en pedido o cuenta",
-      "description": "Platos equivocados o cobros que no corresponden",
+      "topic": "punto de la carne",
+      "description": "Cocción de la carne en su punto o dura",
+      "small_detail": false,
+      "n": 6,
+      "previous_n": 5,
+      "recent_n": 1,
+      "kinds": {
+        "praise": {
+          "n": 5,
+          "previous_n": 4,
+          "recent_n": 1,
+          "quotes": [
+            "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!",
+            "La carne llegó en su punto. También la música está a un volumen agradable",
+            "Como siempre, la carne llegó en su punto"
+          ]
+        },
+        "complaint": {
+          "n": 1,
+          "previous_n": 1,
+          "recent_n": 0,
+          "quotes": [
+            "La verdad la carne estaba dura"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "exactitud del pedido",
+      "description": "Pedidos equivocados o cuentas con cobros que no corresponden",
       "small_detail": false,
       "n": 5,
       "previous_n": 2,
@@ -404,8 +423,36 @@
       }
     },
     {
+      "topic": "mesas y espacio",
+      "description": "Distribución de las mesas y espacio para sentarse",
+      "small_detail": false,
+      "n": 5,
+      "previous_n": 4,
+      "recent_n": 1,
+      "kinds": {
+        "complaint": {
+          "n": 2,
+          "previous_n": 2,
+          "recent_n": 0,
+          "quotes": [
+            "Las mesas estan muy juntas",
+            "Las mesas están muy juntas"
+          ]
+        },
+        "suggestion": {
+          "n": 3,
+          "previous_n": 2,
+          "recent_n": 1,
+          "quotes": [
+            "Una idea: podrían poner más mesas afuera",
+            "Podrían poner más mesas afuera. gracias"
+          ]
+        }
+      }
+    },
+    {
       "topic": "opciones vegetarianas",
-      "description": "Pedido de más platos vegetarianos",
+      "description": "Más platos vegetarianos en el menú",
       "small_detail": false,
       "n": 5,
       "previous_n": 3,
@@ -425,7 +472,7 @@
     },
     {
       "topic": "pago con transferencia",
-      "description": "Pedido de poder pagar por transferencia",
+      "description": "Poder pagar por transferencia",
       "small_detail": false,
       "n": 5,
       "previous_n": 3,
@@ -445,7 +492,7 @@
     },
     {
       "topic": "domicilios",
-      "description": "Pedido de ofrecer entrega a domicilio",
+      "description": "Ofrecer servicio de domicilios",
       "small_detail": false,
       "n": 4,
       "previous_n": 2,
@@ -464,8 +511,8 @@
       }
     },
     {
-      "topic": "frescura de ingredientes",
-      "description": "Que los ingredientes se noten frescos",
+      "topic": "ingredientes frescos",
+      "description": "Frescura de los ingredientes con que cocinan",
       "small_detail": false,
       "n": 4,
       "previous_n": 3,
@@ -485,7 +532,7 @@
     },
     {
       "topic": "reservas",
-      "description": "Pedido de poder reservar mesa",
+      "description": "Recibir reservas de mesa",
       "small_detail": false,
       "n": 4,
       "previous_n": 1,
@@ -505,7 +552,7 @@
     },
     {
       "topic": "jugos sin azúcar",
-      "description": "Pedido de jugos sin azúcar",
+      "description": "Jugos sin azúcar en la carta",
       "small_detail": false,
       "n": 3,
       "previous_n": 2,
@@ -540,6 +587,25 @@
           ]
         }
       }
+    },
+    {
+      "topic": "temperatura del local",
+      "description": "Calor dentro del local",
+      "small_detail": false,
+      "n": 2,
+      "previous_n": 1,
+      "recent_n": 1,
+      "kinds": {
+        "complaint": {
+          "n": 2,
+          "previous_n": 1,
+          "recent_n": 1,
+          "quotes": [
+            "Hacía mucho calor adentro",
+            "Esta vez hacia mucho calor adentro"
+          ]
+        }
+      }
     }
   ],
   "top_complaints": [
@@ -568,19 +634,7 @@
       ]
     },
     {
-      "topic": "sabor de la comida",
-      "small_detail": false,
-      "n": 6,
-      "previous_n": 6,
-      "recent_n": 0,
-      "quotes": [
-        "La verdad la carne estaba dura",
-        "Antes era mejor, ahora a la comida le faltaba sabor",
-        "Esta vez el arroz estaba simple"
-      ]
-    },
-    {
-      "topic": "errores en pedido o cuenta",
+      "topic": "exactitud del pedido",
       "small_detail": false,
       "n": 5,
       "previous_n": 2,
@@ -604,19 +658,19 @@
       ]
     },
     {
-      "topic": "espacio y comodidad",
+      "topic": "sabor de la comida",
       "small_detail": false,
-      "n": 4,
-      "previous_n": 3,
-      "recent_n": 1,
+      "n": 5,
+      "previous_n": 5,
+      "recent_n": 0,
       "quotes": [
-        "Hacía mucho calor adentro",
-        "Esta vez hacia mucho calor adentro",
-        "Las mesas estan muy juntas"
+        "Antes era mejor, ahora a la comida le faltaba sabor",
+        "Esta vez el arroz estaba simple",
+        "El pedido llegó rapidísimo, pero el arroz estaba simple. Recomendado"
       ]
     },
     {
-      "topic": "precio y valor",
+      "topic": "precio",
       "small_detail": false,
       "n": 4,
       "previous_n": 4,
@@ -628,7 +682,7 @@
       ]
     },
     {
-      "topic": "tamaño de porciones",
+      "topic": "tamaño de las porciones",
       "small_detail": false,
       "n": 3,
       "previous_n": 2,
@@ -637,6 +691,17 @@
         "Como siempre, muy buena relación calidad-precio, pero cada vez sirven menos. volveré",
         "Esta vez la porcion fue mas pequeña que otras veces",
         "La verdad la porción fue más pequeña que otras veces"
+      ]
+    },
+    {
+      "topic": "mesas y espacio",
+      "small_detail": false,
+      "n": 2,
+      "previous_n": 2,
+      "recent_n": 0,
+      "quotes": [
+        "Las mesas estan muy juntas",
+        "Las mesas están muy juntas"
       ]
     },
     {
@@ -651,6 +716,17 @@
       ]
     },
     {
+      "topic": "temperatura del local",
+      "small_detail": false,
+      "n": 2,
+      "previous_n": 1,
+      "recent_n": 1,
+      "quotes": [
+        "Hacía mucho calor adentro",
+        "Esta vez hacia mucho calor adentro"
+      ]
+    },
+    {
       "topic": "limpieza",
       "small_detail": false,
       "n": 1,
@@ -659,11 +735,21 @@
       "quotes": [
         "El personal es muy querido, pero el baño no estaba limpio. volveré"
       ]
+    },
+    {
+      "topic": "punto de la carne",
+      "small_detail": false,
+      "n": 1,
+      "previous_n": 1,
+      "recent_n": 0,
+      "quotes": [
+        "La verdad la carne estaba dura"
+      ]
     }
   ],
   "top_praise": [
     {
-      "topic": "tamaño de porciones",
+      "topic": "tamaño de las porciones",
       "small_detail": false,
       "n": 46,
       "previous_n": 26,
@@ -675,7 +761,7 @@
       ]
     },
     {
-      "topic": "precio y valor",
+      "topic": "precio",
       "small_detail": false,
       "n": 41,
       "previous_n": 26,
@@ -687,23 +773,11 @@
       ]
     },
     {
-      "topic": "ambiente y decoración",
-      "small_detail": false,
-      "n": 38,
-      "previous_n": 27,
-      "recent_n": 11,
-      "quotes": [
-        "Primera vez que vengo y me gustó mucho la decoración. Recomendado",
-        "El sitio es limpio y bonito!!",
-        "Como siempre, me gustó mucho la decoración"
-      ]
-    },
-    {
       "topic": "sabor de la comida",
       "small_detail": false,
-      "n": 28,
-      "previous_n": 20,
-      "recent_n": 8,
+      "n": 23,
+      "previous_n": 16,
+      "recent_n": 7,
       "quotes": [
         "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
         "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
@@ -747,6 +821,30 @@
       ]
     },
     {
+      "topic": "ambiente del lugar",
+      "small_detail": false,
+      "n": 17,
+      "previous_n": 14,
+      "recent_n": 3,
+      "quotes": [
+        "La verdad buen ambiente para conversar",
+        "Como siempre, es un lugar tranquilo para almorzar, además uno queda lleno con el almuerzo. Recomendado",
+        "Vengo seguido y buen ambiente para conversar!!"
+      ]
+    },
+    {
+      "topic": "decoración",
+      "small_detail": false,
+      "n": 11,
+      "previous_n": 6,
+      "recent_n": 5,
+      "quotes": [
+        "Primera vez que vengo y me gustó mucho la decoración. Recomendado",
+        "Como siempre, me gustó mucho la decoración",
+        "La verdad me gustó mucho la decoración. Recomendado"
+      ]
+    },
+    {
       "topic": "limpieza",
       "small_detail": false,
       "n": 10,
@@ -771,7 +869,19 @@
       ]
     },
     {
-      "topic": "frescura de ingredientes",
+      "topic": "punto de la carne",
+      "small_detail": false,
+      "n": 5,
+      "previous_n": 4,
+      "recent_n": 1,
+      "quotes": [
+        "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!",
+        "La carne llegó en su punto. También la música está a un volumen agradable",
+        "Como siempre, la carne llegó en su punto"
+      ]
+    },
+    {
+      "topic": "ingredientes frescos",
       "small_detail": false,
       "n": 4,
       "previous_n": 3,
@@ -797,7 +907,7 @@
       ]
     },
     {
-      "topic": "personal en hora del almuerzo",
+      "topic": "personal en el almuerzo",
       "small_detail": false,
       "n": 8,
       "previous_n": 3,
@@ -809,7 +919,7 @@
       ]
     },
     {
-      "topic": "abrir los domingos",
+      "topic": "horario de domingos",
       "small_detail": false,
       "n": 6,
       "previous_n": 5,
@@ -881,17 +991,6 @@
       ]
     },
     {
-      "topic": "espacio y comodidad",
-      "small_detail": false,
-      "n": 3,
-      "previous_n": 2,
-      "recent_n": 1,
-      "quotes": [
-        "Una idea: podrían poner más mesas afuera",
-        "Podrían poner más mesas afuera. gracias"
-      ]
-    },
-    {
       "topic": "jugos sin azúcar",
       "small_detail": false,
       "n": 3,
@@ -901,12 +1000,23 @@
         "Estaría bien tener jugos sin azúcar",
         "Como sugerencia, estaría bien tener jugos sin azúcar"
       ]
+    },
+    {
+      "topic": "mesas y espacio",
+      "small_detail": false,
+      "n": 3,
+      "previous_n": 2,
+      "recent_n": 1,
+      "quotes": [
+        "Una idea: podrían poner más mesas afuera",
+        "Podrían poner más mesas afuera. gracias"
+      ]
     }
   ],
   "small_details": [
     {
       "topic": "galleta con el café",
-      "description": "Galleta de cortesía que acompaña el café o tinto",
+      "description": "Galleta de cortesía que acompaña el café o el tinto",
       "small_detail": true,
       "n": 19,
       "previous_n": 11,

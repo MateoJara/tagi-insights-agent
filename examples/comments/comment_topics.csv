@@ -1,24 +1,27 @@
 topic,description,small_detail
-tiempo de espera,Demoras o rapidez para atender y entregar el pedido,false
-trato del personal,Amabilidad o mala actitud de quienes atienden,false
+tiempo de espera,Demoras o rapidez para ser atendido y recibir el pedido,false
+trato del personal,Amabilidad o mala actitud de meseros y personal al atender,false
 saludo y agradecimiento,Que el personal salude y agradezca al cliente,true
-precio y valor,Precios justos y relacion calidad-precio,false
-tamaño de porciones,Cantidad de comida servida en el plato,false
-sabor de la comida,Sabor sazon y punto de cocción de los platos,false
-frescura de ingredientes,Que los ingredientes se noten frescos,false
-ambiente y decoración,Decoración y sensación del local (acogedor tranquilo para conversar),false
-limpieza,Aseo del local y los baños,false
-ruido y música,Volumen de la música y del ruido en el local,false
-espacio y comodidad,Distribución de mesas y temperatura del local,false
-errores en pedido o cuenta,Platos equivocados o cobros que no corresponden,false
-galleta con el café,Galleta de cortesía que acompaña el café o tinto,true
-opciones vegetarianas,Pedido de más platos vegetarianos,false
-menú infantil,Pedido de un menú para niños,false
-menú con código QR,Pedido de tener el menú en un código QR,false
-domicilios,Pedido de ofrecer entrega a domicilio,false
-reservas,Pedido de poder reservar mesa,false
-abrir los domingos,Pedido de abrir también los domingos,false
-pago con transferencia,Pedido de poder pagar por transferencia,false
-jugos sin azúcar,Pedido de jugos sin azúcar,false
-personal en hora del almuerzo,Pedido de más personal en la hora pico del almuerzo,false
+galleta con el café,Galleta de cortesía que acompaña el café o el tinto,true
+precio,Precios justos y buena relación calidad-precio o alzas de precio,false
+tamaño de las porciones,Porciones abundantes que llenan o platos que sirven menos,false
+sabor de la comida,Sabor y sazón de los platos,false
+punto de la carne,Cocción de la carne en su punto o dura,false
+ingredientes frescos,Frescura de los ingredientes con que cocinan,false
+ambiente del lugar,Ambiente acogedor y tranquilo para almorzar y conversar,false
+decoración,Decoración del local,false
+limpieza,Limpieza del salón y de los baños,false
+ruido y música,Volumen de la música y nivel de ruido en el salón,false
+mesas y espacio,Distribución de las mesas y espacio para sentarse,false
+temperatura del local,Calor dentro del local,false
+exactitud del pedido,Pedidos equivocados o cuentas con cobros que no corresponden,false
+opciones vegetarianas,Más platos vegetarianos en el menú,false
+menú infantil,Menú pensado para niños,false
+menú con código QR,Menú consultable con un código QR,false
+pago con transferencia,Poder pagar por transferencia,false
+horario de domingos,Abrir los domingos,false
+reservas,Recibir reservas de mesa,false
+domicilios,Ofrecer servicio de domicilios,false
+jugos sin azúcar,Jugos sin azúcar en la carta,false
+personal en el almuerzo,Más personal a la hora del almuerzo,false
 sin detalle,Comentario sin información concreta,false

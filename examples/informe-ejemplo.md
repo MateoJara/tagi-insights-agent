@@ -64,7 +64,7 @@ bajaron a 3.3, y solo 8% de las 26 tiene respuesta suya.
 ## Qué dicen los comentarios
 
 Se analizaron 290 comentarios del formulario y de Google; 125 son de los últimos
-tres meses. De ellos, 21 no dicen nada concreto ("Excelente", "Muy mal") y se
+tres meses. De los 290, 21 no dicen nada concreto ("Excelente", "Muy mal") y se
 cuentan aparte.
 
 **De qué se quejan**
@@ -73,18 +73,21 @@ cuentan aparte.
 |---|---|---|---|
 | Tiempo de espera | 23 | 1 | 22 |
 | Trato del personal | 11 | 1 | 10 |
-| Sabor de la comida | 6 | 6 | 0 |
+| Exactitud del pedido | 5 | 2 | 3 |
 
-Las quejas por espera son casi todas recientes y coinciden con la caída de la
-calificación de servicio. Es la pista más concreta sobre qué arreglar:
+El tercer lugar es un empate en 5 menciones: pedidos o cuentas equivocados, ruido y
+música (2 recientes) y sabor de la comida (ninguna reciente).
+
+Las quejas por espera y por el trato son casi todas recientes y coinciden con la
+caída de la calificación de servicio. Es la pista más concreta sobre qué arreglar:
 
 > "Lástima, el pedido tardó casi una hora. No creo que vuelva"
 
 > "Pasaron 20 minutos antes de que alguien se acercara a la mesa"
 
 El mismo tema aparecía antes como elogio: 20 comentarios destacan la rapidez, pero
-solo 3 son de los últimos tres meses. Las quejas por el sabor, en cambio, son todas
-anteriores: no hay ninguna reciente.
+solo 3 son de los últimos tres meses. Con el trato pasa igual: 19 elogios, solo 2
+recientes.
 
 **Qué valoran**
 
@@ -92,7 +95,7 @@ anteriores: no hay ninguna reciente.
 |---|---|---|
 | Tamaño de porciones | 46 | 20 |
 | Precio y valor | 41 | 15 |
-| Ambiente y decoración | 38 | 11 |
+| Sabor de la comida | 23 | 7 |
 
 **Detalles pequeños que sus clientes notan**
 
@@ -114,7 +117,7 @@ anteriores: no hay ninguna reciente.
 - **Precio:** 4.2 de 5. Es su aspecto mejor calificado; pasó de 4.3 a 4.2. En los
   comentarios es el segundo elogio más frecuente (41 menciones).
 - **Comida:** 4.2 de 5. Pasó de 4.2 a 4.1. Lo que más elogian es el tamaño de las
-  porciones (46 menciones).
+  porciones (46 menciones); el sabor suma 23 elogios.
 - **Ambiente:** 3.9 de 5. Pasó de 4.0 a 3.8.
 
 Sus clientes siguen valorando lo que sirve y lo que cobra. Al corregir la atención,
@@ -126,8 +129,8 @@ no toque la carta ni los precios.
    único aspecto que cayó (de 4.0 a 2.6) y arrastra la calificación general, que
    bajó de 4.1 en junio a 3.6 en septiembre. La espera es la queja más repetida: 23
    menciones, 22 de ellas recientes.
-2. **Volver a responder las reseñas.** Pasó de responder 27% a 8%, justo cuando
-   llegaron las más críticas.
+2. **Volver a responder las reseñas.** Antes respondía 30% (base: 174 reseñas) y en
+   los últimos tres meses 8% (base: 26), justo cuando llegaron las más críticas.
 
 ## 5. Plan de acción
 

@@ -100,8 +100,13 @@ def review_summary(reviews, months=RECENT_MONTHS):
         "recent_months": months,
         "recent_n": int(recent.sum()),
         "recent_mean_rating": _mean(reviews.loc[recent, "rating"]),
+        # "previous" excludes the recent period, so it is the right side of a
+        # before/now comparison; the overall figures above include both.
+        "previous_n": int((~recent).sum()),
+        "previous_mean_rating": _mean(reviews.loc[~recent, "rating"]),
         "reply_rate": float(reviews["owner_replied"].mean()),
         "recent_reply_rate": float(reviews.loc[recent, "owner_replied"].mean()),
+        "previous_reply_rate": float(reviews.loc[~recent, "owner_replied"].mean()) if (~recent).any() else None,
         "last_owner_reply": None if pd.isna(last_reply) else last_reply.date(),
     }
 

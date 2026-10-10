@@ -88,5 +88,9 @@ def test_finds_owner_stopped_replying(reviews):
     assert summary["recent_reply_rate"] < 0.1 < summary["reply_rate"]
     assert summary["recent_mean_rating"] < summary["mean_rating"] - 0.5
     assert summary["n_reviews"] == gen.N_GOOGLE_REVIEWS
+    assert summary["previous_n"] + summary["recent_n"] == summary["n_reviews"]
+    # The overall rate mixes both periods, so it sits between "previous" and "recent".
+    assert summary["recent_reply_rate"] < summary["reply_rate"] < summary["previous_reply_rate"]
+    assert summary["recent_mean_rating"] < summary["mean_rating"] < summary["previous_mean_rating"]
     assert gen.REVIEWS_START.date() <= summary["first_date"] < summary["last_date"] <= gen.END.date()
     assert sum(summary["distribution"].values()) == gen.N_GOOGLE_REVIEWS
