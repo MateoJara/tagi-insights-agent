@@ -1,0 +1,4 @@
+pandas>=3.0,<4
+matplotlib>=3.11,<4
+plotly>=7.1,<8
+pytest>=9.1,<10
