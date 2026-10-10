@@ -5,8 +5,14 @@ description: Genera el informe de insights de Tagi para un negocio a partir de l
 
 # Informe de insights
 
-El lector es el dueño del negocio: ocupado, no técnico, quiere saber qué hacer.
-El informe vale por el plan de acción, no por la cantidad de cifras.
+Se producen dos cosas a partir de las mismas cifras:
+
+- **El tablero** (HTML interactivo): es lo que recibe el dueño del negocio. Ocupado,
+  no técnico, lo abre en el celular. Visual y con pocas palabras.
+- **El informe** (Markdown): documento interno de Tagi con el razonamiento completo.
+  De él salen los textos cortos del tablero y es donde se verifica cada cifra.
+
+Los dos valen por el plan de acción, no por la cantidad de cifras.
 
 ## Entradas
 
@@ -46,10 +52,21 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
    `references/sector-<sector>.md`. Hoy solo existe `sector-restaurantes.md`. Si el
    negocio es de otro sector, dilo y pregunta antes de seguir.
 
-5. **Redactar** siguiendo la estructura y el tono de `references/informe.md`.
+5. **Redactar el informe** siguiendo la estructura y el tono de `references/informe.md`.
 
-6. **Revisar.** Recorre el informe cifra por cifra y compárala con `metrics.json`.
-   Corrige cualquier diferencia antes de entregarlo.
+6. **Escribir los textos del tablero** en `<carpeta>/insights.json`, con los campos
+   y límites de `references/informe.md`. Son un resumen del informe, no texto nuevo.
+
+7. **Generar el tablero.** Las cifras las pone el script; no se escriben a mano.
+
+   ```
+   .venv\Scripts\python -m src.dashboard --survey <csv> --reviews <csv> --insights <carpeta>/insights.json --output <carpeta>/dashboard.html
+   ```
+
+   Ábrelo y revisa que se vea bien y que no haya errores.
+
+8. **Revisar.** Recorre el informe y los textos del tablero cifra por cifra y
+   compáralos con `metrics.json`. Corrige cualquier diferencia antes de entregar.
 
 ## Reglas
 
@@ -57,7 +74,9 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 - Los datos dicen qué pasó, no por qué. Las causas se escriben como hipótesis para
   confirmar con el dueño.
 - Máximo tres prioridades.
-- Junto a cada cifra importante, cuántas respuestas o reseñas hay detrás.
+- Junto a cada cifra importante, cuántas respuestas o reseñas hay detrás. Como hay
+  preguntas sin responder, la base de cada cifra es menor que el total: tómala de
+  `answered`, `previous_n` y `recent_n` en `metrics.json`, no del número de filas.
 - Lo marcado como [Criterio] en el archivo del sector se presenta como sugerencia.
   Lo marcado como [Evidencia] se cita como referencia de otros mercados, nunca como
   promesa de resultado.
@@ -65,6 +84,11 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 
 ## Salida
 
-Un archivo Markdown con las gráficas enlazadas por ruta relativa. Con el dataset
-sintético: `examples/informe-ejemplo.md`. Con un cliente real:
-`data/private/<cliente>/informe.md`.
+| | Dataset sintético | Cliente real |
+|---|---|---|
+| Tablero (se entrega) | `examples/dashboard-ejemplo.html` | `data/private/<cliente>/dashboard.html` |
+| Informe (interno) | `examples/informe-ejemplo.md` | `data/private/<cliente>/informe.md` |
+| Textos del tablero | `examples/insights.json` | `data/private/<cliente>/insights.json` |
+
+El informe enlaza las gráficas PNG por ruta relativa. El tablero es un solo archivo
+que abre sin internet.

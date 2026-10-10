@@ -1,6 +1,8 @@
 # Informe de insights: Restaurante Demo
 
 > Ejemplo generado con datos sintéticos. El restaurante y sus clientes no existen.
+> Este es el documento interno de Tagi. Lo que recibe el dueño es el tablero:
+> [dashboard-ejemplo.html](dashboard-ejemplo.html).
 
 **Periodo del formulario:** abril a septiembre de 2026 · 294 respuestas
 **Reseñas de Google:** octubre de 2024 a septiembre de 2026 · 200 reseñas
@@ -16,9 +18,9 @@ responder las reseñas, que están sin respuesta desde junio.
 
 | Métrica | Valor | Lectura |
 |---|---|---|
-| Calificación general (formulario) | 3.9 de 5 | Aceptable, pero por debajo de 4.0. Base: 294 respuestas. |
-| Clientes satisfechos | 71% | Siete de cada diez califican la visita con 4 o 5. |
-| Recomendación (NPS) | -4 | Hay un poco más de clientes que no lo recomendarían que clientes que sí. |
+| Calificación general (formulario) | 3.9 de 5 | Aceptable, pero por debajo de 4.0. Base: 287 respuestas. |
+| Clientes satisfechos | 71% | Siete de cada diez califican la visita con 4 o 5. Base: 287 respuestas. |
+| Recomendación (NPS) | -4 | Hay un poco más de clientes que no lo recomendarían que clientes que sí. Base: 288 respuestas. |
 | Calificación en Google | 4.2 de 5 | Sólida, sobre el umbral de 4.0. Base: 200 reseñas. |
 | Google, últimos 3 meses | 3.6 de 5 | Por debajo de 4.0. Base: 29 reseñas. Es la alerta principal. |
 | Reseñas respondidas | 34% histórico, 0% reciente | Última respuesta: 21 de junio de 2026. |
@@ -36,7 +38,8 @@ tres meses y 68% solo considera negocios de 4 estrellas o más.
 ## 2. Qué cambió
 
 La atención es lo único que cambió de forma importante. Pasó de 4.1 a 2.6 en los
-últimos tres meses, una caída de 1.5 puntos (base: 145 respuestas recientes).
+últimos tres meses, una caída de 1.5 puntos (base: 139 respuestas antes y 141 en
+los últimos tres meses).
 
 La caída fue de un mes a otro, no gradual:
 

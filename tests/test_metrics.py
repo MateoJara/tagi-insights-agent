@@ -62,6 +62,16 @@ def test_finds_planted_service_decline(survey):
     assert changes.drop(index="rating_service")["change"].abs().max() < 0.3
 
 
+def test_answer_counts_exclude_skipped_questions(survey):
+    summary = metrics.survey_summary(survey)
+    answered = summary["answered"]
+    assert answered["rating_service"] == survey["rating_service"].notna().sum()
+    assert all(n < summary["n_responses"] for n in answered.values())
+    changes = metrics.aspect_change(survey)
+    for aspect in metrics.ASPECT_COLUMNS:
+        assert changes.loc[aspect, "previous_n"] + changes.loc[aspect, "recent_n"] == answered[aspect]
+
+
 def test_main_writes_json_for_given_files(tmp_path):
     survey_path, reviews_path = gen.write_sample_data(tmp_path / "data", seed=7)
     output = tmp_path / "out" / "metrics.json"

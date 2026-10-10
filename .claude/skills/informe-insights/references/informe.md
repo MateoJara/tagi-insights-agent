@@ -1,4 +1,8 @@
-# Estructura y tono del informe
+# Estructura y tono del informe y del tablero
+
+El informe es el documento interno de Tagi; el tablero es lo que recibe el dueño.
+El tono y el formato de cifras de abajo aplican a los dos. Las secciones del
+informe están primero; los textos del tablero, al final.
 
 ## Tono
 
@@ -65,3 +69,28 @@ personal en la fecha de la caída). Dos a cuatro preguntas.
 ### Sobre estos datos
 Cuántas filas se leyeron, cuántos duplicados se quitaron, qué no puede decir este
 informe. Breve.
+
+## Textos del tablero (`insights.json`)
+
+El tablero muestra las cifras por su cuenta. Este archivo solo trae los textos, y
+cada uno resume algo que ya está en el informe. Todos los campos son obligatorios.
+
+| Campo | Qué es | Límite |
+|---|---|---|
+| `business_name` | Nombre del negocio | |
+| `headline` | Segunda mitad del título, en minúscula | 8 palabras |
+| `summary` | El resumen del informe | 2 frases |
+| `alert` | Lo más urgente, con su cifra. Empieza en minúscula porque sigue a "Atención prioritaria:". Texto vacío si no hay nada urgente | 1 frase |
+| `actions` | Las acciones del plan | 3 a 6 |
+| `next_level` | La sección "El siguiente nivel" | 3 frases |
+| `questions` | Las preguntas para el dueño | 2 a 4 |
+| `data_note` | Qué no puede decir el tablero | 2 frases |
+
+Cada acción tiene:
+
+- `horizon`: `this_week`, `this_month` u `ongoing`.
+- `title`: empieza con un verbo, máximo 6 palabras.
+- `text`: qué hacer, máximo 2 frases.
+- `why`: la cifra que la justifica, en una línea corta.
+
+Ejemplo completo: `examples/insights.json`.

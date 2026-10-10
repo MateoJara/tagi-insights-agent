@@ -53,6 +53,9 @@ def aspect_change(survey, months=RECENT_MONTHS):
     ratings = survey[list(ASPECT_COLUMNS)].astype(float)
     table = pd.DataFrame({"previous": ratings[~recent].mean(), "recent": ratings[recent].mean()})
     table["change"] = table["recent"] - table["previous"]
+    # Diners can skip questions, so each mean has its own number of answers behind it.
+    table["previous_n"] = ratings[~recent].count()
+    table["recent_n"] = ratings[recent].count()
     return table.sort_values("change")
 
 
@@ -61,6 +64,10 @@ def survey_summary(survey, months=RECENT_MONTHS):
     return {
         "n_responses": len(survey),
         "recent_n": int(recent_mask(survey["submitted_at"], months).sum()),
+        "answered": {
+            column: int(survey[column].notna().sum())
+            for column in ("rating_overall", *ASPECT_COLUMNS, "would_recommend")
+        },
         "first_date": survey["submitted_at"].min().date(),
         "last_date": survey["submitted_at"].max().date(),
         "mean_overall": _mean(survey["rating_overall"]),
@@ -110,7 +117,16 @@ def build_metrics(survey_path, reviews_path, months=RECENT_MONTHS):
         "survey": survey_summary(survey, months),
         "survey_responses_per_month": {str(m): int(n) for m, n in responses_per_month.items()},
         "survey_monthly_means": {str(m): row.to_dict() for m, row in monthly.iterrows()},
-        "survey_aspect_change": aspect_change(survey, months).to_dict(orient="index"),
+        "survey_aspect_change": {
+            aspect: {
+                "previous": float(row["previous"]),
+                "recent": float(row["recent"]),
+                "change": float(row["change"]),
+                "previous_n": int(row["previous_n"]),
+                "recent_n": int(row["recent_n"]),
+            }
+            for aspect, row in aspect_change(survey, months).iterrows()
+        },
         "reviews_cleaning": {**vars(reviews_report), "rows_kept": reviews_report.rows_kept},
         "reviews": review_summary(reviews, months),
     }

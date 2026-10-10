@@ -75,7 +75,7 @@ def plot_rating_distribution(reviews, path):
         ax.text(
             count + counts.max() * 0.015,
             position,
-            f"{count} · {count / total:.0%}",
+            f"{count} · {count / total:.1%}",
             va="center",
             fontsize=10,
             color=INK,
