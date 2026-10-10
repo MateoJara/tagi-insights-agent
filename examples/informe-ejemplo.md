@@ -61,10 +61,60 @@ Los otros tres aspectos casi no se movieron:
 El mismo deterioro ya es visible para el público: las reseñas recientes de Google
 bajaron a 3.3, y solo 8% de las 26 tiene respuesta suya.
 
+## Qué dicen los comentarios
+
+Se analizaron 290 comentarios del formulario y de Google; 125 son de los últimos
+tres meses. De ellos, 21 no dicen nada concreto ("Excelente", "Muy mal") y se
+cuentan aparte.
+
+**De qué se quejan**
+
+| Queja | Menciones | Antes | Últimos 3 meses |
+|---|---|---|---|
+| Tiempo de espera | 23 | 1 | 22 |
+| Trato del personal | 11 | 1 | 10 |
+| Sabor de la comida | 6 | 6 | 0 |
+
+Las quejas por espera son casi todas recientes y coinciden con la caída de la
+calificación de servicio. Es la pista más concreta sobre qué arreglar:
+
+> "Lástima, el pedido tardó casi una hora. No creo que vuelva"
+
+> "Pasaron 20 minutos antes de que alguien se acercara a la mesa"
+
+El mismo tema aparecía antes como elogio: 20 comentarios destacan la rapidez, pero
+solo 3 son de los últimos tres meses. Las quejas por el sabor, en cambio, son todas
+anteriores: no hay ninguna reciente.
+
+**Qué valoran**
+
+| Elogio | Menciones | Últimos 3 meses |
+|---|---|---|
+| Tamaño de porciones | 46 | 20 |
+| Precio y valor | 41 | 15 |
+| Ambiente y decoración | 38 | 11 |
+
+**Detalles pequeños que sus clientes notan**
+
+- **La galleta con el café:** 19 elogios (11 antes, 8 en los últimos tres meses).
+  Cuesta poco y la mencionan sin que nadie pregunte: "El detalle de la galleta con
+  el tinto me pareció muy lindo. volveré". Conviene mantenerla.
+- **El saludo y el agradecimiento:** 2 quejas, ambas recientes: "Nadie saluda ni da
+  las gracias. Ojalá mejoren". Son pocas menciones, pero es de lo más fácil de recuperar.
+
+**Lo que le sugieren**
+
+- Menú con código QR: 10 menciones, 8 de ellas recientes.
+- Más personal a la hora del almuerzo: 8 menciones, 5 recientes. Apunta en la misma
+  dirección que las quejas por espera.
+- Abrir los domingos: 6. Menú infantil: 6.
+
 ## 3. Qué funciona y hay que proteger
 
-- **Precio:** 4.2 de 5. Es su aspecto mejor calificado; pasó de 4.3 a 4.2.
-- **Comida:** 4.2 de 5. Pasó de 4.2 a 4.1.
+- **Precio:** 4.2 de 5. Es su aspecto mejor calificado; pasó de 4.3 a 4.2. En los
+  comentarios es el segundo elogio más frecuente (41 menciones).
+- **Comida:** 4.2 de 5. Pasó de 4.2 a 4.1. Lo que más elogian es el tamaño de las
+  porciones (46 menciones).
 - **Ambiente:** 3.9 de 5. Pasó de 4.0 a 3.8.
 
 Sus clientes siguen valorando lo que sirve y lo que cobra. Al corregir la atención,
@@ -72,8 +122,10 @@ no toque la carta ni los precios.
 
 ## 4. En qué concentrarse
 
-1. **Recuperar la atención.** Es el único aspecto que cayó (de 4.0 a 2.6) y arrastra
-   la calificación general, que bajó de 4.1 en junio a 3.6 en septiembre.
+1. **Recuperar la atención, empezando por los tiempos de espera.** El servicio es el
+   único aspecto que cayó (de 4.0 a 2.6) y arrastra la calificación general, que
+   bajó de 4.1 en junio a 3.6 en septiembre. La espera es la queja más repetida: 23
+   menciones, 22 de ellas recientes.
 2. **Volver a responder las reseñas.** Pasó de responder 27% a 8%, justo cuando
    llegaron las más críticas.
 
@@ -92,11 +144,13 @@ no toque la carta ni los precios.
 
 ### Este mes
 
-- **Corrija la causa que encuentre.** Si hubo personal nuevo: entrénelo y repártalo
+- **Reduzca los tiempos de espera.** Si hubo personal nuevo: entrénelo y repártalo
   entre turnos en lugar de concentrarlo. Si falta gente en horas pico: refuerce esos
-  turnos. Son sugerencias habituales del sector; usted sabe cuál aplica.
-  *Por qué:* servicio en 2.6 en los últimos tres meses.
-  *Cómo medirlo:* la calificación mensual de servicio debe volver a acercarse a 4.0.
+  turnos; 8 clientes sugieren más personal a la hora del almuerzo. Son sugerencias
+  habituales del sector; usted sabe cuál aplica.
+  *Por qué:* servicio en 2.6 en los últimos tres meses y 22 quejas recientes por espera.
+  *Cómo medirlo:* la calificación mensual de servicio debe volver a acercarse a 4.0
+  y las quejas por espera deben bajar.
 - **Atienda las quejas del formulario como oportunidades.** Un cliente que se queja
   ahí todavía no ha escrito en Google.
   *Cómo medirlo:* calificación reciente en Google de vuelta sobre 4.0.
@@ -105,6 +159,9 @@ no toque la carta ni los precios.
 
 - **Asigne a una persona la tarea de responder todas las reseñas cada semana.**
   *Por qué:* la última respuesta fue el 28 de agosto de 2026.
+- **Mantenga la galleta con el café y recupere el saludo.** Son detalles que cuestan
+  poco y que sus clientes notan.
+  *Por qué:* 19 elogios a la galleta; 2 quejas recientes porque nadie saluda.
 - **Invite a todos sus clientes a dejar su opinión**, sin filtrar a los contentos y
   sin ofrecer nada a cambio. Google prohíbe los incentivos por reseñas.
 
@@ -118,13 +175,16 @@ servicio es el ambiente, en 3.9.
 ## Preguntas para usted
 
 1. ¿Hubo cambios de personal, de administrador o de turnos entre junio y julio de 2026?
-2. ¿Aumentó el número de clientes en esos meses sin aumentar el equipo?
+2. ¿Aumentó el número de clientes en esos meses sin aumentar el equipo, sobre todo
+   a la hora del almuerzo?
 3. ¿Quién maneja hoy el perfil de Google del restaurante?
 
 ## Sobre estos datos
 
 - Formulario: 300 respuestas leídas, 6 duplicadas eliminadas, 294 analizadas.
 - Google: 200 reseñas analizadas; 42% trae texto.
+- Comentarios: 290 analizados. Cada uno se clasificó por tema leyéndolo; un mismo
+  comentario puede contar en dos temas. Las citas son textuales.
 - Este informe no conoce sus ventas, costos ni ocupación, y no estima impacto en
   dinero. Quien responde un formulario o deja una reseña no representa a todos sus
   clientes.

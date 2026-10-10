@@ -1,7 +1,7 @@
 {
   "business_name": "Restaurante Demo",
   "headline": "qué dicen sus clientes y qué hacer ahora",
-  "summary": "Su comida y sus precios siguen gustando. Lo que cambió es la atención: cayó desde julio de 2026 y ya se nota en sus reseñas recientes de Google.",
+  "summary": "Su comida y sus precios siguen gustando. Lo que cambió es la atención: cayó desde julio de 2026, sobre todo por los tiempos de espera, y ya se nota en sus reseñas recientes de Google.",
   "alert": "la calificación del servicio pasó de 4.0 a 2.6 en los últimos tres meses, y solo 8% de las 26 reseñas recientes de Google tiene respuesta.",
   "actions": [
     {
@@ -18,9 +18,9 @@
     },
     {
       "horizon": "this_month",
-      "title": "Corrija la causa en el equipo",
+      "title": "Reduzca los tiempos de espera",
       "text": "Si hay personal nuevo, entrénelo y repártalo entre turnos. Si falta gente en horas pico, refuerce esos turnos. Usted sabe cuál aplica.",
-      "why": "Servicio en 2.6; debe volver cerca de 4.0"
+      "why": "Servicio en 2.6 y 22 quejas recientes por espera"
     },
     {
       "horizon": "this_month",
@@ -36,15 +36,15 @@
     },
     {
       "horizon": "ongoing",
-      "title": "Invite a opinar a todos sus clientes",
-      "text": "Sin filtrar a los contentos y sin ofrecer nada a cambio: Google prohíbe los incentivos por reseñas.",
-      "why": "Más opiniones hacen más confiables las cifras"
+      "title": "Mantenga la galleta con el café",
+      "text": "Es un detalle que cuesta poco y que sus clientes mencionan sin que nadie pregunte. Recupere también el saludo y el agradecimiento en la mesa.",
+      "why": "19 elogios a la galleta; 2 quejas recientes por el saludo"
     }
   ],
   "next_level": "Cuando la atención vuelva a su nivel de antes, el siguiente umbral en Google es 4.5. Su ventaja para llegar ahí son el precio y la comida, ambos en 4.2: conviértalos en mensaje en su perfil de Google y en sus redes. Después del servicio, el aspecto con más margen es el ambiente, en 3.9.",
   "questions": [
     "¿Hubo cambios de personal, de administrador o de turnos entre junio y julio de 2026?",
-    "¿Aumentó el número de clientes en esos meses sin aumentar el equipo?",
+    "¿Aumentó el número de clientes en esos meses sin aumentar el equipo, sobre todo a la hora del almuerzo?",
     "¿Quién maneja hoy el perfil de Google del restaurante?"
   ],
   "data_note": "Ejemplo con datos sintéticos: el restaurante y sus clientes no existen. Este tablero no conoce ventas, costos ni ocupación. Las causas mencionadas son hipótesis: los datos muestran qué pasó y cuándo, no por qué."

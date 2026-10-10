@@ -26,27 +26,25 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 
 ## Pasos
 
-1. **Cargar, limpiar y calcular.** Un solo comando hace las tres cosas y entrega un
-   JSON con el reporte de limpieza y todas las cifras:
+1. **Delegar el análisis a los dos subagentes, en paralelo** (las dos llamadas en
+   el mismo mensaje). A cada uno se le pasan las rutas de los CSV y su carpeta:
 
-   ```
-   .venv\Scripts\python -m src.metrics --survey <csv> --reviews <csv> --output <carpeta>/metrics.json
-   ```
+   - `analista-cuantitativo`, con `<carpeta>`: deja `metrics.json` (reporte de
+     limpieza y todas las cifras) y las gráficas en `charts/`.
+   - `analista-comentarios`, con `<carpeta>/comments`: deja `comment_metrics.json`
+     (temas, quejas, elogios, detalles pequeños y citas).
 
-   Si el comando falla porque faltan columnas, detente y repórtalo; no adaptes los
-   datos a mano.
+   Si alguno reporta un error, detente y repórtalo; no adaptes los datos a mano.
+   Si los subagentes no están disponibles, sigue tú las instrucciones de sus
+   archivos en `.claude/agents/`.
 
-2. **Usar solo esas cifras.** Toda cifra del informe sale de `metrics.json`. No
-   calcules promedios, porcentajes ni diferencias de cabeza. Si hace falta una
-   cifra que no está, agrégala a `src/metrics.py` con su test.
+2. **Usar solo esas cifras.** Toda cifra del informe sale de `metrics.json` o de
+   `comment_metrics.json`, leídos por ti, no del resumen que devuelven los
+   subagentes. No calcules promedios, porcentajes ni diferencias de cabeza. Si hace
+   falta una cifra que no está, agrégala al código con su test.
 
-3. **Generar las gráficas.**
-
-   ```
-   .venv\Scripts\python -m src.charts --survey <csv> --reviews <csv> --output-dir <carpeta>/charts
-   ```
-
-   Abre cada PNG y revisa que se lea bien antes de incluirlo.
+3. **Revisar las gráficas.** Abre cada PNG de `<carpeta>/charts` y revisa que se
+   lea bien antes de incluirlo.
 
 4. **Interpretar con el conocimiento del sector.** Lee
    `references/sector-<sector>.md`. Hoy solo existe `sector-restaurantes.md`. Si el
@@ -60,13 +58,14 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 7. **Generar el tablero.** Las cifras las pone el script; no se escriben a mano.
 
    ```
-   .venv\Scripts\python -m src.dashboard --survey <csv> --reviews <csv> --insights <carpeta>/insights.json --output <carpeta>/dashboard.html
+   .venv\Scripts\python -m src.dashboard --survey <csv> --reviews <csv> --insights <carpeta>/insights.json --comments <carpeta>/comments/comment_metrics.json --output <carpeta>/dashboard.html
    ```
 
    Ábrelo y revisa que se vea bien y que no haya errores.
 
 8. **Revisar.** Recorre el informe y los textos del tablero cifra por cifra y
-   compáralos con `metrics.json`. Corrige cualquier diferencia antes de entregar.
+   compáralos con `metrics.json` y `comment_metrics.json`. Las citas de clientes se
+   copian tal cual, con sus errores. Corrige cualquier diferencia antes de entregar.
 
 ## Reglas
 

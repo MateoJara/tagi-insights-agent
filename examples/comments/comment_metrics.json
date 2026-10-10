@@ -5,8 +5,8 @@
   "recent_months": 3,
   "topics": [
     {
-      "topic": "tamaño de las porciones",
-      "description": "Tamaño de las porciones y qué tan lleno queda el cliente",
+      "topic": "tamaño de porciones",
+      "description": "Cantidad de comida servida en el plato",
       "small_detail": false,
       "n": 49,
       "previous_n": 28,
@@ -35,8 +35,8 @@
       }
     },
     {
-      "topic": "precio",
-      "description": "Precios y relación calidad-precio",
+      "topic": "precio y valor",
+      "description": "Precios justos y relacion calidad-precio",
       "small_detail": false,
       "n": 45,
       "previous_n": 30,
@@ -66,7 +66,7 @@
     },
     {
       "topic": "tiempo de espera",
-      "description": "Demoras para tomar o entregar el pedido y rapidez del servicio",
+      "description": "Demoras o rapidez para atender y entregar el pedido",
       "small_detail": false,
       "n": 43,
       "previous_n": 18,
@@ -95,11 +95,11 @@
       }
     },
     {
-      "topic": "ambiente decoración y limpieza",
-      "description": "Ambiente decoración tranquilidad y limpieza del lugar",
+      "topic": "ambiente y decoración",
+      "description": "Decoración y sensación del local (acogedor tranquilo para conversar)",
       "small_detail": false,
-      "n": 39,
-      "previous_n": 28,
+      "n": 38,
+      "previous_n": 27,
       "recent_n": 11,
       "kinds": {
         "praise": {
@@ -111,33 +111,25 @@
             "El sitio es limpio y bonito!!",
             "Como siempre, me gustó mucho la decoración"
           ]
-        },
-        "complaint": {
-          "n": 1,
-          "previous_n": 1,
-          "recent_n": 0,
-          "quotes": [
-            "El personal es muy querido, pero el baño no estaba limpio. volveré"
-          ]
         }
       }
     },
     {
-      "topic": "sabor y calidad de la comida",
-      "description": "Sabor sazón punto de cocción y frescura de los platos",
+      "topic": "sabor de la comida",
+      "description": "Sabor sazon y punto de cocción de los platos",
       "small_detail": false,
-      "n": 38,
-      "previous_n": 29,
-      "recent_n": 9,
+      "n": 34,
+      "previous_n": 26,
+      "recent_n": 8,
       "kinds": {
         "praise": {
-          "n": 32,
-          "previous_n": 23,
-          "recent_n": 9,
+          "n": 28,
+          "previous_n": 20,
+          "recent_n": 8,
           "quotes": [
             "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-            "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias",
-            "Vengo seguido y el ajiaco estaba buenísimo. Recomendado"
+            "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
+            "Como siempre, todo muy rico"
           ]
         },
         "complaint": {
@@ -154,7 +146,7 @@
     },
     {
       "topic": "trato del personal",
-      "description": "Amabilidad o mala actitud de meseros y personal al atender",
+      "description": "Amabilidad o mala actitud de quienes atienden",
       "small_detail": false,
       "n": 30,
       "previous_n": 18,
@@ -184,7 +176,7 @@
     },
     {
       "topic": "sin detalle",
-      "description": "Comentario general sin ningún motivo concreto",
+      "description": "Comentario sin información concreta",
       "small_detail": false,
       "n": 21,
       "previous_n": 12,
@@ -206,7 +198,7 @@
     },
     {
       "topic": "galleta con el café",
-      "description": "Galleta de cortesía que acompaña el café o el tinto",
+      "description": "Galleta de cortesía que acompaña el café o tinto",
       "small_detail": true,
       "n": 19,
       "previous_n": 11,
@@ -225,21 +217,29 @@
       }
     },
     {
-      "topic": "opciones de menú",
-      "description": "Pedidos de nuevas opciones en la carta: vegetarianas menú infantil y jugos sin azúcar",
+      "topic": "limpieza",
+      "description": "Aseo del local y los baños",
       "small_detail": false,
-      "n": 14,
-      "previous_n": 9,
-      "recent_n": 5,
+      "n": 11,
+      "previous_n": 8,
+      "recent_n": 3,
       "kinds": {
-        "suggestion": {
-          "n": 14,
-          "previous_n": 9,
-          "recent_n": 5,
+        "praise": {
+          "n": 10,
+          "previous_n": 7,
+          "recent_n": 3,
           "quotes": [
-            "Seria bueno un menu infantil",
-            "Una idea: deberían tener más opciones vegetarianas. Gracias",
-            "Estaría bien tener jugos sin azúcar"
+            "El sitio es limpio y bonito!!",
+            "El sitio es limpio y bonito, pero parecia que les molestaba atender",
+            "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!"
+          ]
+        },
+        "complaint": {
+          "n": 1,
+          "previous_n": 1,
+          "recent_n": 0,
+          "quotes": [
+            "El personal es muy querido, pero el baño no estaba limpio. volveré"
           ]
         }
       }
@@ -275,8 +275,8 @@
       }
     },
     {
-      "topic": "menú en código QR",
-      "description": "Tener el menú disponible en un código QR",
+      "topic": "menú con código QR",
+      "description": "Pedido de tener el menú en un código QR",
       "small_detail": false,
       "n": 10,
       "previous_n": 2,
@@ -295,8 +295,8 @@
       }
     },
     {
-      "topic": "más personal en el almuerzo",
-      "description": "Más personal en la hora del almuerzo",
+      "topic": "personal en hora del almuerzo",
+      "description": "Pedido de más personal en la hora pico del almuerzo",
       "small_detail": false,
       "n": 8,
       "previous_n": 3,
@@ -315,8 +315,8 @@
       }
     },
     {
-      "topic": "espacio y comodidad del local",
-      "description": "Espacio entre mesas calor adentro y mesas afuera",
+      "topic": "espacio y comodidad",
+      "description": "Distribución de mesas y temperatura del local",
       "small_detail": false,
       "n": 7,
       "previous_n": 5,
@@ -345,7 +345,7 @@
     },
     {
       "topic": "abrir los domingos",
-      "description": "Abrir el negocio los domingos",
+      "description": "Pedido de abrir también los domingos",
       "small_detail": false,
       "n": 6,
       "previous_n": 5,
@@ -364,8 +364,28 @@
       }
     },
     {
-      "topic": "errores en el pedido",
-      "description": "Pedidos equivocados o cuentas con cosas que no se pidieron",
+      "topic": "menú infantil",
+      "description": "Pedido de un menú para niños",
+      "small_detail": false,
+      "n": 6,
+      "previous_n": 4,
+      "recent_n": 2,
+      "kinds": {
+        "suggestion": {
+          "n": 6,
+          "previous_n": 4,
+          "recent_n": 2,
+          "quotes": [
+            "Seria bueno un menu infantil",
+            "Como sugerencia, sería bueno un menú infantil",
+            "Sería bueno un menú infantil"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "errores en pedido o cuenta",
+      "description": "Platos equivocados o cobros que no corresponden",
       "small_detail": false,
       "n": 5,
       "previous_n": 2,
@@ -384,8 +404,28 @@
       }
     },
     {
+      "topic": "opciones vegetarianas",
+      "description": "Pedido de más platos vegetarianos",
+      "small_detail": false,
+      "n": 5,
+      "previous_n": 3,
+      "recent_n": 2,
+      "kinds": {
+        "suggestion": {
+          "n": 5,
+          "previous_n": 3,
+          "recent_n": 2,
+          "quotes": [
+            "Una idea: deberían tener más opciones vegetarianas. Gracias",
+            "Como sugerencia, deberían tener más opciones vegetarianas",
+            "Como sugerencia, deberian tener mas opciones vegetarianas. Gracias"
+          ]
+        }
+      }
+    },
+    {
       "topic": "pago con transferencia",
-      "description": "Poder pagar con transferencia",
+      "description": "Pedido de poder pagar por transferencia",
       "small_detail": false,
       "n": 5,
       "previous_n": 3,
@@ -405,7 +445,7 @@
     },
     {
       "topic": "domicilios",
-      "description": "Ofrecer domicilios",
+      "description": "Pedido de ofrecer entrega a domicilio",
       "small_detail": false,
       "n": 4,
       "previous_n": 2,
@@ -424,8 +464,28 @@
       }
     },
     {
+      "topic": "frescura de ingredientes",
+      "description": "Que los ingredientes se noten frescos",
+      "small_detail": false,
+      "n": 4,
+      "previous_n": 3,
+      "recent_n": 1,
+      "kinds": {
+        "praise": {
+          "n": 4,
+          "previous_n": 3,
+          "recent_n": 1,
+          "quotes": [
+            "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias",
+            "Como siempre, se nota que cocinan con ingredientes frescos. Volveré",
+            "Se nota que cocinan con ingredientes frescos. Volveré"
+          ]
+        }
+      }
+    },
+    {
       "topic": "reservas",
-      "description": "Recibir reservas",
+      "description": "Pedido de poder reservar mesa",
       "small_detail": false,
       "n": 4,
       "previous_n": 1,
@@ -444,8 +504,27 @@
       }
     },
     {
+      "topic": "jugos sin azúcar",
+      "description": "Pedido de jugos sin azúcar",
+      "small_detail": false,
+      "n": 3,
+      "previous_n": 2,
+      "recent_n": 1,
+      "kinds": {
+        "suggestion": {
+          "n": 3,
+          "previous_n": 2,
+          "recent_n": 1,
+          "quotes": [
+            "Estaría bien tener jugos sin azúcar",
+            "Como sugerencia, estaría bien tener jugos sin azúcar"
+          ]
+        }
+      }
+    },
+    {
       "topic": "saludo y agradecimiento",
-      "description": "Saludar y dar las gracias al cliente",
+      "description": "Que el personal salude y agradezca al cliente",
       "small_detail": true,
       "n": 2,
       "previous_n": 0,
@@ -489,7 +568,7 @@
       ]
     },
     {
-      "topic": "sabor y calidad de la comida",
+      "topic": "sabor de la comida",
       "small_detail": false,
       "n": 6,
       "previous_n": 6,
@@ -501,7 +580,7 @@
       ]
     },
     {
-      "topic": "errores en el pedido",
+      "topic": "errores en pedido o cuenta",
       "small_detail": false,
       "n": 5,
       "previous_n": 2,
@@ -525,7 +604,7 @@
       ]
     },
     {
-      "topic": "espacio y comodidad del local",
+      "topic": "espacio y comodidad",
       "small_detail": false,
       "n": 4,
       "previous_n": 3,
@@ -537,7 +616,7 @@
       ]
     },
     {
-      "topic": "precio",
+      "topic": "precio y valor",
       "small_detail": false,
       "n": 4,
       "previous_n": 4,
@@ -549,7 +628,7 @@
       ]
     },
     {
-      "topic": "tamaño de las porciones",
+      "topic": "tamaño de porciones",
       "small_detail": false,
       "n": 3,
       "previous_n": 2,
@@ -572,7 +651,7 @@
       ]
     },
     {
-      "topic": "ambiente decoración y limpieza",
+      "topic": "limpieza",
       "small_detail": false,
       "n": 1,
       "previous_n": 1,
@@ -584,7 +663,7 @@
   ],
   "top_praise": [
     {
-      "topic": "tamaño de las porciones",
+      "topic": "tamaño de porciones",
       "small_detail": false,
       "n": 46,
       "previous_n": 26,
@@ -596,7 +675,7 @@
       ]
     },
     {
-      "topic": "precio",
+      "topic": "precio y valor",
       "small_detail": false,
       "n": 41,
       "previous_n": 26,
@@ -608,7 +687,7 @@
       ]
     },
     {
-      "topic": "ambiente decoración y limpieza",
+      "topic": "ambiente y decoración",
       "small_detail": false,
       "n": 38,
       "previous_n": 27,
@@ -620,15 +699,15 @@
       ]
     },
     {
-      "topic": "sabor y calidad de la comida",
+      "topic": "sabor de la comida",
       "small_detail": false,
-      "n": 32,
-      "previous_n": 23,
-      "recent_n": 9,
+      "n": 28,
+      "previous_n": 20,
+      "recent_n": 8,
       "quotes": [
         "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-        "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias",
-        "Vengo seguido y el ajiaco estaba buenísimo. Recomendado"
+        "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
+        "Como siempre, todo muy rico"
       ]
     },
     {
@@ -668,6 +747,18 @@
       ]
     },
     {
+      "topic": "limpieza",
+      "small_detail": false,
+      "n": 10,
+      "previous_n": 7,
+      "recent_n": 3,
+      "quotes": [
+        "El sitio es limpio y bonito!!",
+        "El sitio es limpio y bonito, pero parecia que les molestaba atender",
+        "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!"
+      ]
+    },
+    {
       "topic": "ruido y música",
       "small_detail": false,
       "n": 6,
@@ -678,23 +769,23 @@
         "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
         "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias"
       ]
+    },
+    {
+      "topic": "frescura de ingredientes",
+      "small_detail": false,
+      "n": 4,
+      "previous_n": 3,
+      "recent_n": 1,
+      "quotes": [
+        "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias",
+        "Como siempre, se nota que cocinan con ingredientes frescos. Volveré",
+        "Se nota que cocinan con ingredientes frescos. Volveré"
+      ]
     }
   ],
   "top_suggestions": [
     {
-      "topic": "opciones de menú",
-      "small_detail": false,
-      "n": 14,
-      "previous_n": 9,
-      "recent_n": 5,
-      "quotes": [
-        "Seria bueno un menu infantil",
-        "Una idea: deberían tener más opciones vegetarianas. Gracias",
-        "Estaría bien tener jugos sin azúcar"
-      ]
-    },
-    {
-      "topic": "menú en código QR",
+      "topic": "menú con código QR",
       "small_detail": false,
       "n": 10,
       "previous_n": 2,
@@ -706,7 +797,7 @@
       ]
     },
     {
-      "topic": "más personal en el almuerzo",
+      "topic": "personal en hora del almuerzo",
       "small_detail": false,
       "n": 8,
       "previous_n": 3,
@@ -727,6 +818,30 @@
         "Como sugerencia, ojalá abrieran los domingos",
         "Ojalá abrieran los domingos. Gracias",
         "Ojalá abrieran los domingos"
+      ]
+    },
+    {
+      "topic": "menú infantil",
+      "small_detail": false,
+      "n": 6,
+      "previous_n": 4,
+      "recent_n": 2,
+      "quotes": [
+        "Seria bueno un menu infantil",
+        "Como sugerencia, sería bueno un menú infantil",
+        "Sería bueno un menú infantil"
+      ]
+    },
+    {
+      "topic": "opciones vegetarianas",
+      "small_detail": false,
+      "n": 5,
+      "previous_n": 3,
+      "recent_n": 2,
+      "quotes": [
+        "Una idea: deberían tener más opciones vegetarianas. Gracias",
+        "Como sugerencia, deberían tener más opciones vegetarianas",
+        "Como sugerencia, deberian tener mas opciones vegetarianas. Gracias"
       ]
     },
     {
@@ -766,7 +881,7 @@
       ]
     },
     {
-      "topic": "espacio y comodidad del local",
+      "topic": "espacio y comodidad",
       "small_detail": false,
       "n": 3,
       "previous_n": 2,
@@ -775,12 +890,23 @@
         "Una idea: podrían poner más mesas afuera",
         "Podrían poner más mesas afuera. gracias"
       ]
+    },
+    {
+      "topic": "jugos sin azúcar",
+      "small_detail": false,
+      "n": 3,
+      "previous_n": 2,
+      "recent_n": 1,
+      "quotes": [
+        "Estaría bien tener jugos sin azúcar",
+        "Como sugerencia, estaría bien tener jugos sin azúcar"
+      ]
     }
   ],
   "small_details": [
     {
       "topic": "galleta con el café",
-      "description": "Galleta de cortesía que acompaña el café o el tinto",
+      "description": "Galleta de cortesía que acompaña el café o tinto",
       "small_detail": true,
       "n": 19,
       "previous_n": 11,
@@ -800,7 +926,7 @@
     },
     {
       "topic": "saludo y agradecimiento",
-      "description": "Saludar y dar las gracias al cliente",
+      "description": "Que el personal salude y agradezca al cliente",
       "small_detail": true,
       "n": 2,
       "previous_n": 0,

@@ -1,20 +1,24 @@
 topic,description,small_detail
-tiempo de espera,Demoras para tomar o entregar el pedido y rapidez del servicio,false
-trato del personal,Amabilidad o mala actitud de meseros y personal al atender,false
-saludo y agradecimiento,Saludar y dar las gracias al cliente,true
-galleta con el café,Galleta de cortesía que acompaña el café o el tinto,true
-sabor y calidad de la comida,Sabor sazón punto de cocción y frescura de los platos,false
-tamaño de las porciones,Tamaño de las porciones y qué tan lleno queda el cliente,false
-precio,Precios y relación calidad-precio,false
-ambiente decoración y limpieza,Ambiente decoración tranquilidad y limpieza del lugar,false
+tiempo de espera,Demoras o rapidez para atender y entregar el pedido,false
+trato del personal,Amabilidad o mala actitud de quienes atienden,false
+saludo y agradecimiento,Que el personal salude y agradezca al cliente,true
+precio y valor,Precios justos y relacion calidad-precio,false
+tamaño de porciones,Cantidad de comida servida en el plato,false
+sabor de la comida,Sabor sazon y punto de cocción de los platos,false
+frescura de ingredientes,Que los ingredientes se noten frescos,false
+ambiente y decoración,Decoración y sensación del local (acogedor tranquilo para conversar),false
+limpieza,Aseo del local y los baños,false
 ruido y música,Volumen de la música y del ruido en el local,false
-espacio y comodidad del local,Espacio entre mesas calor adentro y mesas afuera,false
-errores en el pedido,Pedidos equivocados o cuentas con cosas que no se pidieron,false
-opciones de menú,Pedidos de nuevas opciones en la carta: vegetarianas menú infantil y jugos sin azúcar,false
-menú en código QR,Tener el menú disponible en un código QR,false
-pago con transferencia,Poder pagar con transferencia,false
-abrir los domingos,Abrir el negocio los domingos,false
-más personal en el almuerzo,Más personal en la hora del almuerzo,false
-reservas,Recibir reservas,false
-domicilios,Ofrecer domicilios,false
-sin detalle,Comentario general sin ningún motivo concreto,false
+espacio y comodidad,Distribución de mesas y temperatura del local,false
+errores en pedido o cuenta,Platos equivocados o cobros que no corresponden,false
+galleta con el café,Galleta de cortesía que acompaña el café o tinto,true
+opciones vegetarianas,Pedido de más platos vegetarianos,false
+menú infantil,Pedido de un menú para niños,false
+menú con código QR,Pedido de tener el menú en un código QR,false
+domicilios,Pedido de ofrecer entrega a domicilio,false
+reservas,Pedido de poder reservar mesa,false
+abrir los domingos,Pedido de abrir también los domingos,false
+pago con transferencia,Pedido de poder pagar por transferencia,false
+jugos sin azúcar,Pedido de jugos sin azúcar,false
+personal en hora del almuerzo,Pedido de más personal en la hora pico del almuerzo,false
+sin detalle,Comentario sin información concreta,false

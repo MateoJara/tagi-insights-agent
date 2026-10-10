@@ -18,6 +18,12 @@ TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "dashboard.html"
 EXAMPLES_DIR = Path(__file__).resolve().parent.parent / "examples"
 
 MAX_REVIEWS_LISTED = 40
+MAX_TOPICS_LISTED = 5
+SMALL_DETAIL_KINDS = {
+    "praise": ("Lo elogian", "good"),
+    "complaint": ("Lo echan de menos", "warn"),
+    "suggestion": ("Lo sugieren", "warn"),
+}
 STEADY_CHANGE = 0.5  # an aspect moving less than this between periods counts as steady
 
 # Dashboard text is in Spanish because it is read by the business owner.
@@ -170,7 +176,53 @@ def _reviews_listed(reviews):
     ]
 
 
-def build_dashboard_data(survey_path, reviews_path, insights):
+def _topic_label(topic):
+    return topic[0].upper() + topic[1:]
+
+
+def _topic_rows(entries, limit=MAX_TOPICS_LISTED):
+    return [
+        {
+            "topic": _topic_label(entry["topic"]),
+            "n": entry["n"],
+            "recent_n": entry["recent_n"],
+            "quote": entry["quotes"][0] if entry["quotes"] else None,
+        }
+        for entry in entries[:limit]
+    ]
+
+
+def _small_details(entries):
+    rows = []
+    for entry in entries:
+        # A detail is shown by how diners mostly talk about it: praised or missed.
+        kind = max(entry["kinds"], key=lambda kind: entry["kinds"][kind]["n"])
+        label, status = SMALL_DETAIL_KINDS[kind]
+        rows.append({
+            "topic": _topic_label(entry["topic"]),
+            "n": entry["kinds"][kind]["n"],
+            "kind_label": label,
+            "status": status,
+            "quotes": entry["kinds"][kind]["quotes"][:2],
+        })
+    return rows
+
+
+def _comments(comment_metrics):
+    """The comment section, or None when the comments were not analysed."""
+    if comment_metrics is None:
+        return None
+    return {
+        "n_comments": comment_metrics["n_comments"],
+        "recent_months": comment_metrics["recent_months"],
+        "complaints": _topic_rows(comment_metrics["top_complaints"]),
+        "praise": _topic_rows(comment_metrics["top_praise"]),
+        "suggestions": _topic_rows(comment_metrics["top_suggestions"], limit=4),
+        "small_details": _small_details(comment_metrics["small_details"]),
+    }
+
+
+def build_dashboard_data(survey_path, reviews_path, insights, comment_metrics=None):
     """Everything the template needs, with every figure already formatted."""
     metrics = build_metrics(survey_path, reviews_path)
     reviews, _ = load_google_reviews(reviews_path)
@@ -204,6 +256,7 @@ def build_dashboard_data(survey_path, reviews_path, insights):
             for aspect in ASPECT_COLUMNS
         ],
         "aspects": _aspects(metrics),
+        "comments": _comments(comment_metrics),
         "reviews": _reviews_listed(reviews),
         "n_reviews_with_text": int(reviews["text"].notna().sum()),
     }
@@ -222,10 +275,14 @@ def main(argv=None):
     parser.add_argument("--survey", default=SAMPLE_DIR / "survey_responses.csv")
     parser.add_argument("--reviews", default=SAMPLE_DIR / "google_reviews.csv")
     parser.add_argument("--insights", default=EXAMPLES_DIR / "insights.json")
+    parser.add_argument("--comments", help="comment_metrics.json; omit to leave the comment section out")
     parser.add_argument("--output", default=EXAMPLES_DIR / "dashboard-ejemplo.html")
     args = parser.parse_args(argv)
 
-    data = build_dashboard_data(args.survey, args.reviews, load_insights(args.insights))
+    comment_metrics = None
+    if args.comments:
+        comment_metrics = json.loads(Path(args.comments).read_text(encoding="utf-8"))
+    data = build_dashboard_data(args.survey, args.reviews, load_insights(args.insights), comment_metrics)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(render_dashboard(data), encoding="utf-8")

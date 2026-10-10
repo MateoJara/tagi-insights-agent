@@ -78,6 +78,20 @@ td.n,th.n{text-align:right}
 .act{border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px;background:var(--surface)}
 .act p{color:var(--ink-2);font-size:13.5px}
 .act .why{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:auto;padding-top:4px}
+[hidden]{display:none!important}
+.stack{display:flex;flex-direction:column;gap:22px}
+.topics{display:flex;flex-direction:column;gap:14px}
+.topic{display:flex;flex-direction:column;gap:5px}
+.topic .thd{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 12px;font-size:14px}
+.topic .thd span{color:var(--ink-2);font-size:13px;white-space:nowrap}
+.topic .bar{height:8px;border-radius:4px;background:var(--grid);overflow:hidden}
+.topic .bar i{display:block;height:100%;border-radius:4px;background:var(--accent)}
+.topics.crit .bar i{background:var(--crit)}
+.topic q,.detail q{color:var(--ink-2);font-size:13px;quotes:"“" "”"}
+.details{display:flex;flex-direction:column;gap:12px}
+.detail{border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.detail .dhd{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.detail .dhd span.cnt{color:var(--ink-2);font-size:13px}
 .questions{margin:0;padding-left:20px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
 .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:6px 12px;border-radius:999px;cursor:pointer}
@@ -97,7 +111,7 @@ button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px so
 .empty{color:var(--muted);font-size:13.5px}
 .note{font-size:13px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
 @media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.grid2,.sim{grid-template-columns:1fr}.actions{grid-template-columns:1fr}.meta{text-align:left}}
-@media (max-width:420px){.kpis{grid-template-columns:1fr}}
+@media (max-width:420px){.kpis{grid-template-columns:1fr}.panel{padding:16px}th,td{padding:8px 3px}table{font-size:13px}}
 </style>
 </head>
 <body>
@@ -140,6 +154,41 @@ button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px so
         </table>
       </div>
     </section>
+  </div>
+
+  <div class="stack" id="commentsBlock" hidden>
+    <div class="grid2">
+      <section class="panel">
+        <div>
+          <h2>De qué se quejan</h2>
+          <p class="sub" id="complaintsSub"></p>
+        </div>
+        <div class="topics crit" id="complaints"></div>
+      </section>
+      <section class="panel">
+        <div>
+          <h2>Qué valoran</h2>
+          <p class="sub">Lo que sus clientes elogian con más frecuencia. Es lo que conviene proteger.</p>
+        </div>
+        <div class="topics" id="praise"></div>
+      </section>
+    </div>
+    <div class="grid2">
+      <section class="panel">
+        <div>
+          <h2>Detalles que sus clientes notan</h2>
+          <p class="sub">Cuestan poco y aparecen en los comentarios sin que nadie pregunte por ellos.</p>
+        </div>
+        <div class="details" id="details"></div>
+      </section>
+      <section class="panel">
+        <div>
+          <h2>Lo que le sugieren</h2>
+          <p class="sub">Ideas que más se repiten entre sus clientes.</p>
+        </div>
+        <div class="topics" id="suggestions"></div>
+      </section>
+    </div>
   </div>
 
   <div class="grid2">
@@ -313,7 +362,9 @@ D.kpis.forEach(k => {
   });
   const band = n > 1 ? (W - L - R) / (n - 1) : W - L - R;
   D.months.forEach((m, i) => {
-    const hit = svgEl('rect', { x: x(i) - band / 2, y: T, width: band, height: H - T - B, fill: 'transparent', tabindex: 0, 'aria-label': m }, svg);
+    // Clamp the hover band to the plot so the first and last months do not spill past the chart.
+    const x0 = Math.max(L - 8, x(i) - band / 2), x1 = Math.min(W - R + 8, x(i) + band / 2);
+    const hit = svgEl('rect', { x: x0, y: T, width: x1 - x0, height: H - T - B, fill: 'transparent', tabindex: 0, 'aria-label': m }, svg);
     const build = t => {
       add(t, 'b', '', m);
       D.trend.forEach((serie, k) => {
@@ -340,6 +391,37 @@ D.aspects.forEach(a => {
   add(tr, 'td', 'n num', a.change);
   add(add(tr, 'td'), 'span', 'pill ' + a.status, a.status_label);
 });
+
+/* What diners write: complaints, praise, small details, suggestions */
+(function () {
+  const C = D.comments;
+  if (!C) return;
+  $('commentsBlock').hidden = false;
+  $('complaintsSub').textContent = 'Temas más repetidos en ' + C.n_comments +
+    ' comentarios del formulario y de Google. “Recientes” son los de los últimos ' + C.recent_months + ' meses.';
+  const list = (id, rows, quotes) => {
+    const box = $(id), max = Math.max(1, ...rows.map(r => r.n));
+    if (!rows.length) add(box, 'p', 'empty', 'Sin comentarios de este tipo.');
+    rows.forEach((r, i) => {
+      const item = add(box, 'div', 'topic'), hd = add(item, 'div', 'thd');
+      add(hd, 'b', '', r.topic);
+      add(hd, 'span', 'num', r.n + (r.n === 1 ? ' mención' : ' menciones') + ' · ' + r.recent_n + (r.recent_n === 1 ? ' reciente' : ' recientes'));
+      add(add(item, 'div', 'bar'), 'i').style.width = (r.n / max * 100) + '%';
+      if (r.quote && i < quotes) add(item, 'q', '', r.quote);
+    });
+  };
+  list('complaints', C.complaints, 3);
+  list('praise', C.praise, 3);
+  list('suggestions', C.suggestions, 0);
+  if (!C.small_details.length) add($('details'), 'p', 'empty', 'Todavía no aparece ninguno en los comentarios.');
+  C.small_details.forEach(d => {
+    const card = add($('details'), 'div', 'detail'), hd = add(card, 'div', 'dhd');
+    add(hd, 'h3', '', d.topic);
+    add(hd, 'span', 'pill ' + d.status, d.kind_label);
+    add(card, 'span', 'cnt', d.n + (d.n === 1 ? ' mención' : ' menciones'));
+    d.quotes.forEach(q => add(card, 'q', '', q));
+  });
+})();
 
 /* Google rating distribution */
 (function () {

@@ -116,3 +116,51 @@ def test_main_writes_the_file(tmp_path):
     output = tmp_path / "out" / "dashboard.html"
     dashboard.main(["--insights", str(_write(tmp_path, _insights())), "--output", str(output)])
     assert output.read_text(encoding="utf-8").startswith("<!doctype html>")
+
+
+def _comment_metrics():
+    """Comment metrics from perfect labels, built from the generator's answer key."""
+    import pandas as pd
+
+    from src import comments
+    from src.load_data import load_google_reviews, load_survey_responses
+    from src.sample_comments import TOPICS
+
+    key = pd.read_csv(gen.ANSWER_KEY_PATH, dtype=str)
+    labels = key.assign(topic=key["topics"].str.split("|")).explode("topic")
+    labels["kind"] = labels["topic"].map(lambda topic: TOPICS[topic][1])
+    topics = pd.DataFrame({"topic": sorted(labels["topic"].unique())})
+    topics["description"] = "x"
+    topics["small_detail"] = topics["topic"] == "detail_cookie"
+    exported = comments.export_comments(load_survey_responses()[0], load_google_reviews()[0])
+    return comments.count_labels(exported, topics, labels[comments.LABEL_COLUMNS])
+
+
+def test_comment_section_is_optional(data):
+    assert data["comments"] is None
+    assert "commentsBlock" in dashboard.render_dashboard(data)
+
+
+def test_comment_section_shows_rankings_and_small_details():
+    metrics = _comment_metrics()
+    section = dashboard.build_dashboard_data(SURVEY, REVIEWS, _insights(), metrics)["comments"]
+    assert section["n_comments"] == metrics["n_comments"]
+    assert section["complaints"][0]["topic"] == "Service_wait"
+    assert len(section["complaints"]) <= dashboard.MAX_TOPICS_LISTED
+    counts = [row["n"] for row in section["praise"]]
+    assert counts == sorted(counts, reverse=True)
+    detail = section["small_details"][0]
+    assert (detail["topic"], detail["kind_label"]) == ("Detail_cookie", "Lo elogian")
+    assert 0 < len(detail["quotes"]) <= 2
+
+
+def test_main_accepts_comment_metrics(tmp_path):
+    comments_path = tmp_path / "comment_metrics.json"
+    comments_path.write_text(json.dumps(_comment_metrics()), encoding="utf-8")
+    output = tmp_path / "dashboard.html"
+    dashboard.main([
+        "--insights", str(_write(tmp_path, _insights())),
+        "--comments", str(comments_path),
+        "--output", str(output),
+    ])
+    assert _embedded_data(output.read_text(encoding="utf-8"))["comments"]["complaints"]

@@ -46,9 +46,24 @@ El aspecto que más se movió, desde cuándo y cuánto. Gráfica de tendencia me
 gráfica de antes y ahora. Si el cambio también se ve en Google, dígalo: es la señal
 de que ya es público.
 
+### Qué dicen los comentarios
+Va después de "Qué cambió", porque explica con palabras de los clientes lo que las
+calificaciones muestran. Sale de `comment_metrics.json`:
+
+- Las tres quejas más frecuentes, con cuántas menciones y cuántas son recientes.
+  Una o dos citas textuales de la principal.
+- Los tres elogios más frecuentes.
+- Los detalles pequeños (`small_details`): qué es, cuántas menciones y una cita.
+  Es lo más fácil de mantener o recuperar, así que conviene nombrarlos siempre.
+- Las sugerencias que más se repiten.
+
+Cuando una queja coincide con la caída de una calificación (por ejemplo, tiempos de
+espera y servicio), dígalo: es la pista más concreta sobre qué arreglar. Sigue
+siendo lo que los clientes dicen, no la causa confirmada.
+
 ### 3. Qué funciona y hay que proteger
-Los aspectos mejor calificados y estables. Es lo que no debe tocarse al arreglar lo
-demás.
+Los aspectos mejor calificados y estables, y los elogios más repetidos en los
+comentarios. Es lo que no debe tocarse al arreglar lo demás.
 
 ### 4. En qué concentrarse
 Una prioridad principal, máximo tres. Para cada una: qué muestran los datos y por

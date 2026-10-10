@@ -1,361 +1,371 @@
 table,id,column,topic,kind
 google_reviews,GR-0002,text,trato del personal,praise
 google_reviews,GR-0003,text,sin detalle,praise
-google_reviews,GR-0006,text,sabor y calidad de la comida,praise
-google_reviews,GR-0006,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0007,text,tamaño de las porciones,complaint
-google_reviews,GR-0010,text,tamaño de las porciones,praise
-google_reviews,GR-0010,text,precio,praise
-google_reviews,GR-0010,text,ambiente decoración y limpieza,praise
+google_reviews,GR-0006,text,limpieza,praise
+google_reviews,GR-0006,text,ambiente y decoración,praise
+google_reviews,GR-0006,text,sabor de la comida,praise
+google_reviews,GR-0007,text,tamaño de porciones,complaint
+google_reviews,GR-0010,text,precio y valor,praise
+google_reviews,GR-0010,text,tamaño de porciones,praise
+google_reviews,GR-0010,text,ambiente y decoración,praise
 google_reviews,GR-0011,text,trato del personal,praise
-google_reviews,GR-0014,text,sabor y calidad de la comida,praise
+google_reviews,GR-0014,text,frescura de ingredientes,praise
 google_reviews,GR-0015,text,tiempo de espera,praise
-google_reviews,GR-0017,text,sabor y calidad de la comida,praise
-google_reviews,GR-0018,text,precio,complaint
-google_reviews,GR-0018,text,sabor y calidad de la comida,praise
-google_reviews,GR-0019,text,ambiente decoración y limpieza,praise
+google_reviews,GR-0017,text,sabor de la comida,praise
+google_reviews,GR-0018,text,sabor de la comida,praise
+google_reviews,GR-0018,text,precio y valor,complaint
+google_reviews,GR-0019,text,ambiente y decoración,praise
+google_reviews,GR-0027,text,precio y valor,praise
 google_reviews,GR-0027,text,galleta con el café,praise
-google_reviews,GR-0027,text,precio,praise
 google_reviews,GR-0029,text,tiempo de espera,praise
-google_reviews,GR-0029,text,precio,praise
-google_reviews,GR-0030,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0034,text,ambiente decoración y limpieza,praise
+google_reviews,GR-0029,text,precio y valor,praise
+google_reviews,GR-0030,text,ambiente y decoración,praise
+google_reviews,GR-0034,text,ambiente y decoración,praise
 google_reviews,GR-0036,text,galleta con el café,praise
-google_reviews,GR-0037,text,precio,complaint
-google_reviews,GR-0037,text,sabor y calidad de la comida,praise
-google_reviews,GR-0044,text,precio,praise
+google_reviews,GR-0037,text,sabor de la comida,praise
+google_reviews,GR-0037,text,precio y valor,complaint
+google_reviews,GR-0044,text,precio y valor,praise
 google_reviews,GR-0045,text,tiempo de espera,praise
-google_reviews,GR-0047,text,sabor y calidad de la comida,praise
+google_reviews,GR-0047,text,sabor de la comida,praise
+google_reviews,GR-0054,text,sabor de la comida,praise
 google_reviews,GR-0054,text,trato del personal,praise
-google_reviews,GR-0054,text,sabor y calidad de la comida,praise
+google_reviews,GR-0058,text,precio y valor,praise
 google_reviews,GR-0058,text,tiempo de espera,praise
-google_reviews,GR-0058,text,precio,praise
 google_reviews,GR-0061,text,sin detalle,praise
 google_reviews,GR-0067,text,trato del personal,praise
 google_reviews,GR-0067,text,galleta con el café,praise
-google_reviews,GR-0068,text,sabor y calidad de la comida,complaint
-google_reviews,GR-0070,text,precio,praise
-google_reviews,GR-0072,text,precio,praise
-google_reviews,GR-0072,text,ambiente decoración y limpieza,praise
+google_reviews,GR-0068,text,sabor de la comida,complaint
+google_reviews,GR-0070,text,precio y valor,praise
+google_reviews,GR-0072,text,limpieza,praise
+google_reviews,GR-0072,text,ambiente y decoración,praise
+google_reviews,GR-0072,text,precio y valor,praise
 google_reviews,GR-0076,text,tiempo de espera,praise
-google_reviews,GR-0077,text,ruido y música,complaint
 google_reviews,GR-0077,text,trato del personal,praise
-google_reviews,GR-0080,text,precio,praise
+google_reviews,GR-0077,text,ruido y música,complaint
+google_reviews,GR-0080,text,precio y valor,praise
 google_reviews,GR-0081,text,tiempo de espera,praise
-google_reviews,GR-0082,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0083,text,tamaño de las porciones,praise
+google_reviews,GR-0082,text,ambiente y decoración,praise
+google_reviews,GR-0083,text,tamaño de porciones,praise
 google_reviews,GR-0084,text,tiempo de espera,praise
-google_reviews,GR-0084,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0091,text,tamaño de las porciones,praise
-google_reviews,GR-0092,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0093,text,sabor y calidad de la comida,praise
-google_reviews,GR-0100,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0101,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0104,text,precio,complaint
+google_reviews,GR-0084,text,limpieza,praise
+google_reviews,GR-0084,text,ambiente y decoración,praise
+google_reviews,GR-0091,text,tamaño de porciones,praise
+google_reviews,GR-0092,text,ambiente y decoración,praise
+google_reviews,GR-0093,text,sabor de la comida,praise
+google_reviews,GR-0100,text,ambiente y decoración,praise
+google_reviews,GR-0101,text,limpieza,praise
+google_reviews,GR-0101,text,ambiente y decoración,praise
 google_reviews,GR-0104,text,tiempo de espera,praise
-google_reviews,GR-0107,text,sabor y calidad de la comida,complaint
-google_reviews,GR-0118,text,sabor y calidad de la comida,complaint
+google_reviews,GR-0104,text,precio y valor,complaint
+google_reviews,GR-0107,text,sabor de la comida,complaint
 google_reviews,GR-0118,text,tiempo de espera,praise
-google_reviews,GR-0120,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0121,text,sabor y calidad de la comida,praise
-google_reviews,GR-0123,text,sabor y calidad de la comida,praise
+google_reviews,GR-0118,text,sabor de la comida,complaint
+google_reviews,GR-0120,text,limpieza,praise
+google_reviews,GR-0120,text,ambiente y decoración,praise
+google_reviews,GR-0121,text,sabor de la comida,praise
+google_reviews,GR-0123,text,sabor de la comida,praise
 google_reviews,GR-0128,text,sin detalle,praise
 google_reviews,GR-0129,text,sin detalle,praise
-google_reviews,GR-0131,text,tamaño de las porciones,praise
-google_reviews,GR-0135,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0137,text,ambiente decoración y limpieza,praise
-google_reviews,GR-0139,text,sabor y calidad de la comida,praise
-google_reviews,GR-0139,text,tamaño de las porciones,praise
-google_reviews,GR-0139,text,precio,praise
+google_reviews,GR-0131,text,tamaño de porciones,praise
+google_reviews,GR-0135,text,ambiente y decoración,praise
+google_reviews,GR-0137,text,ambiente y decoración,praise
+google_reviews,GR-0139,text,sabor de la comida,praise
+google_reviews,GR-0139,text,precio y valor,praise
+google_reviews,GR-0139,text,tamaño de porciones,praise
 google_reviews,GR-0140,text,galleta con el café,praise
 google_reviews,GR-0145,text,tiempo de espera,praise
-google_reviews,GR-0149,text,tamaño de las porciones,praise
-google_reviews,GR-0151,text,sabor y calidad de la comida,praise
+google_reviews,GR-0149,text,tamaño de porciones,praise
+google_reviews,GR-0151,text,sabor de la comida,praise
 google_reviews,GR-0153,text,trato del personal,praise
+google_reviews,GR-0158,text,precio y valor,praise
 google_reviews,GR-0158,text,trato del personal,praise
-google_reviews,GR-0158,text,precio,praise
-google_reviews,GR-0160,text,precio,praise
-google_reviews,GR-0161,text,ambiente decoración y limpieza,complaint
+google_reviews,GR-0160,text,precio y valor,praise
 google_reviews,GR-0161,text,trato del personal,praise
+google_reviews,GR-0161,text,limpieza,complaint
 google_reviews,GR-0162,text,sin detalle,praise
-google_reviews,GR-0167,text,tamaño de las porciones,praise
+google_reviews,GR-0167,text,tamaño de porciones,praise
+google_reviews,GR-0170,text,ambiente y decoración,praise
 google_reviews,GR-0170,text,galleta con el café,praise
-google_reviews,GR-0170,text,ambiente decoración y limpieza,praise
 google_reviews,GR-0172,text,ruido y música,praise
 google_reviews,GR-0173,text,sin detalle,complaint
+google_reviews,GR-0174,text,sabor de la comida,praise
 google_reviews,GR-0174,text,trato del personal,praise
-google_reviews,GR-0174,text,sabor y calidad de la comida,praise
+google_reviews,GR-0176,text,tamaño de porciones,praise
 google_reviews,GR-0176,text,ruido y música,complaint
-google_reviews,GR-0176,text,tamaño de las porciones,praise
-google_reviews,GR-0177,text,galleta con el café,praise
 google_reviews,GR-0177,text,ruido y música,praise
-google_reviews,GR-0179,text,tamaño de las porciones,complaint
-google_reviews,GR-0179,text,precio,praise
-google_reviews,GR-0181,text,tamaño de las porciones,praise
-google_reviews,GR-0181,text,ambiente decoración y limpieza,praise
+google_reviews,GR-0177,text,galleta con el café,praise
+google_reviews,GR-0179,text,precio y valor,praise
+google_reviews,GR-0179,text,tamaño de porciones,complaint
+google_reviews,GR-0181,text,ambiente y decoración,praise
+google_reviews,GR-0181,text,tamaño de porciones,praise
 google_reviews,GR-0182,text,tiempo de espera,complaint
+google_reviews,GR-0185,text,tamaño de porciones,praise
 google_reviews,GR-0185,text,tiempo de espera,praise
-google_reviews,GR-0185,text,tamaño de las porciones,praise
+google_reviews,GR-0186,text,limpieza,praise
+google_reviews,GR-0186,text,ambiente y decoración,praise
 google_reviews,GR-0186,text,trato del personal,complaint
-google_reviews,GR-0186,text,ambiente decoración y limpieza,praise
 google_reviews,GR-0187,text,tiempo de espera,complaint
-google_reviews,GR-0188,text,tamaño de las porciones,praise
+google_reviews,GR-0188,text,tamaño de porciones,praise
+google_reviews,GR-0189,text,tamaño de porciones,praise
 google_reviews,GR-0189,text,tiempo de espera,complaint
-google_reviews,GR-0189,text,tamaño de las porciones,praise
+google_reviews,GR-0190,text,tamaño de porciones,praise
 google_reviews,GR-0190,text,trato del personal,complaint
-google_reviews,GR-0190,text,tamaño de las porciones,praise
-google_reviews,GR-0191,text,tamaño de las porciones,praise
+google_reviews,GR-0191,text,tamaño de porciones,praise
 google_reviews,GR-0192,text,sin detalle,praise
+google_reviews,GR-0193,text,tamaño de porciones,praise
 google_reviews,GR-0193,text,tiempo de espera,complaint
-google_reviews,GR-0193,text,tamaño de las porciones,praise
+google_reviews,GR-0195,text,precio y valor,praise
 google_reviews,GR-0195,text,galleta con el café,praise
-google_reviews,GR-0195,text,precio,praise
 google_reviews,GR-0196,text,sin detalle,complaint
-google_reviews,GR-0197,text,tamaño de las porciones,praise
-google_reviews,GR-0197,text,precio,praise
+google_reviews,GR-0197,text,precio y valor,praise
+google_reviews,GR-0197,text,tamaño de porciones,praise
 google_reviews,GR-0200,text,tiempo de espera,praise
 survey_responses,SR-0006,positives,sin detalle,praise
-survey_responses,SR-0007,complaints,sabor y calidad de la comida,complaint
-survey_responses,SR-0011,suggestions,opciones de menú,suggestion
-survey_responses,SR-0012,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0013,complaints,sabor y calidad de la comida,complaint
-survey_responses,SR-0014,complaints,sabor y calidad de la comida,complaint
-survey_responses,SR-0014,suggestions,menú en código QR,suggestion
-survey_responses,SR-0016,positives,tamaño de las porciones,praise
-survey_responses,SR-0018,positives,tamaño de las porciones,praise
-survey_responses,SR-0018,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0019,positives,tamaño de las porciones,praise
-survey_responses,SR-0019,positives,precio,praise
+survey_responses,SR-0007,complaints,sabor de la comida,complaint
+survey_responses,SR-0011,suggestions,opciones vegetarianas,suggestion
+survey_responses,SR-0012,positives,ambiente y decoración,praise
+survey_responses,SR-0013,complaints,sabor de la comida,complaint
+survey_responses,SR-0014,complaints,sabor de la comida,complaint
+survey_responses,SR-0014,suggestions,menú con código QR,suggestion
+survey_responses,SR-0016,positives,tamaño de porciones,praise
+survey_responses,SR-0018,positives,tamaño de porciones,praise
+survey_responses,SR-0018,positives,ambiente y decoración,praise
+survey_responses,SR-0019,positives,precio y valor,praise
+survey_responses,SR-0019,positives,tamaño de porciones,praise
 survey_responses,SR-0020,positives,trato del personal,praise
 survey_responses,SR-0021,positives,trato del personal,praise
 survey_responses,SR-0022,positives,sin detalle,praise
-survey_responses,SR-0026,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0026,positives,frescura de ingredientes,praise
 survey_responses,SR-0027,suggestions,pago con transferencia,suggestion
-survey_responses,SR-0028,positives,tamaño de las porciones,praise
-survey_responses,SR-0028,positives,precio,praise
-survey_responses,SR-0028,suggestions,opciones de menú,suggestion
+survey_responses,SR-0028,positives,precio y valor,praise
+survey_responses,SR-0028,positives,tamaño de porciones,praise
+survey_responses,SR-0028,suggestions,opciones vegetarianas,suggestion
 survey_responses,SR-0030,positives,sin detalle,praise
-survey_responses,SR-0031,complaints,precio,complaint
+survey_responses,SR-0031,complaints,precio y valor,complaint
 survey_responses,SR-0031,positives,trato del personal,praise
 survey_responses,SR-0033,suggestions,abrir los domingos,suggestion
-survey_responses,SR-0035,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0038,positives,precio,praise
-survey_responses,SR-0039,positives,tamaño de las porciones,praise
-survey_responses,SR-0039,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0041,complaints,errores en el pedido,complaint
-survey_responses,SR-0043,complaints,errores en el pedido,complaint
+survey_responses,SR-0035,positives,frescura de ingredientes,praise
+survey_responses,SR-0038,positives,precio y valor,praise
+survey_responses,SR-0039,positives,tamaño de porciones,praise
+survey_responses,SR-0039,positives,ambiente y decoración,praise
+survey_responses,SR-0041,complaints,errores en pedido o cuenta,complaint
+survey_responses,SR-0043,complaints,errores en pedido o cuenta,complaint
+survey_responses,SR-0043,positives,sabor de la comida,praise
 survey_responses,SR-0043,positives,galleta con el café,praise
-survey_responses,SR-0043,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0044,suggestions,opciones de menú,suggestion
+survey_responses,SR-0044,suggestions,menú infantil,suggestion
 survey_responses,SR-0045,complaints,sin detalle,complaint
-survey_responses,SR-0045,suggestions,más personal en el almuerzo,suggestion
-survey_responses,SR-0046,positives,precio,praise
-survey_responses,SR-0047,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0052,suggestions,más personal en el almuerzo,suggestion
-survey_responses,SR-0053,positives,precio,praise
+survey_responses,SR-0045,suggestions,personal en hora del almuerzo,suggestion
+survey_responses,SR-0046,positives,precio y valor,praise
+survey_responses,SR-0047,positives,sabor de la comida,praise
+survey_responses,SR-0052,suggestions,personal en hora del almuerzo,suggestion
+survey_responses,SR-0053,positives,precio y valor,praise
+survey_responses,SR-0054,positives,tamaño de porciones,praise
 survey_responses,SR-0054,positives,tiempo de espera,praise
-survey_responses,SR-0054,positives,tamaño de las porciones,praise
-survey_responses,SR-0055,suggestions,menú en código QR,suggestion
-survey_responses,SR-0056,suggestions,opciones de menú,suggestion
+survey_responses,SR-0055,suggestions,menú con código QR,suggestion
+survey_responses,SR-0056,suggestions,menú infantil,suggestion
 survey_responses,SR-0057,suggestions,reservas,suggestion
 survey_responses,SR-0058,suggestions,abrir los domingos,suggestion
-survey_responses,SR-0059,positives,tamaño de las porciones,praise
-survey_responses,SR-0059,positives,precio,praise
+survey_responses,SR-0059,positives,precio y valor,praise
+survey_responses,SR-0059,positives,tamaño de porciones,praise
 survey_responses,SR-0060,suggestions,abrir los domingos,suggestion
-survey_responses,SR-0061,positives,precio,praise
-survey_responses,SR-0062,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0062,suggestions,opciones de menú,suggestion
-survey_responses,SR-0065,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0066,complaints,tamaño de las porciones,complaint
+survey_responses,SR-0061,positives,precio y valor,praise
+survey_responses,SR-0062,positives,ambiente y decoración,praise
+survey_responses,SR-0062,suggestions,jugos sin azúcar,suggestion
+survey_responses,SR-0065,positives,ambiente y decoración,praise
+survey_responses,SR-0066,complaints,tamaño de porciones,complaint
 survey_responses,SR-0068,positives,tiempo de espera,praise
 survey_responses,SR-0070,positives,tiempo de espera,praise
-survey_responses,SR-0070,positives,tamaño de las porciones,praise
-survey_responses,SR-0070,positives,precio,praise
-survey_responses,SR-0072,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0073,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0073,positives,tamaño de las porciones,praise
-survey_responses,SR-0073,positives,precio,praise
+survey_responses,SR-0070,positives,precio y valor,praise
+survey_responses,SR-0070,positives,tamaño de porciones,praise
+survey_responses,SR-0072,positives,ambiente y decoración,praise
+survey_responses,SR-0073,positives,precio y valor,praise
+survey_responses,SR-0073,positives,tamaño de porciones,praise
+survey_responses,SR-0073,positives,sabor de la comida,praise
+survey_responses,SR-0076,positives,ambiente y decoración,praise
 survey_responses,SR-0076,positives,galleta con el café,praise
-survey_responses,SR-0076,positives,ambiente decoración y limpieza,praise
 survey_responses,SR-0080,positives,trato del personal,praise
 survey_responses,SR-0080,positives,galleta con el café,praise
-survey_responses,SR-0082,positives,tamaño de las porciones,praise
-survey_responses,SR-0083,suggestions,opciones de menú,suggestion
+survey_responses,SR-0082,positives,tamaño de porciones,praise
+survey_responses,SR-0083,suggestions,opciones vegetarianas,suggestion
 survey_responses,SR-0084,positives,tiempo de espera,praise
-survey_responses,SR-0085,suggestions,espacio y comodidad del local,suggestion
-survey_responses,SR-0086,positives,precio,praise
+survey_responses,SR-0085,suggestions,espacio y comodidad,suggestion
+survey_responses,SR-0086,positives,precio y valor,praise
 survey_responses,SR-0091,positives,tiempo de espera,praise
-survey_responses,SR-0092,positives,tamaño de las porciones,praise
-survey_responses,SR-0092,positives,precio,praise
-survey_responses,SR-0093,positives,tamaño de las porciones,praise
+survey_responses,SR-0092,positives,precio y valor,praise
+survey_responses,SR-0092,positives,tamaño de porciones,praise
+survey_responses,SR-0093,positives,tamaño de porciones,praise
 survey_responses,SR-0094,positives,sin detalle,praise
-survey_responses,SR-0094,suggestions,más personal en el almuerzo,suggestion
-survey_responses,SR-0095,positives,tamaño de las porciones,praise
-survey_responses,SR-0095,suggestions,opciones de menú,suggestion
-survey_responses,SR-0097,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0094,suggestions,personal en hora del almuerzo,suggestion
+survey_responses,SR-0095,positives,tamaño de porciones,praise
+survey_responses,SR-0095,suggestions,jugos sin azúcar,suggestion
+survey_responses,SR-0097,positives,sabor de la comida,praise
 survey_responses,SR-0097,suggestions,domicilios,suggestion
 survey_responses,SR-0098,positives,trato del personal,praise
 survey_responses,SR-0098,positives,galleta con el café,praise
+survey_responses,SR-0101,positives,sabor de la comida,praise
 survey_responses,SR-0101,positives,galleta con el café,praise
-survey_responses,SR-0101,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0101,suggestions,opciones de menú,suggestion
+survey_responses,SR-0101,suggestions,menú infantil,suggestion
 survey_responses,SR-0104,positives,trato del personal,praise
-survey_responses,SR-0104,positives,ambiente decoración y limpieza,praise
+survey_responses,SR-0104,positives,ambiente y decoración,praise
 survey_responses,SR-0106,positives,sin detalle,praise
 survey_responses,SR-0108,positives,tiempo de espera,praise
 survey_responses,SR-0110,complaints,tiempo de espera,complaint
-survey_responses,SR-0112,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0112,positives,sabor de la comida,praise
 survey_responses,SR-0112,positives,ruido y música,praise
 survey_responses,SR-0113,suggestions,domicilios,suggestion
-survey_responses,SR-0114,positives,tamaño de las porciones,praise
-survey_responses,SR-0114,positives,precio,praise
-survey_responses,SR-0114,positives,ambiente decoración y limpieza,praise
+survey_responses,SR-0114,positives,ambiente y decoración,praise
+survey_responses,SR-0114,positives,precio y valor,praise
+survey_responses,SR-0114,positives,tamaño de porciones,praise
 survey_responses,SR-0115,complaints,ruido y música,complaint
 survey_responses,SR-0115,positives,tiempo de espera,praise
-survey_responses,SR-0117,complaints,espacio y comodidad del local,complaint
-survey_responses,SR-0121,positives,tamaño de las porciones,praise
-survey_responses,SR-0121,positives,precio,praise
-survey_responses,SR-0121,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0122,positives,tamaño de las porciones,praise
-survey_responses,SR-0122,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0122,suggestions,opciones de menú,suggestion
-survey_responses,SR-0125,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0130,complaints,espacio y comodidad del local,complaint
-survey_responses,SR-0132,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0117,complaints,espacio y comodidad,complaint
+survey_responses,SR-0121,positives,precio y valor,praise
+survey_responses,SR-0121,positives,tamaño de porciones,praise
+survey_responses,SR-0121,positives,ambiente y decoración,praise
+survey_responses,SR-0122,positives,tamaño de porciones,praise
+survey_responses,SR-0122,positives,limpieza,praise
+survey_responses,SR-0122,positives,ambiente y decoración,praise
+survey_responses,SR-0122,suggestions,menú infantil,suggestion
+survey_responses,SR-0125,positives,limpieza,praise
+survey_responses,SR-0125,positives,ambiente y decoración,praise
+survey_responses,SR-0130,complaints,espacio y comodidad,complaint
+survey_responses,SR-0132,positives,sabor de la comida,praise
 survey_responses,SR-0133,suggestions,abrir los domingos,suggestion
 survey_responses,SR-0134,complaints,ruido y música,complaint
 survey_responses,SR-0135,positives,trato del personal,praise
-survey_responses,SR-0137,positives,tamaño de las porciones,praise
+survey_responses,SR-0137,positives,tamaño de porciones,praise
 survey_responses,SR-0137,suggestions,pago con transferencia,suggestion
-survey_responses,SR-0140,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0140,positives,sabor de la comida,praise
 survey_responses,SR-0142,suggestions,abrir los domingos,suggestion
 survey_responses,SR-0143,positives,galleta con el café,praise
-survey_responses,SR-0145,complaints,espacio y comodidad del local,complaint
-survey_responses,SR-0145,positives,tamaño de las porciones,praise
-survey_responses,SR-0145,positives,precio,praise
+survey_responses,SR-0145,complaints,espacio y comodidad,complaint
+survey_responses,SR-0145,positives,precio y valor,praise
+survey_responses,SR-0145,positives,tamaño de porciones,praise
 survey_responses,SR-0145,suggestions,pago con transferencia,suggestion
-survey_responses,SR-0147,positives,tamaño de las porciones,praise
-survey_responses,SR-0147,positives,precio,praise
-survey_responses,SR-0147,suggestions,espacio y comodidad del local,suggestion
+survey_responses,SR-0147,positives,precio y valor,praise
+survey_responses,SR-0147,positives,tamaño de porciones,praise
+survey_responses,SR-0147,suggestions,espacio y comodidad,suggestion
 survey_responses,SR-0148,positives,trato del personal,praise
 survey_responses,SR-0149,complaints,trato del personal,complaint
-survey_responses,SR-0150,positives,tamaño de las porciones,praise
+survey_responses,SR-0150,positives,tamaño de porciones,praise
 survey_responses,SR-0151,complaints,trato del personal,complaint
 survey_responses,SR-0152,complaints,tiempo de espera,complaint
-survey_responses,SR-0153,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0157,positives,precio,praise
+survey_responses,SR-0153,positives,ambiente y decoración,praise
+survey_responses,SR-0157,positives,precio y valor,praise
 survey_responses,SR-0160,complaints,tiempo de espera,complaint
-survey_responses,SR-0162,complaints,errores en el pedido,complaint
-survey_responses,SR-0162,positives,tamaño de las porciones,praise
-survey_responses,SR-0162,positives,precio,praise
-survey_responses,SR-0163,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0162,complaints,errores en pedido o cuenta,complaint
+survey_responses,SR-0162,positives,precio y valor,praise
+survey_responses,SR-0162,positives,tamaño de porciones,praise
+survey_responses,SR-0163,positives,sabor de la comida,praise
 survey_responses,SR-0165,complaints,saludo y agradecimiento,complaint
-survey_responses,SR-0165,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0165,positives,ambiente decoración y limpieza,praise
+survey_responses,SR-0165,positives,sabor de la comida,praise
+survey_responses,SR-0165,positives,limpieza,praise
+survey_responses,SR-0165,positives,ambiente y decoración,praise
 survey_responses,SR-0167,complaints,tiempo de espera,complaint
 survey_responses,SR-0168,positives,galleta con el café,praise
-survey_responses,SR-0170,positives,tamaño de las porciones,praise
-survey_responses,SR-0170,positives,precio,praise
-survey_responses,SR-0172,complaints,errores en el pedido,complaint
+survey_responses,SR-0170,positives,precio y valor,praise
+survey_responses,SR-0170,positives,tamaño de porciones,praise
+survey_responses,SR-0172,complaints,errores en pedido o cuenta,complaint
 survey_responses,SR-0172,positives,galleta con el café,praise
 survey_responses,SR-0173,complaints,sin detalle,complaint
 survey_responses,SR-0175,complaints,saludo y agradecimiento,complaint
-survey_responses,SR-0176,suggestions,más personal en el almuerzo,suggestion
+survey_responses,SR-0176,suggestions,personal en hora del almuerzo,suggestion
 survey_responses,SR-0178,complaints,tiempo de espera,complaint
+survey_responses,SR-0178,positives,ambiente y decoración,praise
 survey_responses,SR-0178,positives,trato del personal,praise
-survey_responses,SR-0178,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0179,positives,tamaño de las porciones,praise
-survey_responses,SR-0179,suggestions,menú en código QR,suggestion
+survey_responses,SR-0179,positives,tamaño de porciones,praise
+survey_responses,SR-0179,suggestions,menú con código QR,suggestion
 survey_responses,SR-0180,complaints,tiempo de espera,complaint
-survey_responses,SR-0180,positives,ambiente decoración y limpieza,praise
+survey_responses,SR-0180,positives,ambiente y decoración,praise
 survey_responses,SR-0186,positives,sin detalle,praise
 survey_responses,SR-0187,complaints,tiempo de espera,complaint
 survey_responses,SR-0187,suggestions,pago con transferencia,suggestion
+survey_responses,SR-0188,positives,precio y valor,praise
 survey_responses,SR-0188,positives,galleta con el café,praise
-survey_responses,SR-0188,positives,precio,praise
 survey_responses,SR-0191,complaints,tiempo de espera,complaint
-survey_responses,SR-0192,positives,precio,praise
+survey_responses,SR-0192,positives,precio y valor,praise
 survey_responses,SR-0194,complaints,trato del personal,complaint
-survey_responses,SR-0196,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0198,positives,precio,praise
-survey_responses,SR-0198,suggestions,más personal en el almuerzo,suggestion
-survey_responses,SR-0200,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0196,positives,sabor de la comida,praise
+survey_responses,SR-0198,positives,precio y valor,praise
+survey_responses,SR-0198,suggestions,personal en hora del almuerzo,suggestion
+survey_responses,SR-0200,positives,sabor de la comida,praise
 survey_responses,SR-0200,suggestions,abrir los domingos,suggestion
-survey_responses,SR-0202,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0204,suggestions,opciones de menú,suggestion
+survey_responses,SR-0202,positives,sabor de la comida,praise
+survey_responses,SR-0204,suggestions,opciones vegetarianas,suggestion
 survey_responses,SR-0205,complaints,tiempo de espera,complaint
-survey_responses,SR-0205,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0205,suggestions,opciones de menú,suggestion
+survey_responses,SR-0205,positives,ambiente y decoración,praise
+survey_responses,SR-0205,suggestions,menú infantil,suggestion
 survey_responses,SR-0207,complaints,trato del personal,complaint
-survey_responses,SR-0207,suggestions,más personal en el almuerzo,suggestion
+survey_responses,SR-0207,suggestions,personal en hora del almuerzo,suggestion
 survey_responses,SR-0210,positives,trato del personal,praise
-survey_responses,SR-0210,positives,tamaño de las porciones,praise
+survey_responses,SR-0210,positives,tamaño de porciones,praise
 survey_responses,SR-0212,complaints,tiempo de espera,complaint
-survey_responses,SR-0214,positives,ambiente decoración y limpieza,praise
+survey_responses,SR-0214,positives,ambiente y decoración,praise
 survey_responses,SR-0215,complaints,tiempo de espera,complaint
 survey_responses,SR-0215,positives,galleta con el café,praise
 survey_responses,SR-0217,complaints,sin detalle,complaint
 survey_responses,SR-0217,positives,sin detalle,praise
-survey_responses,SR-0219,complaints,errores en el pedido,complaint
+survey_responses,SR-0219,complaints,errores en pedido o cuenta,complaint
 survey_responses,SR-0220,complaints,tiempo de espera,complaint
-survey_responses,SR-0221,positives,tamaño de las porciones,praise
-survey_responses,SR-0221,suggestions,más personal en el almuerzo,suggestion
+survey_responses,SR-0221,positives,tamaño de porciones,praise
+survey_responses,SR-0221,suggestions,personal en hora del almuerzo,suggestion
 survey_responses,SR-0222,complaints,trato del personal,complaint
 survey_responses,SR-0223,complaints,trato del personal,complaint
-survey_responses,SR-0224,positives,precio,praise
+survey_responses,SR-0224,positives,precio y valor,praise
+survey_responses,SR-0225,positives,precio y valor,praise
+survey_responses,SR-0225,positives,tamaño de porciones,praise
 survey_responses,SR-0225,positives,galleta con el café,praise
-survey_responses,SR-0225,positives,tamaño de las porciones,praise
-survey_responses,SR-0225,positives,precio,praise
-survey_responses,SR-0228,positives,tamaño de las porciones,praise
-survey_responses,SR-0229,positives,tamaño de las porciones,praise
-survey_responses,SR-0231,complaints,espacio y comodidad del local,complaint
-survey_responses,SR-0231,positives,ambiente decoración y limpieza,praise
+survey_responses,SR-0228,positives,tamaño de porciones,praise
+survey_responses,SR-0229,positives,tamaño de porciones,praise
+survey_responses,SR-0231,complaints,espacio y comodidad,complaint
+survey_responses,SR-0231,positives,ambiente y decoración,praise
 survey_responses,SR-0234,suggestions,reservas,suggestion
-survey_responses,SR-0235,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0236,suggestions,espacio y comodidad del local,suggestion
-survey_responses,SR-0237,positives,precio,praise
-survey_responses,SR-0240,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0235,positives,limpieza,praise
+survey_responses,SR-0235,positives,ambiente y decoración,praise
+survey_responses,SR-0236,suggestions,espacio y comodidad,suggestion
+survey_responses,SR-0237,positives,precio y valor,praise
+survey_responses,SR-0240,positives,frescura de ingredientes,praise
 survey_responses,SR-0240,positives,ruido y música,praise
-survey_responses,SR-0240,suggestions,menú en código QR,suggestion
+survey_responses,SR-0240,suggestions,menú con código QR,suggestion
 survey_responses,SR-0243,complaints,trato del personal,complaint
 survey_responses,SR-0243,positives,sin detalle,praise
 survey_responses,SR-0244,complaints,tiempo de espera,complaint
 survey_responses,SR-0245,complaints,sin detalle,complaint
-survey_responses,SR-0246,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0246,positives,sabor de la comida,praise
 survey_responses,SR-0247,suggestions,reservas,suggestion
-survey_responses,SR-0249,suggestions,menú en código QR,suggestion
-survey_responses,SR-0251,positives,precio,praise
+survey_responses,SR-0249,suggestions,menú con código QR,suggestion
+survey_responses,SR-0251,positives,precio y valor,praise
 survey_responses,SR-0252,complaints,trato del personal,complaint
 survey_responses,SR-0253,complaints,ruido y música,complaint
 survey_responses,SR-0254,suggestions,pago con transferencia,suggestion
-survey_responses,SR-0255,suggestions,opciones de menú,suggestion
-survey_responses,SR-0256,suggestions,menú en código QR,suggestion
-survey_responses,SR-0260,positives,tamaño de las porciones,praise
-survey_responses,SR-0260,positives,precio,praise
-survey_responses,SR-0264,positives,ambiente decoración y limpieza,praise
-survey_responses,SR-0265,positives,sabor y calidad de la comida,praise
+survey_responses,SR-0255,suggestions,jugos sin azúcar,suggestion
+survey_responses,SR-0256,suggestions,menú con código QR,suggestion
+survey_responses,SR-0260,positives,precio y valor,praise
+survey_responses,SR-0260,positives,tamaño de porciones,praise
+survey_responses,SR-0264,positives,ambiente y decoración,praise
 survey_responses,SR-0265,positives,ruido y música,praise
+survey_responses,SR-0265,positives,sabor de la comida,praise
 survey_responses,SR-0267,complaints,tiempo de espera,complaint
-survey_responses,SR-0268,suggestions,más personal en el almuerzo,suggestion
-survey_responses,SR-0269,positives,sabor y calidad de la comida,praise
-survey_responses,SR-0270,suggestions,menú en código QR,suggestion
+survey_responses,SR-0268,suggestions,personal en hora del almuerzo,suggestion
+survey_responses,SR-0269,positives,sabor de la comida,praise
+survey_responses,SR-0270,suggestions,menú con código QR,suggestion
 survey_responses,SR-0272,complaints,tiempo de espera,complaint
 survey_responses,SR-0273,complaints,tiempo de espera,complaint
-survey_responses,SR-0274,suggestions,opciones de menú,suggestion
-survey_responses,SR-0277,suggestions,menú en código QR,suggestion
-survey_responses,SR-0278,suggestions,menú en código QR,suggestion
-survey_responses,SR-0279,positives,tamaño de las porciones,praise
+survey_responses,SR-0274,suggestions,opciones vegetarianas,suggestion
+survey_responses,SR-0277,suggestions,menú con código QR,suggestion
+survey_responses,SR-0278,suggestions,menú con código QR,suggestion
 survey_responses,SR-0279,positives,ruido y música,praise
-survey_responses,SR-0279,suggestions,opciones de menú,suggestion
+survey_responses,SR-0279,positives,tamaño de porciones,praise
+survey_responses,SR-0279,suggestions,menú infantil,suggestion
 survey_responses,SR-0280,complaints,tiempo de espera,complaint
+survey_responses,SR-0280,positives,precio y valor,praise
 survey_responses,SR-0280,positives,tiempo de espera,praise
-survey_responses,SR-0280,positives,precio,praise
 survey_responses,SR-0281,complaints,tiempo de espera,complaint
 survey_responses,SR-0282,complaints,trato del personal,complaint
 survey_responses,SR-0284,suggestions,domicilios,suggestion
 survey_responses,SR-0288,positives,galleta con el café,praise
 survey_responses,SR-0289,complaints,sin detalle,complaint
-survey_responses,SR-0289,suggestions,menú en código QR,suggestion
+survey_responses,SR-0289,suggestions,menú con código QR,suggestion
 survey_responses,SR-0292,suggestions,reservas,suggestion
 survey_responses,SR-0293,suggestions,domicilios,suggestion
 survey_responses,SR-0294,complaints,tiempo de espera,complaint
