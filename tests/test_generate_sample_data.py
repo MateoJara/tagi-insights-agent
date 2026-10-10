@@ -78,3 +78,47 @@ def test_different_seed_writes_different_files(tmp_path):
     first = gen.write_sample_data(tmp_path / "a", seed=1)
     second = gen.write_sample_data(tmp_path / "b", seed=2)
     assert first[0].read_bytes() != second[0].read_bytes()
+
+
+@pytest.fixture(scope="module")
+def generated():
+    return gen.generate_all(gen.SEED)
+
+
+def test_comments_are_varied(generated):
+    survey, reviews, _ = generated
+    unique_texts = pd.concat([survey["positives"], survey["complaints"], reviews["text"]]).dropna().nunique()
+    assert unique_texts > 150
+
+
+def test_answer_key_covers_every_comment(generated):
+    survey, reviews, key = generated
+    survey = survey.drop_duplicates()
+    n_survey_comments = survey[["positives", "complaints", "suggestions"]].notna().sum().sum()
+    assert (key["table"] == "survey_responses").sum() == n_survey_comments
+    assert (key["table"] == "google_reviews").sum() == reviews["text"].notna().sum()
+    assert not key.duplicated(["table", "id", "column"]).any()
+
+
+def test_planted_comment_stories(generated):
+    survey, _, key = generated
+    topics = key.assign(topic=key["topics"].str.split("|")).explode("topic")
+    assert (topics["topic"] == "detail_cookie").sum() >= 10
+
+    complaints = topics[(topics["table"] == "survey_responses") & (topics["column"] == "complaints")]
+    dates = survey.drop_duplicates().set_index("response_id")["submitted_at"]
+    after = complaints["id"].map(dates) >= gen.SERVICE_DECLINE_START
+    service = complaints["topic"].str.startswith("service_")
+    top_after = complaints.loc[after, "topic"].value_counts().index[0]
+    assert top_after == "service_wait"
+    wait_share_after = (complaints.loc[after & service, "topic"] == "service_wait").mean()
+    wait_share_before = (complaints.loc[~after & service, "topic"] == "service_wait").mean()
+    assert wait_share_after > wait_share_before
+
+
+def test_changing_text_seed_keeps_the_numbers():
+    first = gen.generate_survey_responses(np.random.default_rng(gen.SEED), np.random.default_rng(1))
+    second = gen.generate_survey_responses(np.random.default_rng(gen.SEED), np.random.default_rng(2))
+    numeric = [c for c in first.columns if c.startswith("rating_")] + ["would_recommend", "submitted_at"]
+    pd.testing.assert_frame_equal(first[numeric], second[numeric])
+    assert not first["complaints"].equals(second["complaints"])

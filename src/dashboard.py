@@ -142,12 +142,14 @@ def _aspects(metrics):
             status = ("good", "Se mantiene")
         else:
             status = ("warn", "A vigilar")
+        # The change shown is the difference of the two rounded figures beside it, so
+        # the row adds up for the reader (4.0 to 2.6 reads -1.4, even if exact is -1.45).
+        shown_change = round(round(values["recent"], 1) - round(values["previous"], 1), 1)
         rows.append({
             "label": ASPECT_LABELS[aspect],
             "previous": f"{values['previous']:.1f}",
             "recent": f"{values['recent']:.1f}",
-            # A change that rounds to zero prints as "0.0", not "-0.0".
-            "change": f"{values['change']:+.1f}" if round(values["change"], 1) else "0.0",
+            "change": f"{shown_change:+.1f}" if shown_change else "0.0",
             "recent_n": values["recent_n"],
             "status": status[0],
             "status_label": status[1],

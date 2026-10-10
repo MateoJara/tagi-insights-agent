@@ -18,7 +18,9 @@ informe están primero; los textos del tablero, al final.
 - Calificaciones: un decimal (4.1).
 - Porcentajes: sin decimales (71%).
 - NPS: sin decimales, con signo si es negativo.
-- Cambios: con signo y un decimal (-1.5).
+- Cambios: con signo y un decimal (-1.4). Cuando escriba el antes y el ahora, el
+  cambio es la resta de esas dos cifras ya redondeadas, para que le cuadre a quien
+  lee: de 4.0 a 2.6 es -1.4, aunque el valor exacto en `metrics.json` sea -1.45.
 - Fechas: "julio de 2026", no "2026-07".
 
 ## Secciones

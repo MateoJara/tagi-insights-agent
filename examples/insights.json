@@ -2,13 +2,13 @@
   "business_name": "Restaurante Demo",
   "headline": "qué dicen sus clientes y qué hacer ahora",
   "summary": "Su comida y sus precios siguen gustando. Lo que cambió es la atención: cayó desde julio de 2026 y ya se nota en sus reseñas recientes de Google.",
-  "alert": "la calificación del servicio pasó de 4.1 a 2.6 en los últimos tres meses, y ninguna de las 29 reseñas recientes de Google tiene respuesta.",
+  "alert": "la calificación del servicio pasó de 4.0 a 2.6 en los últimos tres meses, y solo 8% de las 26 reseñas recientes de Google tiene respuesta.",
   "actions": [
     {
       "horizon": "this_week",
       "title": "Responda las reseñas recientes",
       "text": "Empiece por las negativas. Agradezca, reconozca la mala experiencia sin discutir y diga qué va a cambiar. Evite respuestas de plantilla.",
-      "why": "0% de las 29 reseñas recientes respondidas"
+      "why": "Solo 8% de las 26 reseñas recientes respondidas"
     },
     {
       "horizon": "this_week",
@@ -26,13 +26,13 @@
       "horizon": "this_month",
       "title": "Atienda las quejas del formulario",
       "text": "Un cliente que se queja en el formulario todavía no ha escrito en Google. Contáctelo o corrija lo que señala antes de que lo haga.",
-      "why": "Google reciente en 3.6, bajo el umbral de 4.0"
+      "why": "Google reciente en 3.3, bajo el umbral de 4.0"
     },
     {
       "horizon": "ongoing",
       "title": "Asigne un responsable de reseñas",
       "text": "Una persona que responda todas las reseñas cada semana, positivas y negativas.",
-      "why": "Última respuesta: 21 de junio de 2026"
+      "why": "Última respuesta: 28 de agosto de 2026"
     },
     {
       "horizon": "ongoing",

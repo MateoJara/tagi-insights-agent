@@ -10,20 +10,20 @@
 ## Resumen
 
 Su comida y sus precios siguen gustando, pero la atención se deterioró desde julio
-de 2026 y ya se nota en Google: sus reseñas de los últimos tres meses promedian 3.6
+de 2026 y ya se nota en Google: sus reseñas de los últimos tres meses promedian 3.3
 frente a 4.2 en el histórico. Lo primero es recuperar el servicio y volver a
-responder las reseñas, que están sin respuesta desde junio.
+responder las reseñas: solo 8% de las recientes tiene respuesta.
 
 ## 1. Cómo está el negocio hoy
 
 | Métrica | Valor | Lectura |
 |---|---|---|
-| Calificación general (formulario) | 3.9 de 5 | Aceptable, pero por debajo de 4.0. Base: 287 respuestas. |
-| Clientes satisfechos | 71% | Siete de cada diez califican la visita con 4 o 5. Base: 287 respuestas. |
-| Recomendación (NPS) | -4 | Hay un poco más de clientes que no lo recomendarían que clientes que sí. Base: 288 respuestas. |
+| Calificación general (formulario) | 3.9 de 5 | Aceptable, pero por debajo de 4.0. Base: 286 respuestas. |
+| Clientes satisfechos | 71% | Siete de cada diez califican la visita con 4 o 5. Base: 286 respuestas. |
+| Recomendación (NPS) | -4 | Hay un poco más de clientes que no lo recomendarían que clientes que sí. Base: 287 respuestas. |
 | Calificación en Google | 4.2 de 5 | Sólida, sobre el umbral de 4.0. Base: 200 reseñas. |
-| Google, últimos 3 meses | 3.6 de 5 | Por debajo de 4.0. Base: 29 reseñas. Es la alerta principal. |
-| Reseñas respondidas | 34% histórico, 0% reciente | Última respuesta: 21 de junio de 2026. |
+| Google, últimos 3 meses | 3.3 de 5 | Por debajo de 4.0. Base: 26 reseñas. Es la alerta principal. |
+| Reseñas respondidas | 27% histórico, 8% reciente | Última respuesta: 28 de agosto de 2026. |
 
 El NPS mide qué tanto lo recomendarían sus clientes: resta el porcentaje que
 responde de 0 a 6 al porcentaje que responde 9 o 10. Va de -100 a 100.
@@ -37,16 +37,16 @@ tres meses y 68% solo considera negocios de 4 estrellas o más.
 
 ## 2. Qué cambió
 
-La atención es lo único que cambió de forma importante. Pasó de 4.1 a 2.6 en los
-últimos tres meses, una caída de 1.5 puntos (base: 139 respuestas antes y 141 en
+La atención es lo único que cambió de forma importante. Pasó de 4.0 a 2.6 en los
+últimos tres meses, una caída de 1.4 puntos (base: 144 respuestas antes y 139 en
 los últimos tres meses).
 
 La caída fue de un mes a otro, no gradual:
 
 | Mes de 2026 | Servicio | General |
 |---|---|---|
-| Abril | 4.0 | 4.0 |
-| Mayo | 4.2 | 4.1 |
+| Abril | 3.9 | 4.0 |
+| Mayo | 4.1 | 4.1 |
 | Junio | 4.1 | 4.1 |
 | Julio | 2.5 | 3.6 |
 | Agosto | 2.7 | 3.8 |
@@ -59,22 +59,22 @@ Los otros tres aspectos casi no se movieron:
 ![Antes y ahora por aspecto](charts/aspect_change.png)
 
 El mismo deterioro ya es visible para el público: las reseñas recientes de Google
-bajaron a 3.6, y ninguna de las 29 tiene respuesta suya.
+bajaron a 3.3, y solo 8% de las 26 tiene respuesta suya.
 
 ## 3. Qué funciona y hay que proteger
 
-- **Precio:** 4.2 de 5, estable. Es su aspecto mejor calificado.
-- **Comida:** 4.2 de 5, prácticamente igual antes y después de julio.
-- **Ambiente:** 3.9 de 5, con una baja leve de 0.1.
+- **Precio:** 4.2 de 5. Es su aspecto mejor calificado; pasó de 4.3 a 4.2.
+- **Comida:** 4.2 de 5. Pasó de 4.2 a 4.1.
+- **Ambiente:** 3.9 de 5. Pasó de 4.0 a 3.8.
 
 Sus clientes siguen valorando lo que sirve y lo que cobra. Al corregir la atención,
 no toque la carta ni los precios.
 
 ## 4. En qué concentrarse
 
-1. **Recuperar la atención.** Es el único aspecto que cayó (de 4.1 a 2.6) y arrastra
+1. **Recuperar la atención.** Es el único aspecto que cayó (de 4.0 a 2.6) y arrastra
    la calificación general, que bajó de 4.1 en junio a 3.6 en septiembre.
-2. **Volver a responder las reseñas.** Pasó de responder 34% a ninguna, justo cuando
+2. **Volver a responder las reseñas.** Pasó de responder 27% a 8%, justo cuando
    llegaron las más críticas.
 
 ## 5. Plan de acción
@@ -84,7 +84,7 @@ no toque la carta ni los precios.
 - **Responda las reseñas de los últimos tres meses, empezando por las negativas.**
   Agradezca, reconozca la mala experiencia sin discutir y diga qué va a cambiar.
   Evite respuestas de plantilla.
-  *Por qué:* 0% de las 29 reseñas recientes tiene respuesta.
+  *Por qué:* solo 8% de las 26 reseñas recientes tiene respuesta.
   *Cómo medirlo:* porcentaje de reseñas recientes respondidas en el próximo informe.
 - **Revise qué cambió en el equipo o en los turnos hacia julio.** Vea las preguntas
   al final.
@@ -104,7 +104,7 @@ no toque la carta ni los precios.
 ### Continuo
 
 - **Asigne a una persona la tarea de responder todas las reseñas cada semana.**
-  *Por qué:* la última respuesta fue el 21 de junio de 2026.
+  *Por qué:* la última respuesta fue el 28 de agosto de 2026.
 - **Invite a todos sus clientes a dejar su opinión**, sin filtrar a los contentos y
   sin ofrecer nada a cambio. Google prohíbe los incentivos por reseñas.
 
@@ -124,7 +124,7 @@ servicio es el ambiente, en 3.9.
 ## Sobre estos datos
 
 - Formulario: 300 respuestas leídas, 6 duplicadas eliminadas, 294 analizadas.
-- Google: 200 reseñas analizadas; 40% trae texto.
+- Google: 200 reseñas analizadas; 42% trae texto.
 - Este informe no conoce sus ventas, costos ni ocupación, y no estima impacto en
   dinero. Quien responde un formulario o deja una reseña no representa a todos sus
   clientes.

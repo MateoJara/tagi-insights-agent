@@ -64,6 +64,8 @@ def test_flags_the_planted_story(data):
     assert aspects["Servicio"]["status_label"] == "Empeoró"
     assert aspects["Comida"]["status_label"] == "Se mantiene"
     assert not any(row["change"] in ("-0.0", "+0.0") for row in data["aspects"])
+    for row in data["aspects"]:
+        assert float(row["change"]) == pytest.approx(float(row["recent"]) - float(row["previous"]))
     assert data["kpis"][3]["status"] == "crit"
 
 
