@@ -1,0 +1,1904 @@
+{
+  "reviews": [
+    {
+      "reviewId": "rv00000",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-10-03T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2024-10-06T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00001",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-10-09T17:00:00Z",
+      "comment": "Vengo seguido y la niña que nos atendió fue un amor!!",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-10-13T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00002",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-11T17:00:00Z",
+      "comment": "10/10",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2024-10-20T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00003",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "THREE",
+      "createTime": "2024-10-14T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00004",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-14T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-10-24T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00005",
+      "reviewer": {
+        "displayName": "Nicolás"
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-10-14T17:00:00Z",
+      "comment": "El sitio es limpio y bonito, ademas el ajiaco estaba buenisimo",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2024-10-22T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00006",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "ONE",
+      "createTime": "2024-10-15T17:00:00Z",
+      "comment": "La verdad la porción fue más pequeña que otras veces",
+      "reviewReply": {
+        "comment": "Lamentamos lo ocurrido. Escríbenos para conocer más detalles y mejorar.",
+        "updateTime": "2024-10-18T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00007",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-15T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00008",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-19T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2024-10-23T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00009",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-19T17:00:00Z",
+      "comment": "Primera vez que vengo y económico y llenador. También me gustó mucho la decoración, gracias",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-10-25T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00010",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-20T17:00:00Z",
+      "comment": "Vengo seguido y el mesero fue muy amable",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-10-22T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00011",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-10-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00012",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-10-27T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2024-11-04T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00013",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-10-31T17:00:00Z",
+      "comment": "Se nota que cocinan con ingredientes frescos"
+    },
+    {
+      "reviewId": "rv00014",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-11-05T17:00:00Z",
+      "comment": "No tuvimos que esperar nada!!",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2024-11-11T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00015",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-11-07T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-11-10T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00016",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-11-12T17:00:00Z",
+      "comment": "Primera vez que vengo y la carne llegó en su punto. Recomendado"
+    },
+    {
+      "reviewId": "rv00017",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "THREE",
+      "createTime": "2024-11-13T17:00:00Z",
+      "comment": "todo muy rico, pero subieron los precios y la porción es la misma",
+      "reviewReply": {
+        "comment": "Lamentamos lo ocurrido. Escríbenos para conocer más detalles y mejorar.",
+        "updateTime": "2024-11-17T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00018",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-11-19T17:00:00Z",
+      "comment": "Vengo seguido y buen ambiente para conversar",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-11-22T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00019",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "TWO",
+      "createTime": "2024-11-19T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00020",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-11-21T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00021",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-12-01T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-12-07T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00022",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-12-01T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-12-08T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00023",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "THREE",
+      "createTime": "2024-12-14T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00024",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-12-17T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2024-12-23T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00025",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-12-26T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00026",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-12-26T17:00:00Z",
+      "comment": "La verdad los precios son justos, además me encantó que el café venga ocn galletica!!",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-01-01T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00027",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FIVE",
+      "createTime": "2024-12-29T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00028",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-12-30T17:00:00Z",
+      "comment": "No tuvimos que esperar nada, además se come bien sin gastar mucho. Volveré"
+    },
+    {
+      "reviewId": "rv00029",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FOUR",
+      "createTime": "2024-12-31T17:00:00Z",
+      "comment": "Primera vez que vengo y es un lugar tranquilo para almorzar. Recomendado"
+    },
+    {
+      "reviewId": "rv00030",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-01-02T17:00:00Z",
+      "reviewReply": {
+        "comment": "Sentimos que tu experiencia no haya sido buena. Tomamos nota para mejorar.",
+        "updateTime": "2025-01-04T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00031",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-01-16T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-01-25T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00032",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-01-16T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00033",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-01-21T17:00:00Z",
+      "comment": "la verdad es un lugar tranquilo para almorzar. recomendado"
+    },
+    {
+      "reviewId": "rv00034",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-01-23T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-01-26T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00035",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-01-29T17:00:00Z",
+      "comment": "Como siempre, qué buen detalle la galleta que traen con el tinto",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-02-02T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00036",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-02-01T17:00:00Z",
+      "comment": "El  ajiaco estaba buenísimo, pero subieron los precios y la porción es la misma, gracias",
+      "reviewReply": {
+        "comment": "Sentimos que tu experiencia no haya sido buena. Tomamos nota para mejorar.",
+        "updateTime": "2025-02-09T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00037",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-02-09T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-02-18T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00038",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-02-09T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-02-18T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00039",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-02-11T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-02-21T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00040",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-02-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00041",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-02-24T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-03-01T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00042",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-02-25T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00043",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-02-26T17:00:00Z",
+      "comment": "La verdad se come bien sin gastar mucho. Volveré",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-03-03T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00044",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-03-03T17:00:00Z",
+      "comment": "Nos atendieron rápido",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-03-07T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00045",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-03-08T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-03-16T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00046",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-03-14T17:00:00Z",
+      "comment": "Como siempre, el ajiaco estaba buenísimo"
+    },
+    {
+      "reviewId": "rv00047",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-03-15T17:00:00Z",
+      "reviewReply": {
+        "comment": "Sentimos que tu experiencia no haya sido buena. Tomamos nota para mejorar.",
+        "updateTime": "2025-03-21T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00048",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-03-18T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-03-27T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00049",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-03-19T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-03-22T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00050",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-03-21T17:00:00Z",
+      "reviewReply": {
+        "comment": "Lamentamos lo ocurrido. Escríbenos para conocer más detalles y mejorar.",
+        "updateTime": "2025-03-31T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00051",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-03-24T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00052",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-03-27T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00053",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-03-30T17:00:00Z",
+      "comment": "El sabor de la comida es excelente, ademas el personal es muy querido",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-04-07T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00054",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-04-07T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00055",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-04-07T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00056",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-04-11T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-04-13T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00057",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-04-24T17:00:00Z",
+      "comment": "Como siempre, buen precio para lo que sirven. También no tuvimos que esperar nada"
+    },
+    {
+      "reviewId": "rv00058",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-04-26T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-04-27T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00059",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "THREE",
+      "createTime": "2025-05-07T17:00:00Z",
+      "reviewReply": {
+        "comment": "Lamentamos lo ocurrido. Escríbenos para conocer más detalles y mejorar.",
+        "updateTime": "2025-05-12T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00060",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-05-10T17:00:00Z",
+      "comment": "10/10",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-05-20T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00061",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-05-18T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00062",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-05-22T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00063",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-05-24T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-05-29T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00064",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "ONE",
+      "createTime": "2025-05-24T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00065",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-06-01T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00066",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-06-08T17:00:00Z",
+      "comment": "COMO SIEMPRE, MUY ATENTOS TODOS. TAMBIÉN LA GALLETICA QUE DAN CON EL CAFÉ HACE LA DIFERENCIA, GRACIAS"
+    },
+    {
+      "reviewId": "rv00067",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "TWO",
+      "createTime": "2025-06-09T17:00:00Z",
+      "comment": "El arroz estaba simple. No creo que vuelva"
+    },
+    {
+      "reviewId": "rv00068",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-06-13T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-06-20T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00069",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-06-20T17:00:00Z",
+      "comment": "Se come bien sin gastar mucho, gracias"
+    },
+    {
+      "reviewId": "rv00070",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-07-03T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00071",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-07-09T17:00:00Z",
+      "comment": "Como siempre, el sitio es limpio y bonito y muy buena relacion calidad-precio. Volvere",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-07-16T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00072",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-07-13T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-07-19T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00073",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-07-17T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-07-25T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00074",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-07-24T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2025-07-28T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00075",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-07T17:00:00Z",
+      "comment": "Vengo seguido y no tuvimos que esperar nada. Recomendado",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-08-16T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00076",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-08-12T17:00:00Z",
+      "comment": "nos atendieron con muy buena actitud, pero la música estaba demasiado alta"
+    },
+    {
+      "reviewId": "rv00077",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-17T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00078",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-17T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00079",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-19T17:00:00Z",
+      "comment": "Primera vez que vengo y muy buena relación calidad-precio!!",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-08-24T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00080",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-20T17:00:00Z",
+      "comment": "Como siempre, el pedido llegó rapidísimo. Volveré"
+    },
+    {
+      "reviewId": "rv00081",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-20T17:00:00Z",
+      "comment": "buen ambiente para conversar, gracias",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-08-29T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00082",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-08-21T17:00:00Z",
+      "comment": "Los  platos vienen bien servidos",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-08-26T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00083",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-08-28T17:00:00Z",
+      "comment": "Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!"
+    },
+    {
+      "reviewId": "rv00084",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-09-10T17:00:00Z",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2025-09-20T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00085",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-09-12T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00086",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-09-12T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00087",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-09-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00088",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-09-25T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00089",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-10-02T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00090",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-07T17:00:00Z",
+      "comment": "Como siempre, sirven bastante. Recomendado"
+    },
+    {
+      "reviewId": "rv00091",
+      "reviewer": {
+        "displayName": "Nicolás"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-10-09T17:00:00Z",
+      "comment": "Me gustó mucho la decoración"
+    },
+    {
+      "reviewId": "rv00092",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-09T17:00:00Z",
+      "comment": "Como siempre, la carne llegó en su punto"
+    },
+    {
+      "reviewId": "rv00093",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-10-09T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00094",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-11T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00095",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-12T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00096",
+      "reviewer": {
+        "displayName": "Nicolás"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-14T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00097",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-15T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00098",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-15T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00099",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-10-17T17:00:00Z",
+      "comment": "Me gustó mucho la decoración"
+    },
+    {
+      "reviewId": "rv00100",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-10-28T17:00:00Z",
+      "comment": "Primera vez que vengo y el sitio es limpio y bonito"
+    },
+    {
+      "reviewId": "rv00101",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-10-28T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00102",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-10-31T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00103",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-11-04T17:00:00Z",
+      "comment": "Nos atendieron rápido, pero ya no es tan económico como antes. Recomendado"
+    },
+    {
+      "reviewId": "rv00104",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-11-07T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00105",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-11-07T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00106",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "ONE",
+      "createTime": "2025-11-09T17:00:00Z",
+      "comment": "A la comida le faltaba sabor"
+    },
+    {
+      "reviewId": "rv00107",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "TWO",
+      "createTime": "2025-11-11T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00108",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-11-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00109",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-11-29T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00110",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-11-30T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00111",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-12-02T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00112",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "THREE",
+      "createTime": "2025-12-04T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00113",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-12-05T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00114",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-12-06T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00115",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-12-10T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00116",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FIVE",
+      "createTime": "2025-12-11T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00117",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "THREE",
+      "createTime": "2025-12-22T17:00:00Z",
+      "comment": "El pedido llegó rapidísimo, pero el arroz estaba simple. Recomendado"
+    },
+    {
+      "reviewId": "rv00118",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-12-26T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00119",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FOUR",
+      "createTime": "2025-12-27T17:00:00Z",
+      "comment": "El sitio es limpio y bonito"
+    },
+    {
+      "reviewId": "rv00120",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-01-01T17:00:00Z",
+      "comment": "Todo muy rico. Volveré"
+    },
+    {
+      "reviewId": "rv00121",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-01-02T17:00:00Z",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2026-01-06T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00122",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-01-16T17:00:00Z",
+      "comment": "La sazón es como de casa, gracias"
+    },
+    {
+      "reviewId": "rv00123",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-01-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00124",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "THREE",
+      "createTime": "2026-01-22T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00125",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-01-25T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00126",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-02-08T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00127",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-02-09T17:00:00Z",
+      "comment": "Excelente"
+    },
+    {
+      "reviewId": "rv00128",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-02-09T17:00:00Z",
+      "comment": "Recomendado"
+    },
+    {
+      "reviewId": "rv00129",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-02-11T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00130",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-02-17T17:00:00Z",
+      "comment": "La vedrad las porciones son generosas"
+    },
+    {
+      "reviewId": "rv00131",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-02-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00132",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-02-23T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00133",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-03-03T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00134",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-03-07T17:00:00Z",
+      "comment": "Como siempre, buen ambiente para conversar"
+    },
+    {
+      "reviewId": "rv00135",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-03-10T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00136",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-03-13T17:00:00Z",
+      "comment": "Es un lugar tranquilo para almorzar!!"
+    },
+    {
+      "reviewId": "rv00137",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-14T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00138",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-15T17:00:00Z",
+      "comment": "Primera vez que vengo y el sabor de la comida es excelente, además económico y llenador, gracias"
+    },
+    {
+      "reviewId": "rv00139",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-16T17:00:00Z",
+      "comment": "Primera vez que vengo y me encantó que el café venga con galletica"
+    },
+    {
+      "reviewId": "rv00140",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-18T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00141",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-18T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00142",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-03-26T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00143",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-26T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00144",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-03-28T17:00:00Z",
+      "comment": "No tuvimos que esperar nada, gracias"
+    },
+    {
+      "reviewId": "rv00145",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-03-30T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00146",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-04-05T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00147",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-04-05T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00148",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-04-06T17:00:00Z",
+      "comment": "Uno queda lleno con el almuerzo, gracias"
+    },
+    {
+      "reviewId": "rv00149",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-04-09T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00150",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-04-13T17:00:00Z",
+      "comment": "Vengo seguido y la sazón es como de casa, gracias"
+    },
+    {
+      "reviewId": "rv00151",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-04-17T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00152",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-04-20T17:00:00Z",
+      "comment": "Como siempre, la niña que nos atendió fue un amor"
+    },
+    {
+      "reviewId": "rv00153",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-04-22T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00154",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-04-22T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00155",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-04-23T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00156",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-04-25T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00157",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-04-29T17:00:00Z",
+      "comment": "Como siempre, muy buena relación calidad-precio, además muy atentos todos"
+    },
+    {
+      "reviewId": "rv00158",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "TWO",
+      "createTime": "2026-05-04T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00159",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-06T17:00:00Z",
+      "comment": "Como siempre, muy buena relacion calidad-precio!!"
+    },
+    {
+      "reviewId": "rv00160",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-05-06T17:00:00Z",
+      "comment": "el personal es muy querido, pero el baño no estaba limpio. volveré"
+    },
+    {
+      "reviewId": "rv00161",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-16T17:00:00Z",
+      "comment": "Todo bien"
+    },
+    {
+      "reviewId": "rv00162",
+      "reviewer": {
+        "displayName": "Nicolás"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-17T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00163",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-20T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00164",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-22T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00165",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-25T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00166",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-25T17:00:00Z",
+      "comment": "las porciones son generosas, gracias"
+    },
+    {
+      "reviewId": "rv00167",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-05-31T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00168",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-06-06T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00169",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-06-06T17:00:00Z",
+      "comment": "La verdad el lugar es acogedor. También qué buen detalle la galleta que traen con el tinto"
+    },
+    {
+      "reviewId": "rv00170",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-06-07T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00171",
+      "reviewer": {
+        "displayName": "Sebastián T."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-06-11T17:00:00Z",
+      "comment": "La música está a un volumen agradable, gracias",
+      "reviewReply": {
+        "comment": "¡Gracias por tu visita! Nos alegra que lo hayas disfrutado.",
+        "updateTime": "2026-06-12T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00172",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "ONE",
+      "createTime": "2026-06-16T17:00:00Z",
+      "comment": "No vuelvo"
+    },
+    {
+      "reviewId": "rv00173",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-06-19T17:00:00Z",
+      "comment": "La verdad la sazón es como de casa. También el personal es muy querido"
+    },
+    {
+      "reviewId": "rv00174",
+      "reviewer": {
+        "displayName": "Andrés Gómez"
+      },
+      "starRating": "TWO",
+      "createTime": "2026-07-02T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00175",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "THREE",
+      "createTime": "2026-07-03T17:00:00Z",
+      "comment": "Como siempre, uno queda lleno con el almuerzo, pero la música estaba demasiado alta. Recomendado"
+    },
+    {
+      "reviewId": "rv00176",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-05T17:00:00Z",
+      "comment": "La música está a un volumen agradable y la galletica que dan con el café hace la diferencia, gracias"
+    },
+    {
+      "reviewId": "rv00177",
+      "reviewer": {
+        "displayName": "Santiago P."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-05T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00178",
+      "reviewer": {
+        "displayName": "Juan Pablo"
+      },
+      "starRating": "THREE",
+      "createTime": "2026-07-13T17:00:00Z",
+      "comment": "COMO SIEMPRE, MUY BUENA RELACIÓN CALIDAD-PRECIO, PERO CADA VEZ SIRVEN MENOS. VOLVERÉ"
+    },
+    {
+      "reviewId": "rv00179",
+      "reviewer": {
+        "displayName": "Valentina S."
+      },
+      "starRating": "ONE",
+      "createTime": "2026-07-14T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00180",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-07-14T17:00:00Z",
+      "comment": "Como siempre, es un lugar tranquilo para almorzar, además uno queda lleno con el almuerzo. Recomendado",
+      "reviewReply": {
+        "comment": "Muchas gracias por tus comentarios, te esperamos pronto.",
+        "updateTime": "2026-07-19T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00181",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "TWO",
+      "createTime": "2026-07-16T17:00:00Z",
+      "comment": "  Esta vez el pedido tardó casi una hora. No creo que vuelva "
+    },
+    {
+      "reviewId": "rv00182",
+      "reviewer": {
+        "displayName": "Alejandro M."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-07-17T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00183",
+      "reviewer": {
+        "displayName": "Mateo L."
+      },
+      "starRating": "ONE",
+      "createTime": "2026-07-24T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00184",
+      "reviewer": {
+        "displayName": "Natalia C."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-07-31T17:00:00Z",
+      "comment": "Primera vez que vengo y sirven bastante, además el pedido llegó rapidísimo, gracias"
+    },
+    {
+      "reviewId": "rv00185",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "THREE",
+      "createTime": "2026-08-03T17:00:00Z",
+      "comment": "El sitio es limpio y bonito, pero parecia que les molestaba atender"
+    },
+    {
+      "reviewId": "rv00186",
+      "reviewer": {
+        "displayName": "Nicolás"
+      },
+      "starRating": "ONE",
+      "createTime": "2026-08-11T17:00:00Z",
+      "comment": "La verdad la comida se demoro muchisimo. Ojala mejoren"
+    },
+    {
+      "reviewId": "rv00187",
+      "reviewer": {
+        "displayName": "Felipe"
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-08-14T17:00:00Z",
+      "comment": "Como siempre, uno queda lleno con el almuerzo. Volveré"
+    },
+    {
+      "reviewId": "rv00188",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "THREE",
+      "createTime": "2026-08-17T17:00:00Z",
+      "comment": "primera vez que vengo y uno queda lleno con el almuerzo, pero esperamos mas de media hora por el pedido"
+    },
+    {
+      "reviewId": "rv00189",
+      "reviewer": {
+        "displayName": "Diego H."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-08-18T17:00:00Z",
+      "comment": "Como siempre, sirven bastante, pero el mesero fue cortante"
+    },
+    {
+      "reviewId": "rv00190",
+      "reviewer": {
+        "displayName": "Daniela Ruiz"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-08-18T17:00:00Z",
+      "comment": "Los  platos vienen bien servidso, gracias"
+    },
+    {
+      "reviewId": "rv00191",
+      "reviewer": {
+        "displayName": "Nicolás"
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-08-19T17:00:00Z",
+      "comment": "Excelente"
+    },
+    {
+      "reviewId": "rv00192",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-08-25T17:00:00Z",
+      "comment": "Vengo seguido y las porciones son generosas, pero esperamos más de media hora por el pedido. Volveré",
+      "reviewReply": {
+        "comment": "Lamentamos lo ocurrido. Escríbenos para conocer más detalles y mejorar.",
+        "updateTime": "2026-08-28T17:00:00Z"
+      }
+    },
+    {
+      "reviewId": "rv00193",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-08-27T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00194",
+      "reviewer": {
+        "displayName": "Paula A."
+      },
+      "starRating": "FOUR",
+      "createTime": "2026-08-29T17:00:00Z",
+      "comment": "Se come bien sin gastar mucho y el detalle de la galleta con el tinto me parecio muy lindo. Recomendado"
+    },
+    {
+      "reviewId": "rv00195",
+      "reviewer": {
+        "displayName": "María José"
+      },
+      "starRating": "TWO",
+      "createTime": "2026-08-31T17:00:00Z",
+      "comment": "Muy mal"
+    },
+    {
+      "reviewId": "rv00196",
+      "reviewer": {
+        "displayName": "Carolina V."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-09-15T17:00:00Z",
+      "comment": "Primera vez que vengo y económico y llenador. Volveré"
+    },
+    {
+      "reviewId": "rv00197",
+      "reviewer": {
+        "displayName": "Laura M."
+      },
+      "starRating": "THREE",
+      "createTime": "2026-09-25T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00198",
+      "reviewer": {
+        "displayName": "Isabella"
+      },
+      "starRating": "THREE",
+      "createTime": "2026-09-26T17:00:00Z"
+    },
+    {
+      "reviewId": "rv00199",
+      "reviewer": {
+        "displayName": "Camila R."
+      },
+      "starRating": "FIVE",
+      "createTime": "2026-09-30T17:00:00Z",
+      "comment": "La verdad nos atendieron rápido. Recomendado"
+    }
+  ],
+  "totalReviewCount": 200
+}
