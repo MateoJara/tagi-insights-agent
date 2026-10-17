@@ -216,6 +216,7 @@ def test_without_earlier_reviews_nothing_is_compared(tmp_path):
                         ["Excelente atención", "Bien", None])
     data = dashboard.build_dashboard_data(path, _insights())
     assert data["kpis"][1]["detail"] == "3 reseñas · sin reseñas anteriores"
+    assert data["kpis"][2]["detail"] == "Sin reseñas anteriores"
     assert any("todavía no hay un antes" in item for item in data["data_warning"]["items"])
     no_earlier_comments = {"n_previous_comments": 0, "n_recent_comments": 2,
                            "top_complaints": [], "top_praise": []}

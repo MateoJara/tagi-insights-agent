@@ -164,7 +164,7 @@ def _kpis(metrics):
             share(recent_satisfied),
             "4–5★",
             _share_status(recent_satisfied, 0.8, 0.6, ("Alto", "Medio", "Bajo")),
-            f"Antes {share(previous_satisfied)}",
+            "Sin reseñas anteriores" if previous_satisfied is None else f"Antes {share(previous_satisfied)}",
         ),
         kpi(
             "Reseñas recientes respondidas",

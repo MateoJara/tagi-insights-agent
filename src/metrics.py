@@ -14,7 +14,7 @@ from src.load_data import SAMPLE_DIR, load_google_reviews
 SATISFIED_MIN_RATING = 4
 RECENT_MONTHS = 3
 # Below these, the figures are only indicative and the dashboard says so.
-MIN_REVIEWS = 30
+MIN_REVIEWS = 50
 MIN_RECENT_REVIEWS = 10
 MIN_COMMENTS = 20
 

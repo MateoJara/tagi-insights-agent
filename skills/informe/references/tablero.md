@@ -78,7 +78,7 @@ acompañan así:
 
 | Código | Qué significa | Qué cambia en los textos |
 |---|---|---|
-| `few_reviews` | menos de 30 reseñas en total | Ninguna conclusión firme: todo es "parece", "por ahora". `alert` vacío salvo algo evidente, como reseñas negativas sin responder |
+| `few_reviews` | menos de 50 reseñas en total | Ninguna conclusión firme: todo es "parece", "por ahora". `alert` vacío salvo algo evidente, como reseñas negativas sin responder |
 | `few_recent_reviews` | menos de 10 en los últimos meses | No afirmar que algo mejoró o empeoró. Describir lo reciente sin compararlo |
 | `no_previous_reviews` | todas las reseñas son recientes | No hay "antes": ninguna frase compara periodos |
 | `few_comments` | menos de 20 comentarios | Los temas se nombran como pistas, no como lo que piensan sus clientes |
