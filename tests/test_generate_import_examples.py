@@ -22,9 +22,8 @@ def test_writes_every_format(written):
         "reviews_export.xlsx",
         "google_business_reviews.json",
         "resenas_copiadas_de_maps.txt",
-        "respuestas_formulario.csv",
     }
-    for name in ("expected_reviews.csv", "expected_reviews_pasted.csv", "expected_survey.csv"):
+    for name in ("expected_reviews.csv", "expected_reviews_pasted.csv"):
         assert (key_dir / name).exists()
 
 
@@ -65,18 +64,6 @@ def test_pasted_text_uses_relative_dates(written):
 )
 def test_relative_labels(days, label):
     assert gen._relative(days) == label
-
-
-def test_survey_export_looks_like_google_forms(written):
-    paths, key_dir = written
-    forms = pd.read_csv(paths["respuestas_formulario.csv"], dtype=str)
-    expected = pd.read_csv(key_dir / "expected_survey.csv")
-    assert len(forms) == len(expected)
-    assert forms.columns[0] == "Marca temporal"
-    assert "response_id" not in forms.columns
-    assert forms["Marca temporal"].str.contains("GMT-5").all()
-    ratings = forms[gen.SURVEY_QUESTIONS["rating_service"]].dropna()
-    assert ratings.str.match(r"^[1-5] - ").all()
 
 
 def test_same_seed_same_files(tmp_path):

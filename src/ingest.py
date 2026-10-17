@@ -1,4 +1,4 @@
-"""Import review and survey files from any supported format into the canonical tables.
+"""Import review files from any supported format into the canonical reviews table.
 
 The importador subagent looks at the files and writes an import plan. This module
 only applies plans, using a closed list of tested conversions, and reports what it
@@ -12,7 +12,6 @@ Run with:
 
 import argparse
 import csv
-import hashlib
 import json
 import re
 import sys
@@ -20,17 +19,12 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.load_data import load_google_reviews, load_survey_responses
-from src.survey_schema import GOOGLE_REVIEWS, SURVEY_RESPONSES, column_names
+from src.load_data import load_google_reviews
+from src.schema import GOOGLE_REVIEWS, column_names
 
 TABLES = {
     "google_reviews": (GOOGLE_REVIEWS, "google_reviews.csv", "review_id", "GR"),
-    "survey_responses": (SURVEY_RESPONSES, "survey_responses.csv", "response_id", "SR"),
 }
-# Form answers carry a timestamp to the second, so two identical rows are one
-# submission sent twice. Reviews only carry a date, and two diners can leave the
-# same 5 stars with no text on the same day, so identical reviews stay distinct.
-IDS_FROM_CONTENT = {"survey_responses"}
 SUPPORTED_SUFFIXES = (".csv", ".tsv", ".txt", ".xlsx", ".xls", ".json")
 ENCODINGS = ("utf-8-sig", "utf-8", "latin-1")
 REPORT_FILE = "import_report.json"
@@ -249,15 +243,11 @@ def _convert_file(spec, file_number):
         if rule["transform"] == "relative_date":
             warnings.append(f"{target}: approximate dates, rebuilt from relative labels")
 
-    if id_column not in mapping and table in IDS_FROM_CONTENT:
-        # Built from the row's content, so a response submitted twice gets the same
-        # id twice and the cleaning step can still spot the duplicate.
-        # str() per value: in pandas 3, astype(str) keeps missing values as NaN.
-        content = output.apply(lambda row: "|".join(map(str, row)), axis=1)
-        output[id_column] = content.map(lambda row: f"{prefix}-{hashlib.sha1(row.encode()).hexdigest()[:10]}")
-    elif id_column not in mapping:
+    # Positional ids: two diners can leave the same 5 stars with no text on the same
+    # day, so identical reviews must stay distinct.
+    if id_column not in mapping:
         output[id_column] = [f"{prefix}{file_number}-{i:04d}" for i in range(1, len(output) + 1)]
-    if table == "google_reviews" and "owner_replied" not in mapping:
+    if "owner_replied" not in mapping:
         output["owner_replied"] = False
         warnings.append("owner_replied: the file has no reply information; assumed no replies")
     for column in column_names(schema):
@@ -309,8 +299,7 @@ def apply_plan(plan, output_dir):
     for table, frames in converted.items():
         path = _write_table(table, pd.concat(frames, ignore_index=True), output_dir)
         # The rest of the system must be able to load what we wrote.
-        loader = load_google_reviews if table == "google_reviews" else load_survey_responses
-        loader(path)
+        load_google_reviews(path)
         written[table] = str(path)
 
     report = {"outputs": written, "files": reports}

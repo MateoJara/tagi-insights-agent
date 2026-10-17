@@ -7,7 +7,7 @@ import pytest
 
 from src import ingest
 from src.generate_import_examples import KEY_DIR, OUTPUT_DIR, PASTED_ON
-from src.load_data import load_google_reviews, load_survey_responses
+from src.load_data import load_google_reviews
 
 EXAMPLES = OUTPUT_DIR
 REVIEW_COLUMNS = ["review_date", "rating", "text", "owner_replied", "owner_reply_date"]
@@ -65,28 +65,6 @@ PLANS = {
                                  "options": {"reference_date": str(PASTED_ON.date())}},
         },
     },
-    "forms": {
-        "path": str(EXAMPLES / "respuestas_formulario.csv"),
-        "table": "survey_responses",
-        "reader": {"format": "csv"},
-        "columns": {
-            "submitted_at": {"source": "Marca temporal", "transform": "datetime",
-                             "options": {"format": "%Y/%m/%d %I:%M:%S %p"}},
-            "rating_overall": {"source": "En general, ¿cómo calificaría su visita?", "transform": "leading_number"},
-            "rating_food": {"source": "Califique cada aspecto de su visita [Comida]", "transform": "leading_number"},
-            "rating_service": {"source": "Califique cada aspecto de su visita [Atención del personal]",
-                               "transform": "leading_number"},
-            "rating_ambience": {"source": "Califique cada aspecto de su visita [Ambiente del lugar]",
-                                "transform": "leading_number"},
-            "rating_value": {"source": "Califique cada aspecto de su visita [Relación calidad-precio]",
-                             "transform": "leading_number"},
-            "would_recommend": {"source": "Del 0 al 10, ¿qué tan probable es que nos recomiende a un amigo?",
-                                "transform": "number"},
-            "positives": {"source": "¿Qué fue lo que más le gustó?", "transform": "text"},
-            "complaints": {"source": "¿Hubo algo que no le gustó?", "transform": "text"},
-            "suggestions": {"source": "¿Tiene alguna sugerencia para nosotros?", "transform": "text"},
-        },
-    },
 }
 
 
@@ -132,22 +110,6 @@ def test_pasted_maps_text_within_date_tolerance(tmp_path):
     gaps = (imported["review_date"] - key["review_date"]).dt.days.abs()
     assert (gaps <= key["date_tolerance_days"]).all()
     assert any("approximate" in warning for warning in report["files"][0]["warnings"])
-
-
-def test_google_forms_export_matches_the_key(tmp_path):
-    report, out = _import(tmp_path, "forms")
-    imported, cleaning = load_survey_responses(out / "survey_responses.csv")
-    key = pd.read_csv(KEY_DIR / "expected_survey.csv")
-    key.insert(0, "response_id", [f"K-{i}" for i in range(len(key))])
-    key_path = tmp_path / "expected_survey.csv"
-    key.to_csv(key_path, index=False)
-    expected, _ = load_survey_responses(key_path)
-    columns = [c for c in expected.columns if c != "response_id"]
-    # The key has no ids, so its double submissions only collapse when compared by content.
-    expected = expected[columns].drop_duplicates().reset_index(drop=True)
-    pd.testing.assert_frame_equal(imported[columns].reset_index(drop=True), expected, check_dtype=False)
-    assert cleaning.duplicates_removed == 6
-    assert "Dirección de correo electrónico" in report["files"][0]["discarded_columns"]
 
 
 def test_identical_reviews_are_kept(tmp_path):
@@ -206,7 +168,7 @@ def test_inspect_describes_each_format():
     assert by_name["resenas_exportadas.csv"]["separator"] == ";"
     assert by_name["resenas_exportadas.csv"]["encoding"] == "utf-8-sig"
     assert by_name["reviews_export.xlsx"]["format"] == "excel"
-    assert by_name["google_business_reviews.json"]["top_level"]["reviews"] == "list of 200"
+    assert by_name["google_business_reviews.json"]["top_level"]["reviews"] == "list of 600"
     assert by_name["resenas_copiadas_de_maps.txt"]["looks_like"] == "google_maps_text"
     assert json.dumps(result, default=str)
 
@@ -216,4 +178,4 @@ def test_cli_apply_writes_report(tmp_path):
     plan_path.write_text(json.dumps({"files": [PLANS["json"]]}), encoding="utf-8")
     ingest.main(["apply", "--plan", str(plan_path), "--output-dir", str(tmp_path / "out")])
     report = json.loads((tmp_path / "out" / ingest.REPORT_FILE).read_text(encoding="utf-8"))
-    assert report["files"][0]["rows_imported"] == 200
+    assert report["files"][0]["rows_imported"] == 600

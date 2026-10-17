@@ -1,148 +1,159 @@
 {
-  "survey_cleaning": {
-    "rows_read": 300,
-    "duplicates_removed": 6,
-    "invalid_ratings": 0,
-    "texts_cleaned": 32,
-    "rows_kept": 294
-  },
-  "survey": {
-    "n_responses": 294,
-    "recent_n": 145,
-    "answered": {
-      "rating_overall": 286,
-      "rating_food": 286,
-      "rating_service": 283,
-      "rating_ambience": 285,
-      "rating_value": 287,
-      "would_recommend": 287
-    },
-    "first_date": "2026-04-02",
-    "last_date": "2026-09-30",
-    "mean_overall": 3.888111888111888,
-    "mean_by_aspect": {
-      "rating_food": 4.171328671328672,
-      "rating_service": 3.3286219081272086,
-      "rating_ambience": 3.9157894736842107,
-      "rating_value": 4.2439024390243905
-    },
-    "satisfied_share": 0.7097902097902098,
-    "nps": -3.83275261324042,
-    "recent_months": 3,
-    "biggest_drop_aspect": "rating_service",
-    "biggest_drop_change": -1.4517386091127102
-  },
-  "survey_responses_per_month": {
-    "2026-04": 46,
-    "2026-05": 45,
-    "2026-06": 59,
-    "2026-07": 47,
-    "2026-08": 63,
-    "2026-09": 34
-  },
-  "survey_monthly_means": {
-    "2026-04": {
-      "rating_overall": 3.9767441860465116,
-      "rating_food": 4.133333333333334,
-      "rating_service": 3.933333333333333,
-      "rating_ambience": 3.9302325581395348,
-      "rating_value": 4.282608695652174
-    },
-    "2026-05": {
-      "rating_overall": 4.069767441860465,
-      "rating_food": 4.27906976744186,
-      "rating_service": 4.071428571428571,
-      "rating_ambience": 4.023809523809524,
-      "rating_value": 4.325581395348837
-    },
-    "2026-06": {
-      "rating_overall": 4.11864406779661,
-      "rating_food": 4.214285714285714,
-      "rating_service": 4.086206896551724,
-      "rating_ambience": 4.0,
-      "rating_value": 4.258620689655173
-    },
-    "2026-07": {
-      "rating_overall": 3.6,
-      "rating_food": 3.978723404255319,
-      "rating_service": 2.488888888888889,
-      "rating_ambience": 3.891304347826087,
-      "rating_value": 4.204545454545454
-    },
-    "2026-08": {
-      "rating_overall": 3.8253968253968256,
-      "rating_food": 4.19672131147541,
-      "rating_service": 2.683333333333333,
-      "rating_ambience": 3.873015873015873,
-      "rating_value": 4.253968253968254
-    },
-    "2026-09": {
-      "rating_overall": 3.6363636363636362,
-      "rating_food": 4.235294117647059,
-      "rating_service": 2.5454545454545454,
-      "rating_ambience": 3.727272727272727,
-      "rating_value": 4.090909090909091
-    }
-  },
-  "survey_aspect_change": {
-    "rating_service": {
-      "previous": 4.041666666666667,
-      "recent": 2.5899280575539567,
-      "change": -1.4517386091127102,
-      "previous_n": 144,
-      "recent_n": 139
-    },
-    "rating_ambience": {
-      "previous": 3.9859154929577465,
-      "recent": 3.8461538461538463,
-      "change": -0.13976164680390024,
-      "previous_n": 142,
-      "recent_n": 143
-    },
-    "rating_value": {
-      "previous": 4.280821917808219,
-      "recent": 4.205673758865248,
-      "change": -0.07514815894297122,
-      "previous_n": 146,
-      "recent_n": 141
-    },
-    "rating_food": {
-      "previous": 4.2027972027972025,
-      "recent": 4.13986013986014,
-      "change": -0.06293706293706247,
-      "previous_n": 143,
-      "recent_n": 143
-    }
-  },
   "reviews_cleaning": {
-    "rows_read": 200,
+    "rows_read": 600,
     "duplicates_removed": 0,
     "invalid_ratings": 0,
-    "texts_cleaned": 13,
-    "rows_kept": 200
+    "texts_cleaned": 58,
+    "rows_kept": 600
   },
   "reviews": {
-    "n_reviews": 200,
-    "first_date": "2024-10-03",
-    "last_date": "2026-09-30",
-    "mean_rating": 4.15,
+    "n_reviews": 600,
+    "first_date": "2024-10-04",
+    "last_date": "2026-09-29",
+    "mean_rating": 4.2,
     "distribution": {
-      "5": 91,
-      "4": 69,
-      "3": 26,
-      "2": 7,
-      "1": 7
+      "5": 316,
+      "4": 159,
+      "3": 79,
+      "2": 21,
+      "1": 25
     },
-    "satisfied_share": 0.8,
-    "text_share": 0.415,
+    "satisfied_share": 0.7916666666666666,
+    "text_share": 0.5066666666666667,
     "recent_months": 3,
-    "recent_n": 26,
-    "recent_mean_rating": 3.3076923076923075,
-    "previous_n": 174,
-    "previous_mean_rating": 4.275862068965517,
-    "reply_rate": 0.27,
-    "recent_reply_rate": 0.07692307692307693,
-    "previous_reply_rate": 0.2988505747126437,
-    "last_owner_reply": "2026-08-28"
+    "recent_n": 75,
+    "previous_n": 525,
+    "recent_text_n": 36,
+    "previous_text_n": 268,
+    "recent_mean_rating": 3.4133333333333336,
+    "previous_mean_rating": 4.312380952380952,
+    "recent_satisfied_share": 0.5333333333333333,
+    "previous_satisfied_share": 0.8285714285714286,
+    "reply_rate": 0.335,
+    "recent_reply_rate": 0.013333333333333334,
+    "previous_reply_rate": 0.38095238095238093,
+    "last_owner_reply": "2026-09-14"
+  },
+  "reviews_monthly": {
+    "2024-10": {
+      "n_reviews": 22,
+      "mean_rating": 4.5,
+      "reply_rate": 0.5909090909090909
+    },
+    "2024-11": {
+      "n_reviews": 19,
+      "mean_rating": 4.578947368421052,
+      "reply_rate": 0.5789473684210527
+    },
+    "2024-12": {
+      "n_reviews": 35,
+      "mean_rating": 4.057142857142857,
+      "reply_rate": 0.4857142857142857
+    },
+    "2025-01": {
+      "n_reviews": 34,
+      "mean_rating": 4.470588235294118,
+      "reply_rate": 0.7058823529411765
+    },
+    "2025-02": {
+      "n_reviews": 22,
+      "mean_rating": 4.636363636363637,
+      "reply_rate": 0.6363636363636364
+    },
+    "2025-03": {
+      "n_reviews": 19,
+      "mean_rating": 4.578947368421052,
+      "reply_rate": 0.5789473684210527
+    },
+    "2025-04": {
+      "n_reviews": 26,
+      "mean_rating": 4.230769230769231,
+      "reply_rate": 0.6923076923076923
+    },
+    "2025-05": {
+      "n_reviews": 30,
+      "mean_rating": 3.7,
+      "reply_rate": 0.7
+    },
+    "2025-06": {
+      "n_reviews": 20,
+      "mean_rating": 4.2,
+      "reply_rate": 0.75
+    },
+    "2025-07": {
+      "n_reviews": 16,
+      "mean_rating": 4.375,
+      "reply_rate": 0.4375
+    },
+    "2025-08": {
+      "n_reviews": 32,
+      "mean_rating": 4.3125,
+      "reply_rate": 0.65625
+    },
+    "2025-09": {
+      "n_reviews": 29,
+      "mean_rating": 4.413793103448276,
+      "reply_rate": 0.6551724137931034
+    },
+    "2025-10": {
+      "n_reviews": 22,
+      "mean_rating": 4.454545454545454,
+      "reply_rate": 0.0
+    },
+    "2025-11": {
+      "n_reviews": 27,
+      "mean_rating": 4.407407407407407,
+      "reply_rate": 0.0
+    },
+    "2025-12": {
+      "n_reviews": 16,
+      "mean_rating": 4.3125,
+      "reply_rate": 0.0
+    },
+    "2026-01": {
+      "n_reviews": 29,
+      "mean_rating": 4.206896551724138,
+      "reply_rate": 0.034482758620689655
+    },
+    "2026-02": {
+      "n_reviews": 21,
+      "mean_rating": 4.428571428571429,
+      "reply_rate": 0.09523809523809523
+    },
+    "2026-03": {
+      "n_reviews": 25,
+      "mean_rating": 4.2,
+      "reply_rate": 0.04
+    },
+    "2026-04": {
+      "n_reviews": 29,
+      "mean_rating": 4.551724137931035,
+      "reply_rate": 0.10344827586206896
+    },
+    "2026-05": {
+      "n_reviews": 32,
+      "mean_rating": 3.90625,
+      "reply_rate": 0.0
+    },
+    "2026-06": {
+      "n_reviews": 20,
+      "mean_rating": 4.55,
+      "reply_rate": 0.1
+    },
+    "2026-07": {
+      "n_reviews": 22,
+      "mean_rating": 3.6818181818181817,
+      "reply_rate": 0.0
+    },
+    "2026-08": {
+      "n_reviews": 27,
+      "mean_rating": 3.3333333333333335,
+      "reply_rate": 0.0
+    },
+    "2026-09": {
+      "n_reviews": 26,
+      "mean_rating": 3.269230769230769,
+      "reply_rate": 0.038461538461538464
+    }
   }
 }

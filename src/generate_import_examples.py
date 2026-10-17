@@ -1,7 +1,7 @@
-"""Write the synthetic sample data again in the messy formats real exports come in.
+"""Write the synthetic sample reviews again in the messy formats real exports come in.
 
-Each file in data/sample/import_examples/ holds the same reviews or responses as
-the canonical CSVs, so the expected result of importing it is known. The answers
+Each file in data/sample/import_examples/ holds the same reviews as the canonical
+CSV, so the expected result of importing it is known. The answers
 go to tests/fixtures/import/, apart from the inputs.
 
 Run with: python -m src.generate_import_examples
@@ -41,24 +41,8 @@ OWNER_REPLIES = {
     ],
 }
 STAR_WORDS = {1: "ONE", 2: "TWO", 3: "THREE", 4: "FOUR", 5: "FIVE"}
-RATING_LABELS = {1: "1 - Muy mala", 2: "2 - Mala", 3: "3 - Regular", 4: "4 - Buena", 5: "5 - Excelente"}
-SURVEY_QUESTIONS = {
-    "rating_overall": "En general, ¿cómo calificaría su visita?",
-    "rating_food": "Califique cada aspecto de su visita [Comida]",
-    "rating_service": "Califique cada aspecto de su visita [Atención del personal]",
-    "rating_ambience": "Califique cada aspecto de su visita [Ambiente del lugar]",
-    "rating_value": "Califique cada aspecto de su visita [Relación calidad-precio]",
-    "would_recommend": "Del 0 al 10, ¿qué tan probable es que nos recomiende a un amigo?",
-    "positives": "¿Qué fue lo que más le gustó?",
-    "complaints": "¿Hubo algo que no le gustó?",
-    "suggestions": "¿Tiene alguna sugerencia para nosotros?",
-}
-
-
 def _load_canonical():
-    reviews = pd.read_csv(SAMPLE_DIR / "google_reviews.csv", parse_dates=["review_date", "owner_reply_date"])
-    survey = pd.read_csv(SAMPLE_DIR / "survey_responses.csv", parse_dates=["submitted_at"])
-    return reviews, survey
+    return pd.read_csv(SAMPLE_DIR / "google_reviews.csv", parse_dates=["review_date", "owner_reply_date"])
 
 
 def _blank(value):
@@ -163,29 +147,6 @@ def _reviews_pasted(out, reviews, names, replies):
     return path, key
 
 
-def _forms_timestamp(moment):
-    hour = moment.hour % 12 or 12
-    suffix = "a. m." if moment.hour < 12 else "p. m."
-    return f"{moment:%Y/%m/%d} {hour}:{moment:%M:%S} {suffix} GMT-5"
-
-
-def _survey_forms(out, survey):
-    """Like a Google Forms export: question text as headers, labelled answers, no ids."""
-    frame = pd.DataFrame({"Marca temporal": survey["submitted_at"].map(_forms_timestamp)})
-    frame["Dirección de correo electrónico"] = ""
-    for column, question in SURVEY_QUESTIONS.items():
-        values = survey[column]
-        if column.startswith("rating_"):
-            frame[question] = values.map(lambda v: "" if pd.isna(v) else RATING_LABELS[int(v)])
-        elif column == "would_recommend":
-            frame[question] = values.map(lambda v: "" if pd.isna(v) else str(int(v)))
-        else:
-            frame[question] = values.map(_blank)
-    path = out / "respuestas_formulario.csv"
-    frame.to_csv(path, index=False, encoding="utf-8")
-    return path
-
-
 def write_import_examples(output_dir=OUTPUT_DIR, key_dir=KEY_DIR, seed=SEED):
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
@@ -193,7 +154,7 @@ def write_import_examples(output_dir=OUTPUT_DIR, key_dir=KEY_DIR, seed=SEED):
     key_dir.mkdir(parents=True, exist_ok=True)
 
     rng = np.random.default_rng(seed)
-    reviews, survey = _load_canonical()
+    reviews = _load_canonical()
     names = [str(rng.choice(FAKE_NAMES)) for _ in range(len(reviews))]
     replies = [
         str(rng.choice(OWNER_REPLIES["positive" if rating >= 4 else "negative"]))
@@ -206,19 +167,17 @@ def write_import_examples(output_dir=OUTPUT_DIR, key_dir=KEY_DIR, seed=SEED):
         _reviews_json(out, reviews, names, replies),
     ]
     pasted_path, pasted_key = _reviews_pasted(out, reviews, names, replies)
-    paths += [pasted_path, _survey_forms(out, survey)]
+    paths.append(pasted_path)
 
     common = {"lineterminator": "\n", "encoding": "utf-8", "index": False}
     reviews.drop(columns="review_id").to_csv(key_dir / "expected_reviews.csv", date_format="%Y-%m-%d", **common)
     pasted_key.to_csv(key_dir / "expected_reviews_pasted.csv", date_format="%Y-%m-%d", **common)
-    survey.drop(columns="response_id").to_csv(key_dir / "expected_survey.csv", **common)
     (key_dir / "README.md").write_text(
         "Respuestas esperadas al importar `data/sample/import_examples/`.\n"
         "El importador no debe leer esta carpeta.\n\n"
         "- `expected_reviews.csv`: lo que deben dar el CSV, el Excel y el JSON de reseñas.\n"
         "- `expected_reviews_pasted.csv`: el texto copiado de Maps (30 reseñas). Sus fechas\n"
-        f"  son relativas al {PASTED_ON:%Y-%m-%d}; cada una admite el margen de `date_tolerance_days`.\n"
-        "- `expected_survey.csv`: el export del formulario, sin identificadores.\n",
+        f"  son relativas al {PASTED_ON:%Y-%m-%d}; cada una admite el margen de `date_tolerance_days`.\n",
         encoding="utf-8",
     )
     return paths

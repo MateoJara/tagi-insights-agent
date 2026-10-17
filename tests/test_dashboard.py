@@ -3,14 +3,16 @@
 import json
 import re
 
+import pandas as pd
 import pytest
 
+from src import comments
 from src import dashboard
 from src import generate_sample_data as gen
-from src.load_data import SAMPLE_DIR
+from src.load_data import SAMPLE_DIR, load_google_reviews
 from src.metrics import build_metrics
+from src.sample_comments import TOPICS
 
-SURVEY = SAMPLE_DIR / "survey_responses.csv"
 REVIEWS = SAMPLE_DIR / "google_reviews.csv"
 
 
@@ -40,42 +42,55 @@ def _embedded_data(page):
     return json.loads(match.group(1))
 
 
+def _comment_metrics():
+    """Comment metrics from perfect labels, built from the generator's answer key."""
+    key = pd.read_csv(gen.ANSWER_KEY_PATH, dtype=str)
+    labels = key.assign(topic=key["topics"].str.split("|")).explode("topic")
+    labels["kind"] = labels["topic"].map(lambda topic: TOPICS[topic][1])
+    topics = pd.DataFrame({"topic": sorted(labels["topic"].unique())})
+    topics["description"] = "x"
+    topics["small_detail"] = topics["topic"] == "detail_cookie"
+    exported = comments.export_comments(load_google_reviews()[0])
+    return comments.count_labels(exported, topics, labels[comments.LABEL_COLUMNS])
+
+
 @pytest.fixture(scope="module")
 def data():
-    return dashboard.build_dashboard_data(SURVEY, REVIEWS, _insights())
+    return dashboard.build_dashboard_data(REVIEWS, _insights())
+
+
+@pytest.fixture(scope="module")
+def with_comments():
+    return dashboard.build_dashboard_data(REVIEWS, _insights(), _comment_metrics())
 
 
 def test_kpis_match_metrics(data):
-    metrics = build_metrics(SURVEY, REVIEWS)
+    reviews = build_metrics(REVIEWS)["reviews"]
     values = [kpi["value"] for kpi in data["kpis"]]
     assert values == [
-        f"{metrics['survey']['mean_overall']:.1f}",
-        f"{metrics['survey']['satisfied_share']:.0%}",
-        f"{metrics['reviews']['recent_mean_rating']:.1f}",
-        f"{metrics['reviews']['recent_reply_rate']:.0%}",
+        f"{reviews['mean_rating']:.1f}",
+        f"{reviews['recent_mean_rating']:.1f}",
+        f"{reviews['recent_satisfied_share']:.0%}",
+        f"{reviews['recent_reply_rate']:.0%}",
     ]
-    answered = metrics["survey"]["answered"]["rating_overall"]
-    assert f"{answered} respuestas" in data["kpis"][0]["detail"]
+    assert f"{reviews['n_reviews']} reseñas" in data["kpis"][0]["detail"]
+    assert f"antes {reviews['previous_mean_rating']:.1f}" in data["kpis"][1]["detail"]
     assert all(kpi["status"] in ("good", "warn", "crit") for kpi in data["kpis"])
 
 
 def test_flags_the_planted_story(data):
-    aspects = {row["label"]: row for row in data["aspects"]}
-    assert aspects["Servicio"]["status_label"] == "Empeoró"
-    assert aspects["Comida"]["status_label"] == "Se mantiene"
-    assert not any(row["change"] in ("-0.0", "+0.0") for row in data["aspects"])
-    for row in data["aspects"]:
-        assert float(row["change"]) == pytest.approx(float(row["recent"]) - float(row["previous"]))
+    assert data["kpis"][1]["status"] in ("warn", "crit")
     assert data["kpis"][3]["status"] == "crit"
 
 
 def test_distribution_and_trend_are_consistent(data):
     assert sum(row["n"] for row in data["distribution"]) == data["n_reviews"] == gen.N_GOOGLE_REVIEWS
     assert data["rating_sum"] == sum(row["stars"] * row["n"] for row in data["distribution"])
-    assert sum(float(row["share"].rstrip("%")) for row in data["distribution"]) == pytest.approx(100)
-    assert len(data["months"]) == len(data["responses_per_month"]) == 6
-    assert all(len(serie["values"]) == 6 for serie in data["trend"])
-    assert sum(data["responses_per_month"]) == data["n_responses"]
+    # Each share is rounded to 0.1, so five of them can miss 100 by at most 0.25.
+    assert sum(float(row["share"].rstrip("%")) for row in data["distribution"]) == pytest.approx(100, abs=0.25)
+    assert len(data["months"]) == len(data["reviews_per_month"]) == 24
+    assert len(data["trend"]) == 1 and len(data["trend"][0]["values"]) == 24
+    assert sum(data["reviews_per_month"]) == data["n_reviews"]
 
 
 def test_listed_reviews_have_text_and_are_newest_first(data):
@@ -86,16 +101,41 @@ def test_listed_reviews_have_text_and_are_newest_first(data):
     assert data["n_reviews_with_text"] >= len(reviews)
 
 
+def test_without_comments_there_is_no_topic_table(data):
+    assert data["comments"] is None
+    assert data["topic_changes"] == []
+
+
+def test_topic_changes_flag_the_rising_complaint(with_comments):
+    rows = {row["topic"]: row for row in with_comments["topic_changes"]}
+    wait = rows["Service_wait"]
+    assert (wait["kind"], wait["status_label"], wait["status"]) == ("Queja", "Aumentó", "crit")
+    for row in with_comments["topic_changes"]:
+        points = int(row["change"].split()[0])
+        assert points == int(row["recent"].rstrip("%")) - int(row["previous"].rstrip("%"))
+
+
+def test_comment_section_shows_rankings_and_small_details(with_comments):
+    section = with_comments["comments"]
+    assert len(section["complaints"]) <= dashboard.MAX_TOPICS_LISTED
+    counts = [row["n"] for row in section["praise"]]
+    assert counts == sorted(counts, reverse=True)
+    detail = section["small_details"][0]
+    assert (detail["topic"], detail["kind_label"]) == ("Detail_cookie", "Lo elogian")
+    assert 0 < len(detail["quotes"]) <= 2
+
+
 def test_render_embeds_the_same_data(data):
     page = dashboard.render_dashboard(data)
     assert "<title>Tablero Restaurante Demo</title>" in page
     assert "__DATA_JSON__" not in page and "__TITLE__" not in page
     assert _embedded_data(page) == json.loads(json.dumps(data))
+    assert "formulario" not in page.lower()
 
 
 def test_text_cannot_break_out_of_the_page():
     hostile = '</script><script>alert(1)</script> <b>&'
-    data = dashboard.build_dashboard_data(SURVEY, REVIEWS, _insights(business_name=hostile, alert=hostile))
+    data = dashboard.build_dashboard_data(REVIEWS, _insights(business_name=hostile, alert=hostile))
     page = dashboard.render_dashboard(data)
     assert page.count("</script>") == 2
     assert "<script>alert(1)" not in page
@@ -112,55 +152,15 @@ def test_insights_are_validated(tmp_path):
         dashboard.load_insights(_write(tmp_path, bad_horizon))
 
 
-def test_main_writes_the_file(tmp_path):
-    output = tmp_path / "out" / "dashboard.html"
-    dashboard.main(["--insights", str(_write(tmp_path, _insights())), "--output", str(output)])
-    assert output.read_text(encoding="utf-8").startswith("<!doctype html>")
-
-
-def _comment_metrics():
-    """Comment metrics from perfect labels, built from the generator's answer key."""
-    import pandas as pd
-
-    from src import comments
-    from src.load_data import load_google_reviews, load_survey_responses
-    from src.sample_comments import TOPICS
-
-    key = pd.read_csv(gen.ANSWER_KEY_PATH, dtype=str)
-    labels = key.assign(topic=key["topics"].str.split("|")).explode("topic")
-    labels["kind"] = labels["topic"].map(lambda topic: TOPICS[topic][1])
-    topics = pd.DataFrame({"topic": sorted(labels["topic"].unique())})
-    topics["description"] = "x"
-    topics["small_detail"] = topics["topic"] == "detail_cookie"
-    exported = comments.export_comments(load_survey_responses()[0], load_google_reviews()[0])
-    return comments.count_labels(exported, topics, labels[comments.LABEL_COLUMNS])
-
-
-def test_comment_section_is_optional(data):
-    assert data["comments"] is None
-    assert "commentsBlock" in dashboard.render_dashboard(data)
-
-
-def test_comment_section_shows_rankings_and_small_details():
-    metrics = _comment_metrics()
-    section = dashboard.build_dashboard_data(SURVEY, REVIEWS, _insights(), metrics)["comments"]
-    assert section["n_comments"] == metrics["n_comments"]
-    assert section["complaints"][0]["topic"] == "Service_wait"
-    assert len(section["complaints"]) <= dashboard.MAX_TOPICS_LISTED
-    counts = [row["n"] for row in section["praise"]]
-    assert counts == sorted(counts, reverse=True)
-    detail = section["small_details"][0]
-    assert (detail["topic"], detail["kind_label"]) == ("Detail_cookie", "Lo elogian")
-    assert 0 < len(detail["quotes"]) <= 2
-
-
-def test_main_accepts_comment_metrics(tmp_path):
+def test_main_writes_the_file_with_comments(tmp_path):
     comments_path = tmp_path / "comment_metrics.json"
     comments_path.write_text(json.dumps(_comment_metrics()), encoding="utf-8")
-    output = tmp_path / "dashboard.html"
+    output = tmp_path / "out" / "dashboard.html"
     dashboard.main([
         "--insights", str(_write(tmp_path, _insights())),
         "--comments", str(comments_path),
         "--output", str(output),
     ])
-    assert _embedded_data(output.read_text(encoding="utf-8"))["comments"]["complaints"]
+    page = output.read_text(encoding="utf-8")
+    assert page.startswith("<!doctype html>")
+    assert _embedded_data(page)["topic_changes"]

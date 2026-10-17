@@ -1,11 +1,11 @@
-"""Load and clean the two input tables according to the schema."""
+"""Load and clean the reviews table according to the schema."""
 
 from dataclasses import dataclass
 from pathlib import Path
 
 import pandas as pd
 
-from src.survey_schema import GOOGLE_REVIEWS, SURVEY_RESPONSES, Column, column_names
+from src.schema import GOOGLE_REVIEWS, Column, column_names
 
 SAMPLE_DIR = Path(__file__).resolve().parent.parent / "data" / "sample"
 
@@ -64,10 +64,6 @@ def _load_table(path, schema: tuple[Column, ...]):
 
     report = CleaningReport(rows_read, rows_read - len(df), invalid_ratings, texts_cleaned)
     return df, report
-
-
-def load_survey_responses(path=SAMPLE_DIR / "survey_responses.csv"):
-    return _load_table(path, SURVEY_RESPONSES)
 
 
 def load_google_reviews(path=SAMPLE_DIR / "google_reviews.csv"):

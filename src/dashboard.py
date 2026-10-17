@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 from src.load_data import SAMPLE_DIR, load_google_reviews
-from src.metrics import ASPECT_COLUMNS, build_metrics
+from src.metrics import build_metrics
 
 TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "dashboard.html"
 EXAMPLES_DIR = Path(__file__).resolve().parent.parent / "examples"
@@ -24,15 +24,11 @@ SMALL_DETAIL_KINDS = {
     "complaint": ("Lo echan de menos", "warn"),
     "suggestion": ("Lo sugieren", "warn"),
 }
-STEADY_CHANGE = 0.5  # an aspect moving less than this between periods counts as steady
+MAX_TOPICS_COMPARED = 4  # per kind, in the "before and now" table
+# A topic whose share of comments moves less than this between periods counts as steady.
+STEADY_SHARE_CHANGE = 0.10
 
 # Dashboard text is in Spanish because it is read by the business owner.
-ASPECT_LABELS = {
-    "rating_food": "Comida",
-    "rating_service": "Servicio",
-    "rating_ambience": "Ambiente",
-    "rating_value": "Precio",
-}
 MONTHS = (
     "enero", "febrero", "marzo", "abril", "mayo", "junio",
     "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
@@ -95,41 +91,49 @@ def _share_status(value, good, warn, labels):
 
 
 def _kpis(metrics):
-    survey, reviews = metrics["survey"], metrics["reviews"]
+    reviews = metrics["reviews"]
     months = reviews["recent_months"]
-    answered = survey["answered"]["rating_overall"]
     recent_mean = reviews["recent_mean_rating"]
+    previous_mean = reviews["previous_mean_rating"]
+    recent_satisfied = reviews["recent_satisfied_share"]
+    previous_satisfied = reviews["previous_satisfied_share"]
     last_reply = reviews["last_owner_reply"]
 
     def kpi(label, value, unit, status, detail):
         return {"label": label, "value": value, "unit": unit, "status": status[0],
                 "status_label": status[1], "detail": detail}
 
+    def rating(value):
+        return "—" if value is None else f"{value:.1f}"
+
+    def share(value):
+        return "—" if value is None else f"{value:.0%}"
+
     return [
         kpi(
-            "Calificación general",
-            "—" if survey["mean_overall"] is None else f"{survey['mean_overall']:.1f}",
+            "Calificación en Google",
+            rating(reviews["mean_rating"]),
             "/ 5",
-            _rating_status(survey["mean_overall"]),
-            f"Formulario · {answered} respuestas",
+            _rating_status(reviews["mean_rating"]),
+            f"{reviews['n_reviews']} reseñas en total",
         ),
         kpi(
-            "Clientes satisfechos",
-            "—" if survey["satisfied_share"] is None else f"{survey['satisfied_share']:.0%}",
-            "4–5★",
-            _share_status(survey["satisfied_share"], 0.8, 0.6, ("Alto", "Medio", "Bajo")),
-            f"Formulario · {answered} respuestas",
-        ),
-        kpi(
-            f"Google, últimos {months} meses",
-            "—" if recent_mean is None else f"{recent_mean:.1f}",
+            f"Últimos {months} meses",
+            rating(recent_mean),
             "★",
             _rating_status(recent_mean),
-            f"{reviews['recent_n']} reseñas · histórico {reviews['mean_rating']:.1f}",
+            f"{reviews['recent_n']} reseñas · antes {rating(previous_mean)}",
+        ),
+        kpi(
+            f"Clientes satisfechos, últimos {months} meses",
+            share(recent_satisfied),
+            "4–5★",
+            _share_status(recent_satisfied, 0.8, 0.6, ("Alto", "Medio", "Bajo")),
+            f"Antes {share(previous_satisfied)}",
         ),
         kpi(
             "Reseñas recientes respondidas",
-            f"{reviews['recent_reply_rate']:.0%}",
+            share(reviews["recent_reply_rate"]),
             "",
             _share_status(reviews["recent_reply_rate"], 0.8, 0.3, ("Al día", "Irregular", "Sin responder")),
             "Nunca ha respondido" if last_reply is None else f"Última respuesta: {_short_date(last_reply)}",
@@ -137,29 +141,32 @@ def _kpis(metrics):
     ]
 
 
-def _aspects(metrics):
+def _topic_changes(comment_metrics):
+    """Each main complaint and praise: its share of comments before and now."""
+    if comment_metrics is None:
+        return []
     rows = []
-    for aspect, values in metrics["survey_aspect_change"].items():
-        if values["change"] <= -STEADY_CHANGE:
-            status = ("crit", "Empeoró")
-        elif values["change"] >= STEADY_CHANGE:
-            status = ("good", "Mejoró")
-        elif values["recent"] >= 4.0:
-            status = ("good", "Se mantiene")
-        else:
-            status = ("warn", "A vigilar")
-        # The change shown is the difference of the two rounded figures beside it, so
-        # the row adds up for the reader (4.0 to 2.6 reads -1.4, even if exact is -1.45).
-        shown_change = round(round(values["recent"], 1) - round(values["previous"], 1), 1)
-        rows.append({
-            "label": ASPECT_LABELS[aspect],
-            "previous": f"{values['previous']:.1f}",
-            "recent": f"{values['recent']:.1f}",
-            "change": f"{shown_change:+.1f}" if shown_change else "0.0",
-            "recent_n": values["recent_n"],
-            "status": status[0],
-            "status_label": status[1],
-        })
+    for kind, label, worse_when_up in (("complaint", "Queja", True), ("praise", "Elogio", False)):
+        ranking = comment_metrics["top_complaints" if kind == "complaint" else "top_praise"]
+        for entry in ranking[:MAX_TOPICS_COMPARED]:
+            previous, recent = entry["previous_share"] or 0.0, entry["recent_share"] or 0.0
+            # Points between the two rounded shares shown, so the row adds up for the reader.
+            points = round(recent * 100) - round(previous * 100)
+            if abs(recent - previous) < STEADY_SHARE_CHANGE:
+                status = ("good", "Estable")
+            elif (recent > previous) == worse_when_up:
+                status = ("crit", "Aumentó" if worse_when_up else "Disminuyó")
+            else:
+                status = ("good", "Disminuyó" if worse_when_up else "Aumentó")
+            rows.append({
+                "topic": _topic_label(entry["topic"]),
+                "kind": label,
+                "previous": f"{previous:.0%}",
+                "recent": f"{recent:.0%}",
+                "change": f"{points:+d} pts" if points else "0 pts",
+                "status": status[0],
+                "status_label": status[1],
+            })
     return rows
 
 
@@ -222,40 +229,36 @@ def _comments(comment_metrics):
     }
 
 
-def build_dashboard_data(survey_path, reviews_path, insights, comment_metrics=None):
+def build_dashboard_data(reviews_path, insights, comment_metrics=None):
     """Everything the template needs, with every figure already formatted."""
-    metrics = build_metrics(survey_path, reviews_path)
+    metrics = build_metrics(reviews_path)
     reviews, _ = load_google_reviews(reviews_path)
-    survey, review_summary = metrics["survey"], metrics["reviews"]
-    monthly = metrics["survey_monthly_means"]
+    review_summary = metrics["reviews"]
+    monthly = metrics["reviews_monthly"]
     distribution = review_summary["distribution"]
 
     return {
         "insights": insights,
         "horizons": {key: {"label": label, "status": status} for key, (label, status) in HORIZONS.items()},
-        "survey_period": _period(survey["first_date"], survey["last_date"]),
         "reviews_period": _period(review_summary["first_date"], review_summary["last_date"]),
-        "n_responses": survey["n_responses"],
         "n_reviews": review_summary["n_reviews"],
         "recent_months": review_summary["recent_months"],
         "kpis": _kpis(metrics),
-        # One decimal so the shares add up to 100% (same format as the PNG chart).
+        # One decimal (same format as the PNG chart): rounded shares can still add up
+        # to 99.9% or 100.1%, but never visibly far from 100%.
         "distribution": [
             {"stars": stars, "n": n, "share": f"{n / review_summary['n_reviews']:.1%}"}
             for stars, n in distribution.items()
         ],
         "rating_sum": sum(stars * n for stars, n in distribution.items()),
         "months": [f"{MONTHS[int(key[-2:]) - 1][:3]} {key[:4]}" for key in monthly],
-        "responses_per_month": list(metrics["survey_responses_per_month"].values()),
-        "trend": [
-            {
-                "label": ASPECT_LABELS[aspect],
-                "values": [None if values[aspect] != values[aspect] else round(values[aspect], 1)
-                           for values in monthly.values()],
-            }
-            for aspect in ASPECT_COLUMNS
-        ],
-        "aspects": _aspects(metrics),
+        "reviews_per_month": [values["n_reviews"] for values in monthly.values()],
+        "trend": [{
+            "label": "Estrellas promedio",
+            "values": [None if values["mean_rating"] is None else round(values["mean_rating"], 1)
+                       for values in monthly.values()],
+        }],
+        "topic_changes": _topic_changes(comment_metrics),
         "comments": _comments(comment_metrics),
         "reviews": _reviews_listed(reviews),
         "n_reviews_with_text": int(reviews["text"].notna().sum()),
@@ -272,7 +275,6 @@ def render_dashboard(data):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Build the owner-facing HTML dashboard.")
-    parser.add_argument("--survey", default=SAMPLE_DIR / "survey_responses.csv")
     parser.add_argument("--reviews", default=SAMPLE_DIR / "google_reviews.csv")
     parser.add_argument("--insights", default=EXAMPLES_DIR / "insights.json")
     parser.add_argument("--comments", help="comment_metrics.json; omit to leave the comment section out")
@@ -282,7 +284,7 @@ def main(argv=None):
     comment_metrics = None
     if args.comments:
         comment_metrics = json.loads(Path(args.comments).read_text(encoding="utf-8"))
-    data = build_dashboard_data(args.survey, args.reviews, load_insights(args.insights), comment_metrics)
+    data = build_dashboard_data(args.reviews, load_insights(args.insights), comment_metrics)
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(render_dashboard(data), encoding="utf-8")

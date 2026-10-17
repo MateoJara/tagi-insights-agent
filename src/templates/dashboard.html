@@ -92,6 +92,7 @@ td.n,th.n{text-align:right}
 .detail{border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px}
 .detail .dhd{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
 .detail .dhd span.cnt{color:var(--ink-2);font-size:13px}
+td .kind{font-size:12px;color:var(--muted)}
 .questions{margin:0;padding-left:20px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
 .filters button{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:6px 12px;border-radius:999px;cursor:pointer}
@@ -118,7 +119,7 @@ button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px so
 <div class="wrap">
   <header class="top">
     <div>
-      <div class="eyebrow">Opinión de sus clientes · formulario y Google</div>
+      <div class="eyebrow">Opinión de sus clientes en Google</div>
       <h1 id="title"></h1>
       <p class="lede" id="summary"></p>
     </div>
@@ -135,22 +136,22 @@ button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px so
   <div class="grid2">
     <section class="panel">
       <div>
-        <h2>Calificación por aspecto, mes a mes</h2>
-        <p class="sub">Respuestas del formulario, escala de 1 a 5. Pase el cursor por un mes para ver el detalle.</p>
+        <h2>Estrellas promedio, mes a mes</h2>
+        <p class="sub">Reseñas de Google, escala de 1 a 5. Pase el cursor por un mes para ver cuántas reseñas hubo.</p>
       </div>
       <div class="legend" id="trendLegend"></div>
       <div class="chart" id="trendChart"></div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="topicPanel" hidden>
       <div>
-        <h2>Antes y ahora por aspecto</h2>
-        <p class="sub" id="aspectSub"></p>
+        <h2>Temas: antes y ahora</h2>
+        <p class="sub" id="topicSub"></p>
       </div>
       <div class="tbl">
         <table>
-          <thead><tr><th>Aspecto</th><th class="n">Antes</th><th class="n">Ahora</th><th class="n">Cambio</th><th>Estado</th></tr></thead>
-          <tbody id="aspects"></tbody>
+          <thead><tr><th>Tema</th><th class="n">Antes</th><th class="n">Ahora</th><th class="n">Cambio</th><th>Estado</th></tr></thead>
+          <tbody id="topicChanges"></tbody>
         </table>
       </div>
     </section>
@@ -310,13 +311,13 @@ function bindTip(node, container, build) {
   const I = D.insights;
   $('title').textContent = I.business_name + ': ' + I.headline;
   $('summary').textContent = I.summary;
-  add($('meta'), 'span', '', 'Formulario: ' + D.survey_period + ' · ' + D.n_responses + ' respuestas');
   add($('meta'), 'span', '', 'Google: ' + D.reviews_period + ' · ' + D.n_reviews + ' reseñas');
   if (I.alert) { $('alertText').textContent = I.alert; $('alert').hidden = false; }
   $('nextLevel').textContent = I.next_level;
   I.questions.forEach(q => add($('questions'), 'li', '', q));
   $('dataNote').textContent = I.data_note;
-  $('aspectSub').textContent = 'Promedio de los últimos ' + D.recent_months + ' meses frente al periodo anterior.';
+  $('topicSub').textContent = 'Qué parte de los comentarios menciona cada tema en los últimos ' + D.recent_months +
+    ' meses, frente al periodo anterior. Se comparan proporciones porque los periodos tienen distinta duración.';
   $('distSub').textContent = D.n_reviews + ' reseñas en total.';
 })();
 
@@ -330,19 +331,20 @@ D.kpis.forEach(k => {
   add(card, 'span', 'd', k.detail);
 });
 
-/* Monthly trend by aspect */
+/* Monthly mean stars */
 (function () {
   const c = $('trendChart'), n = D.months.length;
   const W = 560, H = 260, L = 34, R = 18, T = 14, B = 34;
   const x = i => n > 1 ? L + i / (n - 1) * (W - L - R) : (L + W - R) / 2;
   const y = v => T + (5 - v) / 4 * (H - T - B);
-  const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Calificación promedio por aspecto en cada mes' }, c);
+  const svg = svgEl('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': 'Estrellas promedio de las reseñas en cada mes' }, c);
   for (let s = 1; s <= 5; s++) {
     svgEl('line', { x1: L, x2: W - R, y1: y(s), y2: y(s), stroke: 'var(--grid)' }, svg);
     svgEl('text', { x: L - 10, y: y(s), 'text-anchor': 'end', 'dominant-baseline': 'middle' }, svg).textContent = s;
   }
   D.months.forEach((m, i) => {
-    svgEl('text', { x: x(i), y: H - 10, 'text-anchor': 'middle' }, svg).textContent = m.split(' ')[0];
+    if (n > 12 && i % 3 !== 0 && i !== n - 1) return;
+    svgEl('text', { x: x(i), y: H - 10, 'text-anchor': 'middle' }, svg).textContent = n > 12 ? m : m.split(' ')[0];
   });
   const cross = svgEl('line', { y1: T, y2: H - B, stroke: 'var(--muted)', 'stroke-width': 1, visibility: 'hidden' }, svg);
   D.trend.forEach((serie, k) => {
@@ -356,9 +358,12 @@ D.kpis.forEach(k => {
     serie.values.forEach((v, i) => {
       if (v !== null) svgEl('circle', { cx: x(i), cy: y(v), r: 4.5, fill: SERIES[k], stroke: 'var(--surface)', 'stroke-width': 2 }, svg);
     });
-    const item = add($('trendLegend'), 'span');
-    add(item, 'i', 'sw').style.background = SERIES[k];
-    item.appendChild(document.createTextNode(serie.label));
+    // A single series needs no legend: the panel title names it.
+    if (D.trend.length > 1) {
+      const item = add($('trendLegend'), 'span');
+      add(item, 'i', 'sw').style.background = SERIES[k];
+      item.appendChild(document.createTextNode(serie.label));
+    }
   });
   const band = n > 1 ? (W - L - R) / (n - 1) : W - L - R;
   D.months.forEach((m, i) => {
@@ -372,7 +377,7 @@ D.kpis.forEach(k => {
         add(row, 'i', 'sw').style.background = SERIES[k];
         row.appendChild(document.createTextNode(serie.label + ': ' + (serie.values[i] === null ? 'sin datos' : serie.values[i].toFixed(1))));
       });
-      add(t, 'div', '', D.responses_per_month[i] + ' respuestas');
+      add(t, 'div', '', D.reviews_per_month[i] + (D.reviews_per_month[i] === 1 ? ' reseña' : ' reseñas'));
     };
     const on = () => { cross.setAttribute('x1', x(i)); cross.setAttribute('x2', x(i)); cross.setAttribute('visibility', 'visible'); };
     const off = () => cross.setAttribute('visibility', 'hidden');
@@ -382,14 +387,16 @@ D.kpis.forEach(k => {
   });
 })();
 
-/* Before and now by aspect */
-D.aspects.forEach(a => {
-  const tr = add($('aspects'), 'tr');
-  add(add(tr, 'td'), 'b', '', a.label);
-  add(tr, 'td', 'n num', a.previous);
-  add(tr, 'td', 'n num', a.recent);
-  add(tr, 'td', 'n num', a.change);
-  add(add(tr, 'td'), 'span', 'pill ' + a.status, a.status_label);
+/* Topics before and now */
+if (D.topic_changes.length) $('topicPanel').hidden = false;
+D.topic_changes.forEach(row => {
+  const tr = add($('topicChanges'), 'tr'), name = add(tr, 'td');
+  add(name, 'b', '', row.topic);
+  add(name, 'div', 'kind', row.kind);
+  add(tr, 'td', 'n num', row.previous);
+  add(tr, 'td', 'n num', row.recent);
+  add(tr, 'td', 'n num', row.change);
+  add(add(tr, 'td'), 'span', 'pill ' + row.status, row.status_label);
 });
 
 /* What diners write: complaints, praise, small details, suggestions */
@@ -398,7 +405,7 @@ D.aspects.forEach(a => {
   if (!C) return;
   $('commentsBlock').hidden = false;
   $('complaintsSub').textContent = 'Temas más repetidos en ' + C.n_comments +
-    ' comentarios del formulario y de Google. “Recientes” son los de los últimos ' + C.recent_months + ' meses.';
+    ' comentarios de Google. “Recientes” son los de los últimos ' + C.recent_months + ' meses.';
   const list = (id, rows, quotes) => {
     const box = $(id), max = Math.max(1, ...rows.map(r => r.n));
     if (!rows.length) add(box, 'p', 'empty', 'Sin comentarios de este tipo.');

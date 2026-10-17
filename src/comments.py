@@ -14,15 +14,14 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.load_data import SAMPLE_DIR, load_google_reviews, load_survey_responses
+from src.load_data import SAMPLE_DIR, load_google_reviews
 from src.metrics import RECENT_MONTHS, recent_mask
 
-KEY = ["table", "id", "column"]
+KEY = ["id"]
 KINDS = ("praise", "complaint", "suggestion")
 NO_DETAIL_TOPIC = "sin detalle"  # for comments like "Excelente" that name nothing concrete
 TOPIC_COLUMNS = ["topic", "description", "small_detail"]
 LABEL_COLUMNS = [*KEY, "topic", "kind"]
-SURVEY_TEXT_COLUMNS = ("positives", "complaints", "suggestions")
 
 COMMENTS_FILE = "comments.csv"
 TOPICS_FILE = "comment_topics.csv"
@@ -33,31 +32,16 @@ MAX_QUOTES = 3
 QUOTE_MIN_LENGTH, QUOTE_MAX_LENGTH = 20, 160
 
 
-def export_comments(survey, reviews, months=RECENT_MONTHS):
-    """One row per written comment: table, id, column, date, recent, text."""
-    survey = survey.assign(recent=recent_mask(survey["submitted_at"], months))
-    reviews = reviews.assign(recent=recent_mask(reviews["review_date"], months))
-    parts = [
-        pd.DataFrame({
-            "table": "survey_responses",
-            "id": survey["response_id"],
-            "column": column,
-            "date": survey["submitted_at"].dt.date,
-            "recent": survey["recent"],
-            "text": survey[column],
-        })
-        for column in SURVEY_TEXT_COLUMNS
-    ]
-    parts.append(pd.DataFrame({
-        "table": "google_reviews",
+def export_comments(reviews, months=RECENT_MONTHS):
+    """One row per review with a comment: id, date, stars, recent, text."""
+    comments = pd.DataFrame({
         "id": reviews["review_id"],
-        "column": "text",
         "date": reviews["review_date"].dt.date,
-        "recent": reviews["recent"],
+        "rating": reviews["rating"],
+        "recent": recent_mask(reviews["review_date"], months),
         "text": reviews["text"],
-    }))
-    comments = pd.concat(parts, ignore_index=True).dropna(subset=["text"])
-    return comments.sort_values(["table", "id", "column"], ignore_index=True)
+    }).dropna(subset=["text"])
+    return comments.sort_values("id", ignore_index=True)
 
 
 def _validate(comments, topics, labels):
@@ -101,11 +85,20 @@ def _quotes(rows):
     return newest["text"].head(MAX_QUOTES).tolist()
 
 
-def _summary(rows):
+def _share(count, total):
+    return count / total if total else None
+
+
+def _summary(rows, totals):
+    """Counts, and shares of all comments in each period: the recent period is a few
+    months against many before it, so only shares compare fairly."""
+    previous_n, recent_n = int((~rows["recent"]).sum()), int(rows["recent"].sum())
     return {
         "n": int(len(rows)),
-        "previous_n": int((~rows["recent"]).sum()),
-        "recent_n": int(rows["recent"].sum()),
+        "previous_n": previous_n,
+        "recent_n": recent_n,
+        "previous_share": _share(previous_n, totals["previous"]),
+        "recent_share": _share(recent_n, totals["recent"]),
         "quotes": _quotes(rows),
     }
 
@@ -114,6 +107,7 @@ def count_labels(comments, topics, labels, months=RECENT_MONTHS):
     """Validate the labels and count comments per topic and kind."""
     _validate(comments, topics, labels)
     labeled = labels.merge(comments, on=KEY, validate="many_to_one")
+    totals = {"previous": int((~comments["recent"]).sum()), "recent": int(comments["recent"].sum())}
 
     by_topic = []
     for topic in topics.itertuples():
@@ -123,9 +117,9 @@ def count_labels(comments, topics, labels, months=RECENT_MONTHS):
             "description": topic.description,
             "small_detail": bool(topic.small_detail),
             # A comment counts once per topic even if it carries two kinds.
-            **{key: value for key, value in _summary(rows.drop_duplicates(KEY)).items() if key != "quotes"},
+            **{key: value for key, value in _summary(rows.drop_duplicates(KEY), totals).items() if key != "quotes"},
             "kinds": {
-                kind: _summary(rows[rows["kind"] == kind])
+                kind: _summary(rows[rows["kind"] == kind], totals)
                 for kind in KINDS
                 if (rows["kind"] == kind).any()
             },
@@ -145,7 +139,8 @@ def count_labels(comments, topics, labels, months=RECENT_MONTHS):
     without_detail = labeled.loc[labeled["topic"] == NO_DETAIL_TOPIC, KEY].drop_duplicates()
     return {
         "n_comments": int(len(comments)),
-        "n_recent_comments": int(comments["recent"].sum()),
+        "n_recent_comments": totals["recent"],
+        "n_previous_comments": totals["previous"],
         "n_without_detail": int(len(without_detail)),
         "recent_months": months,
         "topics": by_topic,
@@ -168,16 +163,14 @@ def _read(path, bool_columns=()):
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Export comments for labeling, or count the labels.")
     parser.add_argument("command", choices=("export", "count"))
-    parser.add_argument("--survey", default=SAMPLE_DIR / "survey_responses.csv")
     parser.add_argument("--reviews", default=SAMPLE_DIR / "google_reviews.csv")
     parser.add_argument("--output-dir", required=True)
     args = parser.parse_args(argv)
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    survey, _ = load_survey_responses(args.survey)
     reviews, _ = load_google_reviews(args.reviews)
-    comments = export_comments(survey, reviews)
+    comments = export_comments(reviews)
 
     if args.command == "export":
         comments.to_csv(output_dir / COMMENTS_FILE, index=False, lineterminator="\n", encoding="utf-8")

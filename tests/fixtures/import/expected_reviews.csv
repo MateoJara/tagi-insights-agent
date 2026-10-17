@@ -1,201 +1,601 @@
 review_date,rating,text,owner_replied,owner_reply_date
-2024-10-03,5,,True,2024-10-06
-2024-10-09,5,Vengo seguido y la niña que nos atendió fue un amor!!,True,2024-10-13
-2024-10-11,4,10/10,True,2024-10-20
-2024-10-14,3,,False,
-2024-10-14,4,,True,2024-10-24
-2024-10-14,5,"El sitio es limpio y bonito, ademas el ajiaco estaba buenisimo",True,2024-10-22
-2024-10-15,1,La verdad la porción fue más pequeña que otras veces,True,2024-10-18
-2024-10-15,4,,False,
-2024-10-19,4,,True,2024-10-23
-2024-10-19,4,"Primera vez que vengo y económico y llenador. También me gustó mucho la decoración, gracias",True,2024-10-25
-2024-10-20,4,Vengo seguido y el mesero fue muy amable,True,2024-10-22
-2024-10-20,4,,False,
-2024-10-27,5,,True,2024-11-04
-2024-10-31,5,Se nota que cocinan con ingredientes frescos,False,
-2024-11-05,4,No tuvimos que esperar nada!!,True,2024-11-11
-2024-11-07,4,,True,2024-11-10
-2024-11-12,5,Primera vez que vengo y la carne llegó en su punto. Recomendado,False,
-2024-11-13,3,"todo muy rico, pero subieron los precios y la porción es la misma",True,2024-11-17
-2024-11-19,4,Vengo seguido y buen ambiente para conversar,True,2024-11-22
-2024-11-19,2,,False,
-2024-11-21,5,,False,
-2024-12-01,5,,True,2024-12-07
-2024-12-01,4,,True,2024-12-08
-2024-12-14,3,,False,
-2024-12-17,4,,True,2024-12-23
+2024-10-04,5,,True,2024-10-13
+2024-10-05,5,Vengo seguido y económico y llenador. Recomendado,False,
+2024-10-06,5,Primera vez que vengo y uno queda lleno con el almuerzo,True,2024-10-12
+2024-10-06,5,,True,2024-10-07
+2024-10-08,5,Vengo seguido y la niña que nos atendió fue un amor. Volveré,True,2024-10-10
+2024-10-11,4,,True,2024-10-17
+2024-10-14,4,,True,2024-10-18
+2024-10-14,5,"El lugar es acogedor, gracias",True,2024-10-22
+2024-10-15,5,,True,2024-10-25
+2024-10-16,4,,True,2024-10-26
+2024-10-16,5,"  El ajiaco estaba buenisimo, gracias ",False,
+2024-10-17,5,La verdad el lugar es acogedor. También el sabor de la comida es excelente. Volveré,False,
+2024-10-17,4,,False,
+2024-10-17,4,,False,
+2024-10-19,5,,True,2024-10-28
+2024-10-19,5,Hasta galleta de cortesía dan con el café. Volveré,True,2024-10-26
+2024-10-23,3,,False,
+2024-10-24,3,"La verdad uno queda lleno con el almuerzo, pero ya no es tan económico como antes",False,
+2024-10-26,5,La verdad nos atendieron con muy buena actitud. También los precios son justos,True,2024-11-03
+2024-10-28,5,,False,
+2024-10-28,5,"La música está a un volumen agradable, gracias",True,2024-11-05
+2024-10-31,3,"Los  platos vienen bien servidos, pero me pareció caro para lo que sirven",False,
+2024-11-01,4,Primera vez que vengo y la música está a un volumen agradable. Recomendado,True,2024-11-07
+2024-11-01,5,La verdad sirven bastante!!,True,2024-11-08
+2024-11-02,5,,False,
+2024-11-02,5,,True,2024-11-08
+2024-11-05,5,Buen ambiente para conversar!!,True,2024-11-13
+2024-11-07,3,"  Primera vez que vengo y la atención fue excelente, pero la porción fue más pequeña que otras veces!! ",False,
+2024-11-08,4,,False,
+2024-11-10,5,se come bien sin gastar mucho,True,2024-11-12
+2024-11-12,5,,False,
+2024-11-16,4,Vengo seguido y buen ambiente para conversar,True,2024-11-22
+2024-11-17,4,,True,2024-11-21
+2024-11-18,5,El mesero fue muy amable,True,2024-11-26
+2024-11-19,5,Uno queda lleno con el almuerzo,True,2024-11-23
+2024-11-19,5,La galleta de cortesía con el café es un detallazo,False,
+2024-11-25,5,,True,2024-12-02
+2024-11-27,5,,False,
+2024-11-27,3,,False,
+2024-11-29,5,Excelente,True,2024-12-09
+2024-11-30,5,,False,
+2024-12-01,1,,True,2024-12-09
+2024-12-01,4,  Vengo seguido y la galleta de cortesía con el café es un detallazo ,True,2024-12-10
+2024-12-02,5,,True,2024-12-08
+2024-12-03,5,,True,2024-12-13
+2024-12-05,5,PRIMERA VEZ QUE VENGO Y NO TUVIMOS QUE ESPERAR NADA. RECOMENDADO,False,
+2024-12-05,4,,False,
+2024-12-06,3,"Sirven bastante, pero subieron los precios y la porción es la misma, gracias",False,
+2024-12-06,5,Buen precio para lo que sirven,False,
+2024-12-07,3,"ME GUSTÓ MUCHO LA DECORACIÓN, PERO YA NO ES TAN ECONÓMICO COMO ANTES, GRACIAS",False,
+2024-12-08,2,Nadie saluda ni da las gracias,True,2024-12-13
+2024-12-08,5,PRIMERA VEZ QUE VENGO Y EL LUGAR ES ACOGEDOR. TAMBIEN SE COME BIEN SIN GASTAR MUCHO,True,2024-12-10
+2024-12-08,5,,False,
+2024-12-09,2,,True,2024-12-11
+2024-12-10,5,,False,
+2024-12-10,4,,False,
+2024-12-12,3,"El pedido llegó rapidísimo, pero hacía mucho calor adentro",False,
+2024-12-14,5,,False,
+2024-12-15,5,,False,
+2024-12-16,3,,True,2024-12-17
+2024-12-17,3,"La verdad el sitio es limpio y bonito, pero ya no es tan económico como antes",True,2024-12-23
+2024-12-17,5,El ajiaco estaba buenisimo. Tambien muy atentos todos. Volvere,False,
+2024-12-17,4,,False,
+2024-12-18,4,,True,2024-12-26
+2024-12-19,5,,False,
+2024-12-19,5,,True,2024-12-20
+2024-12-23,3,"El mesero fue muy amable, pero el plato llegó frío, gracias",False,
+2024-12-23,5,Excelente,True,2024-12-30
+2024-12-24,3,,True,2024-12-28
+2024-12-24,5,Primera vez que vengo y sirven muy rápido para lo lleno que estaba!!,False,
+2024-12-26,5,Primera vez que vengo y qué buen detalle la galleta que traen con el tinto,True,2025-01-05
 2024-12-26,4,,False,
-2024-12-26,4,"La verdad los precios son justos, además me encantó que el café venga ocn galletica!!",True,2025-01-01
-2024-12-29,5,,False,
-2024-12-30,4,"No tuvimos que esperar nada, además se come bien sin gastar mucho. Volveré",False,
-2024-12-31,4,Primera vez que vengo y es un lugar tranquilo para almorzar. Recomendado,False,
-2025-01-02,3,,True,2025-01-04
-2025-01-16,5,,True,2025-01-25
-2025-01-16,5,,False,
-2025-01-21,5,la verdad es un lugar tranquilo para almorzar. recomendado,False,
-2025-01-23,5,,True,2025-01-26
-2025-01-29,5,"Como siempre, qué buen detalle la galleta que traen con el tinto",True,2025-02-02
-2025-02-01,3,"El  ajiaco estaba buenísimo, pero subieron los precios y la porción es la misma, gracias",True,2025-02-09
-2025-02-09,5,,True,2025-02-18
-2025-02-09,5,,True,2025-02-18
-2025-02-11,4,,True,2025-02-21
-2025-02-20,5,,False,
-2025-02-24,5,,True,2025-03-01
+2024-12-26,4,Uno queda lleno con el almuerzo!!,True,2025-01-01
+2024-12-28,5,Rico,False,
+2024-12-29,4,"COMO SIEMPRE, LOS PRECIOS SON JUSTOS. VOLVERÉ",True,2025-01-05
+2024-12-30,4,Vengo seguido y sirven muy rápido para lo lleno que estaba!!,True,2025-01-01
+2025-01-01,3,,True,2025-01-03
+2025-01-02,4,,True,2025-01-10
+2025-01-02,5,,True,2025-01-09
+2025-01-03,4,,True,2025-01-13
+2025-01-04,4,Los precios son justos. Tambien la musica esta a un volumen agradable. Recomendado,True,2025-01-10
+2025-01-05,4,,True,2025-01-07
+2025-01-05,5,La verdad la sazón es como de casa,True,2025-01-08
+2025-01-11,5,Es un lugar tranquilo para almorzar. Tambien buen precio para lo que sirven. Recomendado,False,
+2025-01-11,5,Todo bien,True,2025-01-14
+2025-01-11,5,Rico,True,2025-01-19
+2025-01-11,5,,True,2025-01-21
+2025-01-11,5,,False,
+2025-01-12,5,Recomendado,True,2025-01-18
+2025-01-14,5,,False,
+2025-01-14,4,Recomendado,False,
+2025-01-14,5,La galletica que dan con el café hace la diferencia!!,True,2025-01-15
+2025-01-15,5,"Como siempre, el sitio es limpio y bonito",True,2025-01-16
+2025-01-17,4,,True,2025-01-22
+2025-01-19,4,"El detalle de la galleta con el tinto me pareció muy lindo, gracias",False,
+2025-01-19,1,Subieron los precios y la porción es la misma,False,
+2025-01-20,5,,True,2025-01-22
+2025-01-20,4,Me  gustó,False,
+2025-01-21,3,,True,2025-01-27
+2025-01-21,5,Se nota que cocinan con ingredientes frescos. Recomendado,False,
+2025-01-22,4,,False,
+2025-01-26,5,,True,2025-02-05
+2025-01-26,5,"Como siempre, es un lugar tranquilo para almorzar. También hasta galleta de cortesía dan con el café. Recomendado",True,2025-02-02
+2025-01-26,5,,True,2025-01-29
+2025-01-29,4,VENGO SEGUIDO Y SIRVEN BASTANTE,False,
+2025-01-29,5,,True,2025-02-01
+2025-01-29,5,Todo bien,True,2025-02-07
+2025-01-30,5,,True,2025-02-03
+2025-01-30,5,Rico,True,2025-01-31
+2025-01-30,5,,True,2025-02-03
+2025-02-02,5,"Como siempre, el sitio es limpio y bonito. Volveré",True,2025-02-04
+2025-02-05,4,Rico,True,2025-02-07
+2025-02-05,5,Económico y lleandor,True,2025-02-10
+2025-02-05,3,"La verdad uno queda lleno con el almuerzo, pero ya no es tan económico como antes",True,2025-02-14
+2025-02-07,5,Sirven bastante y nos atendieron con muy buena atcitud,False,
+2025-02-08,5,,False,
+2025-02-09,3,,True,2025-02-18
+2025-02-09,5,,True,2025-02-19
+2025-02-10,5,,False,
+2025-02-10,5,La verdad buen precio para lo que sirven,True,2025-02-19
+2025-02-11,5,,True,2025-02-13
+2025-02-15,4,,True,2025-02-24
+2025-02-16,5,"  Como siempre, la sazón es como de casa ",True,2025-02-17
+2025-02-18,5,Vengo seguido y el sitio es limpio y bonito. Volveré,False,
+2025-02-20,4,,True,2025-02-24
+2025-02-20,4,,True,2025-02-27
+2025-02-21,5,,True,2025-03-03
+2025-02-23,5,Económico y llenador!!,True,2025-02-28
+2025-02-23,5,"Como siempre, buen ambiente para conversar",False,
+2025-02-25,5,"Como siempre, la musica esta a un volumen agradable",False,
+2025-02-25,5,VENGO SEGUIDO Y EL SABOR DE LA COMIDA ES EXCELENTE,False,
 2025-02-25,5,,False,
-2025-02-26,5,La verdad se come bien sin gastar mucho. Volveré,True,2025-03-03
-2025-03-03,4,Nos atendieron rápido,True,2025-03-07
-2025-03-08,5,,True,2025-03-16
-2025-03-14,5,"Como siempre, el ajiaco estaba buenísimo",False,
-2025-03-15,3,,True,2025-03-21
-2025-03-18,4,,True,2025-03-27
-2025-03-19,5,,True,2025-03-22
-2025-03-21,3,,True,2025-03-31
-2025-03-24,5,,False,
-2025-03-27,5,,False,
-2025-03-30,5,"El sabor de la comida es excelente, ademas el personal es muy querido",True,2025-04-07
-2025-04-07,5,,False,
-2025-04-07,4,,False,
-2025-04-11,5,,True,2025-04-13
-2025-04-24,5,"Como siempre, buen precio para lo que sirven. También no tuvimos que esperar nada",False,
-2025-04-26,4,,True,2025-04-27
-2025-05-07,3,,True,2025-05-12
-2025-05-10,5,10/10,True,2025-05-20
-2025-05-18,4,,False,
-2025-05-22,4,,False,
-2025-05-24,4,,True,2025-05-29
-2025-05-24,1,,False,
-2025-06-01,4,,False,
-2025-06-08,5,"COMO SIEMPRE, MUY ATENTOS TODOS. TAMBIÉN LA GALLETICA QUE DAN CON EL CAFÉ HACE LA DIFERENCIA, GRACIAS",False,
-2025-06-09,2,El arroz estaba simple. No creo que vuelva,False,
-2025-06-13,5,,True,2025-06-20
-2025-06-20,4,"Se come bien sin gastar mucho, gracias",False,
-2025-07-03,4,,False,
-2025-07-09,5,"Como siempre, el sitio es limpio y bonito y muy buena relacion calidad-precio. Volvere",True,2025-07-16
-2025-07-13,5,,True,2025-07-19
-2025-07-17,5,,True,2025-07-25
-2025-07-24,5,,True,2025-07-28
-2025-08-07,5,Vengo seguido y no tuvimos que esperar nada. Recomendado,True,2025-08-16
-2025-08-12,3,"nos atendieron con muy buena actitud, pero la música estaba demasiado alta",False,
+2025-03-06,5,Nos atendieron rápido,False,
+2025-03-13,5,,True,2025-03-16
+2025-03-15,5,,True,2025-03-22
+2025-03-15,5,,False,
+2025-03-16,5,,True,2025-03-22
+2025-03-17,5,"Vengo seguido y no tuvimos que esperar nada, además la galletica que dan con el café hace la diferencia",False,
+2025-03-18,4,"Buen precio para lo que sirven, gracias",True,2025-03-21
+2025-03-19,5,"Como siempre, buen ambiente para conversar. Volveré",True,2025-03-20
+2025-03-20,5,,True,2025-03-24
+2025-03-22,4,,False,
+2025-03-22,3,"Buen precio para lo que sirven, pero la carne estaba dura",True,2025-04-01
+2025-03-22,5,La  verdad la niña que nos atendio fue un amor. Tambien buen ambiente para conversar. Volvere,False,
+2025-03-24,5,Muy buena relación calidad-precio y me gustó mucho la decoración,True,2025-03-25
+2025-03-24,3,,True,2025-03-28
+2025-03-25,5,,False,
+2025-03-25,5,VENGO SEGUIDO Y ME GUSTÓ MUCHO LA DECORACIÓN Y QUÉ BUEN DETALLE LA GALLETA QUE TRAEN CON EL TINTO,False,
+2025-03-28,5,"Como siempre, la galleta de cortesía con el café es un detallazo. Recomendado",False,
+2025-03-29,3,"Primera vez que vengo y me gustó mucho la decoración, pero ya no es tan económico como antes. Recomendado",True,2025-03-31
+2025-03-30,5,El lugar es acogedor y el dtealle de la galleta con el tinto me pareció muy lindo,True,2025-04-06
+2025-04-01,5,La verdad muy buena relación calidad-precio. Recomendado,False,
+2025-04-01,2,,True,2025-04-08
+2025-04-05,5,Sirven bastnate!!,True,2025-04-14
+2025-04-09,5,"La música está a un volumen agradable, además hasta galleta de cortesía dan con el café",True,2025-04-17
+2025-04-10,4,,True,2025-04-19
+2025-04-11,4,,True,2025-04-17
+2025-04-13,4,,True,2025-04-22
+2025-04-13,4,"Como siempre, la comida estuvo deliciosa, además hasta galleta de cortesía dan con el café",False,
+2025-04-15,5,,False,
+2025-04-17,4,,True,2025-04-23
+2025-04-19,5,Me  gustó,False,
+2025-04-20,5,Primera vez que vengo y se come bien sin gastar mucho!!,True,2025-04-22
+2025-04-20,4,"Como siempre, el ajiaco estaba buenísimo, además me gustó mucho la decoración",False,
+2025-04-21,5,"la verdad económico y llenador, gracias",True,2025-04-23
+2025-04-21,3,"Vengo seguido y el ajiaco estaba buenísimo, pero la música estaba demasiado alta",True,2025-04-25
+2025-04-22,1,"Lástima, subieron los precios y la porción es la misma",True,2025-05-02
+2025-04-23,4,,True,2025-04-30
+2025-04-24,5,"El lugar es acogedor, gracias",False,
+2025-04-24,5,"Como siempre, económico y llenador. Volveré",True,2025-04-28
+2025-04-25,4,la verdad el pedido llegó rapidísimo y la sazón es como de casa. recomendado,True,2025-05-04
+2025-04-26,5,,True,2025-05-06
+2025-04-26,5,el pedido llegó rapidísimo,False,
+2025-04-28,4,Primera vez que vengo y la galletica que dan con el café hace la diferencia,True,2025-05-06
+2025-04-29,4,,True,2025-05-03
+2025-04-29,4,,True,2025-05-08
+2025-04-30,5,,False,
+2025-05-01,4,Vengo seguido y muy buena relación calidad-precio y el sitio es limpio y bonito!!,True,2025-05-11
+2025-05-03,5,  Primera vez que vengo y la galletica que dan con el cafe hace la diferencia. Volvere ,False,
+2025-05-04,5,,False,
+2025-05-05,4,"Buen precio para lo que sirven, gracias",True,2025-05-15
+2025-05-07,3,,False,
+2025-05-07,5,"La verdad muy atentos todos. También es un lugar tranquilo para almorzar, gracias",True,2025-05-17
+2025-05-08,2,"Lástima, cada vez sirven menos. Ojalá mejoren",False,
+2025-05-09,3,,True,2025-05-14
+2025-05-09,4,"VENGO SEGUIDO Y LOS PRECIOS SON JUSTOS, ADEMÁS NOS ATENDIERON RÁPIDO, GRACIAS",True,2025-05-19
+2025-05-10,5,,True,2025-05-15
+2025-05-12,3,,True,2025-05-19
+2025-05-14,3,"Sirven bastante, pero el baño no estaba limpio, gracias",False,
+2025-05-15,4,"La niña que nos atendió fue un amor, además me gustó mucho la decoración. Volveré",True,2025-05-19
+2025-05-15,4,,True,2025-05-17
+2025-05-15,3,"El pedido llego rapidisimo, pero hacia mucho calor adentro!!",False,
+2025-05-17,1,"Lástima, hacía mucho calor adentro",True,2025-05-18
+2025-05-18,5,,True,2025-05-23
+2025-05-19,5,,False,
+2025-05-19,4,"PRIMERA VEZ QUE VENGO Y NO TUVIMOS QUE ESPERAR NADA, GRACIAS",True,2025-05-24
+2025-05-20,4,,True,2025-05-29
+2025-05-21,4,,True,2025-05-28
+2025-05-21,5,Todo bien,True,2025-05-26
+2025-05-22,5,,True,2025-05-27
+2025-05-23,3,"Primera  vez que vengo y buen ambiente para conversar, pero la comida llegó fría a la mesa. Volveré",True,2025-05-24
+2025-05-23,1,Había mucho ruido y no se podía hablar. Una lástima,True,2025-06-02
+2025-05-23,2,"Lástima, la sopa estaba tibia",True,2025-05-31
+2025-05-26,4,,True,2025-06-02
+2025-05-29,5,Económico y llenador. También me gustó mucho la decoración,False,
+2025-05-30,1,,False,
+2025-05-31,5,,True,2025-06-09
+2025-06-01,5,,True,2025-06-09
+2025-06-02,5,,True,2025-06-12
+2025-06-02,5,,True,2025-06-09
+2025-06-05,5,,True,2025-06-11
+2025-06-08,5,,True,2025-06-16
+2025-06-11,4,"como siempre, me encantó que el café venga con galletica, gracias",True,2025-06-20
+2025-06-11,2,,True,2025-06-12
+2025-06-16,1,,True,2025-06-23
+2025-06-19,5,,False,
+2025-06-22,4,Primera vez que vengo y que buen detalle la galleta que traen con el tinto. Recomendado,False,
+2025-06-23,5,,True,2025-07-01
+2025-06-23,4,,False,
+2025-06-25,4,,True,2025-06-27
+2025-06-25,1,La verdad el plato llegó frío. Ojalá mejoren,True,2025-07-05
+2025-06-26,5,"Como siempre, los platos vienen bien servidos",True,2025-06-30
+2025-06-28,5,Buen precio para lo que sirven. Volvere,False,
+2025-06-28,5,,False,
+2025-06-28,4,"  Como siempre, sirven muy rápido para lo lleno que estaba y el sabor de la comida es excelente, gracias ",True,2025-06-30
+2025-06-30,5,,True,2025-07-04
+2025-06-30,5,,True,2025-07-07
+2025-07-01,5,,True,2025-07-10
+2025-07-05,4,,False,
+2025-07-06,5,,True,2025-07-15
+2025-07-10,5,Recomendado,False,
+2025-07-15,5,"La verdad el lugar es acogedor, además la galletica que dan con el café hace la diferencia. Recomendado",False,
+2025-07-18,5,,True,2025-07-28
+2025-07-21,1,Esta vez pasaron 20 minutos antes de que alguien se acercara a la mesa. Ojalá mejoren,False,
+2025-07-22,5,,True,2025-07-28
+2025-07-24,3,"EL LUGAR ES ACOGEDOR, PERO YA NO ES TAN ECONÓMICO COMO ANTES. RECOMENDADO",False,
+2025-07-26,4,,False,
+2025-07-26,4,Sirven muy rápido para lo lleno que estaba!!,False,
+2025-07-27,4,,True,2025-08-06
+2025-07-27,5,,True,2025-08-05
+2025-07-29,5,,False,
+2025-07-31,5,,True,2025-08-05
+2025-07-31,5,,False,
+2025-08-01,5,Uno queda lleno con el almuerzo,True,2025-08-07
+2025-08-02,3,,False,
+2025-08-02,5,Vengo seguido y los precios son justos. También la música está a un volumen agradable. Recomendado,False,
+2025-08-02,3,"Vengo seguido y se nota que cocinan con ingredientes frescos, pero el baño no estaba limpio. Volveré",True,2025-08-07
+2025-08-07,2,La música estaba demasiado alta. Una lástima,False,
+2025-08-10,4,,False,
+2025-08-12,5,,True,2025-08-20
+2025-08-12,4,,False,
+2025-08-13,5,,True,2025-08-14
+2025-08-13,5,,True,2025-08-20
+2025-08-13,4,,True,2025-08-17
+2025-08-14,3,"Primera vez que vengo y buen ambiente para conversar, pero olvidaron una de las bebidas. Recomendado",True,2025-08-18
+2025-08-14,5,,True,2025-08-15
+2025-08-14,4,,True,2025-08-24
+2025-08-15,5,,False,
+2025-08-16,4,,True,2025-08-26
+2025-08-17,5,  Primera vez que vengo y me gustó mucho la decoración ,True,2025-08-19
+2025-08-17,4,,True,2025-08-18
 2025-08-17,5,,False,
-2025-08-17,5,,False,
-2025-08-19,5,Primera vez que vengo y muy buena relación calidad-precio!!,True,2025-08-24
-2025-08-20,5,"Como siempre, el pedido llegó rapidísimo. Volveré",False,
-2025-08-20,5,"buen ambiente para conversar, gracias",True,2025-08-29
-2025-08-21,5,Los  platos vienen bien servidos,True,2025-08-26
-2025-08-28,4,"Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!",False,
-2025-09-10,4,,True,2025-09-20
-2025-09-12,4,,False,
-2025-09-12,5,,False,
-2025-09-20,5,,False,
-2025-09-25,4,,False,
-2025-10-02,4,,False,
-2025-10-07,5,"Como siempre, sirven bastante. Recomendado",False,
-2025-10-09,4,Me gustó mucho la decoración,False,
-2025-10-09,5,"Como siempre, la carne llegó en su punto",False,
-2025-10-09,4,,False,
+2025-08-19,5,Muy rico el plato del día,True,2025-08-24
+2025-08-20,4,,True,2025-08-24
+2025-08-22,5,"Primera vez que vengo y buen ambiente para conversar, además me encantó que el café venga con galletica. Recomendado",False,
+2025-08-22,5,La comida estuvo deliciosa y no tuvimos que esperar nada,False,
+2025-08-23,5,Buen precio para lo que sirven,True,2025-08-31
+2025-08-23,3,"  Muy buena relación calidad-precio, pero la música estaba demasiado alta. Volveré ",True,2025-08-26
+2025-08-25,3,"La música está a un volumen agradable, pero subieron los precios y la porción es la misma!!",False,
+2025-08-25,5,La verdad me gustó mucho la decoración. También uno queda lleno con el almuerzo!!,True,2025-08-31
+2025-08-25,4,,True,2025-08-30
+2025-08-28,5,,True,2025-08-30
+2025-08-29,5,,True,2025-09-07
+2025-08-29,4,Vengo seguido y me gustó mucoh la decoración,False,
+2025-08-30,5,,True,2025-09-03
+2025-09-01,5,Vengo seguido y economico y llenador y las porciones son generosas. Recomendado,True,2025-09-04
+2025-09-01,3,,True,2025-09-10
+2025-09-03,5,"La verdad me gustó mucho la decoración, además la galleta de cortesía con el café es un detallazo. Volveré",True,2025-09-10
+2025-09-03,5,El sitio es limpio y bonito,True,2025-09-08
+2025-09-03,5,LA VERDAD BUEN AMBIENTE PARA CONVERSAR,False,
+2025-09-04,5,,True,2025-09-10
+2025-09-06,4,La  verdad la comida estuvo deliciosa,True,2025-09-12
+2025-09-06,4,,False,
+2025-09-07,5,,False,
+2025-09-08,5,La verdad muy rico el plato del día y buen precio para lo que sirven,True,2025-09-13
+2025-09-08,5,,True,2025-09-14
+2025-09-09,3,,True,2025-09-11
+2025-09-10,5,,False,
+2025-09-11,4,Económico y llenador. Recomendado,True,2025-09-21
+2025-09-13,4,Primera vez que vengo y sirven bastante,True,2025-09-22
+2025-09-13,3,"La musica esta a un volumen agradable, pero la porcion fue mas pequeña que otras veces. Volvere",False,
+2025-09-18,4,,False,
+2025-09-21,5,Las porciones son generosas. También la música está a un volumen agradable,True,2025-09-22
+2025-09-22,5,"Como siempre, buen precio para lo que sirven",True,2025-10-01
+2025-09-24,5,,False,
+2025-09-25,5,,True,2025-10-05
+2025-09-25,5,,True,2025-10-01
+2025-09-26,4,  Vengo seguido y economico y llenador ,False,
+2025-09-27,5,,False,
+2025-09-27,5,El personal es muy querido,True,2025-09-28
+2025-09-29,5,Económico y llenador y la música está a un volumen agradable,True,2025-10-02
+2025-09-29,1,,False,
+2025-09-30,4,,True,2025-10-07
+2025-09-30,5,"Sirven muy rápido para lo lleno que estaba, además el ajiaco estaba buenísimo",True,2025-10-05
+2025-10-01,5,,False,
+2025-10-01,5,"El sitio es limpio y bonito, además la galleta de cortesía con el café es un detallazo",False,
+2025-10-01,5,Vengo seguido y la atención fue excelente. Volveré,False,
+2025-10-04,5,,False,
+2025-10-04,5,todo muy rico!!,False,
+2025-10-05,4,,False,
+2025-10-05,5,,False,
+2025-10-07,3,"Económico y llenador, pero a la comida le faltaba sabor!!",False,
+2025-10-10,5,"La verdad se come bien sin gastar mucho, gracias",False,
 2025-10-11,5,,False,
-2025-10-12,5,,False,
-2025-10-14,5,,False,
-2025-10-15,5,,False,
-2025-10-15,5,,False,
-2025-10-17,4,Me gustó mucho la decoración,False,
-2025-10-28,4,Primera vez que vengo y el sitio es limpio y bonito,False,
-2025-10-28,5,,False,
-2025-10-31,4,,False,
-2025-11-04,3,"Nos atendieron rápido, pero ya no es tan económico como antes. Recomendado",False,
-2025-11-07,5,,False,
-2025-11-07,4,,False,
-2025-11-09,1,A la comida le faltaba sabor,False,
-2025-11-11,2,,False,
-2025-11-20,5,,False,
-2025-11-29,4,,False,
-2025-11-30,5,,False,
-2025-12-02,5,,False,
-2025-12-04,3,,False,
-2025-12-05,5,,False,
+2025-10-12,5,La verdad muy atentos todos. Recomendado,False,
+2025-10-14,5,"Como siempre, la carne llegó en su punto, gracias",False,
+2025-10-16,5,,False,
+2025-10-16,5,"La verdad se come bien sin gastar mucho, gracias",False,
+2025-10-18,5,,False,
+2025-10-20,4,Nos atendieron rápido,False,
+2025-10-23,4,"Las porciones son generosas, gracias",False,
+2025-10-23,5,"Primera vez que vengo y muy buena relacion calidad-precio, gracias",False,
+2025-10-25,3,"  Primera vez que vengo y buen precio para lo que sirven, pero hacía mucho calor adentro ",False,
+2025-10-27,5,uno queda lleno con el almuerzo. volveré,False,
+2025-10-30,1,La verdad el baño no estaba limpio. No creo que vuelva,False,
+2025-10-31,4,La verdad los platos vienen bien servidos,False,
+2025-11-01,5,,False,
+2025-11-02,5,,False,
+2025-11-03,4,Vengo  seguido y nos taendieron rápido!!,False,
+2025-11-03,4,,False,
+2025-11-04,5,,False,
+2025-11-04,5,El sitio es limpio y bonito,False,
+2025-11-09,5,,False,
+2025-11-09,4,Sirven bastante y el sitio es limpio y bonito,False,
+2025-11-09,4,Primera vez que vengo y económico y llenador. También sirven muy rápido para lo lleno que estaba!!,False,
+2025-11-10,4,LA VERDAD MUY BUENA RELACIÓN CALIDAD-PRECIO,False,
+2025-11-10,2,La música estaba demasiado alta,False,
+2025-11-10,5,Los platos vienen bien servidos y la galletica que dan con el café hace la diferencia,False,
+2025-11-11,5,,False,
+2025-11-13,5,Me gustó,False,
+2025-11-17,5,Sirven muy rápido para lo lleno que estaba,False,
+2025-11-17,5,,False,
+2025-11-17,4,,False,
+2025-11-19,5,La verdad uno queda lleno con el almuerzo!!,False,
+2025-11-20,5,el sitio es limpio y bonito,False,
+2025-11-21,5,,False,
+2025-11-22,5,"LA VERDAD EL LUGAR ES ACOGEDOR, ADEMÁS LAS PORCIONES SON GENEROSAS. RECOMENDADO",False,
+2025-11-24,4,,False,
+2025-11-26,4,  Vengo seguido y el sitio es limpio y bonito!! ,False,
+2025-11-27,5,El mesero fue muy amable y muy buena relación calidad-precio. Recomendado,False,
+2025-11-27,4,,False,
+2025-11-29,5,,False,
+2025-11-29,1,Esta vez se equivocaron con el pedido. Una lástima,False,
+2025-12-01,5,La comida estuvo deliciosa,False,
+2025-12-03,3,"La sazón es como de casa, pero ya no es tan económico como antes",False,
 2025-12-06,3,,False,
-2025-12-10,4,,False,
-2025-12-11,5,,False,
-2025-12-22,3,"El pedido llegó rapidísimo, pero el arroz estaba simple. Recomendado",False,
-2025-12-26,4,,False,
-2025-12-27,4,El sitio es limpio y bonito,False,
-2026-01-01,4,Todo muy rico. Volveré,False,
-2026-01-02,4,,True,2026-01-06
-2026-01-16,4,"La sazón es como de casa, gracias",False,
-2026-01-20,4,,False,
-2026-01-22,3,,False,
-2026-01-25,5,,False,
-2026-02-08,3,,False,
-2026-02-09,5,Excelente,False,
-2026-02-09,4,Recomendado,False,
+2025-12-06,5,Vengo seguido y las porciones son generosas!!,False,
+2025-12-08,4,"Como siempre, el sabor de la comdia es excelente. También me gustó mucho la decoración!!",False,
+2025-12-10,5,,False,
+2025-12-10,5,,False,
+2025-12-11,3,"  Vengo seguido y los precios son justos, pero la sopa estaba tibia. Volveré ",False,
+2025-12-12,4,,False,
+2025-12-15,5,"Vengo seguido y el lugar es acogedor, gracias",False,
+2025-12-15,5,Buen ambiente para conversar y el detalle de la galleta con el tinto me pareció muy lindo. Volveré,False,
+2025-12-17,4,,False,
+2025-12-18,5,se come bien sin gastar mucho. también el lugar es acogedor,False,
+2025-12-22,5,,False,
+2025-12-23,5,La carne llego en su punto,False,
+2025-12-28,3,,False,
+2026-01-01,5,Primera  vez que vengo y las porciones son generosas!!,False,
+2026-01-02,5,Vengo seguido y los precios son justos y hasta galleta de cortesía dan con el café,False,
+2026-01-02,3,,False,
+2026-01-03,4,Todo bien,False,
+2026-01-04,5,"  El lugar es acogedor, además todo muy rico, gracias ",False,
+2026-01-05,4,,False,
+2026-01-06,5,"Vengo seguido y el luagr es acogedor. También el mesero fue muy amable, gracias",False,
+2026-01-07,5,,False,
+2026-01-07,4,,False,
+2026-01-07,3,,False,
+2026-01-08,5,,False,
+2026-01-13,3,,True,2026-01-15
+2026-01-13,4,"Como siempre, sirven muy rápido para lo lleno que estaba",False,
+2026-01-14,2,,False,
+2026-01-18,5,Primera vez que vengo y el ajiaco estaba buenísimo,False,
+2026-01-19,4,No tuvimos que esperar nada. Volveré,False,
+2026-01-21,5,,False,
+2026-01-21,5,Vengo seguido y la atención fue excelente,False,
+2026-01-25,4,,False,
+2026-01-26,4,"El lugar es acogedor, además la galletica que dan con el café hace la diferencia",False,
+2026-01-27,5,,False,
+2026-01-27,5,,False,
+2026-01-27,4,,False,
+2026-01-28,5,Excelente,False,
+2026-01-28,3,"Me gustó mucho la decoración, pero parecía que les molestaba atender",False,
+2026-01-28,4,,False,
+2026-01-29,4,"Como siempre, sirven bastante y nos atendieron con muy buena actitud. Volveré",False,
+2026-01-30,3,"Primera vez que vengo y los platos vienen bien servidos, pero subieron los precios y la porción es la misma",False,
+2026-01-31,5,La música está a un volumen agradable,False,
+2026-02-01,5,"Como siempre, buen precio para lo que sirven. Recomendado",False,
+2026-02-02,5,,False,
+2026-02-03,4,,False,
+2026-02-07,4,10/10,False,
+2026-02-07,5,,False,
+2026-02-07,5,Vengo seguido y buen precio para lo que sirven y no tuvimos que esperar nada,False,
+2026-02-09,2,,True,2026-02-19
 2026-02-11,5,,False,
-2026-02-17,5,La vedrad las porciones son generosas,False,
-2026-02-20,4,,False,
+2026-02-11,4,,False,
+2026-02-12,5,"Como siempre, buen precio para lo que sirven",False,
+2026-02-14,4,,False,
+2026-02-16,5,,False,
+2026-02-19,5,Se come bien sin gastar mucho,False,
+2026-02-21,3,,True,2026-02-28
+2026-02-21,4,,False,
+2026-02-22,5,Excelente,False,
 2026-02-23,5,,False,
-2026-03-03,5,,False,
-2026-03-07,5,"Como siempre, buen ambiente para conversar",False,
-2026-03-10,5,,False,
-2026-03-13,5,Es un lugar tranquilo para almorzar!!,False,
-2026-03-14,4,,False,
-2026-03-15,4,"Primera vez que vengo y el sabor de la comida es excelente, además económico y llenador, gracias",False,
-2026-03-16,4,Primera vez que vengo y me encantó que el café venga con galletica,False,
-2026-03-18,4,,False,
-2026-03-18,4,,False,
-2026-03-26,5,,False,
-2026-03-26,4,,False,
-2026-03-28,5,"No tuvimos que esperar nada, gracias",False,
+2026-02-24,5,,False,
+2026-02-24,3,"VENGO SEGUIDO Y LA ATENCIÓN FUE EXCELENTE, PERO HABÍA MUCHO RUIDO Y NO SE PODÍA HABLAR",False,
+2026-02-26,5,"No tuvimos que esperar nada, gracias",False,
+2026-02-27,5,,False,
+2026-03-02,3,"Económico y llenador, pero el arroz estaba simple",False,
+2026-03-07,4,"Vengo seguido y muy buena relación calidad-precio, gracias",False,
+2026-03-08,3,"La atención fue excelente, pero me pareció caro para lo que sirven",False,
+2026-03-08,4,,False,
+2026-03-08,3,,False,
+2026-03-10,4,,False,
+2026-03-10,4,,False,
+2026-03-11,5,"como siempre, sirven muy rápido para lo lleno que estaba, gracias",False,
+2026-03-12,3,,False,
+2026-03-13,5,  La verdad el pedido llegó rapidísimo y el sabor de la comida es excelente ,False,
+2026-03-15,5,Vengo seguido y el lugar es acogedor,False,
+2026-03-18,5,Vengo seguido y muy buena relación calidad-precio. Volveré,False,
+2026-03-22,5,10/10,True,2026-03-25
+2026-03-22,4,"Las porciones son generosas, además la galleta de cortesía con el café es un detallazo",False,
+2026-03-22,5,,False,
+2026-03-22,4,,False,
+2026-03-23,5,,False,
+2026-03-24,5,,False,
+2026-03-27,4,"Primera vez que vengo y sirven muy rápido para lo lleno que estaba y la galletica que dan con el café hace la diferencia, gracias",False,
+2026-03-28,3,"La verdad la atención fue excelente, pero la sopa estaba tibia",False,
+2026-03-29,4,Buen precio para lo que sirven,False,
+2026-03-30,5,,False,
 2026-03-30,4,,False,
-2026-04-05,5,,False,
-2026-04-05,5,,False,
-2026-04-06,4,"Uno queda lleno con el almuerzo, gracias",False,
-2026-04-09,4,,False,
-2026-04-13,4,"Vengo seguido y la sazón es como de casa, gracias",False,
-2026-04-17,5,,False,
-2026-04-20,4,"Como siempre, la niña que nos atendió fue un amor",False,
-2026-04-22,5,,False,
-2026-04-22,3,,False,
+2026-03-31,4,,False,
+2026-03-31,5,,False,
+2026-04-03,4,Sirven bastante. Recomendado,False,
+2026-04-06,5,"no tuvimos que esperar nada, gracias",False,
+2026-04-07,5,,False,
+2026-04-07,5,  La música está a un volumen agradable. Volveré ,False,
+2026-04-08,4,Muy  bueno,False,
+2026-04-09,3,"primera vez que vengo y nos atendieron rápido, pero la carne estaba dura, gracias",False,
+2026-04-11,5,Vengo seguido y sirven bastante y el personal es muy querido,False,
+2026-04-12,4,Primera vez que vengo y la galletica que dan con el cafe hace la diferencia!!,False,
+2026-04-12,5,,False,
+2026-04-13,5,,False,
+2026-04-14,5,,False,
+2026-04-15,3,"Todo muy rico, pero había mucho ruido y no se podía hablar",False,
+2026-04-17,4,Vengo seguido y nos atendieron con muy buena actitud. Recomendado,False,
+2026-04-17,5,,True,2026-04-22
+2026-04-18,2,La verdad subieron los precios y la porción es la misma,False,
+2026-04-21,5,,True,2026-04-25
+2026-04-22,5,"Como siempre, la música está a un volumen agradable, gracias",False,
+2026-04-22,5,,True,2026-04-30
 2026-04-23,5,,False,
-2026-04-25,4,,False,
-2026-04-29,4,"Como siempre, muy buena relación calidad-precio, además muy atentos todos",False,
-2026-05-04,2,,False,
-2026-05-06,5,"Como siempre, muy buena relacion calidad-precio!!",False,
-2026-05-06,3,"el personal es muy querido, pero el baño no estaba limpio. volveré",False,
-2026-05-16,5,Todo bien,False,
-2026-05-17,5,,False,
-2026-05-20,5,,False,
-2026-05-22,5,,False,
-2026-05-25,5,,False,
-2026-05-25,5,"las porciones son generosas, gracias",False,
-2026-05-31,5,,False,
-2026-06-06,4,,False,
-2026-06-06,5,La verdad el lugar es acogedor. También qué buen detalle la galleta que traen con el tinto,False,
-2026-06-07,5,,False,
-2026-06-11,4,"La música está a un volumen agradable, gracias",True,2026-06-12
-2026-06-16,1,No vuelvo,False,
-2026-06-19,4,La verdad la sazón es como de casa. También el personal es muy querido,False,
-2026-07-02,2,,False,
-2026-07-03,3,"Como siempre, uno queda lleno con el almuerzo, pero la música estaba demasiado alta. Recomendado",False,
-2026-07-05,5,"La música está a un volumen agradable y la galletica que dan con el café hace la diferencia, gracias",False,
-2026-07-05,5,,False,
-2026-07-13,3,"COMO SIEMPRE, MUY BUENA RELACIÓN CALIDAD-PRECIO, PERO CADA VEZ SIRVEN MENOS. VOLVERÉ",False,
-2026-07-14,1,,False,
-2026-07-14,4,"Como siempre, es un lugar tranquilo para almorzar, además uno queda lleno con el almuerzo. Recomendado",True,2026-07-19
-2026-07-16,2,  Esta vez el pedido tardó casi una hora. No creo que vuelva ,False,
-2026-07-17,3,,False,
-2026-07-24,1,,False,
-2026-07-31,5,"Primera vez que vengo y sirven bastante, además el pedido llegó rapidísimo, gracias",False,
-2026-08-03,3,"El sitio es limpio y bonito, pero parecia que les molestaba atender",False,
-2026-08-11,1,La verdad la comida se demoro muchisimo. Ojala mejoren,False,
-2026-08-14,5,"Como siempre, uno queda lleno con el almuerzo. Volveré",False,
-2026-08-17,3,"primera vez que vengo y uno queda lleno con el almuerzo, pero esperamos mas de media hora por el pedido",False,
-2026-08-18,3,"Como siempre, sirven bastante, pero el mesero fue cortante",False,
-2026-08-18,4,"Los  platos vienen bien servidso, gracias",False,
-2026-08-19,4,Excelente,False,
-2026-08-25,3,"Vengo seguido y las porciones son generosas, pero esperamos más de media hora por el pedido. Volveré",True,2026-08-28
-2026-08-27,4,,False,
-2026-08-29,4,Se come bien sin gastar mucho y el detalle de la galleta con el tinto me parecio muy lindo. Recomendado,False,
-2026-08-31,2,Muy mal,False,
-2026-09-15,5,Primera vez que vengo y económico y llenador. Volveré,False,
+2026-04-23,5,,False,
+2026-04-23,5,"Vengo seguido y uno queda lleno con el almuerzo y el detalle de la galleta con el tinto me pareció muy lindo, gracias",False,
+2026-04-24,4,Sirven bastante,False,
+2026-04-25,5,,False,
+2026-04-26,5,,False,
+2026-04-26,5,"Me gustó mucho la decoración, además los platos vienen bien servidos, gracias",False,
+2026-04-27,5,,False,
+2026-04-28,4,,False,
+2026-04-28,5,,False,
+2026-04-29,5,Muy buena relación calidad-precio,False,
+2026-05-02,5,Primera vez que vengo y sirven muy rápido para lo lleno que estaba,False,
+2026-05-03,4,La verdad los precios son justos,False,
+2026-05-04,3,"Vengo seguido y económico y llenador, pero el baño no estaba limpio!!",False,
+2026-05-04,5,,False,
+2026-05-05,4,Primera vez que vengo y la galleta de cortesía con el café es un detallazo,False,
+2026-05-05,2,Subieron los precios y la porción es la misma,False,
+2026-05-08,5,La niña que nos atendió fue un amor. También hasta galleta de cortesía dan con el café. Volveré,False,
+2026-05-09,4,,False,
+2026-05-10,4,,False,
+2026-05-11,3,"Vengo seguido y los precios son justos, pero la porción fue más pequeña que otras veces",False,
+2026-05-11,5,"Como siempre, las porciones son generosas. También el mesero fue muy amable!!",False,
+2026-05-11,3,,False,
+2026-05-11,4,,False,
+2026-05-13,5,10/10,False,
+2026-05-14,5,La verdad muy buena relación calidad-precio. También es un lugar tranquilo para almorzar. Recomendado,False,
+2026-05-14,3,,False,
+2026-05-18,5,Rico,False,
+2026-05-20,4,,False,
+2026-05-23,2,,False,
+2026-05-24,5,,False,
+2026-05-26,3,,False,
+2026-05-26,4,,False,
+2026-05-27,3,"Como siempre, el mesero fue muy amable, pero a la comida le faltaba sabor. Recomendado",False,
+2026-05-28,5,Hasta galleta de cortesía dan con el café,False,
+2026-05-28,3,,False,
+2026-05-29,4,,False,
+2026-05-29,5,,False,
+2026-05-30,4,,False,
+2026-05-30,3,,False,
+2026-05-31,4,,False,
+2026-05-31,4,"La verdad los precios son justos, además me encantó que el café venga ocn galletica!!",False,
+2026-05-31,3,,False,
+2026-06-01,5,"No tuvimos que esperar nada, además se come bien sin gastar mucho. Volveré",False,
+2026-06-04,5,Primera vez que vengo y es un lugar tranquilo para almorzar. Recomendado,False,
+2026-06-06,5,,False,
+2026-06-06,5,primera vez que vengo y me gustó mucho la decoración. también los precios son justos. volveré,False,
+2026-06-06,5,,False,
+2026-06-07,5,Muy buena relación calidad-precio. Recomendado,False,
+2026-06-08,5,Excelente,False,
+2026-06-10,4,"Como siempre, la música está a un volumen agradable",False,
+2026-06-11,4,Primera vez que vengo y los precios son justos!!,False,
+2026-06-13,3,,False,
+2026-06-14,5,Es un lugar tranquilo para almorzar y la galletica que dan con el café hace la diferencia,False,
+2026-06-15,5,Primera vez que vengo y el pedido llego rapidisimo. Recomendado,True,2026-06-19
+2026-06-17,4,primera vez que vengo y nos atendieron rápido. recomendado,False,
+2026-06-17,4,Recomendado,False,
+2026-06-18,5,Excelente,False,
+2026-06-19,4,,True,2026-06-21
+2026-06-19,4,"Primera vez que vengo y no tuvimos que esperar nada, además el lugar es acogedor. Recomendado",False,
+2026-06-23,4,La verdad no tuvimos que esperar nada. También muy rico el plato del día,False,
+2026-06-26,5,me gustó mucho la decoración. volveré,False,
+2026-06-26,5,,False,
+2026-07-01,5,,False,
+2026-07-01,5,,False,
+2026-07-06,3,"Es un lugar tranquilo para almorzar, pero la comida se demoró muchísimo",False,
+2026-07-09,2,,False,
+2026-07-11,5,,False,
+2026-07-12,5,Primera vez que vengo y el detalle de la galleta con el tinto me pareció muy lindo. Recomendado,False,
+2026-07-13,1,LA VERDAD PASARON 20 MINUTOS ANTES DE QUE ALGUIEN SE ACERCARA A LA MESA,False,
+2026-07-13,4,La verdad sirven muy rápido para lo lleno que estaba,False,
+2026-07-14,3,,False,
+2026-07-14,5,,False,
+2026-07-15,5,,False,
+2026-07-15,1,,False,
+2026-07-17,4,,False,
+2026-07-18,3,"Vengo seguido y el lugar es acogedor, pero esperamos mas de media hora por el pedido",False,
+2026-07-20,4,,False,
+2026-07-21,3,"Vengo seguido y muy buena relación calidad-precio, pero la cuenta venía con cosas que no pedimos",False,
+2026-07-21,4,"Como siempre, es un lugar tranquilo para almorzar. Volveré",False,
+2026-07-24,4,"buen ambiente para conversar, gracias",False,
+2026-07-24,5,Los  platos vienen bien servidos,False,
+2026-07-26,5,"Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!",False,
+2026-07-31,1,,False,
+2026-07-31,4,,False,
+2026-08-01,3,,False,
+2026-08-04,5,,False,
+2026-08-05,3,"La carne llegó en su punto, pero la espera fue eterna",False,
+2026-08-06,4,La verdad la musica esta a un volumen agradable. Recomendado,False,
+2026-08-07,3,"Primera vez que vengo y la música está a un volumen agradable, pero tocó esperar mucho para que nos tomaran el pedido!!",False,
+2026-08-07,5,,False,
+2026-08-07,5,"Como siempre, económico y llenador",False,
+2026-08-07,2,Esta vez esperamos más de media hora por el pedido,False,
+2026-08-08,1,,False,
+2026-08-08,4,"Como siempre, la niña que nos atendió fue un amor. Recomendado",False,
+2026-08-09,5,Me gustó mucho la decoración. Recomendado,False,
+2026-08-09,1,Estuvimos 40 minutos esperando el almuerzo,False,
+2026-08-13,1,,False,
+2026-08-13,2,,False,
+2026-08-14,5,,False,
+2026-08-15,5,,False,
+2026-08-15,3,,False,
+2026-08-16,1,,False,
+2026-08-16,3,"uno queda lleno con el almuerzo, pero la espera fue eterna. volveré",False,
+2026-08-17,4,,False,
+2026-08-18,1,,False,
+2026-08-23,5,"LA ATENCIÓN FUE EXCELENTE, GRACIAS",False,
+2026-08-24,5,,False,
+2026-08-27,5,"Vengo seguido y muy buena relación calidad-precio, además todo muy rico",False,
+2026-08-28,3,"Es un lugar tranquilo para almorzar, pero tocó esperar mucho para que nos tomaran el pedido, gracias",False,
+2026-08-29,4,,False,
+2026-08-31,2,"Antes era mejor, ahora tocó esperar mucho para que nos tomaran el pedido",False,
+2026-09-01,3,,False,
+2026-09-01,1,Regular,False,
+2026-09-02,3,"La verdad muy buena relación calidad-precio, pero la espera fue eterna",False,
+2026-09-03,2,,False,
+2026-09-03,5,,False,
+2026-09-04,4,,False,
+2026-09-06,5,"Como siempre, buen ambiente para conversar",False,
+2026-09-07,5,,False,
+2026-09-08,5,Es un lugar tranquilo para almorzar!!,False,
+2026-09-08,1,Esta vez el mesero fue cortante,True,2026-09-14
+2026-09-08,4,,False,
+2026-09-09,4,Muy rico el plato del día,False,
+2026-09-10,5,La verdad económcio y llenador!!,False,
+2026-09-11,2,,False,
+2026-09-12,5,,False,
+2026-09-13,5,,False,
+2026-09-16,3,"Primera vez que vengo y sirven bastante, pero se demoran demasiado en atender",False,
+2026-09-18,2,,False,
+2026-09-19,5,"La verdad el sitio es limpio y bonito, además los platos vienen bien servidos!!",False,
+2026-09-23,4,,False,
+2026-09-24,1,No vuelvo,False,
+2026-09-25,1,Nos atendieron de mala gana,False,
 2026-09-25,3,,False,
-2026-09-26,3,,False,
-2026-09-30,5,La verdad nos atendieron rápido. Recomendado,False,
+2026-09-27,4,"Como siempre, buen ambiente para conversar, además muy atentos todos",False,
+2026-09-28,1,,False,
+2026-09-29,2,Esta vez me parecio caro para lo que sirven. Una lastima,False,
