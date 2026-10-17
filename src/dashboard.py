@@ -29,8 +29,7 @@ MAX_TOPICS_COMPARED = 4  # per kind, in the "before and now" table
 # A smaller move in a topic's share of comments is too small to call a change.
 CLEAR_SHARE_CHANGE = 0.10
 
-# TODO: Tagi's contact (pending with the partner) before the repo goes public.
-TAGI_CONTACT = "[contacto de Tagi pendiente]"
+TAGI_CONTACT = "[contacto]"
 
 # Dashboard text is in Spanish because it is read by the business owner.
 MONTHS = (
