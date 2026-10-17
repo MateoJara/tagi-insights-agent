@@ -374,7 +374,8 @@ D.kpis.forEach(k => {
     svgEl('text', { x: L - 10, y: y(s), 'text-anchor': 'end', 'dominant-baseline': 'middle' }, svg).textContent = s;
   }
   D.months.forEach((m, i) => {
-    if (n > 12 && i % 3 !== 0 && i !== n - 1) return;
+    // Every third month counted back from the latest, so the latest always shows and labels never collide.
+    if (n > 12 && (n - 1 - i) % 3 !== 0) return;
     svgEl('text', { x: x(i), y: H - 10, 'text-anchor': 'middle' }, svg).textContent = n > 12 ? m : m.split(' ')[0];
   });
   const cross = svgEl('line', { y1: T, y2: H - B, stroke: 'var(--muted)', 'stroke-width': 1, visibility: 'hidden' }, svg);

@@ -7,5 +7,6 @@
     "url": "https://www.linkedin.com/in/mateo-jaramillo-londoño-b2a475226"
   },
   "repository": "https://github.com/MateoJara/tagi-insights-agent",
+  "license": "MIT",
   "keywords": ["reseñas", "google reviews", "negocios", "tablero", "insights"]
 }
