@@ -29,7 +29,7 @@ MAX_TOPICS_COMPARED = 4  # per kind, in the "before and now" table
 # A smaller move in a topic's share of comments is too small to call a change.
 CLEAR_SHARE_CHANGE = 0.10
 
-TAGI_CONTACT = "[contacto]"
+TAGI_CONTACT = "linkedin.com/in/mateo-jaramillo-londoño-b2a475226"
 
 # Dashboard text is in Spanish because it is read by the business owner.
 MONTHS = (
