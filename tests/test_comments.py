@@ -112,3 +112,13 @@ def test_cli_exports_then_counts(tmp_path, answer_key):
     comments.main(["count", "--output-dir", str(tmp_path)])
     result = json.loads((tmp_path / comments.METRICS_FILE).read_text(encoding="utf-8"))
     assert "service_wait" in [entry["topic"] for entry in result["top_complaints"]]
+
+
+def test_the_no_detail_topic_need_not_be_declared(exported, answer_key):
+    topics, labels = labels_from(answer_key)
+    vague = labels["topic"].isin(["generic_praise", "generic_complaint"])
+    labels.loc[vague, "topic"] = comments.NO_DETAIL_TOPIC
+    labels = labels.drop_duplicates()
+    topics = topics[~topics["topic"].isin(["generic_praise", "generic_complaint"])]
+    result = comments.count_labels(exported, topics.reset_index(drop=True), labels)
+    assert result["n_without_detail"] > 0

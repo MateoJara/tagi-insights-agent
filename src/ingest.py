@@ -412,6 +412,11 @@ def main(argv=None):
     apply_parser = commands.add_parser("apply")
     apply_parser.add_argument("--plan", required=True)
     apply_parser.add_argument("--output-dir", required=True)
+    argv = sys.argv[1:] if argv is None else argv
+    if argv and argv[0] not in commands.choices and not argv[0].startswith("-"):
+        # The usual slip is passing the data path straight after "ingest".
+        raise SystemExit(f"Falta el subcomando antes de {argv[0]!r}. Para ver los archivos: "
+                         f"ingest inspect {argv[0]}. Para importar: ingest apply --plan <plan> --output-dir <salida>.")
     args = parser.parse_args(argv)
 
     sys.stdout.reconfigure(encoding="utf-8")

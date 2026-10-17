@@ -251,3 +251,8 @@ def test_cli_inspect_takes_several_paths(capsys):
     ingest.main(["inspect", str(EXAMPLES / "resenas_exportadas.csv"), str(EXAMPLES / "reviews_export.xlsx")])
     printed = json.loads(capsys.readouterr().out)
     assert len(printed["files"]) == 2
+
+
+def test_cli_without_subcommand_says_what_to_type():
+    with pytest.raises(SystemExit, match="ingest inspect resenas.csv"):
+        ingest.main(["resenas.csv"])

@@ -105,6 +105,11 @@ def _summary(rows, totals):
 
 def count_labels(comments, topics, labels, months=RECENT_MONTHS):
     """Validate the labels and count comments per topic and kind."""
+    if list(topics.columns) == TOPIC_COLUMNS and NO_DETAIL_TOPIC not in set(topics["topic"]):
+        # The no-detail topic always exists; whoever labels should not have to declare it.
+        no_detail = pd.DataFrame([{"topic": NO_DETAIL_TOPIC, "description": "Comentario sin un tema concreto",
+                                   "small_detail": False}])
+        topics = pd.concat([topics, no_detail], ignore_index=True)
     _validate(comments, topics, labels)
     labeled = labels.merge(comments, on=KEY, validate="many_to_one")
     totals = {"previous": int((~comments["recent"]).sum()), "recent": int(comments["recent"].sum())}
