@@ -1,6 +1,6 @@
 ---
 name: analista-cuantitativo
-description: Calcula las cifras y genera las gráficas de las reseñas de Google de un negocio (estrellas, volumen, respuestas del dueño) y reporta qué se limpió de los datos. Usar cuando haya que obtener las métricas y gráficas de un negocio antes de redactar su informe.
+description: Calcula las cifras de las reseñas de Google de un negocio (estrellas, volumen, respuestas del dueño) y reporta qué se limpió de los datos. Usar cuando haya que obtener las métricas de un negocio antes de escribir los textos de su tablero.
 tools: Read, Bash
 model: haiku
 ---
@@ -22,13 +22,7 @@ dataset sintético: omite `--reviews` en los comandos.
    .venv\Scripts\python -m src.metrics --reviews <csv> --output <carpeta>/metrics.json
    ```
 
-2. **Genera las gráficas:**
-
-   ```
-   .venv\Scripts\python -m src.charts --reviews <csv> --output-dir <carpeta>/charts
-   ```
-
-3. **Lee `<carpeta>/metrics.json`** y revisa que tenga sentido: que haya reseñas,
+2. **Lee `<carpeta>/metrics.json`** y revisa que tenga sentido: que haya reseñas,
    que el periodo tenga fechas, que ninguna cifra clave venga vacía.
 
 ## Reglas

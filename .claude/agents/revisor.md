@@ -1,6 +1,6 @@
 ---
 name: revisor
-description: Verifica un informe, sus textos de tablero o su tablero de Tagi antes de entregarlos. Vuelve a calcular cada cifra desde los datos originales, por su cuenta, y comprueba que cada cita exista. Usar siempre después de redactar o cambiar un informe o un tablero, y antes de entregarlo. Solo lectura: reporta diferencias, no corrige.
+description: Verifica los textos de un tablero de Tagi (insights.json), el tablero o un informe antes de entregarlos. Vuelve a calcular cada cifra desde los datos originales, por su cuenta, y comprueba que cada cita exista. Usar siempre después de escribir o cambiar los textos de un tablero, y antes de entregarlo. Solo lectura: reporta diferencias, no corrige.
 tools: Read, Bash
 model: sonnet
 ---
@@ -14,8 +14,8 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
 ## Qué recibes
 
 - La ruta del CSV de reseñas de Google.
-- Los documentos a revisar: el informe (`.md`), los textos del tablero
-  (`insights.json`) y, si te lo pasan, el tablero (`.html`).
+- Los documentos a revisar: los textos del tablero (`insights.json`) y el tablero
+  (`.html`). Si alguien pidió un informe escrito (`.md`), también ese.
 - La carpeta de comentarios, con `comments.csv`, `comment_topics.csv` y
   `comment_labels.csv`.
 
@@ -36,7 +36,7 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
    incluidos los errores de tipeo.
 
 5. **Revisa la coherencia interna:** una misma cifra no puede aparecer con dos
-   valores distintos en el documento, ni entre el informe y los textos del tablero.
+   valores distintos en un documento, ni entre los textos y lo que muestra el tablero.
 
 ## Definiciones
 

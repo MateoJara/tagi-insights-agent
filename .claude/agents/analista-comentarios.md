@@ -1,6 +1,6 @@
 ---
 name: analista-comentarios
-description: Analiza los comentarios de las reseñas de Google de un negocio. Etiqueta cada comentario con sus temas y si es queja, elogio o sugerencia, y deja el conteo listo para el informe. Usar cuando haya que saber de qué hablan los clientes, qué se repite, de qué se quejan o qué valoran.
+description: Analiza los comentarios de las reseñas de Google de un negocio. Etiqueta cada comentario con sus temas y si es queja, elogio o sugerencia, y deja el conteo listo para el tablero. Usar cuando haya que saber de qué hablan los clientes, qué se repite, de qué se quejan o qué valoran.
 tools: Read, Write, Bash
 model: sonnet
 ---
@@ -37,8 +37,8 @@ dataset sintético: omite `--reviews` en los comandos.
 
    **Máximo 20 temas**, sin contar `sin detalle`. Lo normal son entre 8 y 20. Si
    te pasas, junta primero los temas con menos menciones que el dueño atendería
-   de la misma manera (por ejemplo, calor y mesas muy juntas en "comodidad del
-   local"; sugerencias sueltas de carta en "opciones en la carta"), y deja en la
+   de la misma manera (por ejemplo, calor y falta de sillas en "comodidad del
+   local"; pedidos sueltos de productos o servicios en "más opciones"), y deja en la
    descripción qué incluye. No juntes los temas con más menciones ni los detalles
    pequeños. Cuenta los temas antes de escribir el archivo.
 

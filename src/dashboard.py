@@ -1,7 +1,7 @@
 """Build the owner-facing HTML dashboard: one self-contained file, no network needed.
 
 Figures come from src.metrics; the short texts (alert, actions, questions) come
-from an insights JSON written alongside the report.
+from an insights JSON written by the informe-insights skill.
 
 Run with: python -m src.dashboard --insights <json> --output <html>
 """
@@ -9,6 +9,7 @@ Run with: python -m src.dashboard --insights <json> --output <html>
 import argparse
 import html
 import json
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 from src.load_data import SAMPLE_DIR, load_google_reviews
@@ -40,6 +41,29 @@ HORIZONS = {
 }
 INSIGHT_TEXT_FIELDS = ("business_name", "headline", "summary", "alert", "next_level", "data_note")
 ACTION_FIELDS = ("horizon", "title", "text", "why")
+
+
+def round_half_up(value, digits=0):
+    """Round the way a reader does: 4.55 -> 4.6, 0.125 -> 0.13.
+
+    round() and format() work on the binary value, where 4.55 is 4.5499999...,
+    and would show 4.5. Going through the decimal text avoids that.
+    """
+    step = Decimal(1).scaleb(-digits)
+    return float(Decimal(str(float(value))).quantize(step, rounding=ROUND_HALF_UP))
+
+
+def one_decimal(value):
+    return f"{round_half_up(value, 1):.1f}"
+
+
+def _percent_points(value, digits=0):
+    points = Decimal(str(float(value))) * 100
+    return points.quantize(Decimal(1).scaleb(-digits), rounding=ROUND_HALF_UP)
+
+
+def percent(value, digits=0):
+    return f"{_percent_points(value, digits)}%"
 
 
 def load_insights(path):
@@ -104,10 +128,10 @@ def _kpis(metrics):
                 "status_label": status[1], "detail": detail}
 
     def rating(value):
-        return "—" if value is None else f"{value:.1f}"
+        return "—" if value is None else one_decimal(value)
 
     def share(value):
-        return "—" if value is None else f"{value:.0%}"
+        return "—" if value is None else percent(value)
 
     return [
         kpi(
@@ -151,7 +175,7 @@ def _topic_changes(comment_metrics):
         for entry in ranking[:MAX_TOPICS_COMPARED]:
             previous, recent = entry["previous_share"] or 0.0, entry["recent_share"] or 0.0
             # Points between the two rounded shares shown, so the row adds up for the reader.
-            points = round(recent * 100) - round(previous * 100)
+            points = int(_percent_points(recent) - _percent_points(previous))
             if abs(recent - previous) < STEADY_SHARE_CHANGE:
                 status = ("good", "Estable")
             elif (recent > previous) == worse_when_up:
@@ -161,8 +185,8 @@ def _topic_changes(comment_metrics):
             rows.append({
                 "topic": _topic_label(entry["topic"]),
                 "kind": label,
-                "previous": f"{previous:.0%}",
-                "recent": f"{recent:.0%}",
+                "previous": percent(previous),
+                "recent": percent(recent),
                 "change": f"{points:+d} pts" if points else "0 pts",
                 "status": status[0],
                 "status_label": status[1],
@@ -244,10 +268,10 @@ def build_dashboard_data(reviews_path, insights, comment_metrics=None):
         "n_reviews": review_summary["n_reviews"],
         "recent_months": review_summary["recent_months"],
         "kpis": _kpis(metrics),
-        # One decimal (same format as the PNG chart): rounded shares can still add up
+        # One decimal: rounded shares can still add up
         # to 99.9% or 100.1%, but never visibly far from 100%.
         "distribution": [
-            {"stars": stars, "n": n, "share": f"{n / review_summary['n_reviews']:.1%}"}
+            {"stars": stars, "n": n, "share": percent(n / review_summary["n_reviews"], 1)}
             for stars, n in distribution.items()
         ],
         "rating_sum": sum(stars * n for stars, n in distribution.items()),
@@ -255,7 +279,7 @@ def build_dashboard_data(reviews_path, insights, comment_metrics=None):
         "reviews_per_month": [values["n_reviews"] for values in monthly.values()],
         "trend": [{
             "label": "Estrellas promedio",
-            "values": [None if values["mean_rating"] is None else round(values["mean_rating"], 1)
+            "values": [None if values["mean_rating"] is None else round_half_up(values["mean_rating"], 1)
                        for values in monthly.values()],
         }],
         "topic_changes": _topic_changes(comment_metrics),

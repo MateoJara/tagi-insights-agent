@@ -68,14 +68,26 @@ def test_kpis_match_metrics(data):
     reviews = build_metrics(REVIEWS)["reviews"]
     values = [kpi["value"] for kpi in data["kpis"]]
     assert values == [
-        f"{reviews['mean_rating']:.1f}",
-        f"{reviews['recent_mean_rating']:.1f}",
-        f"{reviews['recent_satisfied_share']:.0%}",
-        f"{reviews['recent_reply_rate']:.0%}",
+        dashboard.one_decimal(reviews["mean_rating"]),
+        dashboard.one_decimal(reviews["recent_mean_rating"]),
+        dashboard.percent(reviews["recent_satisfied_share"]),
+        dashboard.percent(reviews["recent_reply_rate"]),
     ]
     assert f"{reviews['n_reviews']} reseñas" in data["kpis"][0]["detail"]
-    assert f"antes {reviews['previous_mean_rating']:.1f}" in data["kpis"][1]["detail"]
+    assert f"antes {dashboard.one_decimal(reviews['previous_mean_rating'])}" in data["kpis"][1]["detail"]
     assert all(kpi["status"] in ("good", "warn", "crit") for kpi in data["kpis"])
+
+
+def test_halves_round_up_like_a_reader_would():
+    # In binary 91 / 20 is 4.5499..., and round() or f"{:.1f}" would show 4.5.
+    assert dashboard.one_decimal(91 / 20) == "4.6"
+    assert dashboard.round_half_up(91 / 20, 1) == 4.6
+    assert dashboard.one_decimal(4.25) == "4.3"
+    assert dashboard.percent(0.125) == "13%"
+    assert dashboard.percent(0.285) == "29%"
+    assert dashboard.percent(1 / 75) == "1%"
+    assert dashboard.percent(0.0) == "0%"
+    assert dashboard.percent(0.5265, 1) == "52.7%"
 
 
 def test_flags_the_planted_story(data):

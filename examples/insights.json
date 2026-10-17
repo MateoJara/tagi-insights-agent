@@ -42,5 +42,5 @@
     "¿Se sigue dando la galleta con el café?",
     "¿Quién maneja hoy el perfil de Google del restaurante?"
   ],
-  "data_note": "Ejemplo con datos sintéticos: el restaurante y sus clientes no existen. Los últimos tres meses tienen 36 comentarios, así que pocas menciones mueven mucho las proporciones. Las causas mencionadas son hipótesis: los datos muestran qué pasó y cuándo, no por qué."
+  "data_note": "Ejemplo con datos sintéticos: el restaurante y sus clientes no existen. Los últimos tres meses tienen 36 comentarios, así que pocas menciones mueven mucho las proporciones, y las causas mencionadas son hipótesis por confirmar."
 }
