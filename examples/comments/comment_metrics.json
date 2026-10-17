@@ -1,589 +1,441 @@
 {
-  "n_comments": 290,
-  "n_recent_comments": 125,
-  "n_without_detail": 21,
+  "n_comments": 304,
+  "n_recent_comments": 36,
+  "n_previous_comments": 268,
+  "n_without_detail": 23,
   "recent_months": 3,
   "topics": [
     {
-      "topic": "tamaño de las porciones",
-      "description": "Porciones abundantes que llenan o platos que sirven menos",
+      "topic": "precio",
+      "description": "Precio de los platos y relación calidad-precio incluyendo alzas de precio",
       "small_detail": false,
-      "n": 49,
-      "previous_n": 28,
-      "recent_n": 21,
+      "n": 83,
+      "previous_n": 77,
+      "recent_n": 6,
+      "previous_share": 0.2873134328358209,
+      "recent_share": 0.16666666666666666,
       "kinds": {
         "praise": {
-          "n": 46,
-          "previous_n": 26,
-          "recent_n": 20,
+          "n": 66,
+          "previous_n": 61,
+          "recent_n": 5,
+          "previous_share": 0.22761194029850745,
+          "recent_share": 0.1388888888888889,
           "quotes": [
-            "Primera vez que vengo y la música está a un volumen agradable y uno queda lleno con el almuerzo",
-            "Primera vez que vengo y económico y llenador. Volveré",
-            "Económico y llenador. También uno queda lleno con el almuerzo!!"
+            "La verdad económcio y llenador!!",
+            "La verdad muy buena relación calidad-precio, pero la espera fue eterna",
+            "Vengo seguido y muy buena relación calidad-precio, además todo muy rico"
           ]
         },
         "complaint": {
-          "n": 3,
-          "previous_n": 2,
+          "n": 17,
+          "previous_n": 16,
           "recent_n": 1,
+          "previous_share": 0.05970149253731343,
+          "recent_share": 0.027777777777777776,
           "quotes": [
-            "Como siempre, muy buena relación calidad-precio, pero cada vez sirven menos. volveré",
-            "Esta vez la porcion fue mas pequeña que otras veces",
-            "La verdad la porción fue más pequeña que otras veces"
+            "Esta vez me parecio caro para lo que sirven. Una lastima",
+            "Subieron los precios y la porción es la misma",
+            "La verdad subieron los precios y la porción es la misma"
           ]
         }
       }
     },
     {
-      "topic": "precio",
-      "description": "Precios justos y buena relación calidad-precio o alzas de precio",
+      "topic": "porciones",
+      "description": "Tamaño de las porciones y si el cliente queda lleno",
       "small_detail": false,
-      "n": 45,
-      "previous_n": 30,
-      "recent_n": 15,
+      "n": 58,
+      "previous_n": 52,
+      "recent_n": 6,
+      "previous_share": 0.19402985074626866,
+      "recent_share": 0.16666666666666666,
       "kinds": {
         "praise": {
-          "n": 41,
-          "previous_n": 26,
-          "recent_n": 15,
+          "n": 54,
+          "previous_n": 48,
+          "recent_n": 6,
+          "previous_share": 0.1791044776119403,
+          "recent_share": 0.16666666666666666,
           "quotes": [
-            "Como siempre, los precios son justos. También el pedido llegó rapidísimo",
-            "Primera vez que vengo y económico y llenador. Volveré",
-            "Económico y llenador. También uno queda lleno con el almuerzo!!"
+            "La verdad el sitio es limpio y bonito, además los platos vienen bien servidos!!",
+            "Primera vez que vengo y sirven bastante, pero se demoran demasiado en atender",
+            "La verdad económcio y llenador!!"
           ]
         },
         "complaint": {
           "n": 4,
           "previous_n": 4,
           "recent_n": 0,
+          "previous_share": 0.014925373134328358,
+          "recent_share": 0.0,
           "quotes": [
-            "Ya no es tan económico como antes. No creo que vuelva",
-            "Nos atendieron rápido, pero ya no es tan económico como antes. Recomendado",
-            "El ajiaco estaba buenísimo, pero subieron los precios y la porción es la misma, gracias"
+            "Vengo seguido y los precios son justos, pero la porción fue más pequeña que otras veces",
+            "La musica esta a un volumen agradable, pero la porcion fue mas pequeña que otras veces. Volvere",
+            "Lástima, cada vez sirven menos. Ojalá mejoren"
           ]
         }
       }
     },
     {
       "topic": "tiempo de espera",
-      "description": "Demoras o rapidez para ser atendido y recibir el pedido",
+      "description": "Demoras o rapidez para atender tomar el pedido y entregarlo",
       "small_detail": false,
-      "n": 43,
-      "previous_n": 18,
-      "recent_n": 25,
+      "n": 49,
+      "previous_n": 35,
+      "recent_n": 14,
+      "previous_share": 0.13059701492537312,
+      "recent_share": 0.3888888888888889,
       "kinds": {
         "praise": {
-          "n": 20,
-          "previous_n": 17,
-          "recent_n": 3,
+          "n": 36,
+          "previous_n": 34,
+          "recent_n": 2,
+          "previous_share": 0.12686567164179105,
+          "recent_share": 0.05555555555555555,
           "quotes": [
-            "La verdad nos atendieron rápido. Recomendado",
-            "Como siempre, los precios son justos. También el pedido llegó rapidísimo",
-            "Primera vez que vengo y sirven bastante, además el pedido llegó rapidísimo, gracias"
+            "Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!",
+            "La verdad sirven muy rápido para lo lleno que estaba",
+            "La verdad no tuvimos que esperar nada. También muy rico el plato del día"
           ]
         },
         "complaint": {
-          "n": 23,
+          "n": 13,
           "previous_n": 1,
-          "recent_n": 22,
+          "recent_n": 12,
+          "previous_share": 0.0037313432835820895,
+          "recent_share": 0.3333333333333333,
           "quotes": [
-            "Lástima, el pedido tardó casi una hora. No creo que vuelva",
-            "Pasaron 20 minutos antes de que alguien se acercara a la mesa",
-            "La espera fue eterna"
+            "Primera vez que vengo y sirven bastante, pero se demoran demasiado en atender",
+            "La verdad muy buena relación calidad-precio, pero la espera fue eterna",
+            "Antes era mejor, ahora tocó esperar mucho para que nos tomaran el pedido"
           ]
         }
       }
     },
     {
-      "topic": "trato del personal",
-      "description": "Amabilidad o mala actitud de meseros y personal al atender",
+      "topic": "ambiente del local",
+      "description": "Lugar acogedor tranquilo y agradable para conversar",
       "small_detail": false,
-      "n": 30,
-      "previous_n": 18,
-      "recent_n": 12,
+      "n": 39,
+      "previous_n": 31,
+      "recent_n": 8,
+      "previous_share": 0.11567164179104478,
+      "recent_share": 0.2222222222222222,
       "kinds": {
         "praise": {
-          "n": 19,
-          "previous_n": 17,
-          "recent_n": 2,
+          "n": 39,
+          "previous_n": 31,
+          "recent_n": 8,
+          "previous_share": 0.11567164179104478,
+          "recent_share": 0.2222222222222222,
           "quotes": [
-            "Vengo seguido y la niña que nos atendió fue un amor, además los platos vienen bien servidos",
-            "Me gusto mucho la decoracion y la atencion fue excelente",
-            "Primera vez que vengo y nos atendieron con muy buena actitud!!"
+            "Como siempre, buen ambiente para conversar, además muy atentos todos",
+            "Es un lugar tranquilo para almorzar!!",
+            "Como siempre, buen ambiente para conversar"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "galleta de cortesía",
+      "description": "Galleta que acompaña el café o el tinto",
+      "small_detail": true,
+      "n": 35,
+      "previous_n": 34,
+      "recent_n": 1,
+      "previous_share": 0.12686567164179105,
+      "recent_share": 0.027777777777777776,
+      "kinds": {
+        "praise": {
+          "n": 35,
+          "previous_n": 34,
+          "recent_n": 1,
+          "previous_share": 0.12686567164179105,
+          "recent_share": 0.027777777777777776,
+          "quotes": [
+            "Primera vez que vengo y el detalle de la galleta con el tinto me pareció muy lindo. Recomendado",
+            "Es un lugar tranquilo para almorzar y la galletica que dan con el café hace la diferencia",
+            "La verdad los precios son justos, además me encantó que el café venga ocn galletica!!"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "atención del personal",
+      "description": "Amabilidad actitud y trato de meseros y personal",
+      "small_detail": false,
+      "n": 31,
+      "previous_n": 26,
+      "recent_n": 5,
+      "previous_share": 0.09701492537313433,
+      "recent_share": 0.1388888888888889,
+      "kinds": {
+        "praise": {
+          "n": 28,
+          "previous_n": 25,
+          "recent_n": 3,
+          "previous_share": 0.09328358208955224,
+          "recent_share": 0.08333333333333333,
+          "quotes": [
+            "Como siempre, buen ambiente para conversar, además muy atentos todos",
+            "La atención fue excelente, gracias",
+            "Como siempre, la niña que nos atendió fue un amor. Recomendado"
           ]
         },
         "complaint": {
-          "n": 11,
+          "n": 3,
           "previous_n": 1,
-          "recent_n": 10,
+          "recent_n": 2,
+          "previous_share": 0.0037313432835820895,
+          "recent_share": 0.05555555555555555,
           "quotes": [
-            "Lástima, nos atendieron de mala gana. ojalá mejoren",
+            "Nos atendieron de mala gana",
             "Esta vez el mesero fue cortante",
-            "La verdad mala actitud del personal"
+            "Me gustó mucho la decoración, pero parecía que les molestaba atender"
           ]
         }
       }
     },
     {
       "topic": "sabor de la comida",
-      "description": "Sabor y sazón de los platos",
+      "description": "Sabor sazón y frescura de los ingredientes en general",
       "small_detail": false,
-      "n": 28,
-      "previous_n": 21,
-      "recent_n": 7,
+      "n": 27,
+      "previous_n": 26,
+      "recent_n": 1,
+      "previous_share": 0.09701492537313433,
+      "recent_share": 0.027777777777777776,
       "kinds": {
         "praise": {
-          "n": 23,
-          "previous_n": 16,
-          "recent_n": 7,
+          "n": 24,
+          "previous_n": 23,
+          "recent_n": 1,
+          "previous_share": 0.08582089552238806,
+          "recent_share": 0.027777777777777776,
           "quotes": [
-            "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-            "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
-            "Como siempre, todo muy rico"
+            "Vengo seguido y muy buena relación calidad-precio, además todo muy rico",
+            "Todo muy rico, pero había mucho ruido y no se podía hablar",
+            "La verdad el pedido llegó rapidísimo y el sabor de la comida es excelente"
           ]
         },
         "complaint": {
-          "n": 5,
-          "previous_n": 5,
+          "n": 3,
+          "previous_n": 3,
           "recent_n": 0,
+          "previous_share": 0.011194029850746268,
+          "recent_share": 0.0,
           "quotes": [
-            "Antes era mejor, ahora a la comida le faltaba sabor",
-            "Esta vez el arroz estaba simple",
-            "El pedido llegó rapidísimo, pero el arroz estaba simple. Recomendado"
+            "Como siempre, el mesero fue muy amable, pero a la comida le faltaba sabor. Recomendado",
+            "Económico y llenador, pero el arroz estaba simple",
+            "Económico y llenador, pero a la comida le faltaba sabor!!"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "música y ruido",
+      "description": "Volumen de la música y nivel de ruido en el local",
+      "small_detail": false,
+      "n": 23,
+      "previous_n": 21,
+      "recent_n": 2,
+      "previous_share": 0.07835820895522388,
+      "recent_share": 0.05555555555555555,
+      "kinds": {
+        "praise": {
+          "n": 16,
+          "previous_n": 14,
+          "recent_n": 2,
+          "previous_share": 0.05223880597014925,
+          "recent_share": 0.05555555555555555,
+          "quotes": [
+            "Primera vez que vengo y la música está a un volumen agradable, pero tocó esperar mucho para que nos tomaran el pedido!!",
+            "La verdad la musica esta a un volumen agradable. Recomendado",
+            "Como siempre, la música está a un volumen agradable"
+          ]
+        },
+        "complaint": {
+          "n": 7,
+          "previous_n": 7,
+          "recent_n": 0,
+          "previous_share": 0.026119402985074626,
+          "recent_share": 0.0,
+          "quotes": [
+            "Todo muy rico, pero había mucho ruido y no se podía hablar",
+            "Vengo seguido y la atención fue excelente, pero había mucho ruido y no se podía hablar",
+            "La música estaba demasiado alta"
           ]
         }
       }
     },
     {
       "topic": "sin detalle",
-      "description": "Comentario sin información concreta",
+      "description": "Comentario que no dice nada concreto",
       "small_detail": false,
-      "n": 21,
-      "previous_n": 12,
-      "recent_n": 9,
+      "n": 23,
+      "previous_n": 21,
+      "recent_n": 2,
+      "previous_share": 0.07835820895522388,
+      "recent_share": 0.05555555555555555,
       "kinds": {
         "praise": {
-          "n": 14,
-          "previous_n": 10,
-          "recent_n": 4,
+          "n": 21,
+          "previous_n": 21,
+          "recent_n": 0,
+          "previous_share": 0.07835820895522388,
+          "recent_share": 0.0,
           "quotes": []
         },
         "complaint": {
-          "n": 7,
-          "previous_n": 2,
-          "recent_n": 5,
+          "n": 2,
+          "previous_n": 0,
+          "recent_n": 2,
+          "previous_share": 0.0,
+          "recent_share": 0.05555555555555555,
           "quotes": []
-        }
-      }
-    },
-    {
-      "topic": "galleta con el café",
-      "description": "Galleta de cortesía que acompaña el café o el tinto",
-      "small_detail": true,
-      "n": 19,
-      "previous_n": 11,
-      "recent_n": 8,
-      "kinds": {
-        "praise": {
-          "n": 19,
-          "previous_n": 11,
-          "recent_n": 8,
-          "quotes": [
-            "El detalle de la galleta con el tinto me pareció muy lindo. volveré",
-            "Se come bien sin gastar mucho y el detalle de la galleta con el tinto me parecio muy lindo. Recomendado",
-            "Como siempre, económico y llenador, además hasta galleta de cortesía dan con el café. Volveré"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "ambiente del lugar",
-      "description": "Ambiente acogedor y tranquilo para almorzar y conversar",
-      "small_detail": false,
-      "n": 17,
-      "previous_n": 14,
-      "recent_n": 3,
-      "kinds": {
-        "praise": {
-          "n": 17,
-          "previous_n": 14,
-          "recent_n": 3,
-          "quotes": [
-            "La verdad buen ambiente para conversar",
-            "Como siempre, es un lugar tranquilo para almorzar, además uno queda lleno con el almuerzo. Recomendado",
-            "Vengo seguido y buen ambiente para conversar!!"
-          ]
         }
       }
     },
     {
       "topic": "decoración",
-      "description": "Decoración del local",
+      "description": "Decoración y aspecto del local",
       "small_detail": false,
-      "n": 11,
-      "previous_n": 6,
-      "recent_n": 5,
+      "n": 17,
+      "previous_n": 16,
+      "recent_n": 1,
+      "previous_share": 0.05970149253731343,
+      "recent_share": 0.027777777777777776,
       "kinds": {
         "praise": {
-          "n": 11,
-          "previous_n": 6,
-          "recent_n": 5,
+          "n": 17,
+          "previous_n": 16,
+          "recent_n": 1,
+          "previous_share": 0.05970149253731343,
+          "recent_share": 0.027777777777777776,
           "quotes": [
-            "Primera vez que vengo y me gustó mucho la decoración. Recomendado",
-            "Como siempre, me gustó mucho la decoración",
-            "La verdad me gustó mucho la decoración. Recomendado"
+            "Me gustó mucho la decoración. Recomendado",
+            "Me gustó mucho la decoración. volveré",
+            "Primera vez que vengo y me gustó mucho la decoración. también los precios son justos. volveré"
           ]
         }
       }
     },
     {
       "topic": "limpieza",
-      "description": "Limpieza del salón y de los baños",
+      "description": "Limpieza del local y de los baños",
       "small_detail": false,
-      "n": 11,
-      "previous_n": 8,
-      "recent_n": 3,
+      "n": 17,
+      "previous_n": 15,
+      "recent_n": 2,
+      "previous_share": 0.055970149253731345,
+      "recent_share": 0.05555555555555555,
       "kinds": {
         "praise": {
-          "n": 10,
-          "previous_n": 7,
-          "recent_n": 3,
-          "quotes": [
-            "El sitio es limpio y bonito!!",
-            "El sitio es limpio y bonito, pero parecia que les molestaba atender",
-            "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!"
-          ]
-        },
-        "complaint": {
-          "n": 1,
-          "previous_n": 1,
-          "recent_n": 0,
-          "quotes": [
-            "El personal es muy querido, pero el baño no estaba limpio. volveré"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "ruido y música",
-      "description": "Volumen de la música y nivel de ruido en el salón",
-      "small_detail": false,
-      "n": 11,
-      "previous_n": 5,
-      "recent_n": 6,
-      "kinds": {
-        "praise": {
-          "n": 6,
-          "previous_n": 2,
-          "recent_n": 4,
-          "quotes": [
-            "Primera vez que vengo y la música está a un volumen agradable y uno queda lleno con el almuerzo",
-            "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-            "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias"
-          ]
-        },
-        "complaint": {
-          "n": 5,
-          "previous_n": 3,
+          "n": 13,
+          "previous_n": 11,
           "recent_n": 2,
+          "previous_share": 0.041044776119402986,
+          "recent_share": 0.05555555555555555,
           "quotes": [
-            "Antes era mejor, ahora había mucho ruido y no se podía hablar",
-            "Como siempre, uno queda lleno con el almuerzo, pero la música estaba demasiado alta. Recomendado",
-            "Había mucho ruido y no se podía hablar"
+            "La verdad el sitio es limpio y bonito, además los platos vienen bien servidos!!",
+            "Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!",
+            "Vengo seguido y el sitio es limpio y bonito!!"
+          ]
+        },
+        "complaint": {
+          "n": 4,
+          "previous_n": 4,
+          "recent_n": 0,
+          "previous_share": 0.014925373134328358,
+          "recent_share": 0.0,
+          "quotes": [
+            "Vengo seguido y económico y llenador, pero el baño no estaba limpio!!",
+            "La verdad el baño no estaba limpio. No creo que vuelva",
+            "Vengo seguido y se nota que cocinan con ingredientes frescos, pero el baño no estaba limpio. Volveré"
           ]
         }
       }
     },
     {
-      "topic": "menú con código QR",
-      "description": "Menú consultable con un código QR",
+      "topic": "platos destacados",
+      "description": "Platos nombrados como el ajiaco o el plato del día",
       "small_detail": false,
       "n": 10,
-      "previous_n": 2,
-      "recent_n": 8,
-      "kinds": {
-        "suggestion": {
-          "n": 10,
-          "previous_n": 2,
-          "recent_n": 8,
-          "quotes": [
-            "Como sugerencia, sería útil tener el menú en un código QR",
-            "Sería útil tener el menú en un código QR. Gracias",
-            "Como sugerencia, sería útil tener el emnú en un código QR"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "personal en el almuerzo",
-      "description": "Más personal a la hora del almuerzo",
-      "small_detail": false,
-      "n": 8,
-      "previous_n": 3,
-      "recent_n": 5,
-      "kinds": {
-        "suggestion": {
-          "n": 8,
-          "previous_n": 3,
-          "recent_n": 5,
-          "quotes": [
-            "Que haya más personal a la hora del almuerzo",
-            "Una idea: que haya más personal a la hora del almuerzo",
-            "Una idea: que haya más personal a la hora del almuerzo. Gracias"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "horario de domingos",
-      "description": "Abrir los domingos",
-      "small_detail": false,
-      "n": 6,
-      "previous_n": 5,
+      "previous_n": 9,
       "recent_n": 1,
+      "previous_share": 0.033582089552238806,
+      "recent_share": 0.027777777777777776,
       "kinds": {
-        "suggestion": {
-          "n": 6,
-          "previous_n": 5,
+        "praise": {
+          "n": 10,
+          "previous_n": 9,
           "recent_n": 1,
+          "previous_share": 0.033582089552238806,
+          "recent_share": 0.027777777777777776,
           "quotes": [
-            "Como sugerencia, ojalá abrieran los domingos",
-            "Ojalá abrieran los domingos. Gracias",
-            "Ojalá abrieran los domingos"
+            "Muy rico el plato del día",
+            "La verdad no tuvimos que esperar nada. También muy rico el plato del día",
+            "Primera vez que vengo y el ajiaco estaba buenísimo"
           ]
         }
       }
     },
     {
-      "topic": "menú infantil",
-      "description": "Menú pensado para niños",
+      "topic": "temperatura de la comida",
+      "description": "Platos que llegan fríos o tibios",
       "small_detail": false,
       "n": 6,
-      "previous_n": 4,
-      "recent_n": 2,
+      "previous_n": 6,
+      "recent_n": 0,
+      "previous_share": 0.022388059701492536,
+      "recent_share": 0.0,
       "kinds": {
-        "suggestion": {
+        "complaint": {
           "n": 6,
-          "previous_n": 4,
-          "recent_n": 2,
+          "previous_n": 6,
+          "recent_n": 0,
+          "previous_share": 0.022388059701492536,
+          "recent_share": 0.0,
           "quotes": [
-            "Seria bueno un menu infantil",
-            "Como sugerencia, sería bueno un menú infantil",
-            "Sería bueno un menú infantil"
+            "La verdad la atención fue excelente, pero la sopa estaba tibia",
+            "Vengo seguido y los precios son justos, pero la sopa estaba tibia. Volveré",
+            "La verdad el plato llegó frío. Ojalá mejoren"
           ]
         }
       }
     },
     {
       "topic": "punto de la carne",
-      "description": "Cocción de la carne en su punto o dura",
-      "small_detail": false,
-      "n": 6,
-      "previous_n": 5,
-      "recent_n": 1,
-      "kinds": {
-        "praise": {
-          "n": 5,
-          "previous_n": 4,
-          "recent_n": 1,
-          "quotes": [
-            "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!",
-            "La carne llegó en su punto. También la música está a un volumen agradable",
-            "Como siempre, la carne llegó en su punto"
-          ]
-        },
-        "complaint": {
-          "n": 1,
-          "previous_n": 1,
-          "recent_n": 0,
-          "quotes": [
-            "La verdad la carne estaba dura"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "exactitud del pedido",
-      "description": "Pedidos equivocados o cuentas con cobros que no corresponden",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 2,
-      "recent_n": 3,
-      "kinds": {
-        "complaint": {
-          "n": 5,
-          "previous_n": 2,
-          "recent_n": 3,
-          "quotes": [
-            "Lastima, me trajeron otro plato. No creo que vuelva",
-            "Se equivocaron con el pedido. Ojalá mejoren",
-            "La cuenta venía con cosas que no pedimos"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "mesas y espacio",
-      "description": "Distribución de las mesas y espacio para sentarse",
+      "description": "Cocción de la carne que llega en su punto o dura",
       "small_detail": false,
       "n": 5,
       "previous_n": 4,
       "recent_n": 1,
+      "previous_share": 0.014925373134328358,
+      "recent_share": 0.027777777777777776,
       "kinds": {
+        "praise": {
+          "n": 3,
+          "previous_n": 2,
+          "recent_n": 1,
+          "previous_share": 0.007462686567164179,
+          "recent_share": 0.027777777777777776,
+          "quotes": [
+            "La carne llegó en su punto, pero la espera fue eterna",
+            "La carne llego en su punto",
+            "Como siempre, la carne llegó en su punto, gracias"
+          ]
+        },
         "complaint": {
           "n": 2,
           "previous_n": 2,
           "recent_n": 0,
+          "previous_share": 0.007462686567164179,
+          "recent_share": 0.0,
           "quotes": [
-            "Las mesas estan muy juntas",
-            "Las mesas están muy juntas"
-          ]
-        },
-        "suggestion": {
-          "n": 3,
-          "previous_n": 2,
-          "recent_n": 1,
-          "quotes": [
-            "Una idea: podrían poner más mesas afuera",
-            "Podrían poner más mesas afuera. gracias"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "opciones vegetarianas",
-      "description": "Más platos vegetarianos en el menú",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 3,
-      "recent_n": 2,
-      "kinds": {
-        "suggestion": {
-          "n": 5,
-          "previous_n": 3,
-          "recent_n": 2,
-          "quotes": [
-            "Una idea: deberían tener más opciones vegetarianas. Gracias",
-            "Como sugerencia, deberían tener más opciones vegetarianas",
-            "Como sugerencia, deberian tener mas opciones vegetarianas. Gracias"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "pago con transferencia",
-      "description": "Poder pagar por transferencia",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 3,
-      "recent_n": 2,
-      "kinds": {
-        "suggestion": {
-          "n": 5,
-          "previous_n": 3,
-          "recent_n": 2,
-          "quotes": [
-            "Seria bueno poder pagar con transferencia",
-            "Sería bueno poder pagar con transferencia",
-            "Como sugerencia, sería bueno poder pagar con transferencia"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "domicilios",
-      "description": "Ofrecer servicio de domicilios",
-      "small_detail": false,
-      "n": 4,
-      "previous_n": 2,
-      "recent_n": 2,
-      "kinds": {
-        "suggestion": {
-          "n": 4,
-          "previous_n": 2,
-          "recent_n": 2,
-          "quotes": [
-            "Podrían ofrecer domicilios. Grcaias",
-            "Como sugerencia, podrían ofrecer domicilios",
-            "Podrían ofrecer domicilios"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "ingredientes frescos",
-      "description": "Frescura de los ingredientes con que cocinan",
-      "small_detail": false,
-      "n": 4,
-      "previous_n": 3,
-      "recent_n": 1,
-      "kinds": {
-        "praise": {
-          "n": 4,
-          "previous_n": 3,
-          "recent_n": 1,
-          "quotes": [
-            "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias",
-            "Como siempre, se nota que cocinan con ingredientes frescos. Volveré",
-            "Se nota que cocinan con ingredientes frescos. Volveré"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "reservas",
-      "description": "Recibir reservas de mesa",
-      "small_detail": false,
-      "n": 4,
-      "previous_n": 1,
-      "recent_n": 3,
-      "kinds": {
-        "suggestion": {
-          "n": 4,
-          "previous_n": 1,
-          "recent_n": 3,
-          "quotes": [
-            "Deberían recibir reservas",
-            "Como sugerencia, deberían recibir reservas",
-            "Deberían recibir reservas. Gracias"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "jugos sin azúcar",
-      "description": "Jugos sin azúcar en la carta",
-      "small_detail": false,
-      "n": 3,
-      "previous_n": 2,
-      "recent_n": 1,
-      "kinds": {
-        "suggestion": {
-          "n": 3,
-          "previous_n": 2,
-          "recent_n": 1,
-          "quotes": [
-            "Estaría bien tener jugos sin azúcar",
-            "Como sugerencia, estaría bien tener jugos sin azúcar"
-          ]
-        }
-      }
-    },
-    {
-      "topic": "saludo y agradecimiento",
-      "description": "Que el personal salude y agradezca al cliente",
-      "small_detail": true,
-      "n": 2,
-      "previous_n": 0,
-      "recent_n": 2,
-      "kinds": {
-        "complaint": {
-          "n": 2,
-          "previous_n": 0,
-          "recent_n": 2,
-          "quotes": [
-            "La verdad nadie saluda ni da las gracias. No creo que vuelva",
-            "Nadie saluda ni da las gracias. Ojalá mejoren"
+            "Primera vez que vengo y nos atendieron rápido, pero la carne estaba dura, gracias",
+            "Buen precio para lo que sirven, pero la carne estaba dura"
           ]
         }
       }
@@ -592,17 +444,68 @@
       "topic": "temperatura del local",
       "description": "Calor dentro del local",
       "small_detail": false,
-      "n": 2,
-      "previous_n": 1,
-      "recent_n": 1,
+      "n": 4,
+      "previous_n": 4,
+      "recent_n": 0,
+      "previous_share": 0.014925373134328358,
+      "recent_share": 0.0,
       "kinds": {
         "complaint": {
-          "n": 2,
-          "previous_n": 1,
-          "recent_n": 1,
+          "n": 4,
+          "previous_n": 4,
+          "recent_n": 0,
+          "previous_share": 0.014925373134328358,
+          "recent_share": 0.0,
           "quotes": [
-            "Hacía mucho calor adentro",
-            "Esta vez hacia mucho calor adentro"
+            "Primera vez que vengo y buen precio para lo que sirven, pero hacía mucho calor adentro",
+            "Lástima, hacía mucho calor adentro",
+            "El pedido llego rapidisimo, pero hacia mucho calor adentro!!"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "errores en el pedido o la cuenta",
+      "description": "Bebidas olvidadas pedidos equivocados o cobros de más",
+      "small_detail": false,
+      "n": 3,
+      "previous_n": 2,
+      "recent_n": 1,
+      "previous_share": 0.007462686567164179,
+      "recent_share": 0.027777777777777776,
+      "kinds": {
+        "complaint": {
+          "n": 3,
+          "previous_n": 2,
+          "recent_n": 1,
+          "previous_share": 0.007462686567164179,
+          "recent_share": 0.027777777777777776,
+          "quotes": [
+            "Vengo seguido y muy buena relación calidad-precio, pero la cuenta venía con cosas que no pedimos",
+            "Esta vez se equivocaron con el pedido. Una lástima",
+            "Primera vez que vengo y buen ambiente para conversar, pero olvidaron una de las bebidas. Recomendado"
+          ]
+        }
+      }
+    },
+    {
+      "topic": "saludo y agradecimiento",
+      "description": "Saludar al cliente y dar las gracias",
+      "small_detail": true,
+      "n": 1,
+      "previous_n": 1,
+      "recent_n": 0,
+      "previous_share": 0.0037313432835820895,
+      "recent_share": 0.0,
+      "kinds": {
+        "complaint": {
+          "n": 1,
+          "previous_n": 1,
+          "recent_n": 0,
+          "previous_share": 0.0037313432835820895,
+          "recent_share": 0.0,
+          "quotes": [
+            "Nadie saluda ni da las gracias"
           ]
         }
       }
@@ -610,445 +513,385 @@
   ],
   "top_complaints": [
     {
+      "topic": "precio",
+      "small_detail": false,
+      "n": 17,
+      "previous_n": 16,
+      "recent_n": 1,
+      "previous_share": 0.05970149253731343,
+      "recent_share": 0.027777777777777776,
+      "quotes": [
+        "Esta vez me parecio caro para lo que sirven. Una lastima",
+        "Subieron los precios y la porción es la misma",
+        "La verdad subieron los precios y la porción es la misma"
+      ]
+    },
+    {
       "topic": "tiempo de espera",
       "small_detail": false,
-      "n": 23,
+      "n": 13,
       "previous_n": 1,
-      "recent_n": 22,
+      "recent_n": 12,
+      "previous_share": 0.0037313432835820895,
+      "recent_share": 0.3333333333333333,
       "quotes": [
-        "Lástima, el pedido tardó casi una hora. No creo que vuelva",
-        "Pasaron 20 minutos antes de que alguien se acercara a la mesa",
-        "La espera fue eterna"
+        "Primera vez que vengo y sirven bastante, pero se demoran demasiado en atender",
+        "La verdad muy buena relación calidad-precio, pero la espera fue eterna",
+        "Antes era mejor, ahora tocó esperar mucho para que nos tomaran el pedido"
       ]
     },
     {
-      "topic": "trato del personal",
+      "topic": "música y ruido",
       "small_detail": false,
-      "n": 11,
-      "previous_n": 1,
-      "recent_n": 10,
-      "quotes": [
-        "Lástima, nos atendieron de mala gana. ojalá mejoren",
-        "Esta vez el mesero fue cortante",
-        "La verdad mala actitud del personal"
-      ]
-    },
-    {
-      "topic": "exactitud del pedido",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 2,
-      "recent_n": 3,
-      "quotes": [
-        "Lastima, me trajeron otro plato. No creo que vuelva",
-        "Se equivocaron con el pedido. Ojalá mejoren",
-        "La cuenta venía con cosas que no pedimos"
-      ]
-    },
-    {
-      "topic": "ruido y música",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 3,
-      "recent_n": 2,
-      "quotes": [
-        "Antes era mejor, ahora había mucho ruido y no se podía hablar",
-        "Como siempre, uno queda lleno con el almuerzo, pero la música estaba demasiado alta. Recomendado",
-        "Había mucho ruido y no se podía hablar"
-      ]
-    },
-    {
-      "topic": "sabor de la comida",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 5,
+      "n": 7,
+      "previous_n": 7,
       "recent_n": 0,
+      "previous_share": 0.026119402985074626,
+      "recent_share": 0.0,
       "quotes": [
-        "Antes era mejor, ahora a la comida le faltaba sabor",
-        "Esta vez el arroz estaba simple",
-        "El pedido llegó rapidísimo, pero el arroz estaba simple. Recomendado"
+        "Todo muy rico, pero había mucho ruido y no se podía hablar",
+        "Vengo seguido y la atención fue excelente, pero había mucho ruido y no se podía hablar",
+        "La música estaba demasiado alta"
       ]
     },
     {
-      "topic": "precio",
+      "topic": "temperatura de la comida",
+      "small_detail": false,
+      "n": 6,
+      "previous_n": 6,
+      "recent_n": 0,
+      "previous_share": 0.022388059701492536,
+      "recent_share": 0.0,
+      "quotes": [
+        "La verdad la atención fue excelente, pero la sopa estaba tibia",
+        "Vengo seguido y los precios son justos, pero la sopa estaba tibia. Volveré",
+        "La verdad el plato llegó frío. Ojalá mejoren"
+      ]
+    },
+    {
+      "topic": "limpieza",
       "small_detail": false,
       "n": 4,
       "previous_n": 4,
       "recent_n": 0,
+      "previous_share": 0.014925373134328358,
+      "recent_share": 0.0,
       "quotes": [
-        "Ya no es tan económico como antes. No creo que vuelva",
-        "Nos atendieron rápido, pero ya no es tan económico como antes. Recomendado",
-        "El ajiaco estaba buenísimo, pero subieron los precios y la porción es la misma, gracias"
+        "Vengo seguido y económico y llenador, pero el baño no estaba limpio!!",
+        "La verdad el baño no estaba limpio. No creo que vuelva",
+        "Vengo seguido y se nota que cocinan con ingredientes frescos, pero el baño no estaba limpio. Volveré"
       ]
     },
     {
-      "topic": "tamaño de las porciones",
+      "topic": "porciones",
       "small_detail": false,
-      "n": 3,
-      "previous_n": 2,
-      "recent_n": 1,
-      "quotes": [
-        "Como siempre, muy buena relación calidad-precio, pero cada vez sirven menos. volveré",
-        "Esta vez la porcion fue mas pequeña que otras veces",
-        "La verdad la porción fue más pequeña que otras veces"
-      ]
-    },
-    {
-      "topic": "mesas y espacio",
-      "small_detail": false,
-      "n": 2,
-      "previous_n": 2,
+      "n": 4,
+      "previous_n": 4,
       "recent_n": 0,
+      "previous_share": 0.014925373134328358,
+      "recent_share": 0.0,
       "quotes": [
-        "Las mesas estan muy juntas",
-        "Las mesas están muy juntas"
-      ]
-    },
-    {
-      "topic": "saludo y agradecimiento",
-      "small_detail": true,
-      "n": 2,
-      "previous_n": 0,
-      "recent_n": 2,
-      "quotes": [
-        "La verdad nadie saluda ni da las gracias. No creo que vuelva",
-        "Nadie saluda ni da las gracias. Ojalá mejoren"
+        "Vengo seguido y los precios son justos, pero la porción fue más pequeña que otras veces",
+        "La musica esta a un volumen agradable, pero la porcion fue mas pequeña que otras veces. Volvere",
+        "Lástima, cada vez sirven menos. Ojalá mejoren"
       ]
     },
     {
       "topic": "temperatura del local",
       "small_detail": false,
-      "n": 2,
+      "n": 4,
+      "previous_n": 4,
+      "recent_n": 0,
+      "previous_share": 0.014925373134328358,
+      "recent_share": 0.0,
+      "quotes": [
+        "Primera vez que vengo y buen precio para lo que sirven, pero hacía mucho calor adentro",
+        "Lástima, hacía mucho calor adentro",
+        "El pedido llego rapidisimo, pero hacia mucho calor adentro!!"
+      ]
+    },
+    {
+      "topic": "atención del personal",
+      "small_detail": false,
+      "n": 3,
       "previous_n": 1,
+      "recent_n": 2,
+      "previous_share": 0.0037313432835820895,
+      "recent_share": 0.05555555555555555,
+      "quotes": [
+        "Nos atendieron de mala gana",
+        "Esta vez el mesero fue cortante",
+        "Me gustó mucho la decoración, pero parecía que les molestaba atender"
+      ]
+    },
+    {
+      "topic": "errores en el pedido o la cuenta",
+      "small_detail": false,
+      "n": 3,
+      "previous_n": 2,
       "recent_n": 1,
+      "previous_share": 0.007462686567164179,
+      "recent_share": 0.027777777777777776,
       "quotes": [
-        "Hacía mucho calor adentro",
-        "Esta vez hacia mucho calor adentro"
-      ]
-    },
-    {
-      "topic": "limpieza",
-      "small_detail": false,
-      "n": 1,
-      "previous_n": 1,
-      "recent_n": 0,
-      "quotes": [
-        "El personal es muy querido, pero el baño no estaba limpio. volveré"
-      ]
-    },
-    {
-      "topic": "punto de la carne",
-      "small_detail": false,
-      "n": 1,
-      "previous_n": 1,
-      "recent_n": 0,
-      "quotes": [
-        "La verdad la carne estaba dura"
-      ]
-    }
-  ],
-  "top_praise": [
-    {
-      "topic": "tamaño de las porciones",
-      "small_detail": false,
-      "n": 46,
-      "previous_n": 26,
-      "recent_n": 20,
-      "quotes": [
-        "Primera vez que vengo y la música está a un volumen agradable y uno queda lleno con el almuerzo",
-        "Primera vez que vengo y económico y llenador. Volveré",
-        "Económico y llenador. También uno queda lleno con el almuerzo!!"
-      ]
-    },
-    {
-      "topic": "precio",
-      "small_detail": false,
-      "n": 41,
-      "previous_n": 26,
-      "recent_n": 15,
-      "quotes": [
-        "Como siempre, los precios son justos. También el pedido llegó rapidísimo",
-        "Primera vez que vengo y económico y llenador. Volveré",
-        "Económico y llenador. También uno queda lleno con el almuerzo!!"
+        "Vengo seguido y muy buena relación calidad-precio, pero la cuenta venía con cosas que no pedimos",
+        "Esta vez se equivocaron con el pedido. Una lástima",
+        "Primera vez que vengo y buen ambiente para conversar, pero olvidaron una de las bebidas. Recomendado"
       ]
     },
     {
       "topic": "sabor de la comida",
       "small_detail": false,
-      "n": 23,
-      "previous_n": 16,
-      "recent_n": 7,
+      "n": 3,
+      "previous_n": 3,
+      "recent_n": 0,
+      "previous_share": 0.011194029850746268,
+      "recent_share": 0.0,
       "quotes": [
-        "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-        "Vengo seguido y el ajiaco estaba buenísimo. Recomendado",
-        "Como siempre, todo muy rico"
-      ]
-    },
-    {
-      "topic": "tiempo de espera",
-      "small_detail": false,
-      "n": 20,
-      "previous_n": 17,
-      "recent_n": 3,
-      "quotes": [
-        "La verdad nos atendieron rápido. Recomendado",
-        "Como siempre, los precios son justos. También el pedido llegó rapidísimo",
-        "Primera vez que vengo y sirven bastante, además el pedido llegó rapidísimo, gracias"
-      ]
-    },
-    {
-      "topic": "galleta con el café",
-      "small_detail": true,
-      "n": 19,
-      "previous_n": 11,
-      "recent_n": 8,
-      "quotes": [
-        "El detalle de la galleta con el tinto me pareció muy lindo. volveré",
-        "Se come bien sin gastar mucho y el detalle de la galleta con el tinto me parecio muy lindo. Recomendado",
-        "Como siempre, económico y llenador, además hasta galleta de cortesía dan con el café. Volveré"
-      ]
-    },
-    {
-      "topic": "trato del personal",
-      "small_detail": false,
-      "n": 19,
-      "previous_n": 17,
-      "recent_n": 2,
-      "quotes": [
-        "Vengo seguido y la niña que nos atendió fue un amor, además los platos vienen bien servidos",
-        "Me gusto mucho la decoracion y la atencion fue excelente",
-        "Primera vez que vengo y nos atendieron con muy buena actitud!!"
-      ]
-    },
-    {
-      "topic": "ambiente del lugar",
-      "small_detail": false,
-      "n": 17,
-      "previous_n": 14,
-      "recent_n": 3,
-      "quotes": [
-        "La verdad buen ambiente para conversar",
-        "Como siempre, es un lugar tranquilo para almorzar, además uno queda lleno con el almuerzo. Recomendado",
-        "Vengo seguido y buen ambiente para conversar!!"
-      ]
-    },
-    {
-      "topic": "decoración",
-      "small_detail": false,
-      "n": 11,
-      "previous_n": 6,
-      "recent_n": 5,
-      "quotes": [
-        "Primera vez que vengo y me gustó mucho la decoración. Recomendado",
-        "Como siempre, me gustó mucho la decoración",
-        "La verdad me gustó mucho la decoración. Recomendado"
-      ]
-    },
-    {
-      "topic": "limpieza",
-      "small_detail": false,
-      "n": 10,
-      "previous_n": 7,
-      "recent_n": 3,
-      "quotes": [
-        "El sitio es limpio y bonito!!",
-        "El sitio es limpio y bonito, pero parecia que les molestaba atender",
-        "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!"
-      ]
-    },
-    {
-      "topic": "ruido y música",
-      "small_detail": false,
-      "n": 6,
-      "previous_n": 2,
-      "recent_n": 4,
-      "quotes": [
-        "Primera vez que vengo y la música está a un volumen agradable y uno queda lleno con el almuerzo",
-        "La verdad la música está a un volumen agradable y el sabor de la comida es excelente",
-        "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias"
+        "Como siempre, el mesero fue muy amable, pero a la comida le faltaba sabor. Recomendado",
+        "Económico y llenador, pero el arroz estaba simple",
+        "Económico y llenador, pero a la comida le faltaba sabor!!"
       ]
     },
     {
       "topic": "punto de la carne",
       "small_detail": false,
-      "n": 5,
-      "previous_n": 4,
-      "recent_n": 1,
+      "n": 2,
+      "previous_n": 2,
+      "recent_n": 0,
+      "previous_share": 0.007462686567164179,
+      "recent_share": 0.0,
       "quotes": [
-        "La verdad la carne llegó en su punto. También el sitio es limpio y bonito!!",
-        "La carne llegó en su punto. También la música está a un volumen agradable",
-        "Como siempre, la carne llegó en su punto"
+        "Primera vez que vengo y nos atendieron rápido, pero la carne estaba dura, gracias",
+        "Buen precio para lo que sirven, pero la carne estaba dura"
       ]
     },
     {
-      "topic": "ingredientes frescos",
-      "small_detail": false,
-      "n": 4,
-      "previous_n": 3,
-      "recent_n": 1,
+      "topic": "saludo y agradecimiento",
+      "small_detail": true,
+      "n": 1,
+      "previous_n": 1,
+      "recent_n": 0,
+      "previous_share": 0.0037313432835820895,
+      "recent_share": 0.0,
       "quotes": [
-        "Se nota que cocinan con ingredientes frescos. También la música está a un volumen agradable, gracias",
-        "Como siempre, se nota que cocinan con ingredientes frescos. Volveré",
-        "Se nota que cocinan con ingredientes frescos. Volveré"
+        "Nadie saluda ni da las gracias"
       ]
     }
   ],
-  "top_suggestions": [
+  "top_praise": [
     {
-      "topic": "menú con código QR",
+      "topic": "precio",
+      "small_detail": false,
+      "n": 66,
+      "previous_n": 61,
+      "recent_n": 5,
+      "previous_share": 0.22761194029850745,
+      "recent_share": 0.1388888888888889,
+      "quotes": [
+        "La verdad económcio y llenador!!",
+        "La verdad muy buena relación calidad-precio, pero la espera fue eterna",
+        "Vengo seguido y muy buena relación calidad-precio, además todo muy rico"
+      ]
+    },
+    {
+      "topic": "porciones",
+      "small_detail": false,
+      "n": 54,
+      "previous_n": 48,
+      "recent_n": 6,
+      "previous_share": 0.1791044776119403,
+      "recent_share": 0.16666666666666666,
+      "quotes": [
+        "La verdad el sitio es limpio y bonito, además los platos vienen bien servidos!!",
+        "Primera vez que vengo y sirven bastante, pero se demoran demasiado en atender",
+        "La verdad económcio y llenador!!"
+      ]
+    },
+    {
+      "topic": "ambiente del local",
+      "small_detail": false,
+      "n": 39,
+      "previous_n": 31,
+      "recent_n": 8,
+      "previous_share": 0.11567164179104478,
+      "recent_share": 0.2222222222222222,
+      "quotes": [
+        "Como siempre, buen ambiente para conversar, además muy atentos todos",
+        "Es un lugar tranquilo para almorzar!!",
+        "Como siempre, buen ambiente para conversar"
+      ]
+    },
+    {
+      "topic": "tiempo de espera",
+      "small_detail": false,
+      "n": 36,
+      "previous_n": 34,
+      "recent_n": 2,
+      "previous_share": 0.12686567164179105,
+      "recent_share": 0.05555555555555555,
+      "quotes": [
+        "Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!",
+        "La verdad sirven muy rápido para lo lleno que estaba",
+        "La verdad no tuvimos que esperar nada. También muy rico el plato del día"
+      ]
+    },
+    {
+      "topic": "galleta de cortesía",
+      "small_detail": true,
+      "n": 35,
+      "previous_n": 34,
+      "recent_n": 1,
+      "previous_share": 0.12686567164179105,
+      "recent_share": 0.027777777777777776,
+      "quotes": [
+        "Primera vez que vengo y el detalle de la galleta con el tinto me pareció muy lindo. Recomendado",
+        "Es un lugar tranquilo para almorzar y la galletica que dan con el café hace la diferencia",
+        "La verdad los precios son justos, además me encantó que el café venga ocn galletica!!"
+      ]
+    },
+    {
+      "topic": "atención del personal",
+      "small_detail": false,
+      "n": 28,
+      "previous_n": 25,
+      "recent_n": 3,
+      "previous_share": 0.09328358208955224,
+      "recent_share": 0.08333333333333333,
+      "quotes": [
+        "Como siempre, buen ambiente para conversar, además muy atentos todos",
+        "La atención fue excelente, gracias",
+        "Como siempre, la niña que nos atendió fue un amor. Recomendado"
+      ]
+    },
+    {
+      "topic": "sabor de la comida",
+      "small_detail": false,
+      "n": 24,
+      "previous_n": 23,
+      "recent_n": 1,
+      "previous_share": 0.08582089552238806,
+      "recent_share": 0.027777777777777776,
+      "quotes": [
+        "Vengo seguido y muy buena relación calidad-precio, además todo muy rico",
+        "Todo muy rico, pero había mucho ruido y no se podía hablar",
+        "La verdad el pedido llegó rapidísimo y el sabor de la comida es excelente"
+      ]
+    },
+    {
+      "topic": "decoración",
+      "small_detail": false,
+      "n": 17,
+      "previous_n": 16,
+      "recent_n": 1,
+      "previous_share": 0.05970149253731343,
+      "recent_share": 0.027777777777777776,
+      "quotes": [
+        "Me gustó mucho la decoración. Recomendado",
+        "Me gustó mucho la decoración. volveré",
+        "Primera vez que vengo y me gustó mucho la decoración. también los precios son justos. volveré"
+      ]
+    },
+    {
+      "topic": "música y ruido",
+      "small_detail": false,
+      "n": 16,
+      "previous_n": 14,
+      "recent_n": 2,
+      "previous_share": 0.05223880597014925,
+      "recent_share": 0.05555555555555555,
+      "quotes": [
+        "Primera vez que vengo y la música está a un volumen agradable, pero tocó esperar mucho para que nos tomaran el pedido!!",
+        "La verdad la musica esta a un volumen agradable. Recomendado",
+        "Como siempre, la música está a un volumen agradable"
+      ]
+    },
+    {
+      "topic": "limpieza",
+      "small_detail": false,
+      "n": 13,
+      "previous_n": 11,
+      "recent_n": 2,
+      "previous_share": 0.041044776119402986,
+      "recent_share": 0.05555555555555555,
+      "quotes": [
+        "La verdad el sitio es limpio y bonito, además los platos vienen bien servidos!!",
+        "Como siempre, el pedido llegó rapidísimo. También el sitio es limpio y bonito!!",
+        "Vengo seguido y el sitio es limpio y bonito!!"
+      ]
+    },
+    {
+      "topic": "platos destacados",
       "small_detail": false,
       "n": 10,
-      "previous_n": 2,
-      "recent_n": 8,
-      "quotes": [
-        "Como sugerencia, sería útil tener el menú en un código QR",
-        "Sería útil tener el menú en un código QR. Gracias",
-        "Como sugerencia, sería útil tener el emnú en un código QR"
-      ]
-    },
-    {
-      "topic": "personal en el almuerzo",
-      "small_detail": false,
-      "n": 8,
-      "previous_n": 3,
-      "recent_n": 5,
-      "quotes": [
-        "Que haya más personal a la hora del almuerzo",
-        "Una idea: que haya más personal a la hora del almuerzo",
-        "Una idea: que haya más personal a la hora del almuerzo. Gracias"
-      ]
-    },
-    {
-      "topic": "horario de domingos",
-      "small_detail": false,
-      "n": 6,
-      "previous_n": 5,
+      "previous_n": 9,
       "recent_n": 1,
+      "previous_share": 0.033582089552238806,
+      "recent_share": 0.027777777777777776,
       "quotes": [
-        "Como sugerencia, ojalá abrieran los domingos",
-        "Ojalá abrieran los domingos. Gracias",
-        "Ojalá abrieran los domingos"
+        "Muy rico el plato del día",
+        "La verdad no tuvimos que esperar nada. También muy rico el plato del día",
+        "Primera vez que vengo y el ajiaco estaba buenísimo"
       ]
     },
     {
-      "topic": "menú infantil",
-      "small_detail": false,
-      "n": 6,
-      "previous_n": 4,
-      "recent_n": 2,
-      "quotes": [
-        "Seria bueno un menu infantil",
-        "Como sugerencia, sería bueno un menú infantil",
-        "Sería bueno un menú infantil"
-      ]
-    },
-    {
-      "topic": "opciones vegetarianas",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 3,
-      "recent_n": 2,
-      "quotes": [
-        "Una idea: deberían tener más opciones vegetarianas. Gracias",
-        "Como sugerencia, deberían tener más opciones vegetarianas",
-        "Como sugerencia, deberian tener mas opciones vegetarianas. Gracias"
-      ]
-    },
-    {
-      "topic": "pago con transferencia",
-      "small_detail": false,
-      "n": 5,
-      "previous_n": 3,
-      "recent_n": 2,
-      "quotes": [
-        "Seria bueno poder pagar con transferencia",
-        "Sería bueno poder pagar con transferencia",
-        "Como sugerencia, sería bueno poder pagar con transferencia"
-      ]
-    },
-    {
-      "topic": "domicilios",
-      "small_detail": false,
-      "n": 4,
-      "previous_n": 2,
-      "recent_n": 2,
-      "quotes": [
-        "Podrían ofrecer domicilios. Grcaias",
-        "Como sugerencia, podrían ofrecer domicilios",
-        "Podrían ofrecer domicilios"
-      ]
-    },
-    {
-      "topic": "reservas",
-      "small_detail": false,
-      "n": 4,
-      "previous_n": 1,
-      "recent_n": 3,
-      "quotes": [
-        "Deberían recibir reservas",
-        "Como sugerencia, deberían recibir reservas",
-        "Deberían recibir reservas. Gracias"
-      ]
-    },
-    {
-      "topic": "jugos sin azúcar",
+      "topic": "punto de la carne",
       "small_detail": false,
       "n": 3,
       "previous_n": 2,
       "recent_n": 1,
+      "previous_share": 0.007462686567164179,
+      "recent_share": 0.027777777777777776,
       "quotes": [
-        "Estaría bien tener jugos sin azúcar",
-        "Como sugerencia, estaría bien tener jugos sin azúcar"
-      ]
-    },
-    {
-      "topic": "mesas y espacio",
-      "small_detail": false,
-      "n": 3,
-      "previous_n": 2,
-      "recent_n": 1,
-      "quotes": [
-        "Una idea: podrían poner más mesas afuera",
-        "Podrían poner más mesas afuera. gracias"
+        "La carne llegó en su punto, pero la espera fue eterna",
+        "La carne llego en su punto",
+        "Como siempre, la carne llegó en su punto, gracias"
       ]
     }
   ],
+  "top_suggestions": [],
   "small_details": [
     {
-      "topic": "galleta con el café",
-      "description": "Galleta de cortesía que acompaña el café o el tinto",
+      "topic": "galleta de cortesía",
+      "description": "Galleta que acompaña el café o el tinto",
       "small_detail": true,
-      "n": 19,
-      "previous_n": 11,
-      "recent_n": 8,
+      "n": 35,
+      "previous_n": 34,
+      "recent_n": 1,
+      "previous_share": 0.12686567164179105,
+      "recent_share": 0.027777777777777776,
       "kinds": {
         "praise": {
-          "n": 19,
-          "previous_n": 11,
-          "recent_n": 8,
+          "n": 35,
+          "previous_n": 34,
+          "recent_n": 1,
+          "previous_share": 0.12686567164179105,
+          "recent_share": 0.027777777777777776,
           "quotes": [
-            "El detalle de la galleta con el tinto me pareció muy lindo. volveré",
-            "Se come bien sin gastar mucho y el detalle de la galleta con el tinto me parecio muy lindo. Recomendado",
-            "Como siempre, económico y llenador, además hasta galleta de cortesía dan con el café. Volveré"
+            "Primera vez que vengo y el detalle de la galleta con el tinto me pareció muy lindo. Recomendado",
+            "Es un lugar tranquilo para almorzar y la galletica que dan con el café hace la diferencia",
+            "La verdad los precios son justos, además me encantó que el café venga ocn galletica!!"
           ]
         }
       }
     },
     {
       "topic": "saludo y agradecimiento",
-      "description": "Que el personal salude y agradezca al cliente",
+      "description": "Saludar al cliente y dar las gracias",
       "small_detail": true,
-      "n": 2,
-      "previous_n": 0,
-      "recent_n": 2,
+      "n": 1,
+      "previous_n": 1,
+      "recent_n": 0,
+      "previous_share": 0.0037313432835820895,
+      "recent_share": 0.0,
       "kinds": {
         "complaint": {
-          "n": 2,
-          "previous_n": 0,
-          "recent_n": 2,
+          "n": 1,
+          "previous_n": 1,
+          "recent_n": 0,
+          "previous_share": 0.0037313432835820895,
+          "recent_share": 0.0,
           "quotes": [
-            "La verdad nadie saluda ni da las gracias. No creo que vuelva",
-            "Nadie saluda ni da las gracias. Ojalá mejoren"
+            "Nadie saluda ni da las gracias"
           ]
         }
       }

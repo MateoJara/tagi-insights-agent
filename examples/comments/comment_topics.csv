@@ -1,27 +1,18 @@
 topic,description,small_detail
-tiempo de espera,Demoras o rapidez para ser atendido y recibir el pedido,false
-trato del personal,Amabilidad o mala actitud de meseros y personal al atender,false
-saludo y agradecimiento,Que el personal salude y agradezca al cliente,true
-galleta con el café,Galleta de cortesía que acompaña el café o el tinto,true
-precio,Precios justos y buena relación calidad-precio o alzas de precio,false
-tamaño de las porciones,Porciones abundantes que llenan o platos que sirven menos,false
-sabor de la comida,Sabor y sazón de los platos,false
-punto de la carne,Cocción de la carne en su punto o dura,false
-ingredientes frescos,Frescura de los ingredientes con que cocinan,false
-ambiente del lugar,Ambiente acogedor y tranquilo para almorzar y conversar,false
-decoración,Decoración del local,false
-limpieza,Limpieza del salón y de los baños,false
-ruido y música,Volumen de la música y nivel de ruido en el salón,false
-mesas y espacio,Distribución de las mesas y espacio para sentarse,false
+precio,Precio de los platos y relación calidad-precio incluyendo alzas de precio,false
+porciones,Tamaño de las porciones y si el cliente queda lleno,false
+sabor de la comida,Sabor sazón y frescura de los ingredientes en general,false
+platos destacados,Platos nombrados como el ajiaco o el plato del día,false
+punto de la carne,Cocción de la carne que llega en su punto o dura,false
+temperatura de la comida,Platos que llegan fríos o tibios,false
+tiempo de espera,Demoras o rapidez para atender tomar el pedido y entregarlo,false
+atención del personal,Amabilidad actitud y trato de meseros y personal,false
+errores en el pedido o la cuenta,Bebidas olvidadas pedidos equivocados o cobros de más,false
+ambiente del local,Lugar acogedor tranquilo y agradable para conversar,false
+música y ruido,Volumen de la música y nivel de ruido en el local,false
+decoración,Decoración y aspecto del local,false
+limpieza,Limpieza del local y de los baños,false
 temperatura del local,Calor dentro del local,false
-exactitud del pedido,Pedidos equivocados o cuentas con cobros que no corresponden,false
-opciones vegetarianas,Más platos vegetarianos en el menú,false
-menú infantil,Menú pensado para niños,false
-menú con código QR,Menú consultable con un código QR,false
-pago con transferencia,Poder pagar por transferencia,false
-horario de domingos,Abrir los domingos,false
-reservas,Recibir reservas de mesa,false
-domicilios,Ofrecer servicio de domicilios,false
-jugos sin azúcar,Jugos sin azúcar en la carta,false
-personal en el almuerzo,Más personal a la hora del almuerzo,false
-sin detalle,Comentario sin información concreta,false
+galleta de cortesía,Galleta que acompaña el café o el tinto,true
+saludo y agradecimiento,Saludar al cliente y dar las gracias,true
+sin detalle,Comentario que no dice nada concreto,false

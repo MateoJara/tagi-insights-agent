@@ -1,51 +1,46 @@
 {
   "business_name": "Restaurante Demo",
   "headline": "qué dicen sus clientes y qué hacer ahora",
-  "summary": "Su comida y sus precios siguen gustando. Lo que cambió es la atención: cayó desde julio de 2026, sobre todo por los tiempos de espera, y ya se nota en sus reseñas recientes de Google.",
-  "alert": "la calificación del servicio pasó de 4.0 a 2.6 en los últimos tres meses, y solo 8% de las 26 reseñas recientes de Google tiene respuesta.",
+  "summary": "Sus reseñas fueron muy buenas casi dos años, pero en los últimos tres meses bajaron de 4.3 a 3.4 estrellas. La queja que creció es la espera.",
+  "alert": "las estrellas cayeron de 4.3 a 3.4 en los últimos tres meses, 33% de los comentarios recientes se quejan de la espera y solo 1% de las reseñas recientes tiene respuesta.",
   "actions": [
     {
       "horizon": "this_week",
       "title": "Responda las reseñas recientes",
       "text": "Empiece por las negativas. Agradezca, reconozca la mala experiencia sin discutir y diga qué va a cambiar. Evite respuestas de plantilla.",
-      "why": "Solo 8% de las 26 reseñas recientes respondidas"
+      "why": "1% de las 75 reseñas recientes respondidas"
     },
     {
       "horizon": "this_week",
       "title": "Revise qué cambió en julio",
-      "text": "La caída fue de un mes a otro, no gradual. Mire si hubo cambios de personal, de administrador o de turnos en esas semanas.",
-      "why": "Servicio: 4.1 en junio, 2.5 en julio"
+      "text": "Las estrellas bajaron desde julio de 2026. Mire si hubo cambios de personal, de administrador o de turnos en esas semanas.",
+      "why": "3.7 en julio, 3.3 en agosto y septiembre"
     },
     {
       "horizon": "this_month",
       "title": "Reduzca los tiempos de espera",
       "text": "Si hay personal nuevo, entrénelo y repártalo entre turnos. Si falta gente en horas pico, refuerce esos turnos. Usted sabe cuál aplica.",
-      "why": "Servicio en 2.6 y 22 quejas recientes por espera"
-    },
-    {
-      "horizon": "this_month",
-      "title": "Atienda las quejas del formulario",
-      "text": "Un cliente que se queja en el formulario todavía no ha escrito en Google. Contáctelo o corrija lo que señala antes de que lo haga.",
-      "why": "Google reciente en 3.3, bajo el umbral de 4.0"
+      "why": "Espera: de 0% a 33% de los comentarios"
     },
     {
       "horizon": "ongoing",
       "title": "Asigne un responsable de reseñas",
       "text": "Una persona que responda todas las reseñas cada semana, positivas y negativas.",
-      "why": "Última respuesta: 28 de agosto de 2026"
+      "why": "Antes respondía 38%; ahora 1%"
     },
     {
       "horizon": "ongoing",
       "title": "Mantenga la galleta con el café",
-      "text": "Es un detalle que cuesta poco y que sus clientes mencionan sin que nadie pregunte. Recupere también el saludo y el agradecimiento en la mesa.",
-      "why": "19 elogios a la galleta; 2 quejas recientes por el saludo"
+      "text": "Es barata y sus clientes la mencionan sin que nadie pregunte. Si se dejó de dar, recupérela.",
+      "why": "35 elogios; solo 1 en los últimos 3 meses"
     }
   ],
-  "next_level": "Cuando la atención vuelva a su nivel de antes, el siguiente umbral en Google es 4.5. Su ventaja para llegar ahí son el precio y la comida, ambos en 4.2: conviértalos en mensaje en su perfil de Google y en sus redes. Después del servicio, el aspecto con más margen es el ambiente, en 3.9.",
+  "next_level": "Cuando la atención vuelva a su nivel de antes, el objetivo es que las reseñas recientes vuelvan a superar 4.0 y luego se acerquen a 4.5. Su ventaja para lograrlo son las porciones y el ambiente, que sus clientes siguen elogiando: conviértalos en mensaje en su perfil de Google y en sus redes.",
   "questions": [
-    "¿Hubo cambios de personal, de administrador o de turnos entre junio y julio de 2026?",
-    "¿Aumentó el número de clientes en esos meses sin aumentar el equipo, sobre todo a la hora del almuerzo?",
+    "¿Hubo cambios de personal, de administrador o de turnos alrededor de julio de 2026?",
+    "¿Aumentó el número de clientes en esos meses sin aumentar el equipo?",
+    "¿Se sigue dando la galleta con el café?",
     "¿Quién maneja hoy el perfil de Google del restaurante?"
   ],
-  "data_note": "Ejemplo con datos sintéticos: el restaurante y sus clientes no existen. Este tablero no conoce ventas, costos ni ocupación. Las causas mencionadas son hipótesis: los datos muestran qué pasó y cuándo, no por qué."
+  "data_note": "Ejemplo con datos sintéticos: el restaurante y sus clientes no existen. Los últimos tres meses tienen 36 comentarios, así que pocas menciones mueven mucho las proporciones. Las causas mencionadas son hipótesis: los datos muestran qué pasó y cuándo, no por qué."
 }

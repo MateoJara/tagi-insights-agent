@@ -4,133 +4,122 @@
 > Este es el documento interno de Tagi. Lo que recibe el dueño es el tablero:
 > [dashboard-ejemplo.html](dashboard-ejemplo.html).
 
-**Periodo del formulario:** abril a septiembre de 2026 · 294 respuestas
-**Reseñas de Google:** octubre de 2024 a septiembre de 2026 · 200 reseñas
+**Reseñas de Google:** octubre de 2024 a septiembre de 2026 · 600 reseñas, 304 con
+comentario
 
 ## Resumen
 
-Su comida y sus precios siguen gustando, pero la atención se deterioró desde julio
-de 2026 y ya se nota en Google: sus reseñas de los últimos tres meses promedian 3.3
-frente a 4.2 en el histórico. Lo primero es recuperar el servicio y volver a
-responder las reseñas: solo 8% de las recientes tiene respuesta.
+Sus reseñas fueron muy buenas durante casi dos años, pero en los últimos tres meses
+bajaron de 4.3 a 3.4 estrellas, y en los comentarios aparece una queja que antes casi
+no existía: la espera. Lo primero es reducir los tiempos de espera y volver a
+responder las reseñas, que hoy casi no tienen respuesta.
 
 ## 1. Cómo está el negocio hoy
 
-| Métrica | Valor | Lectura |
-|---|---|---|
-| Calificación general (formulario) | 3.9 de 5 | Aceptable, pero por debajo de 4.0. Base: 286 respuestas. |
-| Clientes satisfechos | 71% | Siete de cada diez califican la visita con 4 o 5. Base: 286 respuestas. |
-| Recomendación (NPS) | -4 | Hay un poco más de clientes que no lo recomendarían que clientes que sí. Base: 287 respuestas. |
-| Calificación en Google | 4.2 de 5 | Sólida, sobre el umbral de 4.0. Base: 200 reseñas. |
-| Google, últimos 3 meses | 3.3 de 5 | Por debajo de 4.0. Base: 26 reseñas. Es la alerta principal. |
-| Reseñas respondidas | 27% histórico, 8% reciente | Última respuesta: 28 de agosto de 2026. |
+| Métrica | Antes | Últimos 3 meses | Lectura |
+|---|---|---|---|
+| Estrellas promedio | 4.3 | 3.4 | Cayó 0.9, y quedó por debajo de 4.0. |
+| Clientes satisfechos (4 y 5 estrellas) | 83% | 53% | Bajó 30 puntos: casi la mitad de las reseñas recientes son de 3 estrellas o menos. |
+| Reseñas respondidas por el dueño | 38% | 1% | Respondió una de las 75 recientes; la última respuesta fue el 14 de septiembre de 2026. |
+| Base | 525 reseñas | 75 reseñas | |
 
-El NPS mide qué tanto lo recomendarían sus clientes: resta el porcentaje que
-responde de 0 a 6 al porcentaje que responde 9 o 10. Va de -100 a 100.
-
-El promedio reciente importa más que el histórico porque es lo que lee quien está
-decidiendo hoy dónde comer. Como referencia de otros mercados, una encuesta de 2026
-en Estados Unidos encontró que 74% de los consumidores busca reseñas de los últimos
-tres meses y 68% solo considera negocios de 4 estrellas o más.
+El promedio total, el que Google muestra, todavía es 4.2 (600 reseñas), porque los
+casi dos años buenos pesan mucho. Pero quien busca un restaurante mira las reseñas
+recientes. Como referencia de otros mercados, una encuesta de 2026 en Estados Unidos
+encontró que 74% de los consumidores busca reseñas de los últimos tres meses y 68%
+solo considera negocios de 4 estrellas o más.
 
 ![Distribución de calificaciones en Google](charts/rating_distribution.png)
 
 ## 2. Qué cambió
 
-La atención es lo único que cambió de forma importante. Pasó de 4.0 a 2.6 en los
-últimos tres meses, una caída de 1.4 puntos (base: 144 respuestas antes y 139 en
-los últimos tres meses).
+Las estrellas se mantuvieron casi siempre por encima de 4 hasta junio de 2026 y
+cayeron en los tres meses siguientes:
 
-La caída fue de un mes a otro, no gradual:
-
-| Mes de 2026 | Servicio | General |
+| Mes de 2026 | Reseñas | Estrellas promedio |
 |---|---|---|
-| Abril | 3.9 | 4.0 |
-| Mayo | 4.1 | 4.1 |
-| Junio | 4.1 | 4.1 |
-| Julio | 2.5 | 3.6 |
-| Agosto | 2.7 | 3.8 |
-| Septiembre | 2.5 | 3.6 |
+| Julio | 22 | 3.7 |
+| Agosto | 27 | 3.3 |
+| Septiembre | 26 | 3.3 |
 
-![Calificación por aspecto, mes a mes](charts/monthly_trend.png)
+![Estrellas promedio, mes a mes](charts/monthly_rating.png)
 
-Los otros tres aspectos casi no se movieron:
+Lo que no cambió es cuántas reseñas recibe: entre 22 y 27 al mes en ese periodo,
+dentro del rango de los meses anteriores (de 16 a 35). No es que lleguen menos
+clientes a opinar; es que opinan peor.
 
-![Antes y ahora por aspecto](charts/aspect_change.png)
+![Reseñas por mes](charts/monthly_volume.png)
 
-El mismo deterioro ya es visible para el público: las reseñas recientes de Google
-bajaron a 3.3, y solo 8% de las 26 tiene respuesta suya.
+Dos meses anteriores también bajaron de 4 (mayo de 2025 y mayo de 2026) y se
+recuperaron al mes siguiente. Por eso un solo mes malo no es alarma; tres seguidos sí.
 
 ## Qué dicen los comentarios
 
-Se analizaron 290 comentarios del formulario y de Google; 125 son de los últimos
-tres meses. De los 290, 21 no dicen nada concreto ("Excelente", "Muy mal") y se
-cuentan aparte.
+Se analizaron 304 comentarios: 268 de antes y 36 de los últimos tres meses. De los
+304, 23 no dicen nada concreto ("Excelente", "Todo bien") y se cuentan aparte. Como los
+periodos tienen distinta duración, se comparan proporciones: qué parte de los
+comentarios de cada periodo menciona un tema.
 
 **De qué se quejan**
 
-| Queja | Menciones | Antes | Últimos 3 meses |
-|---|---|---|---|
-| Tiempo de espera | 23 | 1 | 22 |
-| Trato del personal | 11 | 1 | 10 |
-| Exactitud del pedido | 5 | 2 | 3 |
+| Queja | Antes | Últimos 3 meses |
+|---|---|---|
+| Tiempo de espera | 1 de 268 (0%) | 12 de 36 (33%) |
+| Precio | 16 de 268 (6%) | 1 de 36 (3%) |
+| Música y ruido | 7 de 268 (3%) | 0 |
 
-El tercer lugar es un empate en 5 menciones: pedidos o cuentas equivocados, ruido y
-música (2 recientes) y sabor de la comida (ninguna reciente).
+La espera es la queja que más creció, y lo hizo justo cuando cayeron las
+estrellas: uno de cada tres comentarios recientes la menciona. Otras dos quejas
+también subieron en proporción, pero con una o dos menciones recientes, muy pocas
+para sacar conclusiones: atención del personal (de 0% a 6%) y errores en el pedido
+o la cuenta (de 1% a 3%).
 
-Las quejas por espera y por el trato son casi todas recientes y coinciden con la
-caída de la calificación de servicio. Es la pista más concreta sobre qué arreglar:
+> "Primera vez que vengo y sirven bastante, pero se demoran demasiado en atender"
 
-> "Lástima, el pedido tardó casi una hora. No creo que vuelva"
+> "La verdad muy buena relación calidad-precio, pero la espera fue eterna"
 
-> "Pasaron 20 minutos antes de que alguien se acercara a la mesa"
-
-El mismo tema aparecía antes como elogio: 20 comentarios destacan la rapidez, pero
-solo 3 son de los últimos tres meses. Con el trato pasa igual: 19 elogios, solo 2
-recientes.
+Las dos citas elogian algo antes de quejarse: las porciones y el precio siguen gustando.
 
 **Qué valoran**
 
-| Elogio | Menciones | Últimos 3 meses |
+| Elogio | Antes | Últimos 3 meses |
 |---|---|---|
-| Tamaño de porciones | 46 | 20 |
-| Precio y valor | 41 | 15 |
-| Sabor de la comida | 23 | 7 |
+| Precio | 23% | 14% |
+| Porciones | 18% | 17% |
+| Ambiente del local | 12% | 22% |
+| Rapidez del servicio | 13% | 6% |
+| Galleta de cortesía | 13% | 3% |
+
+La rapidez, que antes se elogiaba en 13% de los comentarios, bajó a 6% (2 menciones
+recientes).
 
 **Detalles pequeños que sus clientes notan**
 
-- **La galleta con el café:** 19 elogios (11 antes, 8 en los últimos tres meses).
-  Cuesta poco y la mencionan sin que nadie pregunte: "El detalle de la galleta con
-  el tinto me pareció muy lindo. volveré". Conviene mantenerla.
-- **El saludo y el agradecimiento:** 2 quejas, ambas recientes: "Nadie saluda ni da
-  las gracias. Ojalá mejoren". Son pocas menciones, pero es de lo más fácil de recuperar.
+- **La galleta con el café:** 35 elogios, pero 34 son de antes y solo 1 de los
+  últimos tres meses. Puede que se haya dejado de dar, o solo que ahora hay menos
+  reseñas contentas. Con 36 comentarios recientes no se puede saber: hay que
+  preguntarlo.
+- **El saludo:** una sola queja, anterior al periodo reciente ("Nadie saluda ni da
+  las gracias"). Es poco, pero es de lo más barato de cuidar.
 
-**Lo que le sugieren**
-
-- Menú con código QR: 10 menciones, 8 de ellas recientes.
-- Más personal a la hora del almuerzo: 8 menciones, 5 recientes. Apunta en la misma
-  dirección que las quejas por espera.
-- Abrir los domingos: 6. Menú infantil: 6.
+No hubo sugerencias concretas en los comentarios.
 
 ## 3. Qué funciona y hay que proteger
 
-- **Precio:** 4.2 de 5. Es su aspecto mejor calificado; pasó de 4.3 a 4.2. En los
-  comentarios es el segundo elogio más frecuente (41 menciones).
-- **Comida:** 4.2 de 5. Pasó de 4.2 a 4.1. Lo que más elogian es el tamaño de las
-  porciones (46 menciones); el sabor suma 23 elogios.
-- **Ambiente:** 3.9 de 5. Pasó de 4.0 a 3.8.
+- **Las porciones:** se elogian igual antes y ahora (18% y 17%).
+- **El ambiente:** sube de 12% a 22% de los comentarios recientes.
+- **El precio:** sigue siendo el elogio más repetido en el total (66 menciones),
+  aunque baja de 23% a 14%.
 
-Sus clientes siguen valorando lo que sirve y lo que cobra. Al corregir la atención,
-no toque la carta ni los precios.
+Sus clientes siguen valorando lo que sirve, lo que cobra y el lugar. Al corregir la
+atención, no toque la carta ni los precios.
 
 ## 4. En qué concentrarse
 
-1. **Recuperar la atención, empezando por los tiempos de espera.** El servicio es el
-   único aspecto que cayó (de 4.0 a 2.6) y arrastra la calificación general, que
-   bajó de 4.1 en junio a 3.6 en septiembre. La espera es la queja más repetida: 23
-   menciones, 22 de ellas recientes.
-2. **Volver a responder las reseñas.** Antes respondía 30% (base: 174 reseñas) y en
-   los últimos tres meses 8% (base: 26), justo cuando llegaron las más críticas.
+1. **Reducir los tiempos de espera.** Las estrellas bajaron de 4.3 a 3.4 y la espera
+   pasó de 0% a 33% de los comentarios en el mismo periodo.
+2. **Volver a responder las reseñas.** De 38% respondidas a 1%, justo cuando llegan
+   las más críticas.
 
 ## 5. Plan de acción
 
@@ -139,56 +128,51 @@ no toque la carta ni los precios.
 - **Responda las reseñas de los últimos tres meses, empezando por las negativas.**
   Agradezca, reconozca la mala experiencia sin discutir y diga qué va a cambiar.
   Evite respuestas de plantilla.
-  *Por qué:* solo 8% de las 26 reseñas recientes tiene respuesta.
+  *Por qué:* 1% de las 75 reseñas recientes tiene respuesta.
   *Cómo medirlo:* porcentaje de reseñas recientes respondidas en el próximo informe.
-- **Revise qué cambió en el equipo o en los turnos hacia julio.** Vea las preguntas
-  al final.
-  *Por qué:* la atención pasó de 4.1 en junio a 2.5 en julio, de un mes a otro.
+- **Revise qué cambió hacia julio de 2026.** Vea las preguntas al final.
+  *Por qué:* las estrellas pasaron de estar casi siempre sobre 4 a 3.7 en julio y
+  3.3 en agosto y septiembre.
 
 ### Este mes
 
 - **Reduzca los tiempos de espera.** Si hubo personal nuevo: entrénelo y repártalo
-  entre turnos en lugar de concentrarlo. Si falta gente en horas pico: refuerce esos
-  turnos; 8 clientes sugieren más personal a la hora del almuerzo. Son sugerencias
+  entre turnos. Si falta gente en horas pico: refuerce esos turnos. Son sugerencias
   habituales del sector; usted sabe cuál aplica.
-  *Por qué:* servicio en 2.6 en los últimos tres meses y 22 quejas recientes por espera.
-  *Cómo medirlo:* la calificación mensual de servicio debe volver a acercarse a 4.0
-  y las quejas por espera deben bajar.
-- **Atienda las quejas del formulario como oportunidades.** Un cliente que se queja
-  ahí todavía no ha escrito en Google.
-  *Cómo medirlo:* calificación reciente en Google de vuelta sobre 4.0.
+  *Por qué:* 33% de los comentarios recientes se quejan de la espera.
+  *Cómo medirlo:* esa proporción debe bajar y las estrellas mensuales volver a 4.
 
 ### Continuo
 
 - **Asigne a una persona la tarea de responder todas las reseñas cada semana.**
-  *Por qué:* la última respuesta fue el 28 de agosto de 2026.
-- **Mantenga la galleta con el café y recupere el saludo.** Son detalles que cuestan
-  poco y que sus clientes notan.
-  *Por qué:* 19 elogios a la galleta; 2 quejas recientes porque nadie saluda.
+  *Por qué:* antes respondía 38%; ahora 1%.
+- **Mantenga la galleta con el café**, si se dejó de dar, recupérela. Es barata y
+  sus clientes la mencionan sin que nadie pregunte.
+  *Por qué:* 35 elogios en total.
 - **Invite a todos sus clientes a dejar su opinión**, sin filtrar a los contentos y
   sin ofrecer nada a cambio. Google prohíbe los incentivos por reseñas.
 
 ## 6. El siguiente nivel
 
-Cuando la atención vuelva a su nivel de antes, el siguiente umbral en Google es 4.5.
-Su ventaja para llegar ahí es clara: precio y comida en 4.2. Conviértalos en mensaje
-en su perfil de Google y en sus redes. El aspecto con más margen después del
-servicio es el ambiente, en 3.9.
+Cuando la atención vuelva a su nivel de antes, el objetivo es que las reseñas
+recientes vuelvan a superar 4.0 y luego se acerquen a 4.5. Su ventaja para lograrlo
+son las porciones y el ambiente, que sus clientes siguen elogiando: conviértalos en
+mensaje en su perfil de Google y en sus redes.
 
 ## Preguntas para usted
 
-1. ¿Hubo cambios de personal, de administrador o de turnos entre junio y julio de 2026?
-2. ¿Aumentó el número de clientes en esos meses sin aumentar el equipo, sobre todo
-   a la hora del almuerzo?
-3. ¿Quién maneja hoy el perfil de Google del restaurante?
+1. ¿Hubo cambios de personal, de administrador o de turnos alrededor de julio de 2026?
+2. ¿Aumentó el número de clientes en esos meses sin aumentar el equipo?
+3. ¿Se sigue dando la galleta con el café?
+4. ¿Quién maneja hoy el perfil de Google del restaurante?
 
 ## Sobre estos datos
 
-- Formulario: 300 respuestas leídas, 6 duplicadas eliminadas, 294 analizadas.
-- Google: 200 reseñas analizadas; 42% trae texto.
-- Comentarios: 290 analizados. Cada uno se clasificó por tema leyéndolo; un mismo
-  comentario puede contar en dos temas. Las citas son textuales.
-- Este informe no conoce sus ventas, costos ni ocupación, y no estima impacto en
-  dinero. Quien responde un formulario o deja una reseña no representa a todos sus
-  clientes.
+- 600 reseñas leídas, ninguna duplicada; 304 traen comentario.
+- Cada comentario se clasificó por tema leyéndolo; un mismo comentario puede contar
+  en dos temas. Las citas son textuales.
+- Los últimos tres meses tienen 36 comentarios: un cambio de pocas menciones en ese
+  periodo mueve mucho las proporciones.
+- Este informe no conoce sus ventas, costos ni ocupación. Quien deja una reseña no
+  representa a todos sus clientes: escriben más los muy contentos y los muy molestos.
 - Las causas mencionadas son hipótesis. Los datos muestran qué pasó y cuándo, no por qué.
