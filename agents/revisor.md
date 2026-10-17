@@ -20,6 +20,7 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
   `comment_labels.csv`.
 - El Python del análisis (la línea `TAGI_PYTHON` del paso de preparación), que
   tiene pandas. Si no te lo pasan, usa `python`.
+- La raíz del plugin, para saber qué código no debes usar.
 
 ## Qué haces
 

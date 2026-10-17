@@ -9,6 +9,7 @@ Run with: python -m src.dashboard --insights <json> --output <html>
 import argparse
 import html
 import json
+import re
 from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
@@ -19,15 +20,17 @@ TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "dashboard.html"
 EXAMPLES_DIR = Path(__file__).resolve().parent.parent / "examples"
 
 MAX_REVIEWS_LISTED = 40
-MAX_TOPICS_LISTED = 5
+# Per kind, in the lists and in the "before and now" table alike, so both show the same topics.
+MAX_TOPICS_LISTED = 4
 SMALL_DETAIL_KINDS = {
     "praise": ("Lo elogian", "good"),
     "complaint": ("Lo echan de menos", "warn"),
     "suggestion": ("Lo sugieren", "warn"),
 }
-MAX_TOPICS_COMPARED = 4  # per kind, in the "before and now" table
 # A smaller move in a topic's share of comments is too small to call a change.
 CLEAR_SHARE_CHANGE = 0.10
+# With fewer comments than this in a period, a topic is not called up or down at all.
+MIN_COMMENTS_COMPARED = 10
 
 # Shown as a link after the invitations to contact Tagi.
 TAGI_CONTACT = {
@@ -74,6 +77,39 @@ def _percent_points(value, digits=0):
 
 def percent(value, digits=0):
     return f"{_percent_points(value, digits)}%"
+
+
+def _words(text):
+    return len(text.split())
+
+
+def _sentences(text):
+    """Sentences in a text. A period, question or exclamation mark followed by a space ends one, so "4.3" does not."""
+    text = text.strip()
+    return len([part for part in re.split(r"(?<=[.!?])\s+", text) if part]) if text else 0
+
+
+def check_insights(insights, data_warnings=()):
+    """The limits of references/tablero.md that code can count. Returns the problems, empty when there are none."""
+    problems = []
+    for field, limit in (("summary", 2), ("alert", 1), ("next_level", 3), ("data_note", 2)):
+        if _sentences(insights[field]) > limit:
+            problems.append(f"{field} tiene {_sentences(insights[field])} frases (máximo {limit})")
+    if _words(insights["headline"]) > 8:
+        problems.append(f"headline tiene {_words(insights['headline'])} palabras (máximo 8)")
+    low, actions = bool(data_warnings), insights["actions"]
+    fewest, most = (1, 3) if low else (3, 6)
+    if not fewest <= len(actions) <= most:
+        reason = " porque hay pocos datos" if low else ""
+        problems.append(f"hay {len(actions)} acciones (deben ser de {fewest} a {most}{reason})")
+    for action in actions:
+        if _words(action["title"]) > 6:
+            problems.append(f"el título {action['title']!r} tiene {_words(action['title'])} palabras (máximo 6)")
+        if _sentences(action["text"]) > 2:
+            problems.append(f"el texto de {action['title']!r} tiene {_sentences(action['text'])} frases (máximo 2)")
+    if not 2 <= len(insights["questions"]) <= 4:
+        problems.append(f"hay {len(insights['questions'])} preguntas (deben ser de 2 a 4)")
+    return problems
 
 
 def load_insights(path):
@@ -157,21 +193,25 @@ def _kpis(metrics):
             "★",
             _rating_status(recent_mean),
             f"{_plural(reviews['recent_n'], 'reseña', 'reseñas')} · "
-            + ("sin reseñas anteriores" if previous_mean is None else f"antes {rating(previous_mean)}"),
+            + ("sin reseñas anteriores" if previous_mean is None
+               else f"antes {rating(previous_mean)} ({_plural(reviews['previous_n'], 'reseña', 'reseñas')})"),
         ),
         kpi(
             f"Clientes satisfechos, últimos {months} meses",
             share(recent_satisfied),
             "4–5★",
             _share_status(recent_satisfied, 0.8, 0.6, ("Alto", "Medio", "Bajo")),
-            "Sin reseñas anteriores" if previous_satisfied is None else f"Antes {share(previous_satisfied)}",
+            f"De {_plural(reviews['recent_n'], 'reseña', 'reseñas')} · "
+            + ("sin reseñas anteriores" if previous_satisfied is None
+               else f"antes {share(previous_satisfied)} de {reviews['previous_n']}"),
         ),
         kpi(
             "Reseñas recientes respondidas",
             share(reviews["recent_reply_rate"]),
             "",
             _share_status(reviews["recent_reply_rate"], 0.8, 0.3, ("Al día", "Irregular", "Sin responder")),
-            "Nunca ha respondido" if last_reply is None else f"Última respuesta: {_short_date(last_reply)}",
+            f"De {reviews['recent_n']} recientes · "
+            + ("nunca ha respondido" if last_reply is None else f"última respuesta: {_short_date(last_reply)}"),
         ),
     ]
 
@@ -181,14 +221,17 @@ def _topic_changes(comment_metrics):
     # Without comments in both periods there is nothing to compare: 0% would look like data.
     if comment_metrics is None or not comment_metrics["n_previous_comments"] or not comment_metrics["n_recent_comments"]:
         return []
+    n_previous, n_recent = comment_metrics["n_previous_comments"], comment_metrics["n_recent_comments"]
     rows = []
     for kind, label, worse_when_up in (("complaint", "Queja", True), ("praise", "Elogio", False)):
         ranking = comment_metrics["top_complaints" if kind == "complaint" else "top_praise"]
-        for entry in ranking[:MAX_TOPICS_COMPARED]:
+        for entry in ranking[:MAX_TOPICS_LISTED]:
             previous, recent = entry["previous_share"] or 0.0, entry["recent_share"] or 0.0
             # Points between the two rounded shares shown, so the row adds up for the reader.
             points = int(_percent_points(recent) - _percent_points(previous))
-            if abs(recent - previous) < CLEAR_SHARE_CHANGE:
+            if min(n_previous, n_recent) < MIN_COMMENTS_COMPARED:
+                status = ("neutral", "Base pequeña")
+            elif abs(recent - previous) < CLEAR_SHARE_CHANGE:
                 status = ("neutral", "Sin cambio claro")
             elif (recent > previous) == worse_when_up:
                 status = ("crit", "Aumentó" if worse_when_up else "Disminuyó")
@@ -199,6 +242,8 @@ def _topic_changes(comment_metrics):
                 "kind": label,
                 "previous": percent(previous),
                 "recent": percent(recent),
+                "previous_count": f"{entry['previous_n'] or 0} de {n_previous}",
+                "recent_count": f"{entry['recent_n'] or 0} de {n_recent}",
                 "change": f"{points:+d} pts" if points else "0 pts",
                 "status": status[0],
                 "status_label": status[1],
@@ -276,6 +321,9 @@ def _data_warning(metrics):
                        "orientativas: unas pocas opiniones nuevas pueden cambiarlas mucho.",
         "no_previous_reviews": f"Todas sus reseñas son de los últimos {months} meses: todavía no hay un antes "
                                "con qué comparar.",
+        "few_previous_reviews": f"Antes de los últimos {months} meses hay solo "
+                                f"{_plural(reviews['previous_n'], 'reseña', 'reseñas')}: muy pocas para "
+                                "saber si algo cambió.",
         "few_recent_reviews": f"En los últimos {months} meses hay {_plural(reviews['recent_n'], 'reseña', 'reseñas')}: "
                               "muy pocas para saber si algo cambió frente a antes.",
         "few_comments": "Ninguna reseña trae comentario: no hay temas que analizar." if n_comments == 0 else
@@ -292,6 +340,9 @@ def _data_warning(metrics):
 def build_dashboard_data(reviews_path, insights, comment_metrics=None):
     """Everything the template needs, with every figure already formatted."""
     metrics = build_metrics(reviews_path)
+    problems = check_insights(insights, metrics["data_warnings"])
+    if problems:
+        raise ValueError("insights.json no cumple los límites de references/tablero.md:\n- " + "\n- ".join(problems))
     reviews, _ = load_google_reviews(reviews_path)
     review_summary = metrics["reviews"]
     monthly = metrics["reviews_monthly"]
@@ -349,7 +400,10 @@ def main(argv=None):
     comment_metrics = None
     if args.comments:
         comment_metrics = json.loads(Path(args.comments).read_text(encoding="utf-8"))
-    data = build_dashboard_data(args.reviews, load_insights(args.insights), comment_metrics)
+    try:
+        data = build_dashboard_data(args.reviews, load_insights(args.insights), comment_metrics)
+    except ValueError as error:
+        raise SystemExit(str(error)) from None
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(render_dashboard(data), encoding="utf-8")

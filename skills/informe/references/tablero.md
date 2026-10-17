@@ -47,7 +47,8 @@ tablero sale de ellas:
 
 ## Campos de `insights.json`
 
-Todos son obligatorios.
+Todos son obligatorios. Al generar el tablero, el script cuenta palabras, frases,
+acciones y preguntas, y no genera nada si algo pasa los límites.
 
 | Campo | Qué es | Límite |
 |---|---|---|
@@ -79,6 +80,7 @@ acompañan así:
 | Código | Qué significa | Qué cambia en los textos |
 |---|---|---|
 | `few_reviews` | menos de 50 reseñas en total | Ninguna conclusión firme: todo es "parece", "por ahora". `alert` vacío salvo algo evidente, como reseñas negativas sin responder |
+| `few_previous_reviews` | menos de 10 antes de los últimos meses | No afirmar que algo mejoró o empeoró: el "antes" es muy pequeño. La tabla de temas no marca cambios |
 | `few_recent_reviews` | menos de 10 en los últimos meses | No afirmar que algo mejoró o empeoró. Describir lo reciente sin compararlo |
 | `no_previous_reviews` | todas las reseñas son recientes | No hay "antes": ninguna frase compara periodos |
 | `few_comments` | menos de 20 comentarios | Los temas se nombran como pistas, no como lo que piensan sus clientes |

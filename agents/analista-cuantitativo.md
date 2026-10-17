@@ -17,6 +17,9 @@ te dan ruta, usa el dataset sintético: omite `--reviews` en los comandos.
 `<python>` es el Python del análisis que te pasa quien te llama (la línea
 `TAGI_PYTHON` del paso de preparación). Si no te lo pasan, usa `python`.
 
+Si en este archivo ves `${CLAUDE_PLUGIN_ROOT}` escrito tal cual, sin reemplazar por una
+ruta, usa la raíz del plugin que te pasa quien te llama.
+
 ## Qué haces
 
 1. **Calcula las cifras:**

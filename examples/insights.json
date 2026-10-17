@@ -7,7 +7,7 @@
     {
       "horizon": "this_week",
       "title": "Responda las reseñas recientes",
-      "text": "Empiece por las negativas. Agradezca, reconozca la mala experiencia sin discutir y diga qué va a cambiar. Evite respuestas de plantilla.",
+      "text": "Empiece por las negativas: agradezca, reconozca la mala experiencia sin discutir y diga qué va a cambiar. Evite respuestas de plantilla.",
       "why": "1% de las 75 reseñas recientes respondidas"
     },
     {
@@ -19,7 +19,7 @@
     {
       "horizon": "this_month",
       "title": "Reduzca los tiempos de espera",
-      "text": "Si hay personal nuevo, entrénelo y repártalo entre turnos. Si falta gente en horas pico, refuerce esos turnos. Usted sabe cuál aplica.",
+      "text": "Si hay personal nuevo, entrénelo y repártalo entre turnos. Si falta gente en horas pico, refuerce esos turnos; usted sabe cuál aplica.",
       "why": "Espera: de 0% a 33% de los comentarios"
     },
     {

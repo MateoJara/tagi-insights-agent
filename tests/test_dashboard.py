@@ -22,9 +22,9 @@ def _insights(**overrides):
         "headline": "headline",
         "summary": "summary",
         "alert": "alert",
-        "actions": [{"horizon": "this_week", "title": "t", "text": "x", "why": "w"}],
+        "actions": [{"horizon": "this_week", "title": "t", "text": "x", "why": "w"}] * 3,
         "next_level": "next",
-        "questions": ["q1"],
+        "questions": ["q1", "q2"],
         "data_note": "note",
     }
     insights.update(overrides)
@@ -216,7 +216,7 @@ def test_without_earlier_reviews_nothing_is_compared(tmp_path):
                         ["Excelente atención", "Bien", None])
     data = dashboard.build_dashboard_data(path, _insights())
     assert data["kpis"][1]["detail"] == "3 reseñas · sin reseñas anteriores"
-    assert data["kpis"][2]["detail"] == "Sin reseñas anteriores"
+    assert data["kpis"][2]["detail"] == "De 3 reseñas · sin reseñas anteriores"
     assert any("todavía no hay un antes" in item for item in data["data_warning"]["items"])
     no_earlier_comments = {"n_previous_comments": 0, "n_recent_comments": 2,
                            "top_complaints": [], "top_praise": []}
@@ -234,3 +234,72 @@ def test_small_moves_are_not_called_a_change(with_comments):
     for row in with_comments["topic_changes"]:
         if abs(int(row["change"].split()[0])) < dashboard.CLEAR_SHARE_CHANGE * 100 - 1:
             assert (row["status"], row["status_label"]) == ("neutral", "Sin cambio claro")
+
+
+def test_kpis_show_the_reviews_behind_each_figure(data):
+    reviews = build_metrics(REVIEWS)["reviews"]
+    assert f"({reviews['previous_n']} reseñas)" in data["kpis"][1]["detail"]
+    assert data["kpis"][2]["detail"].startswith(f"De {reviews['recent_n']} reseñas")
+    assert f"de {reviews['previous_n']}" in data["kpis"][2]["detail"]
+    assert data["kpis"][3]["detail"].startswith(f"De {reviews['recent_n']} recientes")
+
+
+def test_topic_table_shows_counts_and_the_same_topics_as_the_lists(with_comments):
+    complaints = [row["topic"] for row in with_comments["comments"]["complaints"]]
+    compared = [row["topic"] for row in with_comments["topic_changes"] if row["kind"] == "Queja"]
+    assert compared == complaints
+    first = with_comments["topic_changes"][0]
+    assert first["previous_count"].endswith("de 268") and first["recent_count"].endswith("de 36")
+
+
+def test_a_tiny_period_gets_no_verdict():
+    entry = {"topic": "espera", "previous_share": 0.0, "recent_share": 0.67, "previous_n": 0, "recent_n": 2}
+    tiny_before = {"n_previous_comments": 3, "n_recent_comments": 36, "top_complaints": [entry], "top_praise": []}
+    row = dashboard._topic_changes(tiny_before)[0]
+    assert (row["status"], row["status_label"]) == ("neutral", "Base pequeña")
+    assert row["recent_count"] == "2 de 36"
+
+
+def test_few_earlier_reviews_get_their_own_notice(tmp_path):
+    dates = list(pd.date_range("2026-03-01", periods=5, freq="D")) + list(pd.date_range("2026-07-01", periods=60, freq="D"))
+    path = _few_reviews(tmp_path, dates, [5] * 65, [None] * 65)
+    data = dashboard.build_dashboard_data(path, _insights())
+    assert any(item.startswith("Antes de los últimos 3 meses hay solo 5 reseñas") for item in data["data_warning"]["items"])
+
+
+@pytest.mark.parametrize(
+    ("change", "problem"),
+    [
+        ({"headline": "una dos tres cuatro cinco seis siete ocho nueve"}, "headline tiene 9 palabras"),
+        ({"summary": "Uno. Dos. Tres."}, "summary tiene 3 frases"),
+        ({"actions": [{"horizon": "ongoing", "title": "uno dos tres cuatro cinco seis siete",
+                       "text": "Uno. Dos. Tres.", "why": "w"}] * 3}, "tiene 7 palabras"),
+        ({"questions": ["solo una"]}, "hay 1 preguntas"),
+    ],
+)
+def test_insights_limits_are_checked(change, problem):
+    problems = dashboard.check_insights(_insights(**change))
+    assert any(problem in text for text in problems)
+
+
+def test_decimals_are_not_sentence_ends():
+    assert dashboard._sentences("Bajaron de 4.3 a 3.4 estrellas. La queja es la espera.") == 2
+
+
+def test_low_data_allows_fewer_actions_and_caps_them():
+    one_action = _insights(actions=[{"horizon": "this_week", "title": "t", "text": "x", "why": "w"}])
+    assert dashboard.check_insights(one_action, ["few_reviews"]) == []
+    assert any("de 3 a 6" in text for text in dashboard.check_insights(one_action))
+    many = _insights(actions=[{"horizon": "ongoing", "title": "t", "text": "x", "why": "w"}] * 4)
+    assert any("de 1 a 3" in text for text in dashboard.check_insights(many, ["few_reviews"]))
+
+
+def test_the_example_texts_follow_the_limits():
+    insights = dashboard.load_insights(dashboard.EXAMPLES_DIR / "insights.json")
+    assert dashboard.check_insights(insights) == []
+
+
+def test_cli_refuses_texts_over_the_limits(tmp_path):
+    path = _write(tmp_path, _insights(summary="Uno. Dos. Tres."))
+    with pytest.raises(SystemExit, match="summary tiene 3 frases"):
+        dashboard.main(["--insights", str(path), "--output", str(tmp_path / "t.html")])

@@ -91,6 +91,7 @@ def test_no_warnings_with_enough_data(reviews):
         ({"n_reviews": 49}, ["few_reviews"]),
         ({"n_reviews": 30}, ["few_reviews"]),
         ({"recent_n": 9}, ["few_recent_reviews"]),
+        ({"previous_n": 5}, ["few_previous_reviews"]),
         ({"recent_text_n": 5, "previous_text_n": 14}, ["few_comments"]),
         # Without a "before", "few recent reviews" is not the problem: there is nothing to compare.
         ({"n_reviews": 3, "recent_n": 3, "previous_n": 0, "recent_text_n": 2, "previous_text_n": 0},

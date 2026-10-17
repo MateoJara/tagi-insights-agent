@@ -17,6 +17,19 @@ Quien pide el tablero puede no saber nada de programación. Háblale de usted, e
 español, sin términos técnicos, y cuéntale en una línea qué estás haciendo en cada
 paso.
 
+## Rutas del plugin
+
+Este texto usa `${CLAUDE_PLUGIN_ROOT}` (la raíz del plugin), `${CLAUDE_SKILL_DIR}` (la
+carpeta de esta skill) y `${CLAUDE_PLUGIN_DATA}` (una carpeta propia del plugin). En
+algunos entornos, como Cowork, llegan escritas tal cual, sin reemplazar. Si es así:
+
+- La carpeta de esta skill es su "base directory" (termina en `skills/informe`).
+- La raíz del plugin está dos niveles arriba de esa carpeta: es la que tiene `tagi.py`.
+- En el paso de preparación, omite `--env-dir`.
+
+Pásale a cada subagente la raíz del plugin, ya resuelta, junto con el Python del
+análisis.
+
 ## Entradas
 
 Las reseñas pueden llegar de tres formas:
@@ -61,16 +74,16 @@ subas a ningún servicio.
    python.exe to PATH") y detente.
 
 1. **Importar las reseñas.** Lanza el subagente `tagi:importador` con las rutas de
-   las reseñas (archivos o carpeta), la carpeta de salida `<salida>` y el Python del
-   análisis. Deja `<salida>/google_reviews.csv`.
+   las reseñas (archivos o carpeta), la carpeta de salida `<salida>`, el Python del
+   análisis y la raíz del plugin. Deja `<salida>/google_reviews.csv`.
 
    Si el importador pregunta algo (por ejemplo, el día en que se copiaron unas
    reseñas de Google Maps), hazle la pregunta al usuario con palabras sencillas y
    vuelve a lanzarlo con la respuesta. No respondas tú por el usuario.
 
 2. **Delegar el análisis a los dos subagentes, en paralelo** (las dos llamadas en
-   el mismo mensaje). A cada uno se le pasa la ruta del CSV, su carpeta y el Python
-   del análisis:
+   el mismo mensaje). A cada uno se le pasa la ruta del CSV, su carpeta, el Python
+   del análisis y la raíz del plugin:
 
    - `tagi:analista-cuantitativo`, con `<salida>`: deja `metrics.json`
      (reporte de limpieza y todas las cifras).
@@ -97,8 +110,11 @@ subas a ningún servicio.
 
 5. **Escribir los textos del tablero** en `<salida>/insights.json`, con el
    tono, las preguntas previas y los campos de `${CLAUDE_SKILL_DIR}/references/tablero.md`.
-   Ejemplo completo: `${CLAUDE_PLUGIN_ROOT}/examples/insights.json`. El nombre
-   del negocio sale de los archivos o se le pregunta al usuario.
+   Ejemplo completo: `${CLAUDE_PLUGIN_ROOT}/examples/insights.json`.
+
+   El nombre del negocio sale de los archivos. Si no está, pregúntaselo al usuario
+   antes de escribir: no pongas un nombre genérico ("Mi negocio", "Su negocio")
+   salvo que el usuario lo pida.
 
 6. **Generar el tablero.** Las cifras las pone el script; no se escriben a mano.
 
@@ -107,10 +123,14 @@ subas a ningún servicio.
    ```
 
    El aviso de pocos datos y el cierre con el contacto de Tagi los pone el script.
+   El script también cuenta palabras, frases, acciones y preguntas de
+   `insights.json`: si algo pasa los límites, dice qué y no genera el tablero.
+   Corrige los textos y vuelve a correrlo.
    Si puedes abrirlo, revisa que se vea bien y que no haya errores.
 
 7. **Pasar por el revisor.** Lanza el subagente `tagi:revisor` con la ruta del CSV,
-   `insights.json`, el tablero, la carpeta de comentarios y el Python del análisis.
+   `insights.json`, el tablero, la carpeta de comentarios, el Python del análisis y
+   la raíz del plugin.
    Recalcula cada cifra por su cuenta y comprueba cada cita.
 
    - Si devuelve `CON ERRORES`: corrige lo que señala, genera el tablero de nuevo

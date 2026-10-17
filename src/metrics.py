@@ -16,6 +16,7 @@ RECENT_MONTHS = 3
 # Below these, the figures are only indicative and the dashboard says so.
 MIN_REVIEWS = 50
 MIN_RECENT_REVIEWS = 10
+MIN_PREVIOUS_REVIEWS = 10
 MIN_COMMENTS = 20
 
 
@@ -97,8 +98,11 @@ def data_warnings(summary):
         warnings.append("few_reviews")
     if summary["previous_n"] == 0:
         warnings.append("no_previous_reviews")
-    elif summary["recent_n"] < MIN_RECENT_REVIEWS:
-        warnings.append("few_recent_reviews")
+    else:
+        if summary["previous_n"] < MIN_PREVIOUS_REVIEWS:
+            warnings.append("few_previous_reviews")
+        if summary["recent_n"] < MIN_RECENT_REVIEWS:
+            warnings.append("few_recent_reviews")
     if summary["recent_text_n"] + summary["previous_text_n"] < MIN_COMMENTS:
         warnings.append("few_comments")
     return warnings

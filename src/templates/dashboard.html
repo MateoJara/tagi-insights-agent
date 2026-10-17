@@ -99,6 +99,7 @@ td.n,th.n{text-align:right}
 .detail .dhd{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
 .detail .dhd span.cnt{color:var(--ink-2);font-size:13px}
 td .kind{font-size:12px;color:var(--muted)}
+td .base{display:block;font-size:11.5px;color:var(--muted);white-space:nowrap}
 td .pill.inline{display:none;margin-top:4px}
 .questions{margin:0;padding-left:20px;color:var(--ink-2);display:flex;flex-direction:column;gap:6px}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
@@ -348,7 +349,8 @@ function bindTip(node, container, build) {
     $('lowData').hidden = false;
   }
   $('topicSub').textContent = 'Qué parte de los comentarios menciona cada tema en los últimos ' + D.recent_months +
-    ' meses, frente al periodo anterior. Se comparan proporciones porque los periodos tienen distinta duración.';
+    ' meses, frente al periodo anterior, con los comentarios detrás de cada cifra. Se comparan proporciones' +
+    ' porque los periodos tienen distinta duración.';
   $('distSub').textContent = D.n_reviews + (D.n_reviews === 1 ? ' reseña en total.' : ' reseñas en total.');
 })();
 
@@ -427,8 +429,11 @@ D.topic_changes.forEach(row => {
   add(name, 'div', 'kind', row.kind);
   // On narrow screens the status moves under the topic name instead of its own column.
   add(name, 'span', 'pill inline ' + row.status, row.status_label);
-  add(tr, 'td', 'n num', row.previous);
-  add(tr, 'td', 'n num', row.recent);
+  // Each share with the comments behind it, so a big change on two comments reads as such.
+  [[row.previous, row.previous_count], [row.recent, row.recent_count]].forEach(([share, count]) => {
+    const cell = add(tr, 'td', 'n num', share);
+    add(cell, 'span', 'base', count);
+  });
   add(tr, 'td', 'n num', row.change);
   add(add(tr, 'td', 'status-col'), 'span', 'pill ' + row.status, row.status_label);
 });
