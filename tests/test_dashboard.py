@@ -176,3 +176,59 @@ def test_main_writes_the_file_with_comments(tmp_path):
     page = output.read_text(encoding="utf-8")
     assert page.startswith("<!doctype html>")
     assert _embedded_data(page)["topic_changes"]
+
+
+def _few_reviews(tmp_path, dates, ratings, texts):
+    path = tmp_path / "few.csv"
+    pd.DataFrame({
+        "review_id": [f"R{i}" for i in range(len(dates))],
+        "review_date": pd.to_datetime(dates),
+        "rating": ratings,
+        "text": texts,
+        "owner_replied": [False] * len(dates),
+        "owner_reply_date": [None] * len(dates),
+    }).to_csv(path, index=False)
+    return path
+
+
+def test_sample_has_no_low_data_notice_but_has_the_closing(data):
+    assert data["data_warning"] is None
+    assert "Tagi Insights Agent" in data["closing"] and dashboard.TAGI_CONTACT in data["closing"]
+
+
+def test_few_reviews_build_a_dashboard_with_a_notice(tmp_path):
+    dates = pd.date_range("2024-01-01", periods=8, freq="90D")
+    path = _few_reviews(tmp_path, dates, [5, 4, 3, 5, 2, 4, 5, 1],
+                        ["Muy buen servicio", None, "Regular", None, None, "Bien", None, "Malo"])
+    data = dashboard.build_dashboard_data(path, _insights())
+    items = data["data_warning"]["items"]
+    assert items[0].startswith("Con 8 reseñas")
+    assert any("hay 2 reseñas" in item for item in items)
+    assert any("Solo 4 reseñas traen comentario" in item for item in items)
+    assert dashboard.TAGI_CONTACT in data["data_warning"]["invitation"]
+    assert "antes 3.8" in data["kpis"][1]["detail"]
+    assert "<title>" in dashboard.render_dashboard(data)
+
+
+def test_without_earlier_reviews_nothing_is_compared(tmp_path):
+    path = _few_reviews(tmp_path, ["2026-08-01", "2026-08-15", "2026-09-01"], [5, 4, 5],
+                        ["Excelente atención", "Bien", None])
+    data = dashboard.build_dashboard_data(path, _insights())
+    assert data["kpis"][1]["detail"] == "3 reseñas · sin reseñas anteriores"
+    assert any("todavía no hay un antes" in item for item in data["data_warning"]["items"])
+    no_earlier_comments = {"n_previous_comments": 0, "n_recent_comments": 2,
+                           "top_complaints": [], "top_praise": []}
+    assert dashboard._topic_changes(no_earlier_comments) == []
+
+
+def test_a_single_review_without_text(tmp_path):
+    data = dashboard.build_dashboard_data(_few_reviews(tmp_path, ["2026-08-01"], [3], [None]), _insights())
+    assert data["kpis"][0]["detail"] == "1 reseña en total"
+    assert "Ninguna reseña trae comentario: no hay temas que analizar." in data["data_warning"]["items"]
+    assert data["reviews"] == [] and data["trend"][0]["values"] == [3.0]
+
+
+def test_small_moves_are_not_called_a_change(with_comments):
+    for row in with_comments["topic_changes"]:
+        if abs(int(row["change"].split()[0])) < dashboard.CLEAR_SHARE_CHANGE * 100 - 1:
+            assert (row["status"], row["status_label"]) == ("neutral", "Sin cambio claro")

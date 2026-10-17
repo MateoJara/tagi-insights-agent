@@ -27,6 +27,9 @@ dataset sintético: omite `--reviews` en los comandos.
    el tono, pero el tipo de cada tema sale de lo que dice el texto: una reseña de 4
    estrellas puede traer una queja.
 
+   Si el archivo queda sin comentarios, detente aquí y repórtalo: no hay nada que
+   etiquetar, y el tablero se hace sin la sección de comentarios.
+
 2. **Lee todos los comentarios** de ese archivo antes de decidir nada.
 
 3. **Define los temas** a partir de lo que leíste y no de una lista previa. Un tema

@@ -1,4 +1,4 @@
-"""Metrics for the insights report, computed from the cleaned reviews.
+"""Metrics for the insights dashboard, computed from the cleaned reviews.
 
 Run with: python -m src.metrics
 """
@@ -13,6 +13,10 @@ from src.load_data import SAMPLE_DIR, load_google_reviews
 
 SATISFIED_MIN_RATING = 4
 RECENT_MONTHS = 3
+# Below these, the figures are only indicative and the dashboard says so.
+MIN_REVIEWS = 30
+MIN_RECENT_REVIEWS = 10
+MIN_COMMENTS = 20
 
 
 def recent_mask(dates, months=RECENT_MONTHS):
@@ -86,13 +90,29 @@ def review_summary(reviews, months=RECENT_MONTHS):
     }
 
 
+def data_warnings(summary):
+    """Codes for the figures that rest on too few reviews, from a review_summary."""
+    warnings = []
+    if summary["n_reviews"] < MIN_REVIEWS:
+        warnings.append("few_reviews")
+    if summary["previous_n"] == 0:
+        warnings.append("no_previous_reviews")
+    elif summary["recent_n"] < MIN_RECENT_REVIEWS:
+        warnings.append("few_recent_reviews")
+    if summary["recent_text_n"] + summary["previous_text_n"] < MIN_COMMENTS:
+        warnings.append("few_comments")
+    return warnings
+
+
 def build_metrics(reviews_path, months=RECENT_MONTHS):
-    """Load the reviews and return every figure the report needs as plain data."""
+    """Load the reviews and return every figure the dashboard needs as plain data."""
     reviews, cleaning = load_google_reviews(reviews_path)
     monthly = monthly_reviews(reviews)
+    summary = review_summary(reviews, months)
     return {
         "reviews_cleaning": {**vars(cleaning), "rows_kept": cleaning.rows_kept},
-        "reviews": review_summary(reviews, months),
+        "reviews": summary,
+        "data_warnings": data_warnings(summary),
         "reviews_monthly": {
             str(month): {
                 "n_reviews": int(row["n_reviews"]),
@@ -105,7 +125,7 @@ def build_metrics(reviews_path, months=RECENT_MONTHS):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(description="Compute the report metrics as JSON.")
+    parser = argparse.ArgumentParser(description="Compute the dashboard metrics as JSON.")
     parser.add_argument("--reviews", default=SAMPLE_DIR / "google_reviews.csv")
     parser.add_argument("--output", help="write the JSON to this file instead of printing it")
     args = parser.parse_args(argv)

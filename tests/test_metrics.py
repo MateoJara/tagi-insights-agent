@@ -74,3 +74,27 @@ def test_main_writes_json_for_given_file(tmp_path):
     data = json.loads(output.read_text(encoding="utf-8"))
     assert data["reviews"]["n_reviews"] == data["reviews_cleaning"]["rows_kept"]
     assert sum(month["n_reviews"] for month in data["reviews_monthly"].values()) == data["reviews"]["n_reviews"]
+
+
+def _summary(**overrides):
+    summary = {"n_reviews": 600, "recent_n": 75, "previous_n": 525, "recent_text_n": 36, "previous_text_n": 268}
+    return {**summary, **overrides}
+
+
+def test_no_warnings_with_enough_data(reviews):
+    assert metrics.data_warnings(metrics.review_summary(reviews)) == []
+
+
+@pytest.mark.parametrize(
+    ("overrides", "expected"),
+    [
+        ({"n_reviews": 29}, ["few_reviews"]),
+        ({"recent_n": 9}, ["few_recent_reviews"]),
+        ({"recent_text_n": 5, "previous_text_n": 14}, ["few_comments"]),
+        # Without a "before", "few recent reviews" is not the problem: there is nothing to compare.
+        ({"n_reviews": 3, "recent_n": 3, "previous_n": 0, "recent_text_n": 2, "previous_text_n": 0},
+         ["few_reviews", "no_previous_reviews", "few_comments"]),
+    ],
+)
+def test_data_warnings_name_each_thin_figure(overrides, expected):
+    assert metrics.data_warnings(_summary(**overrides)) == expected

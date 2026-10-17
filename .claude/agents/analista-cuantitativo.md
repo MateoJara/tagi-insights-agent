@@ -52,6 +52,8 @@ Un reporte corto para quien te llamó:
   respuesta.
 - **Tendencia mensual:** los meses con el promedio más alto y más bajo, y si el
   número de reseñas por mes cambió.
+- **Pocos datos:** los códigos de `data_warnings` en `metrics.json`, tal cual
+  (lista vacía si no hay ninguno).
 - **Bases pequeñas:** cualquier cifra con menos de 30 reseñas detrás, y los meses
   con menos de 5.
 - **Archivos creados**, con su ruta.

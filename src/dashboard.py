@@ -26,8 +26,11 @@ SMALL_DETAIL_KINDS = {
     "suggestion": ("Lo sugieren", "warn"),
 }
 MAX_TOPICS_COMPARED = 4  # per kind, in the "before and now" table
-# A topic whose share of comments moves less than this between periods counts as steady.
-STEADY_SHARE_CHANGE = 0.10
+# A smaller move in a topic's share of comments is too small to call a change.
+CLEAR_SHARE_CHANGE = 0.10
+
+# TODO: Tagi's contact (pending with the partner) before the repo goes public.
+TAGI_CONTACT = "[contacto de Tagi pendiente]"
 
 # Dashboard text is in Spanish because it is read by the business owner.
 MONTHS = (
@@ -41,6 +44,10 @@ HORIZONS = {
 }
 INSIGHT_TEXT_FIELDS = ("business_name", "headline", "summary", "alert", "next_level", "data_note")
 ACTION_FIELDS = ("horizon", "title", "text", "why")
+
+
+def _plural(n, singular, plural):
+    return f"{n} {singular if n == 1 else plural}"
 
 
 def round_half_up(value, digits=0):
@@ -139,14 +146,15 @@ def _kpis(metrics):
             rating(reviews["mean_rating"]),
             "/ 5",
             _rating_status(reviews["mean_rating"]),
-            f"{reviews['n_reviews']} reseñas en total",
+            f"{_plural(reviews['n_reviews'], 'reseña', 'reseñas')} en total",
         ),
         kpi(
             f"Últimos {months} meses",
             rating(recent_mean),
             "★",
             _rating_status(recent_mean),
-            f"{reviews['recent_n']} reseñas · antes {rating(previous_mean)}",
+            f"{_plural(reviews['recent_n'], 'reseña', 'reseñas')} · "
+            + ("sin reseñas anteriores" if previous_mean is None else f"antes {rating(previous_mean)}"),
         ),
         kpi(
             f"Clientes satisfechos, últimos {months} meses",
@@ -167,7 +175,8 @@ def _kpis(metrics):
 
 def _topic_changes(comment_metrics):
     """Each main complaint and praise: its share of comments before and now."""
-    if comment_metrics is None:
+    # Without comments in both periods there is nothing to compare: 0% would look like data.
+    if comment_metrics is None or not comment_metrics["n_previous_comments"] or not comment_metrics["n_recent_comments"]:
         return []
     rows = []
     for kind, label, worse_when_up in (("complaint", "Queja", True), ("praise", "Elogio", False)):
@@ -176,8 +185,8 @@ def _topic_changes(comment_metrics):
             previous, recent = entry["previous_share"] or 0.0, entry["recent_share"] or 0.0
             # Points between the two rounded shares shown, so the row adds up for the reader.
             points = int(_percent_points(recent) - _percent_points(previous))
-            if abs(recent - previous) < STEADY_SHARE_CHANGE:
-                status = ("good", "Estable")
+            if abs(recent - previous) < CLEAR_SHARE_CHANGE:
+                status = ("neutral", "Sin cambio claro")
             elif (recent > previous) == worse_when_up:
                 status = ("crit", "Aumentó" if worse_when_up else "Disminuyó")
             else:
@@ -253,6 +262,30 @@ def _comments(comment_metrics):
     }
 
 
+def _data_warning(metrics):
+    """The few-data notice, or None when every figure has enough reviews behind it."""
+    codes, reviews = metrics["data_warnings"], metrics["reviews"]
+    if not codes:
+        return None
+    months, n_comments = reviews["recent_months"], reviews["recent_text_n"] + reviews["previous_text_n"]
+    messages = {
+        "few_reviews": f"Con {_plural(reviews['n_reviews'], 'reseña', 'reseñas')}, todas las cifras son "
+                       "orientativas: unas pocas opiniones nuevas pueden cambiarlas mucho.",
+        "no_previous_reviews": f"Todas sus reseñas son de los últimos {months} meses: todavía no hay un antes "
+                               "con qué comparar.",
+        "few_recent_reviews": f"En los últimos {months} meses hay {_plural(reviews['recent_n'], 'reseña', 'reseñas')}: "
+                              "muy pocas para saber si algo cambió frente a antes.",
+        "few_comments": "Ninguna reseña trae comentario: no hay temas que analizar." if n_comments == 0 else
+                        f"Solo {_plural(n_comments, 'reseña trae', 'reseñas traen')} comentario: los temas de los "
+                        "comentarios son orientativos.",
+    }
+    return {
+        "items": [messages[code] for code in codes],
+        "invitation": "Si quiere conseguir más reseñas o entender mejor a sus clientes, en Tagi podemos "
+                      f"ayudarle: {TAGI_CONTACT}.",
+    }
+
+
 def build_dashboard_data(reviews_path, insights, comment_metrics=None):
     """Everything the template needs, with every figure already formatted."""
     metrics = build_metrics(reviews_path)
@@ -268,6 +301,7 @@ def build_dashboard_data(reviews_path, insights, comment_metrics=None):
         "n_reviews": review_summary["n_reviews"],
         "recent_months": review_summary["recent_months"],
         "kpis": _kpis(metrics),
+        "data_warning": _data_warning(metrics),
         # One decimal: rounded shares can still add up
         # to 99.9% or 100.1%, but never visibly far from 100%.
         "distribution": [
@@ -286,6 +320,9 @@ def build_dashboard_data(reviews_path, insights, comment_metrics=None):
         "comments": _comments(comment_metrics),
         "reviews": _reviews_listed(reviews),
         "n_reviews_with_text": int(reviews["text"].notna().sum()),
+        "closing": "Hecho con Tagi Insights Agent, gratis y de código abierto. ¿No sabe cómo usarlo, tiene pocas "
+                   "reseñas o quiere llevar herramientas de IA como Claude Code a su negocio? "
+                   f"Escríbanos: {TAGI_CONTACT}.",
     }
 
 

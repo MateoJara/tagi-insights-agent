@@ -36,6 +36,8 @@ cita ni resume fuera de `data/private/`.
      (temas, quejas, elogios, detalles pequeños y citas).
 
    Si alguno reporta un error, detente y repórtalo; no adaptes los datos a mano.
+   Si el analista de comentarios dice que no hay comentarios, sigue sin ellos: el
+   tablero se genera sin `--comments`.
    Si los subagentes no están disponibles, sigue tú las instrucciones de sus
    archivos en `.claude/agents/`.
 
@@ -43,6 +45,10 @@ cita ni resume fuera de `data/private/`.
    `comment_metrics.json`, leídos por ti, no del resumen que devuelven los
    subagentes. No calcules promedios, porcentajes ni diferencias de cabeza. Si hace
    falta una cifra que no está, agrégala al código con su test.
+
+   Mira `data_warnings` en `metrics.json`. Si trae algún código, hay pocos datos:
+   el tablero mostrará un aviso por su cuenta, y los textos se escriben con las
+   reglas de "Con pocos datos" de `references/tablero.md`.
 
 3. **Interpretar.** Lee `references/criterios.md`: cómo leen los clientes las
    reseñas, qué señal sugiere qué hipótesis y cómo priorizar.
@@ -55,6 +61,8 @@ cita ni resume fuera de `data/private/`.
    ```
    .venv\Scripts\python -m src.dashboard --reviews <csv> --insights <carpeta>/insights.json --comments <carpeta>/comments/comment_metrics.json --output <carpeta>/dashboard.html
    ```
+
+   El aviso de pocos datos y el cierre con el contacto de Tagi los pone el script.
 
    Ábrelo y revisa que se vea bien y que no haya errores.
 

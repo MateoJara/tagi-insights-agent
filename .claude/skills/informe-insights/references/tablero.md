@@ -55,7 +55,7 @@ Todos son obligatorios.
 | `headline` | Segunda mitad del título, en minúscula | 8 palabras |
 | `summary` | Cómo está el negocio, qué es lo más importante que cambió y qué debe hacer primero | 2 frases |
 | `alert` | Lo más urgente, con su cifra. Empieza en minúscula porque sigue a "Atención prioritaria:". Texto vacío si no hay nada urgente | 1 frase |
-| `actions` | El plan de acción | 3 a 6 |
+| `actions` | El plan de acción | 3 a 6 (con pocos datos, 1 a 3) |
 | `next_level` | Qué falta para subir de categoría una vez resuelto lo urgente, apoyado en lo que hay que proteger | 3 frases |
 | `questions` | Las hipótesis que solo el dueño puede confirmar (por ejemplo, si hubo cambios de personal en la fecha de la caída) | 2 a 4 |
 | `data_note` | Qué no puede decir el tablero: bases pequeñas, que las causas son hipótesis | 2 frases |
@@ -69,5 +69,23 @@ Cada acción tiene:
 
 Entre las acciones debe haber al menos una por cada prioridad, y conviene nombrar
 los detalles pequeños: son lo más fácil de mantener o recuperar.
+
+## Con pocos datos
+
+Si `data_warnings` en `metrics.json` trae algún código, el tablero muestra arriba
+un aviso de "Pocos datos" con una invitación a contactar a Tagi. Los textos lo
+acompañan así:
+
+| Código | Qué significa | Qué cambia en los textos |
+|---|---|---|
+| `few_reviews` | menos de 30 reseñas en total | Ninguna conclusión firme: todo es "parece", "por ahora". `alert` vacío salvo algo evidente, como reseñas negativas sin responder |
+| `few_recent_reviews` | menos de 10 en los últimos meses | No afirmar que algo mejoró o empeoró. Describir lo reciente sin compararlo |
+| `no_previous_reviews` | todas las reseñas son recientes | No hay "antes": ninguna frase compara periodos |
+| `few_comments` | menos de 20 comentarios | Los temas se nombran como pistas, no como lo que piensan sus clientes |
+
+Además, con cualquier código:
+- Máximo 3 acciones. Responder las reseñas y conseguir más reseñas (pidiéndolas a
+  todos los clientes por igual) suelen ser las más útiles.
+- `data_note` no repite el aviso: dice lo que este análisis sí permite ver.
 
 Ejemplo completo: `examples/insights.json`.
