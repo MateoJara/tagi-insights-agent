@@ -90,11 +90,15 @@ Solo estas. No escribas código de conversión propio.
 | `star_symbols` | estrellas dibujadas: "★★★★☆" | |
 | `yes_no` | "Sí"/"No", "Yes"/"No", "True"/"False", 1/0 | |
 | `not_empty` | verdadero si hay contenido (por ejemplo, el texto de una respuesta) | |
-| `date` | fechas | `day_first`, `format`, `timezone` |
-| `datetime` | fechas con hora | `day_first`, `format`, `timezone` |
+| `date` | fechas | `day_first`, `format` o `formats`, `timezone` |
+| `datetime` | fechas con hora | `day_first`, `format` o `formats`, `timezone` |
 | `relative_date` | "hace 2 semanas" | `reference_date` (obligatoria) |
 
 - `day_first`: `true` si la fecha viene día/mes/año.
+- `formats`: cuando una misma columna mezcla formatos (por ejemplo `03/04/2026` y
+  `2026-05-27`), una lista de patrones que se prueban en orden:
+  `["%d/%m/%Y", "%Y-%m-%d"]`. Cada fecha usa el primero que le sirve, así que pon
+  primero el que domina en la columna. No se combina con `format`.
 - `format`: el patrón exacto, como `%Y/%m/%d %I:%M:%S %p`. "a. m." y "p. m." se
   leen como AM y PM, y un final como "GMT-5" se ignora.
 - `timezone`: para fechas con zona horaria (terminadas en `Z` o con `+00:00`). Usa

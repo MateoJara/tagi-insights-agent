@@ -99,11 +99,25 @@ def _normalize_datetime_text(value):
     return re.sub(r"\bp\.\s?m\.", "PM", text, flags=re.IGNORECASE)
 
 
+def _parse_datetimes(texts, date_format, options):
+    return pd.to_datetime(texts, errors="coerce", dayfirst=options.get("day_first", False),
+                          format=date_format, utc=bool(options.get("timezone")))
+
+
 def _datetime(values, options):
-    """Dates or date-times. Options: day_first, format, timezone (convert aware times to it)."""
+    """Dates or date-times.
+
+    Options: day_first; format (one pattern); formats (several patterns tried in
+    order, for columns that mix them: each value takes the first that fits);
+    timezone (convert aware times to it).
+    """
+    if "format" in options and "formats" in options:
+        raise ValueError("use either 'format' or 'formats', not both")
     texts = _blank_to_na(values).map(lambda v: None if _missing(v) else _normalize_datetime_text(v))
-    parsed = pd.to_datetime(texts, errors="coerce", dayfirst=options.get("day_first", False),
-                            format=options.get("format"), utc=bool(options.get("timezone")))
+    formats = options.get("formats") or [options.get("format")]
+    parsed = _parse_datetimes(texts, formats[0], options)
+    for date_format in formats[1:]:
+        parsed = parsed.where(parsed.notna(), _parse_datetimes(texts, date_format, options))
     if options.get("timezone"):
         parsed = parsed.dt.tz_convert(options["timezone"]).dt.tz_localize(None)
     return parsed

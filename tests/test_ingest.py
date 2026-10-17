@@ -112,6 +112,42 @@ def test_pasted_maps_text_within_date_tolerance(tmp_path):
     assert any("approximate" in warning for warning in report["files"][0]["warnings"])
 
 
+def _date_plan(source, options):
+    return {"files": [{
+        "path": str(source), "table": "google_reviews", "reader": {"format": "csv"},
+        "columns": {
+            "review_date": {"source": "Fecha", "transform": "date", "options": options},
+            "rating": {"source": "Estrellas", "transform": "number"},
+        },
+    }]}
+
+
+def test_mixed_date_formats_with_formats_option(tmp_path):
+    source = tmp_path / "mixed.csv"
+    source.write_text("Fecha,Estrellas\n03/04/2026,5\n2026-05-27,4\n27/05/2026,3\n", encoding="utf-8")
+    report = ingest.apply_plan(_date_plan(source, {"formats": ["%d/%m/%Y", "%Y-%m-%d"]}), tmp_path / "out")
+    imported, _ = load_google_reviews(tmp_path / "out" / "google_reviews.csv")
+    # 03/04/2026 is read day-first because that format comes first in the list.
+    assert imported["review_date"].dt.strftime("%Y-%m-%d").tolist() == ["2026-04-03", "2026-05-27", "2026-05-27"]
+    assert report["files"][0]["conversion_failures"] == {}
+
+
+def test_a_date_matching_no_format_is_still_reported(tmp_path):
+    source = tmp_path / "mixed.csv"
+    source.write_text("Fecha,Estrellas\n03/04/2026,5\nmayo 2026,4\n", encoding="utf-8")
+    report = ingest.apply_plan(_date_plan(source, {"formats": ["%d/%m/%Y", "%Y-%m-%d"]}), tmp_path / "out")
+    failures = report["files"][0]["conversion_failures"]["review_date"]
+    assert failures == {"count": 1, "examples": ["mayo 2026"]}
+    assert report["files"][0]["rows_imported"] == 1
+
+
+def test_format_and_formats_together_are_rejected(tmp_path):
+    source = tmp_path / "mixed.csv"
+    source.write_text("Fecha,Estrellas\n03/04/2026,5\n", encoding="utf-8")
+    with pytest.raises(ValueError, match="either 'format' or 'formats'"):
+        ingest.apply_plan(_date_plan(source, {"format": "%d/%m/%Y", "formats": ["%Y-%m-%d"]}), tmp_path / "out")
+
+
 def test_identical_reviews_are_kept(tmp_path):
     reviews = tmp_path / "reviews.csv"
     reviews.write_text("Fecha,Estrellas\n2026-01-05,5\n2026-01-05,5\n", encoding="utf-8")
