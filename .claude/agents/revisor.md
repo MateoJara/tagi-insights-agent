@@ -13,10 +13,11 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
 
 ## Qué recibes
 
-- Las rutas de los dos CSV: respuestas del formulario y reseñas de Google.
+- La ruta del CSV de reseñas de Google.
 - Los documentos a revisar: el informe (`.md`), los textos del tablero
   (`insights.json`) y, si te lo pasan, el tablero (`.html`).
-- La carpeta de comentarios, con `comments.csv` y `comment_labels.csv`.
+- La carpeta de comentarios, con `comments.csv`, `comment_topics.csv` y
+  `comment_labels.csv`.
 
 ## Qué haces
 
@@ -41,38 +42,37 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
 
 Limpieza, antes de cualquier cálculo:
 - Se eliminan las filas repetidas exactas.
-- Una calificación vacía, no numérica o fuera de rango cuenta como no respondida.
-  Rangos: 1 a 5 en las calificaciones, 0 a 10 en `would_recommend`.
-- Cada promedio y cada porcentaje se calcula solo sobre quienes respondieron esa
-  pregunta. Esa cantidad es la "base" de la cifra.
+- Una calificación vacía, no numérica o fuera de 1 a 5 no cuenta.
+- Cada promedio y cada porcentaje se calcula sobre las reseñas que entran en él.
+  Esa cantidad es la "base" de la cifra.
 
-Periodos, en las dos tablas:
-- **Histórico** o total: todas las filas.
-- **Reciente:** las filas posteriores al momento más reciente de la tabla menos 3
-  meses de calendario. En el formulario se compara fecha y hora completas.
-- **Antes:** todas las filas que no son recientes. No es lo mismo que histórico:
+Periodos:
+- **Histórico** o total: todas las reseñas.
+- **Reciente:** las reseñas con `review_date` posterior a la fecha más reciente
+  de la tabla menos 3 meses de calendario.
+- **Antes:** todas las reseñas que no son recientes. No es lo mismo que histórico:
   si un texto compara "antes" con "ahora", la primera cifra debe ser la de antes.
+- **Mensual:** por mes calendario de `review_date`.
 
-Formulario (`survey_responses`):
-- **Clientes satisfechos:** proporción de `rating_overall` igual a 4 o 5.
-- **NPS:** porcentaje con `would_recommend` de 9 o 10, menos el porcentaje con 0 a 6.
-- **Mensual:** promedio por mes calendario de `submitted_at`.
-
-Reseñas (`google_reviews`):
+Reseñas:
+- **Estrellas promedio:** promedio de `rating`.
+- **Clientes satisfechos:** proporción de reseñas con 4 o 5 estrellas.
 - **Reseñas respondidas:** proporción con `owner_replied` verdadero.
 - **Última respuesta:** la fecha más reciente de `owner_reply_date`.
 
 Comentarios:
-- Los conteos por tema salen de `comment_labels.csv`: comentarios distintos
-  (`table`, `id`, `column`) con ese tema y ese tipo (`praise`, `complaint`,
-  `suggestion`). Reciente o no se toma de la columna `recent` de `comments.csv`.
+- Los conteos por tema salen de `comment_labels.csv`: reseñas distintas (`id`) con
+  ese tema y ese tipo (`praise`, `complaint`, `suggestion`). Reciente o no se toma
+  de la columna `recent` de `comments.csv`.
+- La **proporción** de un tema en un periodo es su conteo en ese periodo dividido
+  por el total de comentarios de ese periodo (filas de `comments.csv`).
 - El tema `sin detalle` se cuenta aparte.
 
 ## Regla de redondeo
 
 Una cifra está bien si coincide con tu cálculo redondeado a los decimales que
 muestra el documento, redondeando el medio hacia arriba o hacia el par. Un cambio
-("una caída de 1.4") está bien si coincide con tu cálculo redondeado o con la
+("una caída de 1.4", "+20 puntos") está bien si coincide con tu cálculo redondeado o con la
 resta de las dos cifras ya redondeadas que lo acompañan. Si ni así coincide, es un
 error.
 

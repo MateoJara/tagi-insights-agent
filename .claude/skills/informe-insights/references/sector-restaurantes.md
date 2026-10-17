@@ -65,9 +65,10 @@ clientes contentos filtrando a los demás. Lo primero viola las reglas de Google
 - **[Evidencia]** Los clientes insatisfechos que no se quejan y se sienten ignorados
   son los que tienen menor intención de volver. (Ro)
 
-**Cómo usarlo:** el formulario existe para captar a ese cliente silencioso antes de
-que se vaya o escriba en Google. Una queja en el formulario es una oportunidad de
-recuperación, y así debe presentarse al dueño.
+**Cómo usarlo:** las quejas que llegan a Google son una parte pequeña de los
+clientes insatisfechos; el resto se va sin decir nada. Por eso cada queja escrita
+vale más de lo que parece, y responderla es la oportunidad de recuperación que hay
+que presentarle al dueño.
 
 ## 5. Personal y servicio
 
@@ -78,27 +79,23 @@ recuperación, y así debe presentarse al dueño.
 **Cómo usarlo:** si el servicio cae de forma brusca en una fecha, pregunta por
 cambios de personal alrededor de esa fecha antes de proponer otra causa.
 
-## 6. NPS
-
-- **[Evidencia]** No hay una referencia confiable para restaurantes. Las cifras
-  publicadas van de 30 a 42 según la fuente, y cambian con el país y con el método:
-  una encuesta justo después de la visita da entre 10 y 20 puntos más que una anual.
-- **Cómo usarlo:** compara el NPS del restaurante contra su propia historia, no
-  contra un promedio del sector. Si hay que dar una referencia, di que es aproximada.
-
-## 7. De la señal a la recomendación
+## 6. De la señal a la recomendación
 
 Todo lo de esta tabla es **[Criterio]**. Las causas son hipótesis para confirmar con
 el dueño; los datos dicen qué pasó, no por qué.
 
+Las señales salen de dos lugares: las estrellas mes a mes y la proporción de
+comentarios que menciona cada tema antes y ahora.
+
 | Señal en los datos | Hipótesis frecuentes | Qué preguntarle al dueño | Acciones típicas |
 |---|---|---|---|
-| El servicio cae de golpe | Cambio de personal, de administrador o de turnos | ¿Qué cambió en el equipo en esa fecha? | Entrenamiento de los nuevos, repartirlos entre turnos, guion de atención |
-| El servicio cae poco a poco | Más clientes con el mismo personal, desgaste del equipo | ¿Subió la ocupación? ¿Hay horas pico sin refuerzo? | Refuerzo en horas pico, revisar turnos |
-| La comida cae | Cambio de cocinero, de proveedor o de receta; porciones más pequeñas | ¿Cambió algo en cocina o en compras? | Estandarizar recetas y porciones, revisar proveedor |
-| El precio cae y la comida no | Subida de precios reciente, porción percibida menor | ¿Hubo ajuste de carta? | Comunicar el valor, combos, revisar platos peor valorados |
-| El ambiente cae | Ruido, temperatura, limpieza, mesas muy juntas | ¿Hubo cambios en el local? | Arreglos puntuales, suelen ser de bajo costo |
-| Promedio reciente en Google peor que el histórico | Cualquiera de las anteriores, ya visible al público | (ver qué aspecto cae en el formulario) | Atacar la causa y responder las reseñas recientes |
+| Las estrellas caen de golpe y crecen las quejas por atención o espera | Cambio de personal, de administrador o de turnos | ¿Qué cambió en el equipo en esa fecha? | Entrenamiento de los nuevos, repartirlos entre turnos, guion de atención |
+| Las estrellas caen poco a poco y crecen las quejas por espera | Más clientes con el mismo personal, desgaste del equipo | ¿Subió la ocupación? ¿Hay horas pico sin refuerzo? | Refuerzo en horas pico, revisar turnos |
+| Crecen las quejas por la comida | Cambio de cocinero, de proveedor o de receta; porciones más pequeñas | ¿Cambió algo en cocina o en compras? | Estandarizar recetas y porciones, revisar proveedor |
+| Crecen las quejas por precio y no por la comida | Subida de precios reciente, porción percibida menor | ¿Hubo ajuste de carta? | Comunicar el valor, combos, revisar platos peor valorados |
+| Crecen las quejas por el local | Ruido, temperatura, limpieza, mesas muy juntas | ¿Hubo cambios en el local? | Arreglos puntuales, suelen ser de bajo costo |
+| Un elogio que antes era frecuente casi desaparece | Se dejó de hacer algo que los clientes notaban | ¿Cambió algo de lo que elogiaban? | Recuperarlo; suele ser barato |
+| Promedio reciente peor que el anterior | Cualquiera de las anteriores, ya visible al público | (ver qué queja crece en los comentarios) | Atacar la causa y responder las reseñas recientes |
 | El dueño no responde reseñas | Falta de tiempo, nadie a cargo | ¿Quién maneja el perfil de Google? | Asignar un responsable, responder las negativas recientes primero |
 | Muchas calificaciones sin texto | Normal en Google | | Invitar a comentar a todos los clientes por igual |
 
@@ -111,23 +108,24 @@ el dueño; los datos dicen qué pasó, no por qué.
 4. La causa de fondo va en "este mes", con una forma de medir si funcionó en el
    siguiente informe.
 
-## 8. El siguiente nivel
+## 7. El siguiente nivel
 
 Cuando no hay nada roto, **[Criterio]**:
 
 - Buscar el umbral siguiente (4.0, 4.5) y cuántas reseñas positivas harían falta.
-- Identificar el aspecto mejor calificado y convertirlo en mensaje: en el perfil de
+- Identificar el elogio más repetido y convertirlo en mensaje: en el perfil de
   Google, en redes, en la carta.
-- Mirar el aspecto más bajo aunque sea aceptable; ahí está el margen de mejora.
-- Subir el volumen de respuestas al formulario y de reseñas, que hace más confiables
+- Mirar la queja que más se repite aunque sean pocas; ahí está el margen de mejora.
+- Pedir reseñas a todos los clientes por igual: más reseñas hacen más confiables
   todas las cifras.
 
-## 9. Límites: qué no puede decir el informe
+## 8. Límites: qué no puede decir el informe
 
 - No conoce ventas, costos, ocupación ni competencia. No estima impacto en dinero.
-- Con pocas respuestas en un periodo, un cambio puede ser ruido. Menciona siempre
-  cuántas respuestas hay detrás de una cifra.
-- Quien responde un formulario o deja una reseña no representa a todos los clientes.
+- Con pocas reseñas en un periodo, un cambio puede ser ruido. Menciona siempre
+  cuántas reseñas hay detrás de una cifra.
+- Quien deja una reseña no representa a todos los clientes: escriben más los muy
+  contentos y los muy molestos.
 
 ## Fuentes
 
@@ -151,6 +149,3 @@ una cifra a un cliente.
   Central Florida. https://stars.library.ucf.edu/rosenscholar/201
 - Hausknecht, J. y otros. Rotación y calidad del servicio. Journal of Applied
   Psychology. https://news.cornell.edu/node/271325
-- Referencias de NPS (dispares entre sí):
-  https://www.koji.so/docs/nps-benchmarks-by-industry-2026 y
-  https://www.customerthermometer.com/customer-satisfaction/nps-and-csat-score-benchmarks-by-industry/

@@ -1,6 +1,6 @@
 ---
 name: informe-insights
-description: Genera el informe de insights de Tagi para un negocio a partir de las respuestas de su formulario de clientes y sus reseñas de Google: métricas clave, gráficas, qué cambió y un plan de acción priorizado para el dueño. Usar cuando pidan un informe, reporte o análisis de un restaurante o cliente de Tagi, o cuando entreguen archivos de encuestas o reseñas para analizar.
+description: Genera el informe de insights de Tagi para un negocio a partir de sus reseñas de Google: métricas clave, gráficas, qué cambió, qué dicen los clientes y un plan de acción priorizado para el dueño. Usar cuando pidan un informe, reporte o análisis de un negocio o cliente de Tagi, o cuando entreguen reseñas para analizar.
 ---
 
 # Informe de insights
@@ -16,9 +16,12 @@ Los dos valen por el plan de acción, no por la cantidad de cifras.
 
 ## Entradas
 
-Dos archivos CSV con las columnas definidas en `src/survey_schema.py`:
-respuestas del formulario y reseñas de Google. Si no se indica ninguno, se usa el
-dataset sintético de `data/sample/`.
+Un CSV de reseñas de Google con las columnas definidas en `src/schema.py`. Si no
+se indica ninguno, se usa el dataset sintético de `data/sample/`.
+
+Si las reseñas vienen en otro formato (Excel, JSON, texto copiado de Google Maps,
+un CSV con otros nombres de columna), primero pásalas por el subagente
+`importador`, que deja el CSV en ese formato.
 
 Si los archivos son de un cliente real, viven en `data/private/<cliente>/` y todo
 lo que se genere (cifras, gráficas, informe) se guarda en esa misma carpeta. Nada
@@ -27,7 +30,7 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 ## Pasos
 
 1. **Delegar el análisis a los dos subagentes, en paralelo** (las dos llamadas en
-   el mismo mensaje). A cada uno se le pasan las rutas de los CSV y su carpeta:
+   el mismo mensaje). A cada uno se le pasa la ruta del CSV y su carpeta:
 
    - `analista-cuantitativo`, con `<carpeta>`: deja `metrics.json` (reporte de
      limpieza y todas las cifras) y las gráficas en `charts/`.
@@ -58,12 +61,12 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 7. **Generar el tablero.** Las cifras las pone el script; no se escriben a mano.
 
    ```
-   .venv\Scripts\python -m src.dashboard --survey <csv> --reviews <csv> --insights <carpeta>/insights.json --comments <carpeta>/comments/comment_metrics.json --output <carpeta>/dashboard.html
+   .venv\Scripts\python -m src.dashboard --reviews <csv> --insights <carpeta>/insights.json --comments <carpeta>/comments/comment_metrics.json --output <carpeta>/dashboard.html
    ```
 
    Ábrelo y revisa que se vea bien y que no haya errores.
 
-8. **Pasar por el revisor.** Lanza el subagente `revisor` con las rutas de los CSV,
+8. **Pasar por el revisor.** Lanza el subagente `revisor` con la ruta del CSV,
    el informe, `insights.json` y la carpeta de comentarios. Recalcula cada cifra
    por su cuenta y comprueba cada cita.
 
@@ -82,9 +85,11 @@ de un cliente real se copia, cita ni resume fuera de `data/private/`.
 - Los datos dicen qué pasó, no por qué. Las causas se escriben como hipótesis para
   confirmar con el dueño.
 - Máximo tres prioridades.
-- Junto a cada cifra importante, cuántas respuestas o reseñas hay detrás. Como hay
-  preguntas sin responder, la base de cada cifra es menor que el total: tómala de
-  `answered`, `previous_n` y `recent_n` en `metrics.json`, no del número de filas.
+- Junto a cada cifra importante, cuántas reseñas hay detrás: `previous_n`,
+  `recent_n`, `previous_text_n` y `recent_text_n` en `metrics.json`.
+- Para comparar un tema entre periodos usa sus proporciones (`previous_share`,
+  `recent_share` en `comment_metrics.json`), nunca los conteos: el periodo reciente
+  son pocos meses contra muchos.
 - Al comparar un antes con un ahora, las dos cifras salen de periodos que no se
   solapan: `previous_*` y `recent_*`. El total o histórico incluye lo reciente y
   no sirve como "antes".

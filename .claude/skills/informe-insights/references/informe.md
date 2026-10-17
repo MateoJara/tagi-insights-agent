@@ -8,7 +8,7 @@ informe están primero; los textos del tablero, al final.
 
 - Trate al lector de **usted**.
 - Frases cortas y directas. Sin jerga de datos: nada de "media", "outlier" o
-  "correlación". Si usa un término como NPS, explíquelo en una línea la primera vez.
+  "correlación". Si usa un término técnico, explíquelo en una línea la primera vez.
 - Primero la conclusión, después la cifra que la respalda.
 - Honesto con lo malo y concreto con lo bueno. Sin adjetivos de relleno.
 - Las acciones empiezan con un verbo y dicen quién, qué y para cuándo.
@@ -17,10 +17,10 @@ informe están primero; los textos del tablero, al final.
 
 - Calificaciones: un decimal (4.1).
 - Porcentajes: sin decimales (71%).
-- NPS: sin decimales, con signo si es negativo.
-- Cambios: con signo y un decimal (-1.4). Cuando escriba el antes y el ahora, el
-  cambio es la resta de esas dos cifras ya redondeadas, para que le cuadre a quien
-  lee: de 4.0 a 2.6 es -1.4, aunque el valor exacto en `metrics.json` sea -1.45.
+- Cambios de una calificación: con signo y un decimal (-0.9). Cambios de una
+  proporción: en puntos (+20 puntos). Cuando escriba el antes y el ahora, el cambio
+  es la resta de esas dos cifras ya redondeadas, para que le cuadre a quien lee: de
+  4.3 a 3.4 es -0.9, aunque el valor exacto sea -0.88.
 - Fechas: "julio de 2026", no "2026-07".
 
 ## Secciones
@@ -28,42 +28,42 @@ informe están primero; los textos del tablero, al final.
 El informe responde seis preguntas, en este orden.
 
 ### Encabezado
-Nombre del negocio, periodo analizado, número de respuestas del formulario y de
-reseñas de Google.
+Nombre del negocio, periodo analizado, número de reseñas y cuántas traen comentario.
 
 ### Resumen
 Tres líneas como máximo: cómo está el negocio, qué es lo más importante que cambió
 y qué debe hacer primero. Quien solo lea esto debe poder actuar.
 
 ### 1. Cómo está el negocio hoy
-Tabla corta con las métricas clave: calificación general, clientes satisfechos,
-recomendación (NPS), calificación en Google y calificación reciente en Google. Una
-línea de lectura por métrica, no solo el número. Mencione los umbrales de 4.0 y 4.5
-cuando el negocio esté cerca de uno.
+Tabla corta con las métricas clave, cada una antes y en los últimos meses:
+estrellas promedio, clientes satisfechos (4 y 5 estrellas) y reseñas respondidas
+por el dueño. Además, el promedio total, que es el que Google muestra. Una línea de
+lectura por métrica, no solo el número. Mencione los umbrales de 4.0 y 4.5 cuando
+el negocio esté cerca de uno.
 
 ### 2. Qué cambió
-El aspecto que más se movió, desde cuándo y cuánto. Gráfica de tendencia mensual y
-gráfica de antes y ahora. Si el cambio también se ve en Google, dígalo: es la señal
-de que ya es público.
+Desde cuándo y cuánto cambiaron las estrellas, con la gráfica mensual. Diga si
+cambió también el número de reseñas por mes: menos reseñas y peores no es lo mismo
+que las mismas reseñas pero peores.
 
 ### Qué dicen los comentarios
 Va después de "Qué cambió", porque explica con palabras de los clientes lo que las
 calificaciones muestran. Sale de `comment_metrics.json`:
 
-- Las tres quejas más frecuentes, con cuántas menciones y cuántas son recientes.
-  Una o dos citas textuales de la principal.
+- Las tres quejas más frecuentes, con cuántas menciones y qué proporción de los
+  comentarios ocupan antes y ahora. Una o dos citas textuales de la principal.
 - Los tres elogios más frecuentes.
 - Los detalles pequeños (`small_details`): qué es, cuántas menciones y una cita.
   Es lo más fácil de mantener o recuperar, así que conviene nombrarlos siempre.
 - Las sugerencias que más se repiten.
 
-Cuando una queja coincide con la caída de una calificación (por ejemplo, tiempos de
-espera y servicio), dígalo: es la pista más concreta sobre qué arreglar. Sigue
-siendo lo que los clientes dicen, no la causa confirmada.
+Cuando una queja crece justo cuando caen las estrellas (por ejemplo, tiempos de
+espera), dígalo: es la pista más concreta sobre qué arreglar. Sigue siendo lo que
+los clientes dicen, no la causa confirmada.
 
 ### 3. Qué funciona y hay que proteger
-Los aspectos mejor calificados y estables, y los elogios más repetidos en los
-comentarios. Es lo que no debe tocarse al arreglar lo demás.
+Los elogios más repetidos y estables en los comentarios. Es lo que no debe
+tocarse al arreglar lo demás.
 
 ### 4. En qué concentrarse
 Una prioridad principal, máximo tres. Para cada una: qué muestran los datos y por
@@ -84,8 +84,8 @@ Las hipótesis que solo el dueño puede confirmar (por ejemplo, si hubo cambios 
 personal en la fecha de la caída). Dos a cuatro preguntas.
 
 ### Sobre estos datos
-Cuántas filas se leyeron, cuántos duplicados se quitaron, qué no puede decir este
-informe. Breve.
+Cuántas reseñas se leyeron, cuántos duplicados se quitaron, qué no puede decir
+este informe. Breve.
 
 ## Textos del tablero (`insights.json`)
 
