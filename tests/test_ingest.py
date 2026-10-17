@@ -230,3 +230,24 @@ def test_inspect_skips_earlier_outputs(tmp_path):
     assert [info["path"] for info in result["files"]] == [str(tmp_path / "resenas.csv")]
     assert result["skipped_output_folders"] == [str(tmp_path / "tagi")]
     assert result["unsupported_files"] == []
+
+
+def test_inspect_accepts_single_files_and_folders(tmp_path):
+    # An owner may attach files to the chat instead of naming a folder.
+    attached = EXAMPLES / "resenas_exportadas.csv"
+    notes = tmp_path / "notas.docx"
+    notes.write_bytes(b"not a data file")
+    folder = tmp_path / "otra"
+    folder.mkdir()
+    (folder / "mas.csv").write_text("Fecha,Estrellas\n2026-01-05,5\n", encoding="utf-8")
+    result = ingest.inspect_paths([attached, notes, folder, tmp_path / "no_existe.csv"])
+    assert [info["path"] for info in result["files"]] == [str(attached), str(folder / "mas.csv")]
+    assert result["files"][0]["separator"] == ";"
+    assert result["unsupported_files"] == [str(notes)]
+    assert result["missing"] == [str(tmp_path / "no_existe.csv")]
+
+
+def test_cli_inspect_takes_several_paths(capsys):
+    ingest.main(["inspect", str(EXAMPLES / "resenas_exportadas.csv"), str(EXAMPLES / "reviews_export.xlsx")])
+    printed = json.loads(capsys.readouterr().out)
+    assert len(printed["files"]) == 2

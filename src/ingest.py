@@ -388,11 +388,27 @@ def inspect_folder(folder):
             "skipped_output_folders": [str(out) for out in output_folders]}
 
 
+def inspect_paths(paths):
+    """Describe the data in any mix of folders and single files, such as files attached to a chat."""
+    result = {"files": [], "unsupported_files": [], "skipped_output_folders": [], "missing": []}
+    for path in map(Path, paths):
+        if path.is_dir():
+            for key, values in inspect_folder(path).items():
+                result[key].extend(values)
+        elif path.is_file() and path.suffix.lower() in SUPPORTED_SUFFIXES:
+            result["files"].append(inspect_file(path))
+        elif path.is_file():
+            result["unsupported_files"].append(str(path))
+        else:
+            result["missing"].append(str(path))
+    return result
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Inspect data files, or apply an import plan.")
     commands = parser.add_subparsers(dest="command", required=True)
     inspect_parser = commands.add_parser("inspect")
-    inspect_parser.add_argument("folder")
+    inspect_parser.add_argument("paths", nargs="+", help="folders or single files")
     apply_parser = commands.add_parser("apply")
     apply_parser.add_argument("--plan", required=True)
     apply_parser.add_argument("--output-dir", required=True)
@@ -400,7 +416,7 @@ def main(argv=None):
 
     sys.stdout.reconfigure(encoding="utf-8")
     if args.command == "inspect":
-        print(json.dumps(inspect_folder(args.folder), indent=2, ensure_ascii=False, default=str))
+        print(json.dumps(inspect_paths(args.paths), indent=2, ensure_ascii=False, default=str))
         return
     plan = json.loads(Path(args.plan).read_text(encoding="utf-8"))
     print(json.dumps(apply_plan(plan, args.output_dir), indent=2, ensure_ascii=False))

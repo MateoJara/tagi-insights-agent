@@ -19,15 +19,25 @@ paso.
 
 ## Entradas
 
-La carpeta con las reseñas: $ARGUMENTS
+Las reseñas pueden llegar de tres formas:
 
-Si arriba no hay una carpeta, pregunta dónde están guardadas las reseñas. Pueden
-venir en CSV, Excel, JSON o texto copiado de Google Maps, con cualquier nombre de
-columna.
+- **Archivos adjuntos a la conversación.** Es lo más común: el usuario arrastra el
+  archivo al chat. Busca la ruta donde quedó cada adjunto.
+- **Una carpeta o un archivo indicado:** $ARGUMENTS
+- **Nada.** Pídele que adjunte el archivo de sus reseñas o que diga dónde está. Si
+  no lo tiene, explícale que puede descargarlas de Google Takeout (si es el dueño
+  del perfil) o copiarlas de Google Maps y pegarlas en un archivo de texto.
 
-Todo lo que se genere va en una carpeta `tagi` dentro de la carpeta de las reseñas
-(`<carpeta>/tagi/`). Los datos del negocio no salen de su computador: no los copies
-a otro lugar ni los subas a ningún servicio.
+Pueden venir en CSV, Excel, JSON o texto copiado de Google Maps, con cualquier
+nombre de columna.
+
+**Carpeta de resultados (`<salida>`).** Si las reseñas están en una carpeta del
+usuario, `<salida>` es `tagi` dentro de esa carpeta. Si llegaron como adjuntos, o si
+no se puede escribir junto a ellas, `<salida>` es `tagi` dentro de la carpeta de
+trabajo de esta sesión. Créala si no existe.
+
+Los datos del negocio no salen de su computador: no los copies a otro lugar ni los
+subas a ningún servicio.
 
 ## Pasos
 
@@ -50,9 +60,9 @@ a otro lugar ni los subas a ningún servicio.
    instalarlo desde https://www.python.org/downloads/ (en Windows, marcando "Add
    python.exe to PATH") y detente.
 
-1. **Importar las reseñas.** Lanza el subagente `tagi:importador` con la carpeta de
-   las reseñas, la carpeta de salida `<carpeta>/tagi` y el Python del análisis.
-   Deja `<carpeta>/tagi/google_reviews.csv`.
+1. **Importar las reseñas.** Lanza el subagente `tagi:importador` con las rutas de
+   las reseñas (archivos o carpeta), la carpeta de salida `<salida>` y el Python del
+   análisis. Deja `<salida>/google_reviews.csv`.
 
    Si el importador pregunta algo (por ejemplo, el día en que se copiaron unas
    reseñas de Google Maps), hazle la pregunta al usuario con palabras sencillas y
@@ -62,9 +72,9 @@ a otro lugar ni los subas a ningún servicio.
    el mismo mensaje). A cada uno se le pasa la ruta del CSV, su carpeta y el Python
    del análisis:
 
-   - `tagi:analista-cuantitativo`, con `<carpeta>/tagi`: deja `metrics.json`
+   - `tagi:analista-cuantitativo`, con `<salida>`: deja `metrics.json`
      (reporte de limpieza y todas las cifras).
-   - `tagi:analista-comentarios`, con `<carpeta>/tagi/comments`: deja
+   - `tagi:analista-comentarios`, con `<salida>/comments`: deja
      `comment_metrics.json` (temas, quejas, elogios, detalles pequeños y citas).
 
    Si alguno reporta un error, detente y explícalo; no adaptes los datos a mano.
@@ -85,7 +95,7 @@ a otro lugar ni los subas a ningún servicio.
 4. **Interpretar.** Lee `${CLAUDE_SKILL_DIR}/references/criterios.md`: cómo leen los clientes las
    reseñas, qué señal sugiere qué hipótesis y cómo priorizar.
 
-5. **Escribir los textos del tablero** en `<carpeta>/tagi/insights.json`, con el
+5. **Escribir los textos del tablero** en `<salida>/insights.json`, con el
    tono, las preguntas previas y los campos de `${CLAUDE_SKILL_DIR}/references/tablero.md`.
    Ejemplo completo: `${CLAUDE_PLUGIN_ROOT}/examples/insights.json`. El nombre
    del negocio sale de los archivos o se le pregunta al usuario.
@@ -93,7 +103,7 @@ a otro lugar ni los subas a ningún servicio.
 6. **Generar el tablero.** Las cifras las pone el script; no se escriben a mano.
 
    ```
-   "<Python del análisis>" "${CLAUDE_PLUGIN_ROOT}/tagi.py" dashboard --reviews <carpeta>/tagi/google_reviews.csv --insights <carpeta>/tagi/insights.json --comments <carpeta>/tagi/comments/comment_metrics.json --output <carpeta>/tagi/tablero.html
+   "<Python del análisis>" "${CLAUDE_PLUGIN_ROOT}/tagi.py" dashboard --reviews <salida>/google_reviews.csv --insights <salida>/insights.json --comments <salida>/comments/comment_metrics.json --output <salida>/tablero.html
    ```
 
    El aviso de pocos datos y el cierre con el contacto de Tagi los pone el script.
@@ -112,9 +122,11 @@ a otro lugar ni los subas a ningún servicio.
 
    Tú no reemplazas al revisor: quien redactó un texto no ve sus propios errores.
 
-8. **Entregar.** Di dónde quedó el tablero (`<carpeta>/tagi/tablero.html`), que
-   se abre con doble clic en cualquier navegador, también sin internet, y resume en
-   tres líneas lo más importante: cómo está el negocio y qué hacer primero.
+8. **Entregar.** Entrega el archivo `<salida>/tablero.html`: si puedes adjuntarlo
+   o mostrarlo en la conversación, hazlo; si no, di su ruta completa. Explica que se
+   abre con doble clic en cualquier navegador, también sin internet, y que se puede
+   enviar como cualquier archivo. Resume en tres líneas lo más importante: cómo
+   está el negocio y qué hacer primero.
 
 Si alguien pide además un informe escrito, redáctalo después del tablero a partir
 de las mismas preguntas de `${CLAUDE_SKILL_DIR}/references/tablero.md`, y pásalo también por el revisor.
@@ -139,7 +151,7 @@ Por defecto no se escribe: el dueño solo ve el tablero.
   mercados, nunca como promesa de resultado.
 - No recomendar incentivos a cambio de reseñas.
 
-## Salida, en `<carpeta>/tagi/`
+## Salida, en `<salida>`
 
 | Archivo | Qué es |
 |---|---|

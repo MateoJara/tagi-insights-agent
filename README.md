@@ -59,17 +59,21 @@ En Claude Code, escriba:
 
 ## Usarlo
 
+Adjunte el archivo de sus reseñas a la conversación y escriba:
+
 ```text
-/tagi:informe C:\Users\usted\Documentos\mis-reseñas
+/tagi:informe
 ```
 
-O, con sus palabras: *"mis reseñas de Google están en la carpeta Documentos/mis-reseñas,
-¿qué dicen mis clientes?"*
+O, con sus palabras: *"estas son las reseñas de mi negocio, ¿qué dicen mis clientes?"*
+
+Si prefiere, indique la carpeta donde las tiene:
+`/tagi:informe C:\Users\usted\Documentos\mis-reseñas`.
 
 Claude le irá contando qué hace en cada paso. Puede preguntarle el nombre del negocio
-o algún dato de las reseñas. Al final le dice dónde quedó el tablero:
-`<su carpeta>/tagi/tablero.html`. Se abre con doble clic en cualquier navegador,
-también sin internet, y se puede enviar por WhatsApp o correo como cualquier archivo.
+o algún dato de las reseñas. Al final le entrega el tablero, `tablero.html`. Se abre
+con doble clic en cualquier navegador, también sin internet, y se puede enviar por
+WhatsApp o correo como cualquier archivo.
 
 ## Cómo conseguir sus reseñas
 
@@ -99,8 +103,9 @@ servicio), sirve tal cual.
 
 ## Sus datos
 
-- Todo se guarda en su computador, en la carpeta `tagi` junto a sus reseñas. Los
-  datos no pasan por Tagi.
+- Todo se guarda en su computador, en una carpeta `tagi` junto a sus reseñas (o en
+  la carpeta de trabajo de la conversación, si las adjuntó). Los datos no pasan por
+  Tagi.
 - Claude lee sus reseñas para analizarlas, como en cualquier conversación con
   Claude. Revise la política de privacidad de su plan de Claude si eso le importa.
 - Los nombres de quienes dejaron las reseñas nunca se copian: el importador los
