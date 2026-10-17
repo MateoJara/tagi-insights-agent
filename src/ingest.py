@@ -372,9 +372,20 @@ def inspect_file(path, preview_rows=6):
 
 
 def inspect_folder(folder):
-    files = sorted(p for p in Path(folder).rglob("*") if p.is_file() and p.suffix.lower() in SUPPORTED_SUFFIXES)
-    skipped = sorted(str(p) for p in Path(folder).rglob("*") if p.is_file() and p.suffix.lower() not in SUPPORTED_SUFFIXES)
-    return {"files": [inspect_file(path) for path in files], "unsupported_files": skipped}
+    """Describe every data file under the folder, leaving out earlier outputs of the analysis.
+
+    A folder holding an import report is an output of apply_plan (for instance the
+    "tagi" folder next to the owner's files): reading it again would import the same
+    reviews twice.
+    """
+    folder = Path(folder)
+    output_folders = sorted({report.parent for report in folder.rglob(REPORT_FILE)})
+    every_file = [p for p in folder.rglob("*")
+                  if p.is_file() and not any(out == p.parent or out in p.parents for out in output_folders)]
+    files = sorted(p for p in every_file if p.suffix.lower() in SUPPORTED_SUFFIXES)
+    skipped = sorted(str(p) for p in every_file if p.suffix.lower() not in SUPPORTED_SUFFIXES)
+    return {"files": [inspect_file(path) for path in files], "unsupported_files": skipped,
+            "skipped_output_folders": [str(out) for out in output_folders]}
 
 
 def main(argv=None):

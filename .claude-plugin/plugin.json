@@ -1,0 +1,11 @@
+{
+  "name": "tagi",
+  "displayName": "Tagi Insights",
+  "description": "Convierte las reseñas de Google de cualquier negocio, en el formato que vengan, en un tablero con lo que dicen sus clientes y un plan de acción.",
+  "author": {
+    "name": "Mateo Jaramillo",
+    "url": "https://www.linkedin.com/in/mateo-jaramillo-londoño-b2a475226"
+  },
+  "repository": "https://github.com/MateoJara/tagi-insights-agent",
+  "keywords": ["reseñas", "google reviews", "negocios", "tablero", "insights"]
+}

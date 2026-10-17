@@ -1,0 +1,14 @@
+{
+  "name": "tagi",
+  "description": "Herramientas gratuitas de Tagi para entender a los clientes de un negocio.",
+  "owner": {
+    "name": "Mateo Jaramillo"
+  },
+  "plugins": [
+    {
+      "name": "tagi",
+      "source": "./",
+      "description": "Convierte las reseñas de Google de cualquier negocio en un tablero con lo que dicen sus clientes y un plan de acción."
+    }
+  ]
+}

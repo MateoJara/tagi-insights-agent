@@ -1,6 +1,6 @@
 ---
 name: importador
-description: Convierte las reseñas de Google de un negocio desde el formato en que vengan al formato del sistema. Usar cuando alguien diga dónde están sus datos, o entregue archivos de reseñas en CSV, Excel, JSON o texto copiado de Google Maps.
+description: "Convierte las reseñas de Google de un negocio desde el formato en que vengan al formato del sistema. Usar cuando alguien diga dónde están sus datos, o entregue archivos de reseñas en CSV, Excel, JSON o texto copiado de Google Maps."
 tools: Read, Write, Bash
 model: sonnet
 ---
@@ -12,19 +12,23 @@ script convierte.
 
 ## Qué recibes
 
-La carpeta con los datos, la carpeta de salida y, si te la dan, información extra
-(por ejemplo, el día en que se copiaron unas reseñas).
+La carpeta con los datos, la carpeta de salida, el Python del análisis y, si te la
+dan, información extra (por ejemplo, el día en que se copiaron unas reseñas).
+
+`<python>` es el Python del análisis que te pasa quien te llama (la línea
+`TAGI_PYTHON` del paso de preparación). Si no te lo pasan, usa `python`.
 
 ## Qué haces
 
 1. **Mira cada archivo** sin abrirlo a mano:
 
    ```
-   .venv\Scripts\python -m src.ingest inspect <carpeta>
+   "<python>" "${CLAUDE_PLUGIN_ROOT}/tagi.py" ingest inspect <carpeta>
    ```
 
    Te dice el formato, la codificación, el separador, las primeras filas, las hojas
-   de un Excel o las llaves de un JSON.
+   de un Excel o las llaves de un JSON. Salta las carpetas de resultados de un
+   análisis anterior (`skipped_output_folders`): no son reseñas nuevas.
 
 2. **Decide qué es cada archivo:** reseñas (`google_reviews`) o nada que sirva.
    Si un archivo trae otra cosa (por ejemplo, respuestas de una encuesta), no lo
@@ -45,7 +49,7 @@ La carpeta con los datos, la carpeta de salida y, si te la dan, información ext
    }]}
    ```
 
-   - `path`: relativa a la raíz del proyecto, o absoluta.
+   - `path`: la ruta absoluta del archivo, como la muestra `inspect`.
    - `reader.format`: `csv` (`sep`, `encoding`, `header_row`), `excel` (`sheet`,
      `header_row`: la fila de los encabezados, contando desde 0), `json`
      (`records_path`: dónde está la lista de registros, como `reviews`; los campos
@@ -58,7 +62,7 @@ La carpeta con los datos, la carpeta de salida y, si te la dan, información ext
 4. **Aplica el plan:**
 
    ```
-   .venv\Scripts\python -m src.ingest apply --plan <salida>/import_plan.json --output-dir <salida>
+   "<python>" "${CLAUDE_PLUGIN_ROOT}/tagi.py" ingest apply --plan <salida>/import_plan.json --output-dir <salida>
    ```
 
    Lee `<salida>/import_report.json`. Si hay valores que no se pudieron convertir
@@ -122,8 +126,9 @@ No inventes un dato que cambie los resultados. Devuélvelo como pregunta:
 - Nunca mapees nombres, correos, teléfonos ni nada que identifique a una persona.
   El sistema no los necesita y así nunca llegan al tablero.
 - No modifiques los archivos originales. Solo escribes el plan.
-- No leas nada dentro de `tests/`.
-- Los datos de un cliente real no salen de su carpeta en `data/private/`.
+- No leas nada dentro de `${CLAUDE_PLUGIN_ROOT}/tests/`.
+- Los datos del negocio no salen de su carpeta: no los copies a otro lugar ni los
+  subas a ningún servicio.
 
 ## Qué devuelves
 

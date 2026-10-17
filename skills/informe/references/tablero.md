@@ -88,4 +88,4 @@ Además, con cualquier código:
   todos los clientes por igual) suelen ser las más útiles.
 - `data_note` no repite el aviso: dice lo que este análisis sí permite ver.
 
-Ejemplo completo: `examples/insights.json`.
+Ejemplo completo: `examples/insights.json`, en la raíz del plugin.

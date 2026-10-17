@@ -215,3 +215,18 @@ def test_cli_apply_writes_report(tmp_path):
     ingest.main(["apply", "--plan", str(plan_path), "--output-dir", str(tmp_path / "out")])
     report = json.loads((tmp_path / "out" / ingest.REPORT_FILE).read_text(encoding="utf-8"))
     assert report["files"][0]["rows_imported"] == 600
+
+
+def test_inspect_skips_earlier_outputs(tmp_path):
+    # Running the analysis twice must not import its own output as new reviews.
+    (tmp_path / "resenas.csv").write_text("Fecha,Estrellas\n2026-01-05,5\n", encoding="utf-8")
+    plan = {"files": [{"path": str(tmp_path / "resenas.csv"), "table": "google_reviews", "reader": {"format": "csv"},
+                       "columns": {"review_date": {"source": "Fecha", "transform": "date"},
+                                   "rating": {"source": "Estrellas", "transform": "number"}}}]}
+    ingest.apply_plan(plan, tmp_path / "tagi")
+    (tmp_path / "tagi" / "comments").mkdir()
+    (tmp_path / "tagi" / "comments" / "comments.csv").write_text("id,text\n", encoding="utf-8")
+    result = ingest.inspect_folder(tmp_path)
+    assert [info["path"] for info in result["files"]] == [str(tmp_path / "resenas.csv")]
+    assert result["skipped_output_folders"] == [str(tmp_path / "tagi")]
+    assert result["unsupported_files"] == []

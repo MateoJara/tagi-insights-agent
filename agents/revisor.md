@@ -1,6 +1,6 @@
 ---
 name: revisor
-description: Verifica los textos de un tablero de Tagi (insights.json), el tablero o un informe antes de entregarlos. Vuelve a calcular cada cifra desde los datos originales, por su cuenta, y comprueba que cada cita exista. Usar siempre después de escribir o cambiar los textos de un tablero, y antes de entregarlo. Solo lectura: reporta diferencias, no corrige.
+description: "Verifica los textos de un tablero de Tagi (insights.json), el tablero o un informe antes de entregarlos. Vuelve a calcular cada cifra desde los datos originales, por su cuenta, y comprueba que cada cita exista. Usar siempre después de escribir o cambiar los textos de un tablero, y antes de entregarlo. Solo lectura: reporta diferencias, no corrige."
 tools: Read, Bash
 model: sonnet
 ---
@@ -18,6 +18,8 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
   (`.html`). Si alguien pidió un informe escrito (`.md`), también ese.
 - La carpeta de comentarios, con `comments.csv`, `comment_topics.csv` y
   `comment_labels.csv`.
+- El Python del análisis (la línea `TAGI_PYTHON` del paso de preparación), que
+  tiene pandas. Si no te lo pasan, usa `python`.
 
 ## Qué haces
 
@@ -26,7 +28,7 @@ escribió. Por eso calculas todo tú, desde los datos crudos.
    comillas. Recorre el documento completo, tablas incluidas.
 
 2. **Vuelve a calcular cada una** con tu propio código de pandas sobre los CSV,
-   usando las definiciones de abajo. Ejecuta con `.venv\Scripts\python -c "..."`.
+   usando las definiciones de abajo. Ejecuta con `"<python>" -c "..."`, usando el Python del análisis.
 
 3. **Compara** lo que dice el documento con lo que calculaste, con la regla de
    redondeo de abajo.
@@ -78,20 +80,21 @@ error.
 
 ## Reglas
 
-- No uses `src/metrics.py`, `src/comments.py`, `src/dashboard.py` ni
-  `src/load_data.py`, y no tomes `metrics.json` ni `comment_metrics.json` como
-  verdad. Son lo que estás revisando.
-- No edites, crees ni borres archivos del proyecto. Si necesitas un script largo,
-  pásalo por `-c` o guárdalo fuera del proyecto, en la carpeta temporal del sistema.
+- No uses el código del plugin (`${CLAUDE_PLUGIN_ROOT}/src/` ni `tagi.py`), y no
+  tomes `metrics.json` ni `comment_metrics.json` como verdad. Son lo que estás
+  revisando.
+- No edites, crees ni borres archivos. Si necesitas un script largo, pásalo por
+  `-c` o guárdalo en la carpeta temporal del sistema.
 - No corrijas el documento ni propongas una redacción nueva. Di qué está mal y
   cuánto da tu cálculo.
-- No leas nada dentro de `tests/`.
+- No leas nada dentro de `${CLAUDE_PLUGIN_ROOT}/tests/`.
 - Si una afirmación no se puede comprobar con estos datos (una cifra de un estudio
   externo, un umbral como 4.0 o 4.5, una regla de Google), lístala aparte como no
   verificable. No es un error.
 - Cuenta las afirmaciones cifra por cifra: cada celda de una tabla y cada cita es una.
 - Si no logras calcular algo, dilo. No lo des por bueno.
-- Los datos de un cliente real no salen de su carpeta en `data/private/`.
+- Los datos del negocio no salen de su carpeta: no los copies a otro lugar ni los
+  subas a ningún servicio.
 
 ## Qué devuelves
 

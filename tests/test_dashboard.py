@@ -193,7 +193,8 @@ def _few_reviews(tmp_path, dates, ratings, texts):
 
 def test_sample_has_no_low_data_notice_but_has_the_closing(data):
     assert data["data_warning"] is None
-    assert "Tagi Insights Agent" in data["closing"] and dashboard.TAGI_CONTACT in data["closing"]
+    assert "Tagi Insights Agent" in data["closing"]
+    assert data["contact"]["url"].startswith("https://www.linkedin.com/")
 
 
 def test_few_reviews_build_a_dashboard_with_a_notice(tmp_path):
@@ -205,7 +206,7 @@ def test_few_reviews_build_a_dashboard_with_a_notice(tmp_path):
     assert items[0].startswith("Con 8 reseñas")
     assert any("hay 2 reseñas" in item for item in items)
     assert any("Solo 4 reseñas traen comentario" in item for item in items)
-    assert dashboard.TAGI_CONTACT in data["data_warning"]["invitation"]
+    assert data["data_warning"]["invitation"].endswith("ayudarle:")
     assert "antes 3.8" in data["kpis"][1]["detail"]
     assert "<title>" in dashboard.render_dashboard(data)
 

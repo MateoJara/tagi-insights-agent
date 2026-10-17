@@ -29,7 +29,11 @@ MAX_TOPICS_COMPARED = 4  # per kind, in the "before and now" table
 # A smaller move in a topic's share of comments is too small to call a change.
 CLEAR_SHARE_CHANGE = 0.10
 
-TAGI_CONTACT = "linkedin.com/in/mateo-jaramillo-londoño-b2a475226"
+# Shown as a link after the invitations to contact Tagi.
+TAGI_CONTACT = {
+    "label": "Mateo Jaramillo en LinkedIn",
+    "url": "https://www.linkedin.com/in/mateo-jaramillo-londoño-b2a475226",
+}
 
 # Dashboard text is in Spanish because it is read by the business owner.
 MONTHS = (
@@ -281,7 +285,7 @@ def _data_warning(metrics):
     return {
         "items": [messages[code] for code in codes],
         "invitation": "Si quiere conseguir más reseñas o entender mejor a sus clientes, en Tagi podemos "
-                      f"ayudarle: {TAGI_CONTACT}.",
+                      "ayudarle:",
     }
 
 
@@ -321,7 +325,8 @@ def build_dashboard_data(reviews_path, insights, comment_metrics=None):
         "n_reviews_with_text": int(reviews["text"].notna().sum()),
         "closing": "Hecho con Tagi Insights Agent, gratis y de código abierto. ¿No sabe cómo usarlo, tiene pocas "
                    "reseñas o quiere llevar herramientas de IA como Claude Code a su negocio? "
-                   f"Escríbanos: {TAGI_CONTACT}.",
+                   "Escríbanos:",
+        "contact": TAGI_CONTACT,
     }
 
 
