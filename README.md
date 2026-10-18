@@ -8,7 +8,8 @@ quejan sus clientes, qué valoran y qué hacer primero. Sirve para cualquier neg
 (un restaurante, un taller, una peluquería, una clínica) y para reseñas en casi
 cualquier formato.
 
-Es un plugin gratuito para [Claude Code](https://claude.com/claude-code), hecho por
+Es un plugin gratuito para Claude, que funciona en Cowork (la app de escritorio, sin
+terminal) y en [Claude Code](https://claude.com/claude-code). Lo hizo
 [Tagi](#necesita-ayuda).
 
 ![Tablero de ejemplo: calificación, tendencia mes a mes y temas de los comentarios antes y ahora](docs/tablero-ejemplo.png)
@@ -38,37 +39,53 @@ doble clic.*
 
 ## Instalar
 
-Necesita:
+Funciona en dos lugares de Claude, los dos con una suscripción de pago (Pro o Max):
 
-- **Claude Code**, que requiere una suscripción de pago de Claude (Pro o Max) o una
-  cuenta de la API.
-- **Python 3.11 o más nuevo.** Si no lo tiene, descárguelo de
-  [python.org](https://www.python.org/downloads/); en Windows, marque "Add
-  python.exe to PATH" al instalarlo. Lo demás (pandas y openpyxl) se instala solo
-  la primera vez que pide un tablero, en una carpeta aparte que no toca nada más de
-  su computador.
+- **Cowork**, en la app de escritorio de Claude: para quien no usa terminal.
+- **Claude Code**: para quien ya lo usa.
 
-En Claude Code, escriba:
+### En Cowork
+
+1. En la app de Claude, abra la pestaña **Cowork**.
+2. En la barra lateral, entre a **Customize** y luego a **Plugins**.
+3. Pulse **Add marketplace** y pegue esta dirección:
+   `https://github.com/MateoJara/tagi-insights-agent`
+4. Busque **Tagi Insights** en la lista y pulse **Install**.
+
+Cowork ya trae lo que el plugin necesita para hacer los cálculos; no hay que
+instalar nada más. Para recibir versiones nuevas, use **Check for updates** en el
+catálogo de Tagi, o quite el plugin y vuelva a instalarlo.
+
+### En Claude Code
+
+Necesita **Python 3.11 o más nuevo**. Si no lo tiene, descárguelo de
+[python.org](https://www.python.org/downloads/); en Windows, marque "Add python.exe
+to PATH" al instalarlo. Lo demás (pandas y openpyxl) se instala solo la primera vez
+que pide un tablero, en una carpeta aparte que no toca nada más de su computador.
+
+Escriba:
 
 ```text
 /plugin marketplace add https://github.com/MateoJara/tagi-insights-agent.git
 /plugin install tagi@tagi
 ```
 
-<!-- TODO(bloque D): instrucciones para Cowork, después de probarlo con el repo público. -->
+Para recibir versiones nuevas: `/plugin marketplace update tagi`.
 
 ## Usarlo
 
-Adjunte el archivo de sus reseñas a la conversación y escriba:
+Adjunte el archivo de sus reseñas a la conversación y copie este mensaje:
 
 ```text
-/tagi:informe
+/tagi:informe Estas son las reseñas de Google de mi negocio. Sigue el proceso completo del plugin Tagi, paso a paso, y lanza sus subagentes (importador, analistas y revisor) sin pedirme confirmación.
 ```
 
-O, con sus palabras: *"estas son las reseñas de mi negocio, ¿qué dicen mis clientes?"*
+La segunda parte importa. Algunos entornos, como Cowork, le piden a Claude que no
+lance subagentes si usted no lo pide; sin esa frase, Claude puede hacer el análisis
+por su cuenta y saltarse el revisor, que es el que comprueba cada cifra.
 
-Si prefiere, indique la carpeta donde las tiene:
-`/tagi:informe C:\Users\usted\Documentos\mis-reseñas`.
+Si prefiere, en vez de adjuntar el archivo, indique la carpeta donde lo tiene:
+`/tagi:informe C:\Users\usted\Documentos\mis-reseñas`, con la misma segunda parte.
 
 Claude le irá contando qué hace en cada paso. Puede preguntarle el nombre del negocio
 o algún dato de las reseñas. Al final le entrega el tablero, `tablero.html`. Se abre
@@ -90,7 +107,8 @@ reseñas, con fecha exacta y sus respuestas:
 Los nombres de los botones pueden cambiar un poco según el idioma y la versión de
 Google.
 
-<!-- TODO: probar el importador con un Reviews.json real de Takeout. -->
+El plugin lee el formato en que Google entrega las reseñas, pero todavía no lo hemos
+probado con una descarga real de Takeout. Si algo falla, [escríbanos](#necesita-ayuda).
 
 **Si no es el dueño, o quiere algo rápido.** Abra el negocio en Google Maps, vaya a
 la pestaña de reseñas, ordénelas por "Más recientes", baje hasta cargar las que
@@ -148,9 +166,9 @@ El plugin es gratis. Lo que se consume es el uso de Claude de su plan:
 - **Instalado y sin usarse:** unos 400 tokens por sesión, lo que ocupan las
   descripciones de la skill y los subagentes.
 - **Al pedir un tablero:** varios subagentes leen sus reseñas y el revisor las
-  vuelve a leer, así que el consumo crece con el número de comentarios.
-
-<!-- TODO: medir una corrida completa con 30 y con 600 reseñas y poner las cifras. -->
+  vuelve a leer, así que el consumo crece con el número de comentarios. En nuestra
+  prueba en Cowork con un plan Pro, un tablero de 80 reseñas usó alrededor del 10%
+  del límite de uso de 5 horas. Es una medida aproximada, de una sola corrida.
 
 ## ¿Necesita ayuda?
 
@@ -201,7 +219,7 @@ fines comerciales, siempre que conserve el aviso de la licencia.
 
 ### In English
 
-Tagi Insights is a free Claude Code plugin that turns a business's Google reviews,
+Tagi Insights is a free Claude plugin (Cowork and Claude Code) that turns a business's Google reviews,
 in whatever format they come (CSV, Excel, Google's JSON export or text pasted from
 Google Maps), into a mobile-friendly dashboard with what customers say and a
 prioritized action plan. It is built as one skill orchestrating four subagents: an

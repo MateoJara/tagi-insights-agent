@@ -85,6 +85,10 @@ crees agentes por tu cuenta.
    reseñas de Google Maps), hazle la pregunta al usuario con palabras sencillas y
    vuelve a lanzarlo con la respuesta. No respondas tú por el usuario.
 
+   No le des al usuario cifras propias antes de que terminen los analistas: los
+   periodos y las definiciones son los del script, y unas cifras preliminares
+   calculadas de otra forma no coincidirían con el tablero.
+
 2. **Delegar el análisis a los dos subagentes, en paralelo** (las dos llamadas en
    el mismo mensaje). A cada uno se le pasa la ruta del CSV, su carpeta, el Python
    del análisis y la raíz del plugin:
